@@ -1,5 +1,3 @@
-# CWE-502 - Deserialization of Untrusted Data
-<a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">🔗 CWE-502 - Deserialization of Untrusted Data</a>
 
 ## ✏️ Senaryo 1
 Bir web uygulamasında kullanıcı oturum bilgileri cookie formatında saklanır. Oturum verileri seri hale getirilerek tarayıcıya gönderilir. Kullanıcı sitesine tekrar geldiğinde bu veriler okunur ve işlenir. Sistem oturum durumunu bu bilgilerle yeniden oluşturur.

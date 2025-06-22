@@ -1,5 +1,3 @@
-# CWE-400 - Uncontrolled Resource Consumption (Resource Exhaustion)
-<a href="https://cwe.mitre.org/data/definitions/400.html" target="_blank">🔗 CWE-400 - Uncontrolled Resource Consumption</a>
 
 ## ✏️ Senaryo 1
 Bir dosya yükleme sistemi kullanıcıların büyük dosyalar yüklemesine imkan tanıyor. Sistem yüklenen dosyaları geçici olarak sunucu diskinde saklar. Kullanıcılar farklı boyutlarda dosyalar yükleyebilir. Yükleme işlemi sırasında disk alanı kullanılır.

@@ -1,5 +1,3 @@
-# CWE-119 - Improper Restriction of Operations within the Bounds of a Memory Buffer
-<a href="https://cwe.mitre.org/data/definitions/119.html" target="_blank">🔗 CWE-119 - Improper Restriction of Operations within the Bounds of a Memory Buffer</a>
 
 ## ✏️ Senaryo 1
 Bir metin düzenleyici uygulamasında kullanıcılar çok satırlı metinleri düzenleyebiliyor. Her satır uygulama içinde bellekte tutuluyor ve dizin bilgisiyle erişiliyor. Kullanıcı metne ekleme yaptığında sistem belirli bir tampon belleğe veri yazıyor. Bu belleğin boyutu kullanıcı girdisine göre ayarlanıyor.

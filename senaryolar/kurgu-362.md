@@ -1,5 +1,3 @@
-# CWE-362 - Concurrent Execution using Shared Resource with Improper Synchronization (Race Condition)
-<a href="https://cwe.mitre.org/data/definitions/362.html" target="_blank">🔗 CWE-362 - Race Condition</a>
 
 ## ✏️ Senaryo 1
 Bir e-ticaret sitesinde müşteriler aynı anda ürün satın alabilir. Son ürün kaldığında birden çok kullanıcı ödeme işlemi başlatabilir. Sistem stok kontrolünü ödeme sırasında yapar. Ödeme başarılı olan kullanıcılar ürünü alabilir.

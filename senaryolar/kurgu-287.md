@@ -1,5 +1,3 @@
-# CWE-287 - Improper Authentication
-<a href="https://cwe.mitre.org/data/definitions/287.html" target="_blank">🔗 CWE-287 - Improper Authentication</a>
 
 ## ✏️ Senaryo 1
 Bir mobil bankacılık uygulamasında kullanıcılar PIN kodunu girerek giriş yapabiliyor. Uygulama PIN uzunluğunu değerlendirip sisteme erişim sağlıyor. Giriş yapıldıktan sonra kullanıcıya tüm bankacılık işlemleri sunuluyor. PIN girişi uygulamanın ana giriş yöntemi.

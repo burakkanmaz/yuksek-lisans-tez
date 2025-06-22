@@ -1,5 +1,3 @@
-# CWE-79 - Cross-site Scripting (XSS)
-<a href="https://cwe.mitre.org/data/definitions/79.html" target="_blank">🔗 CWE-79 - Cross-site Scripting (XSS)</a>
 
 ## ✏️ Senaryo 1
 Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.

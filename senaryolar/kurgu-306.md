@@ -1,5 +1,3 @@
-# CWE-306 - Missing Authentication for Critical Function
-<a href="https://cwe.mitre.org/data/definitions/306.html" target="_blank">🔗 CWE-306 - Missing Authentication for Critical Function</a>
 
 ## ✏️ Senaryo 1
 Bir web uygulamasında yönetici paneli üzerinden sistem ayarları değiştirilebiliyor. Panel bağlantısı üzerinden ayar sayfalarına erişilebiliyor. URL bilgisi ile bu panele ulaşılabiliyor. Ayar değişiklikleri doğrudan uygulanıyor.

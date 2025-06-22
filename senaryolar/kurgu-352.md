@@ -1,5 +1,3 @@
-# CWE-352 - Cross-Site Request Forgery (CSRF)
-<a href="https://cwe.mitre.org/data/definitions/352.html" target="_blank">🔗 CWE-352 - Cross-Site Request Forgery (CSRF)</a>
 
 ## ✏️ Senaryo 1
 Bir sosyal medya uygulamasında kullanıcılar gönderileri şikayet edebiliyor. Şikayet işlemi buton tıklaması ile gerçekleşiyor ve arka planda işlem sunucuya gönderiliyor. Kullanıcı oturumu aktif olduğunda işlem yapılabiliyor. Şikayet edilen içerikler kullanıcı panelinde gösteriliyor.

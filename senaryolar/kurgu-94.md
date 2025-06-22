@@ -1,5 +1,3 @@
-# CWE-94 - Improper Control of Generation of Code ('Code Injection')
-<a href="https://cwe.mitre.org/data/definitions/94.html" target="_blank">🔗 CWE-94 - Code Injection</a>
 
 ## ✏️ Senaryo 1
 Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.

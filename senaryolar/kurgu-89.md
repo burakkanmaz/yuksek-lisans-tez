@@ -1,5 +1,3 @@
-# CWE-89 - SQL Injection
-<a href="https://cwe.mitre.org/data/definitions/89.html" target="_blank">🔗 CWE-89 - SQL Injection</a>
 
 ## ✏️ Senaryo 1
 Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.

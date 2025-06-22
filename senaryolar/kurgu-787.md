@@ -1,5 +1,3 @@
-# CWE-787 - Out-of-bounds Write
-<a href="https://cwe.mitre.org/data/definitions/787.html" target="_blank">🔗 CWE-787 - Out-of-bounds Write</a>
 
 ## ✏️ Senaryo 1
 Bir metin editörü uygulamasında kullanıcılar belge içeriğini düzenler. Sistem metin verilerini bellek alanlarında saklar. Kullanıcı düzenlemeleri sistem tarafından işlenir ve kayıt edilir. Belge içeriği düzenli olarak güncellenir.

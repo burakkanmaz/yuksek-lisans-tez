@@ -1,5 +1,3 @@
-# CWE-125 - Out-of-bounds Read
-<a href="https://cwe.mitre.org/data/definitions/125.html" target="_blank">🔗 CWE-125 - Out-of-bounds Read</a>
 
 ## ✏️ Senaryo 1
 Bir dosya inceleme aracında kullanıcılar dosya içeriğini satır satır görüntüleyebiliyor. Kullanıcı kaçıncı satırı görmek istediğini manuel olarak girebiliyor. Sistem bu satıra karşılık gelen veriyi okuyarak kullanıcıya gösteriyor. Satır numarası arayüzdeki metin kutusuna yazılıyor.

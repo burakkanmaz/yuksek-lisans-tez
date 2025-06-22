@@ -1,5 +1,3 @@
-# CWE-704 - Incorrect Type Conversion or Cast
-<a href="https://cwe.mitre.org/data/definitions/704.html" target="_blank">🔗 CWE-704 - Incorrect Type Conversion or Cast</a>
 
 ## ✏️ Senaryo 1
 Bir hesap makinesi uygulamasında kullanıcılar farklı sayı türleri girebiliyor. Sistem ondalıklı ve tam sayıları işleyebilir. Giriş verileri hesaplama sırasında uygun formatlara dönüştürülür. Sonuçlar kullanıcıya gösterilir.

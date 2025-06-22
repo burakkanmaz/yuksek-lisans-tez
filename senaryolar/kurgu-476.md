@@ -1,5 +1,3 @@
-# CWE-476 - NULL Pointer Dereference
-<a href="https://cwe.mitre.org/data/definitions/476.html" target="_blank">🔗 CWE-476 - NULL Pointer Dereference</a>
 
 ## ✏️ Senaryo 1
 Bir kullanıcı yönetim sisteminde kullanıcıların profil bilgileri bellekte tutulur. Sistem kullanıcı bilgilerini getirirken veri yapısını kontrol eder. Profil bilgilerine erişim sırasında sistem uygun veri alanlarını kullanır. Kullanıcı bilgileri güvenli şekilde işlenir.

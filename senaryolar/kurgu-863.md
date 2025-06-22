@@ -1,5 +1,3 @@
-# CWE-863 - Incorrect Authorization
-<a href="https://cwe.mitre.org/data/definitions/863.html" target="_blank">🔗 CWE-863 - Incorrect Authorization</a>
 
 ## ✏️ Senaryo 1
 Bir dosya yönetim sisteminde kullanıcılar kendi dosyalarını görüntüleyebilir. Sistem kullanıcı hesapları ile dosya erişimlerini yönetir. Her kullanıcı kendi dosya alanına erişim sahibidir. Dosya işlemleri kullanıcı yetkileri çerçevesinde gerçekleşir.

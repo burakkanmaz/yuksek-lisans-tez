@@ -1,5 +1,3 @@
-# CWE-20 - Improper Input Validation
-<a href="https://cwe.mitre.org/data/definitions/20.html" target="_blank">🔗 CWE-20 - Improper Input Validation</a>
 
 ## ✏️ Senaryo 1
 Bir e-ticaret sitesinde kullanıcılar ödeme ekranında adres bilgilerini girebiliyor. Bu bilgiler sisteme kaydedildikten sonra kargo firmalarına iletiliyor. Adres, il ve posta kodu alanları metin kutularından alınıyor. Kullanıcılar bu alanlara istedikleri içeriği yazabiliyor.

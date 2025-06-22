@@ -1,5 +1,3 @@
-# CWE-434 - Unrestricted Upload of File with Dangerous Type
-<a href="https://cwe.mitre.org/data/definitions/434.html" target="_blank">🔗 CWE-434 - Unrestricted Upload of File with Dangerous Type</a>
 
 ## ✏️ Senaryo 1
 Bir belge paylaşım platformunda kullanıcılar dosyalarını yükleyebiliyor. Platform farklı dosya türlerini destekler. Kullanıcılar çeşitli uzantılarda dosyalar yükleyebilir. Yüklenen dosyalar sistem üzerinde saklanır.

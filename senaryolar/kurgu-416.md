@@ -1,5 +1,3 @@
-# CWE-416 - Use After Free
-<a href="https://cwe.mitre.org/data/definitions/416.html" target="_blank">🔗 CWE-416 - Use After Free</a>
 
 ## ✏️ Senaryo 1
 Bir metin düzenleyici uygulamasında kullanıcı bir dosyayı açtıktan sonra düzenleme yapabiliyor. Dosya içeriği bellekte tutuluyor ve kullanıcı bu içeriği değiştiriyor. Dosya kapatıldıktan sonra sistem bellek alanını yönetir. Uygulama bellek kaynaklarını gerektiğinde serbest bırakıyor.

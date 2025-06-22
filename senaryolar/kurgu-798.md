@@ -1,5 +1,3 @@
-# CWE-798 - Use of Hard-coded Credentials
-<a href="https://cwe.mitre.org/data/definitions/798.html" target="_blank">🔗 CWE-798 - Use of Hard-coded Credentials</a>
 
 ## ✏️ Senaryo 1
 Bir uygulama veritabanına bağlanmak için konfigürasyon dosyasından bağlantı bilgilerini okur. Bağlantı parametreleri uygulama başlangıcında ayarlanır. Sistem veritabanı ile güvenli bağlantı kurar. Veri işlemleri bu bağlantı üzerinden gerçekleştirilir.

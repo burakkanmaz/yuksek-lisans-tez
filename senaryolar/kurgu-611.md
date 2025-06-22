@@ -1,5 +1,3 @@
-# CWE-611 - Improper Restriction of XML External Entity Reference
-<a href="https://cwe.mitre.org/data/definitions/611.html" target="_blank">🔗 CWE-611 - XML External Entity (XXE)</a>
 
 ## ✏️ Senaryo 1
 Bir döküman yönetim sisteminde kullanıcılar XML dosyalarını yükleyebiliyor. Sistem bu dosyaları okuyarak içerik verilerini çıkarıyor. XML dosyaları çeşitli yapılarda olabilir ve sistem bunları işleyebilir. Yüklenen dökümanlar sisteme entegre edilir.

@@ -1,5 +1,3 @@
-# CWE-78 - Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')
-<a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">🔗 CWE-78 - OS Command Injection</a>
 
 ## ✏️ Senaryo 1
 Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.

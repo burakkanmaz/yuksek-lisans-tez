@@ -1,5 +1,3 @@
-# CWE-918 - Server-Side Request Forgery (SSRF)
-<a href="https://cwe.mitre.org/data/definitions/918.html" target="_blank">🔗 CWE-918 - Server-Side Request Forgery (SSRF)</a>
 
 ## ✏️ Senaryo 1
 Bir web uygulaması kullanıcıların belirttiği URL'lerden veri çeker. Kullanıcılar RSS feed adresleri veya API endpoint'leri girebilir. Sistem bu adreslere istek göndererek içeriği alır. İçerik işlendikten sonra kullanıcıya sunulur.

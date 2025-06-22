@@ -1,5 +1,3 @@
-# CWE-862 - Missing Authorization
-<a href="https://cwe.mitre.org/data/definitions/862.html" target="_blank">🔗 CWE-862 - Missing Authorization</a>
 
 ## ✏️ Senaryo 1
 Bir içerik yönetim sisteminde kullanıcılar farklı rollerle oturum açıyor. Editörler yazı düzenleyip silme işlemlerini gerçekleştirebiliyor. Arayüzde her kullanıcı için silme butonu görüntüleniyor. Kullanıcılar bu butona tıklayarak işlem yapabiliyor.

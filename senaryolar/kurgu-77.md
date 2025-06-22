@@ -1,5 +1,3 @@
-# CWE-77 - Improper Neutralization of Special Elements used in a Command ('Command Injection')
-<a href="https://cwe.mitre.org/data/definitions/77.html" target="_blank">🔗 CWE-77 - Command Injection</a>
 
 ## ✏️ Senaryo 1
 Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.

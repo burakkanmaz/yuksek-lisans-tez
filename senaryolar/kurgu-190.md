@@ -1,5 +1,3 @@
-# CWE-190 - Integer Overflow or Wraparound
-<a href="https://cwe.mitre.org/data/definitions/190.html" target="_blank">🔗 CWE-190 - Integer Overflow or Wraparound</a>
 
 ## ✏️ Senaryo 1
 Bir fatura hesaplama uygulamasında kullanıcı adet ve birim fiyat girerek toplam tutarı görebiliyor. Hesaplama işlemi iki tam sayı değerin çarpımıyla yapılıyor. Uygulama girilen değerlerin sınırlarını değerlendiriyor. Büyük değerler girildiğinde sonuç hesaplanıyor.
