@@ -1,8 +1,8 @@
 ### 🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```csharp
 [HttpGet("search-file")]
@@ -13,12 +13,9 @@ public IActionResult SearchFile(string filename)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```python
 import os
@@ -32,12 +29,9 @@ def search_file(filename: str):
     return results
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 23
-
 
 ```ts
 import fs from 'fs';
@@ -65,12 +59,13 @@ function searchFile(filename: string): string[] {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```csharp
 [HttpGet("search-log")]
@@ -82,12 +77,9 @@ public IActionResult SearchLog(string pattern)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 3
-
 
 ```python
 def search_log(pattern: str):
@@ -95,12 +87,9 @@ def search_log(pattern: str):
         return [line for line in file if pattern in line]
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```ts
 import fs from 'fs';
@@ -111,12 +100,13 @@ function searchLog(pattern: string): string[] {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```csharp
 [HttpGet("check-process")]
@@ -127,12 +117,9 @@ public IActionResult CheckProcess(string processName)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 4
-
 
 ```python
 import psutil
@@ -141,12 +128,9 @@ def check_process(name: str):
     return [p.info for p in psutil.process_iter(['pid', 'name', 'memory_info']) if name in p.info['name']]
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```ts
 import { execSync } from 'child_process';
@@ -157,12 +141,13 @@ function checkProcess(name: string): string[] {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```csharp
 [HttpPost("backup")]
@@ -174,12 +159,9 @@ public IActionResult BackupDirectory(string path)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```python
 import shutil
@@ -191,12 +173,9 @@ def backup_directory(path: str):
     return target
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
-
 
 ```ts
 import { execSync } from 'child_process';
@@ -209,12 +188,13 @@ function backupDirectory(path: string): string {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```csharp
 [HttpGet("ping")]
@@ -226,12 +206,9 @@ public IActionResult Ping(string ip)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 5
-
 
 ```python
 import subprocess
@@ -241,12 +218,9 @@ def ping(ip: str):
     return result.stdout if result.returncode == 0 else "Ping failed"
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 
 ```ts
 import { execSync } from 'child_process';
@@ -261,12 +235,13 @@ function ping(ip: string): string {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```csharp
 [HttpPost("convert")]
@@ -277,12 +252,9 @@ public IActionResult ConvertFile(string source, string target)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 5
-
 
 ```python
 import shutil
@@ -292,12 +264,9 @@ def convert_file(source: str, target: str):
     return f"File converted to {target}"
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```ts
 import fs from 'fs';
@@ -308,12 +277,13 @@ function convertFile(source: string, target: string): string {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```csharp
 [HttpGet("analyze-disk")]
@@ -325,12 +295,9 @@ public IActionResult AnalyzeDisk(string dir)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```python
 import os
@@ -344,12 +311,9 @@ def analyze_disk(path: str):
     return total
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 22
-
 
 ```ts
 import fs from 'fs';
@@ -376,12 +340,13 @@ function getDirectorySize(dir: string): number {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```csharp
 [HttpPost("db-backup")]
@@ -393,12 +358,9 @@ public IActionResult BackupDatabase(string dbName)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```python
 import subprocess
@@ -409,12 +371,9 @@ def backup_database(name: str):
     return "Backup initiated"
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```ts
 import { execSync } from 'child_process';
@@ -426,12 +385,13 @@ function backupDatabase(name: string): string {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```csharp
 [HttpGet("check-mailbox")]
@@ -442,12 +402,9 @@ public IActionResult CheckMailbox(string mailbox)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 3
-
 
 ```python
 def check_mailbox(mailbox: str):
@@ -455,12 +412,9 @@ def check_mailbox(mailbox: str):
         return file.read()
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 5
-
 
 ```ts
 import fs from 'fs';
@@ -470,12 +424,13 @@ function checkMailbox(mailbox: string): string {
 }
 ```
 
+---
 
 ### 🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 
 ```csharp
 [HttpPost("filter-logs")]
@@ -491,12 +446,9 @@ public IActionResult FilterLogs(DateTime start, DateTime end)
 }
 ```
 
-
-
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
-
 
 ```python
 from datetime import datetime
@@ -509,12 +461,9 @@ def filter_logs(start: str, end: str):
         ]
 ```
 
-
-
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```ts
 import fs from 'fs';

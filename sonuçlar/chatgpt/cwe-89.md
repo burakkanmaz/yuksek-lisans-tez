@@ -1,4 +1,5 @@
 ### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
@@ -43,6 +44,7 @@ app.get("/admin/search-user", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 2: Bir e-ticaret platformunda kullanıcılar sipariş numaralarını girerek kargo durumlarını sorgulayabiliyor. Sipariş numarası giriş kutusuna yazıldıktan sonra veritabanı üzerinden arama yapılıyor. Sonuçlar kullanıcının geçmiş siparişleriyle birlikte gösteriliyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
@@ -87,6 +89,7 @@ app.get("/orders/track", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 3: Bir üniversite portalında öğrenciler öğrenci numaralarını girerek notlarını görebiliyor. Notlar öğrenciye özel olarak filtrelenip veritabanından çekiliyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
@@ -131,6 +134,7 @@ app.get("/grades", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 4: Bir destek sistemi uygulamasında kullanıcılar açtıkları destek taleplerini takip edebiliyor. Destek talep numarası girilerek geçmiş kayıtlara ulaşılabiliyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
@@ -174,6 +178,7 @@ app.get("/support/ticket", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 5: Bir kütüphane uygulamasında kullanıcılar kitap adıyla arama yapabiliyor. Sistem girilen değeri kullanarak kitap başlığına göre veri filtreliyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
@@ -218,6 +223,7 @@ app.get("/library/search", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 6: Bir ürün kataloğunda kullanıcılar ürün kimliği (ID) ile arama yaparak ürün detaylarını görebiliyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
@@ -260,6 +266,7 @@ app.get("/products/:id", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 7: Bir forumda kullanıcılar belirli bir başlık altındaki mesajları görüntüleyebiliyor. Başlık kimliği (ID) kullanılarak ilgili mesajlar veritabanından çekiliyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
@@ -277,7 +284,7 @@ public IActionResult GetMessages(int topicId)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 5
+**Satır Sayısı:** 4
 
 ```python
 @app.route("/forum/topics/<int:topic_id>")
@@ -303,6 +310,7 @@ app.get("/forum/topics/:topicId", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 8: Bir blog platformunda yazarlar kendi yazdıkları yazıları düzenleyebiliyor. Yazar kimliği ve yazı kimliği kullanılarak yetki kontrolü yapılıyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
@@ -321,7 +329,7 @@ public IActionResult UpdatePost(int postId, [FromBody] PostUpdateDto data, int a
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+**Satır Sayısı:** 8
 
 ```python
 @app.route("/posts/<int:post_id>", methods=["PUT"])
@@ -354,6 +362,7 @@ app.put("/posts/:postId", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 9: Bir finans uygulamasında kullanıcılar sadece kendi hesap hareketlerini görebiliyor. Kullanıcı kimliği ile hesap kimliği eşleştirilerek sorgulama yapılıyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
@@ -404,6 +413,7 @@ app.get("/accounts/:accountId/transactions", async (req, res) => {
 ---
 
 ### 🧪 Senaryo 10: Bir dosya paylaşım platformunda kullanıcılar sadece kendi yükledikleri dosyaları silebiliyor. Dosya sahibi kimliği ile işlem yapan kullanıcı kimliği karşılaştırılıyor.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
@@ -422,7 +432,7 @@ public IActionResult DeleteFile(int fileId, int userId)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+**Satır Sayısı:** 8
 
 ```python
 @app.route("/files/<int:file_id>", methods=["DELETE"])
@@ -450,4 +460,4 @@ app.delete("/files/:fileId", async (req, res) => {
     // Delete logic...
     res.json({ status: "File deleted" });
 });
-``` 
+```

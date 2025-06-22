@@ -1,4 +1,5 @@
 ### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 29
@@ -71,6 +72,7 @@ app.post("/compile-template", (req, res) => {
 ---
 
 ### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 18
@@ -129,6 +131,7 @@ app.post("/evaluate-formula", (req, res) => {
 ---
 
 ### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 21
@@ -192,6 +195,7 @@ app.post("/render-html", (req, res) => {
 ---
 
 ### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 12
@@ -242,9 +246,10 @@ app.post("/save-config", (req, res) => {
 ---
 
 ### 🧪 Senaryo 5: Bir betik motoru kullanıcıların yazdığı kodları çalıştırır. Kodlar sistem içinde yorumlanarak yürütülür. Kullanıcılar çeşitli komutlar ve fonksiyonlar kullanabilir. Betik dili sistemin yeteneklerini genişletir.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 11
+**Satır Sayısı:** 13
 
 ```csharp
 [HttpPost("run-script")]
@@ -264,7 +269,7 @@ public IActionResult RunScript([FromBody] ScriptInput input)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+**Satır Sayısı:** 8
 
 ```python
 @app.route("/run-script", methods=["POST"])
@@ -295,6 +300,7 @@ app.post("/run-script", (req, res) => {
 ---
 
 ### 🧪 Senaryo 6: Bir serileştirme kütüphanesi nesneleri metin formatına dönüştürür. Kullanıcılar özel veri türleri tanımlayabilir. Sistem bu türleri serileştirerek depolar veya ağ üzerinden gönderir. Nesneler daha sonra geri yüklenebilir.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 14
@@ -318,7 +324,7 @@ public IActionResult Deserialize([FromBody] DataInput input)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+**Satır Sayısı:** 8
 
 ```python
 @app.route("/deserialize", methods=["POST"])
@@ -333,7 +339,7 @@ def deserialize():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 8
+**Satır Sayısı:** 9
 
 ```typescript
 app.post("/deserialize", (req, res) => {
@@ -350,9 +356,10 @@ app.post("/deserialize", (req, res) => {
 ---
 
 ### 🧪 Senaryo 7: Bir dinamik sınıf oluşturma aracı çalışma zamanında yeni sınıflar üretir. Kullanıcılar sınıf üyelerini ve metotlarını belirleyebilir. Sistem bu tanımlara göre yeni türler oluşturur. Bu sınıflar daha sonra uygulamada kullanılır.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 15
+**Satır Sayısı:** 14
 
 ```csharp
 [HttpPost("create-class")]
@@ -373,7 +380,7 @@ public IActionResult CreateClass([FromBody] ClassDefinition def)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 4
+**Satır Sayısı:** 5
 
 ```python
 @app.route("/create-class", methods=["POST"])
@@ -385,7 +392,7 @@ def create_class():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 8
+**Satır Sayısı:** 9
 
 ```typescript
 app.post("/create-class", (req, res) => {
@@ -402,6 +409,7 @@ app.post("/create-class", (req, res) => {
 ---
 
 ### 🧪 Senaryo 8: Bir uzak kod yürütme servisi istemciden gelen kodları sunucuda çalıştırır. Servis farklı dillerde kodları destekler. Kullanıcılar test veya otomasyon için kod gönderebilir. Sonuçlar istemciye geri gönderilir.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 14
@@ -437,7 +445,7 @@ def remote_exec():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 8
+**Satır Sayısı:** 9
 
 ```typescript
 app.post("/remote-exec", (req, res) => {
@@ -454,9 +462,10 @@ app.post("/remote-exec", (req, res) => {
 ---
 
 ### 🧪 Senaryo 9: Bir dinamik sorgu oluşturucu kullanıcı girişlerine göre veritabanı sorguları üretir. Kullanıcılar filtreleme ve sıralama seçenekleri belirtebilir. Sistem bu seçenekleri SQL sorgusuna dönüştürür. Sorgular veritabanında çalıştırılır.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 10
+**Satır Sayısı:** 8
 
 ```csharp
 [HttpGet("products")]
@@ -484,7 +493,7 @@ def get_products():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 8
+**Satır Sayısı:** 7
 
 ```typescript
 app.get("/products", (req, res) => {
@@ -499,9 +508,10 @@ app.get("/products", (req, res) => {
 ---
 
 ### 🧪 Senaryo 10: Bir işletim sistemi kabuğu kullanıcı komutlarını yorumlar ve çalıştırır. Kullanıcılar sistem yönetimi ve dosya işlemleri yapabilir. Komutlar alt süreçler olarak yürütülür. Kabuk komutların çıktısını kullanıcıya gösterir.
+
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 11
+**Satır Sayısı:** 8
 
 ```csharp
 [HttpPost("run-command")]
@@ -540,4 +550,4 @@ app.post("/run-command", (req, res) => {
         res.json({ stdout, stderr });
     });
 });
-``` 
+```

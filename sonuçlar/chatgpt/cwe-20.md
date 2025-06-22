@@ -1,8 +1,8 @@
 ### 🧪 Senaryo 1: Bir e-ticaret sitesinde kullanıcılar ödeme ekranında adres bilgilerini girebiliyor. Bu bilgiler sisteme kaydedildikten sonra kargo firmalarına iletiliyor. Adres, il ve posta kodu alanları metin kutularından alınıyor. Kullanıcılar bu alanlara istedikleri içeriği yazabiliyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 18
-
 
 ```csharp
 [HttpPost("submit-address")]
@@ -25,13 +25,13 @@ public class AddressModel
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 1: Bir e-ticaret sitesinde kullanıcılar ödeme ekranında adres bilgilerini girebiliyor. Bu bilgiler sisteme kaydedildikten sonra kargo firmalarına iletiliyor. Adres, il ve posta kodu alanları metin kutularından alınıyor. Kullanıcılar bu alanlara istedikleri içeriği yazabiliyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 
 ```python
 from flask import Flask, request, jsonify
@@ -52,13 +52,13 @@ def submit_address():
     return jsonify({"message": "Address saved successfully"}), 200
 ```
 
-
+---
 
 ### 🧪 Senaryo 1: Bir e-ticaret sitesinde kullanıcılar ödeme ekranında adres bilgilerini girebiliyor. Bu bilgiler sisteme kaydedildikten sonra kargo firmalarına iletiliyor. Adres, il ve posta kodu alanları metin kutularından alınıyor. Kullanıcılar bu alanlara istedikleri içeriği yazabiliyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 18
-
 
 ```typescript
 import express from 'express';
@@ -81,13 +81,13 @@ app.post('/submit-address', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 2: Bir eğitim platformunda kullanıcılar şifre oluştururken serbest metin girebiliyor. Şifre alanı minimum uzunluk şartı bulunuyor. Özel karakter, boşluk ve farklı semboller şifrede kullanılabiliyor. Şifre bilgisi sisteme kaydediliyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 
 ```csharp
 [HttpPost("create-password")]
@@ -108,13 +108,13 @@ public class PasswordModel
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 2: Bir eğitim platformunda kullanıcılar şifre oluştururken serbest metin girebiliyor. Şifre alanı minimum uzunluk şartı bulunuyor. Özel karakter, boşluk ve farklı semboller şifrede kullanılabiliyor. Şifre bilgisi sisteme kaydediliyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```python
 @app.route('/create-password', methods=['POST'])
@@ -128,13 +128,13 @@ def create_password():
     return jsonify({"error": "Password too short"}), 400
 ```
 
-
+---
 
 ### 🧪 Senaryo 2: Bir eğitim platformunda kullanıcılar şifre oluştururken serbest metin girebiliyor. Şifre alanı minimum uzunluk şartı bulunuyor. Özel karakter, boşluk ve farklı semboller şifrede kullanılabiliyor. Şifre bilgisi sisteme kaydediliyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 
 ```typescript
 app.post('/create-password', async (req, res) => {
@@ -150,13 +150,13 @@ app.post('/create-password', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 3: Bir kargo takip sisteminde kullanıcılar kargo numarasını girerek paket bilgilerine erişiyor. Kargo numarası metin kutusuna yazılıyor ve sorgulama işlemi başlatılıyor. Giriş alanında uzunluk sınırı bulunuyor. Farklı karakter türleri girişte kullanılabiliyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 
 ```csharp
 [HttpGet("track-package")]
@@ -171,13 +171,13 @@ public IActionResult TrackPackage(string trackingNumber)
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 3: Bir kargo takip sisteminde kullanıcılar kargo numarasını girerek paket bilgilerine erişiyor. Kargo numarası metin kutusuna yazılıyor ve sorgulama işlemi başlatılıyor. Giriş alanında uzunluk sınırı bulunuyor. Farklı karakter türleri girişte kullanılabiliyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```python
 @app.route('/track-package', methods=['GET'])
@@ -189,13 +189,13 @@ def track_package():
     return jsonify({"error": "Invalid tracking number"}), 400
 ```
 
-
+---
 
 ### 🧪 Senaryo 3: Bir kargo takip sisteminde kullanıcılar kargo numarasını girerek paket bilgilerine erişiyor. Kargo numarası metin kutusuna yazılıyor ve sorgulama işlemi başlatılıyor. Giriş alanında uzunluk sınırı bulunuyor. Farklı karakter türleri girişte kullanılabiliyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```typescript
 app.get('/track-package', async (req, res) => {
@@ -209,13 +209,13 @@ app.get('/track-package', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 4: Bir sosyal medya platformunda kullanıcılar biyografi bilgilerini doldurabiliyor. Biyografi alanı karakter sınırı ile sınırlandırılmış. Bu bilgiler kullanıcı profillerinde görüntüleniyor. HTML ve özel semboller girişte kullanılabiliyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 
 ```csharp
 [HttpPost("update-bio")]
@@ -236,13 +236,13 @@ public class BioModel
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 4: Bir sosyal medya platformunda kullanıcılar biyografi bilgilerini doldurabiliyor. Biyografi alanı karakter sınırı ile sınırlandırılmış. Bu bilgiler kullanıcı profillerinde görüntüleniyor. HTML ve özel semboller girişte kullanılabiliyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```python
 @app.route('/update-bio', methods=['POST'])
@@ -256,13 +256,13 @@ def update_bio():
     return jsonify({"error": "Biography too long"}), 400
 ```
 
-
+---
 
 ### 🧪 Senaryo 4: Bir sosyal medya platformunda kullanıcılar biyografi bilgilerini doldurabiliyor. Biyografi alanı karakter sınırı ile sınırlandırılmış. Bu bilgiler kullanıcı profillerinde görüntüleniyor. HTML ve özel semboller girişte kullanılabiliyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```typescript
 app.post('/update-bio', async (req, res) => {
@@ -276,13 +276,13 @@ app.post('/update-bio', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 5: Bir rezervasyon sisteminde kullanıcılar tarih aralığı girerek uygunluk sorgulaması yapabiliyor. Tarih alanları metin girişi ile doldurulabiliyor. Sistem bu tarih bilgilerini işleyerek uygunluk kontrolü yapıyor. Tarih formatı serbest bırakılmış.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 17
-
 
 ```csharp
 [HttpPost("check-availability")]
@@ -304,13 +304,13 @@ public class DateRangeModel
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 5: Bir rezervasyon sisteminde kullanıcılar tarih aralığı girerek uygunluk sorgulaması yapabiliyor. Tarih alanları metin girişi ile doldurulabiliyor. Sistem bu tarih bilgilerini işleyerek uygunluk kontrolü yapıyor. Tarih formatı serbest bırakılmış.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 
 ```python
 @app.route('/check-availability', methods=['POST'])
@@ -325,13 +325,13 @@ def check_availability():
         return jsonify({"error": "Invalid date format"}), 400
 ```
 
-
+---
 
 ### 🧪 Senaryo 5: Bir rezervasyon sisteminde kullanıcılar tarih aralığı girerek uygunluk sorgulaması yapabiliyor. Tarih alanları metin girişi ile doldurulabiliyor. Sistem bu tarih bilgilerini işleyerek uygunluk kontrolü yapıyor. Tarih formatı serbest bırakılmış.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 
 ```typescript
 app.post('/check-availability', async (req, res) => {
@@ -346,13 +346,13 @@ app.post('/check-availability', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 6: Bir forum sisteminde kullanıcılar konu başlığı ve içerik girerek yeni konu açabiliyor. Karakter sayısı sınırlaması bulunuyor. Başlık alanına sayılar ve semboller girilebiliyor. Konular ana sayfada listeleniyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 17
-
 
 ```csharp
 [HttpPost("create-topic")]
@@ -374,13 +374,13 @@ public class TopicModel
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 6: Bir forum sisteminde kullanıcılar konu başlığı ve içerik girerek yeni konu açabiliyor. Karakter sayısı sınırlaması bulunuyor. Başlık alanına sayılar ve semboller girilebiliyor. Konular ana sayfada listeleniyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```python
 @app.route('/create-topic', methods=['POST'])
@@ -394,13 +394,13 @@ def create_topic():
     return jsonify({"error": "Input too long"}), 400
 ```
 
-
+---
 
 ### 🧪 Senaryo 6: Bir forum sisteminde kullanıcılar konu başlığı ve içerik girerek yeni konu açabiliyor. Karakter sayısı sınırlaması bulunuyor. Başlık alanına sayılar ve semboller girilebiliyor. Konular ana sayfada listeleniyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```typescript
 app.post('/create-topic', async (req, res) => {
@@ -414,13 +414,13 @@ app.post('/create-topic', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 7: Bir üyelik formunda kullanıcılar doğum tarihi bilgisini elle girebiliyor. Tarih formatı açık şekilde belirtilmemiş. Sistem alanın dolu olmasını kontrol ediyor. Bu bilgi üyelik sonrası profil sayfasında gösteriliyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 
 ```csharp
 [HttpPost("set-birthdate")]
@@ -441,13 +441,13 @@ public class BirthdateModel
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 7: Bir üyelik formunda kullanıcılar doğum tarihi bilgisini elle girebiliyor. Tarih formatı açık şekilde belirtilmemiş. Sistem alanın dolu olmasını kontrol ediyor. Bu bilgi üyelik sonrası profil sayfasında gösteriliyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```python
 @app.route('/set-birthdate', methods=['POST'])
@@ -461,13 +461,13 @@ def set_birthdate():
     return jsonify({"error": "Birthdate required"}), 400
 ```
 
-
+---
 
 ### 🧪 Senaryo 7: Bir üyelik formunda kullanıcılar doğum tarihi bilgisini elle girebiliyor. Tarih formatı açık şekilde belirtilmemiş. Sistem alanın dolu olmasını kontrol ediyor. Bu bilgi üyelik sonrası profil sayfasında gösteriliyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```typescript
 app.post('/set-birthdate', async (req, res) => {
@@ -481,13 +481,13 @@ app.post('/set-birthdate', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 8: Bir dosya arama sisteminde kullanıcılar dosya adını yazarak arama yapıyor. Arama kutusu girilen değeri sorguya dönüştürüyor. Dosya adında sembol ve özel karakterler kullanılabiliyor. Arama sonuçları kullanıcıya sunuluyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
-
 
 ```csharp
 [HttpGet("search-file")]
@@ -500,13 +500,13 @@ public IActionResult SearchFile(string fileName)
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 8: Bir dosya arama sisteminde kullanıcılar dosya adını yazarak arama yapıyor. Arama kutusu girilen değeri sorguya dönüştürüyor. Dosya adında sembol ve özel karakterler kullanılabiliyor. Arama sonuçları kullanıcıya sunuluyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 5
-
 
 ```python
 @app.route('/search-file', methods=['GET'])
@@ -516,13 +516,13 @@ def search_file():
     return jsonify([r.serialize() for r in results])
 ```
 
-
+---
 
 ### 🧪 Senaryo 8: Bir dosya arama sisteminde kullanıcılar dosya adını yazarak arama yapıyor. Arama kutusu girilen değeri sorguya dönüştürüyor. Dosya adında sembol ve özel karakterler kullanılabiliyor. Arama sonuçları kullanıcıya sunuluyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```typescript
 app.get('/search-file', async (req, res) => {
@@ -534,13 +534,13 @@ app.get('/search-file', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 9: Bir blog platformunda kullanıcılar başlıklara etiket ekleyebiliyor. Etiket giriş alanı serbest metin formatında. Uzun ifadeler etiket olarak belirlenebiliyor. Bu etiketler filtreleme sisteminde görüntüleniyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 12
-
 
 ```csharp
 [HttpPost("add-tag")]
@@ -557,13 +557,13 @@ public class TagModel
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 9: Bir blog platformunda kullanıcılar başlıklara etiket ekleyebiliyor. Etiket giriş alanı serbest metin formatında. Uzun ifadeler etiket olarak belirlenebiliyor. Bu etiketler filtreleme sisteminde görüntüleniyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```python
 @app.route('/add-tag', methods=['POST'])
@@ -575,13 +575,13 @@ def add_tag():
     return jsonify({"message": "Tag added"})
 ```
 
-
+---
 
 ### 🧪 Senaryo 9: Bir blog platformunda kullanıcılar başlıklara etiket ekleyebiliyor. Etiket giriş alanı serbest metin formatında. Uzun ifadeler etiket olarak belirlenebiliyor. Bu etiketler filtreleme sisteminde görüntüleniyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 5
-
 
 ```typescript
 app.post('/add-tag', async (req, res) => {
@@ -591,13 +591,13 @@ app.post('/add-tag', async (req, res) => {
 });
 ```
 
-
+---
 
 ### 🧪 Senaryo 10: Bir anket sisteminde katılımcılar yaş bilgilerini girerek anketi başlatabiliyor. Yaş alanı doldurulup doldurulmadığı kontrol ediliyor. Farklı formatlar yaş alanına girilebiliyor. Yaş bilgisi raporlarda gösteriliyor.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 
 ```csharp
 [HttpPost("submit-age")]
@@ -618,13 +618,13 @@ public class AgeModel
 }
 ```
 
-
+---
 
 ### 🧪 Senaryo 10: Bir anket sisteminde katılımcılar yaş bilgilerini girerek anketi başlatabiliyor. Yaş alanı doldurulup doldurulmadığı kontrol ediliyor. Farklı formatlar yaş alanına girilebiliyor. Yaş bilgisi raporlarda gösteriliyor.
-**💻 Dil:** `Python`  
+
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```python
 @app.route('/submit-age', methods=['POST'])
@@ -638,13 +638,13 @@ def submit_age():
     return jsonify({"error": "Age is required"}), 400
 ```
 
-
+---
 
 ### 🧪 Senaryo 10: Bir anket sisteminde katılımcılar yaş bilgilerini girerek anketi başlatabiliyor. Yaş alanı doldurulup doldurulmadığı kontrol ediliyor. Farklı formatlar yaş alanına girilebiliyor. Yaş bilgisi raporlarda gösteriliyor.
-**💻 Dil:** `TypeScript`  
+
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 
 ```typescript
 app.post('/submit-age', async (req, res) => {

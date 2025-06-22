@@ -1,8 +1,8 @@
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 
 ```csharp
 [HttpPost("disk-usage")]
@@ -16,10 +16,10 @@ public IActionResult GetDiskUsage([FromBody] string directoryPath)
     return Ok(new { Path = directoryPath, TotalBytes = totalSize });
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 18
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 19
 
 ```python
 from flask import Flask, request, jsonify
@@ -42,10 +42,10 @@ def disk_usage():
     return jsonify({"path": directory_path, "total_bytes": total_size})
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 30
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 31
 
 ```typescript
 import express from 'express';
@@ -81,13 +81,13 @@ app.post('/disk-usage', (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 
 ```csharp
 [HttpPost("process-file")]
@@ -101,10 +101,10 @@ public IActionResult ProcessFile([FromBody] string filePath)
     return Ok(new { Processed = result });
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 14
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 15
 
 ```python
 from flask import Flask, request, jsonify
@@ -123,10 +123,10 @@ def process_file():
     return jsonify({"processed": result})
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 15
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 16
 
 ```typescript
 import express from 'express';
@@ -147,13 +147,13 @@ app.post('/process-file', (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```csharp
 [HttpGet("read-log")]
@@ -164,10 +164,10 @@ public IActionResult ReadLog(string fileName, int page = 1, int pageSize = 20)
     return Ok(paged);
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 14
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 15
 
 ```python
 from flask import Flask, request, jsonify
@@ -186,10 +186,10 @@ def read_log():
     return jsonify(lines[start:end])
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 13
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 14
 
 ```typescript
 import express from 'express';
@@ -208,13 +208,13 @@ app.get('/read-log', (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 
 ```csharp
 [HttpPost("backup-directory")]
@@ -228,10 +228,10 @@ public IActionResult BackupDirectory([FromBody] string directoryPath)
     return Ok(new { ZipFile = zipPath });
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 20
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 21
 
 ```python
 from flask import Flask, request, jsonify
@@ -256,10 +256,10 @@ def backup_directory():
     return jsonify({"zip_file": zip_path})
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 26
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 27
 
 ```typescript
 import express from 'express';
@@ -291,13 +291,13 @@ app.post('/backup-directory', (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```csharp
 [HttpPost("ping")]
@@ -308,10 +308,10 @@ public IActionResult Ping([FromBody] string host)
     return Ok(new { Status = reply.Status.ToString(), Time = reply.RoundtripTime });
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 10
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 11
 
 ```python
 from flask import Flask, request, jsonify
@@ -326,10 +326,10 @@ def ping():
     return jsonify({"output": result.stdout.decode(), "error": result.stderr.decode()})
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 12
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 13
 
 ```typescript
 import express from 'express';
@@ -347,13 +347,13 @@ app.post('/ping', (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 14
-
 
 ```csharp
 [HttpPost("compress-files")]
@@ -371,10 +371,10 @@ public IActionResult CompressFiles([FromBody] List<string> filePaths)
     return Ok(new { ZipFile = zipPath });
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 16
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 17
 
 ```python
 from flask import Flask, request, jsonify
@@ -395,10 +395,10 @@ def compress_files():
     return jsonify({"zip_file": zip_path})
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 26
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 27
 
 ```typescript
 import express from 'express';
@@ -430,13 +430,13 @@ app.post('/compress-files', (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 
 ```csharp
 [HttpPost("monitor-process")]
@@ -447,10 +447,10 @@ public IActionResult MonitorProcess([FromBody] string processName)
     return Ok(list);
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 17
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 18
 
 ```python
 from flask import Flask, request, jsonify
@@ -472,10 +472,10 @@ def monitor_process():
     return jsonify(results)
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 12
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 13
 
 ```typescript
 import express from 'express';
@@ -493,13 +493,13 @@ app.post('/monitor-process', async (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```csharp
 [HttpPost("search-files")]
@@ -509,10 +509,10 @@ public IActionResult SearchFiles([FromBody] string searchPattern)
     return Ok(files);
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 14
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 15
 
 ```python
 from flask import Flask, request, jsonify
@@ -531,10 +531,10 @@ def search_files():
     return jsonify(result)
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 25
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 26
 
 ```typescript
 import express from 'express';
@@ -565,13 +565,13 @@ app.post('/search-files', (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 6
-
 
 ```csharp
 [HttpPost("manage-database")]
@@ -581,10 +581,10 @@ public IActionResult ManageDatabase([FromBody] string dbName)
     return Ok(new { Database = dbName, Status = "Success" });
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 8
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 9
 
 ```python
 from flask import Flask, request, jsonify
@@ -597,10 +597,10 @@ def manage_database():
     return jsonify({"database": db_name, "status": "Success"})
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 9
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 10
 
 ```typescript
 import express from 'express';
@@ -615,13 +615,13 @@ app.post('/manage-database', (req, res) => {
 
 ```
 
-
+---
 
 ### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-**💻 Dil:** `C#`  
+
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 5
-
 
 ```csharp
 [HttpPost("security-scan")]
@@ -630,10 +630,10 @@ public IActionResult SecurityScan([FromBody] string scanParams)
     return Ok(new { Params = scanParams, Result = "Scan complete. No threats found." });
 }
 ```
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 8
 
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 9
 
 ```python
 from flask import Flask, request, jsonify
@@ -646,10 +646,10 @@ def security_scan():
     return jsonify({"params": params, "result": "Scan complete. No threats found."})
 
 ```
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-**Satır Sayısı:** 9
 
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 10
 
 ```typescript
 import express from 'express';
