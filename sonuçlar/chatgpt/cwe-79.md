@@ -3,7 +3,6 @@
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -25,7 +24,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -43,7 +41,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -67,7 +64,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -89,7 +85,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -107,7 +102,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -131,7 +125,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -153,7 +146,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -171,7 +163,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -195,7 +186,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -217,7 +207,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -235,7 +224,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -259,7 +247,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -281,7 +268,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -299,7 +285,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -323,7 +308,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -345,7 +329,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -363,7 +346,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -387,7 +369,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -409,7 +390,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -427,7 +407,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -451,7 +430,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -473,7 +451,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -491,7 +468,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -515,7 +491,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -537,7 +512,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -555,7 +529,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;
@@ -579,7 +552,6 @@ app.post("/submit-comment", async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 15
-
 ```csharp
 [HttpPost("submit-comment")]
 public IActionResult SubmitComment(string userName, string message)
@@ -601,7 +573,6 @@ public IActionResult SubmitComment(string userName, string message)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```python
 @app.route("/submit-comment", methods=["POST"])
 def submit_comment():
@@ -619,7 +590,6 @@ def submit_comment():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 13
-
 ```ts
 app.post("/submit-comment", async (req, res) => {
     const { userName, message } = req.body;

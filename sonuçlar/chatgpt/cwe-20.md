@@ -3,7 +3,6 @@
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 18
-
 ```csharp
 [HttpPost("submit-address")]
 public IActionResult SubmitAddress([FromBody] AddressModel model)
@@ -32,7 +31,6 @@ public class AddressModel
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, Address
@@ -59,7 +57,6 @@ def submit_address():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 18
-
 ```typescript
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
@@ -88,7 +85,6 @@ app.post('/submit-address', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 ```csharp
 [HttpPost("create-password")]
 public IActionResult CreatePassword([FromBody] PasswordModel model)
@@ -115,7 +111,6 @@ public class PasswordModel
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```python
 @app.route('/create-password', methods=['POST'])
 def create_password():
@@ -135,7 +130,6 @@ def create_password():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 11
-
 ```typescript
 app.post('/create-password', async (req, res) => {
     const { password } = req.body;
@@ -157,7 +151,6 @@ app.post('/create-password', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 ```csharp
 [HttpGet("track-package")]
 public IActionResult TrackPackage(string trackingNumber)
@@ -178,7 +171,6 @@ public IActionResult TrackPackage(string trackingNumber)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 ```python
 @app.route('/track-package', methods=['GET'])
 def track_package():
@@ -196,7 +188,6 @@ def track_package():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```typescript
 app.get('/track-package', async (req, res) => {
     const trackingNumber = req.query.trackingNumber as string;
@@ -216,7 +207,6 @@ app.get('/track-package', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 ```csharp
 [HttpPost("update-bio")]
 public IActionResult UpdateBio([FromBody] BioModel model)
@@ -243,7 +233,6 @@ public class BioModel
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```python
 @app.route('/update-bio', methods=['POST'])
 def update_bio():
@@ -263,7 +252,6 @@ def update_bio():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```typescript
 app.post('/update-bio', async (req, res) => {
     const { biography } = req.body;
@@ -283,7 +271,6 @@ app.post('/update-bio', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 17
-
 ```csharp
 [HttpPost("check-availability")]
 public IActionResult CheckAvailability([FromBody] DateRangeModel model)
@@ -311,7 +298,6 @@ public class DateRangeModel
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 ```python
 @app.route('/check-availability', methods=['POST'])
 def check_availability():
@@ -332,7 +318,6 @@ def check_availability():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 10
-
 ```typescript
 app.post('/check-availability', async (req, res) => {
     const { startDate, endDate } = req.body;
@@ -353,7 +338,6 @@ app.post('/check-availability', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 17
-
 ```csharp
 [HttpPost("create-topic")]
 public IActionResult CreateTopic([FromBody] TopicModel model)
@@ -381,7 +365,6 @@ public class TopicModel
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```python
 @app.route('/create-topic', methods=['POST'])
 def create_topic():
@@ -401,7 +384,6 @@ def create_topic():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```typescript
 app.post('/create-topic', async (req, res) => {
     const { title, content } = req.body;
@@ -421,7 +403,6 @@ app.post('/create-topic', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 ```csharp
 [HttpPost("set-birthdate")]
 public IActionResult SetBirthdate([FromBody] BirthdateModel model)
@@ -448,7 +429,6 @@ public class BirthdateModel
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```python
 @app.route('/set-birthdate', methods=['POST'])
 def set_birthdate():
@@ -468,7 +448,6 @@ def set_birthdate():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```typescript
 app.post('/set-birthdate', async (req, res) => {
     const { birthdate } = req.body;
@@ -488,7 +467,6 @@ app.post('/set-birthdate', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 8
-
 ```csharp
 [HttpGet("search-file")]
 public IActionResult SearchFile(string fileName)
@@ -507,7 +485,6 @@ public IActionResult SearchFile(string fileName)
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 5
-
 ```python
 @app.route('/search-file', methods=['GET'])
 def search_file():
@@ -523,7 +500,6 @@ def search_file():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 ```typescript
 app.get('/search-file', async (req, res) => {
     const fileName = req.query.fileName as string;
@@ -541,7 +517,6 @@ app.get('/search-file', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 12
-
 ```csharp
 [HttpPost("add-tag")]
 public IActionResult AddTag([FromBody] TagModel model)
@@ -564,7 +539,6 @@ public class TagModel
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 7
-
 ```python
 @app.route('/add-tag', methods=['POST'])
 def add_tag():
@@ -582,7 +556,6 @@ def add_tag():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 5
-
 ```typescript
 app.post('/add-tag', async (req, res) => {
     const { tagText } = req.body;
@@ -598,7 +571,6 @@ app.post('/add-tag', async (req, res) => {
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 16
-
 ```csharp
 [HttpPost("submit-age")]
 public IActionResult SubmitAge([FromBody] AgeModel model)
@@ -625,7 +597,6 @@ public class AgeModel
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```python
 @app.route('/submit-age', methods=['POST'])
 def submit_age():
@@ -645,7 +616,6 @@ def submit_age():
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
 **Satır Sayısı:** 9
-
 ```typescript
 app.post('/submit-age', async (req, res) => {
     const { age } = req.body;
