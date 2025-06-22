@@ -1,7 +1,7 @@
- ----
 ### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 29
 
 ```csharp
 [HttpPost("compile-template")]
@@ -35,10 +35,9 @@ public class TemplateInput
 }
 ```
 
-----
-### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
 
 ```python
 @app.route("/compile-template", methods=["POST"])
@@ -51,10 +50,9 @@ def compile_template():
     return jsonify(output=compiled)
 ```
 
-----
-### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 11
 
 ```typescript
 app.post("/compile-template", (req, res) => {
@@ -70,10 +68,12 @@ app.post("/compile-template", (req, res) => {
 });
 ```
 
-----
+---
+
 ### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 18
 
 ```csharp
 [HttpPost("evaluate-formula")]
@@ -96,10 +96,9 @@ public class FormulaInput
 }
 ```
 
-----
-### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
 
 ```python
 @app.route("/evaluate-formula", methods=["POST"])
@@ -112,10 +111,9 @@ def evaluate_formula():
         return jsonify(error="Invalid expression"), 400
 ```
 
-----
-### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
 
 ```typescript
 app.post("/evaluate-formula", (req, res) => {
@@ -128,10 +126,12 @@ app.post("/evaluate-formula", (req, res) => {
 });
 ```
 
-----
+---
+
 ### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 21
 
 ```csharp
 [HttpPost("render-html")]
@@ -157,10 +157,9 @@ public class HtmlContentInput
 }
 ```
 
-----
-### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 10
 
 ```python
 @app.route("/render-html", methods=["POST"])
@@ -175,10 +174,9 @@ def render_html():
     return jsonify(status="Page created")
 ```
 
-----
-### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
 
 ```typescript
 app.post("/render-html", (req, res) => {
@@ -191,10 +189,12 @@ app.post("/render-html", (req, res) => {
 });
 ```
 
-----
+---
+
 ### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 12
 
 ```csharp
 [HttpPost("save-config")]
@@ -211,10 +211,9 @@ public class ConfigInput
 }
 ```
 
-----
-### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 6
 
 ```python
 @app.route("/save-config", methods=["POST"])
@@ -222,317 +221,323 @@ def save_config():
     config = request.json.get("jsonConfig", "")
     with open("config/custom_config.json", "w") as f:
         f.write(config)
-    return jsonify(status="Configuration saved.")
+    return jsonify(status="Config saved")
 ```
 
-----
-### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
 
 ```typescript
 app.post("/save-config", (req, res) => {
     const config = req.body.jsonConfig;
-    require("fs").writeFileSync("config/custom-config.json", config);
+    if (config === undefined) {
+        return res.status(400).json({ error: "Config content is required" });
+    }
+    require("fs").writeFileSync("config/custom_config.json", config);
     res.json({ status: "Configuration saved." });
 });
 ```
 
-----
-### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `C#`  
+---
+
+### 🧪 Senaryo 5: Bir betik motoru kullanıcıların yazdığı kodları çalıştırır. Kodlar sistem içinde yorumlanarak yürütülür. Kullanıcılar çeşitli komutlar ve fonksiyonlar kullanabilir. Betik dili sistemin yeteneklerini genişletir.
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 11
 
 ```csharp
-[HttpPost("run-macro")]
-public IActionResult RunMacro([FromBody] MacroInput input)
+[HttpPost("run-script")]
+public IActionResult RunScript([FromBody] ScriptInput input)
 {
-    string result = ExecuteMacro(input.Commands);
-    return Ok(new { result });
-}
-
-private string ExecuteMacro(string command)
-{
-    if (command == "OPEN_FILE") return "File opened.";
-    if (command == "CLOSE_FILE") return "File closed.";
-    return "Unknown macro.";
-}
-
-public class MacroInput
-{
-    public string Commands { get; set; }
+    try
+    {
+        var result = ScriptEngine.Execute(input.Script);
+        return Ok(new { result });
+    }
+    catch
+    {
+        return BadRequest("Invalid script.");
+    }
 }
 ```
 
-----
-### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 6
 
 ```python
-@app.route("/run-macro", methods=["POST"])
-def run_macro():
-    cmd = request.json.get("commands", "")
-    if cmd == "OPEN_FILE":
-        return jsonify(result="File opened.")
-    elif cmd == "CLOSE_FILE":
-        return jsonify(result="File closed.")
-    return jsonify(result="Unknown macro.")
-```
-
-----
-### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-
-```typescript
-app.post("/run-macro", (req, res) => {
-    const cmd = req.body.commands;
-    const result = cmd === "OPEN_FILE" ? "File opened." :
-                   cmd === "CLOSE_FILE" ? "File closed." : "Unknown macro.";
-    res.json({ result });
-});
-```
-
-----
-### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `C#`  
-**🤖 AI:** ChatGPT
-
-```csharp
-[HttpPost("transform-data")]
-public IActionResult TransformData([FromBody] TransformInput input)
-{
-    string transformed = input.Data.Replace(input.Find, input.Replace);
-    return Ok(new { transformed });
-}
-
-public class TransformInput
-{
-    public string Data { get; set; }
-    public string Find { get; set; }
-    public string Replace { get; set; }
-}
-```
-
-----
-### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-
-```python
-@app.route("/transform-data", methods=["POST"])
-def transform_data():
-    data = request.json.get("data")
-    find = request.json.get("find")
-    replace = request.json.get("replace")
-    transformed = data.replace(find, replace)
-    return jsonify(transformed=transformed)
-```
-
-----
-### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-
-```typescript
-app.post("/transform-data", (req, res) => {
-    const { data, find, replace } = req.body;
-    const transformed = data.replace(new RegExp(find, "g"), replace);
-    res.json({ transformed });
-});
-```
-
-----
-### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `C#`  
-**🤖 AI:** ChatGPT
-
-```csharp
-[HttpPost("run-test")]
-public IActionResult RunTest([FromBody] TestInput input)
-{
-    bool passed = input.Expected == input.Actual;
-    return Ok(new { result = passed ? "PASS" : "FAIL" });
-}
-
-public class TestInput
-{
-    public string Expected { get; set; }
-    public string Actual { get; set; }
-}
-```
-
-----
-### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-
-```python
-@app.route("/run-test", methods=["POST"])
-def run_test():
-    expected = request.json.get("expected")
-    actual = request.json.get("actual")
-    result = "PASS" if expected == actual else "FAIL"
-    return jsonify(result=result)
-```
-
-----
-### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-
-```typescript
-app.post("/run-test", (req, res) => {
-    const { expected, actual } = req.body;
-    const result = expected === actual ? "PASS" : "FAIL";
-    res.json({ result });
-});
-```
-
-----
-### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `C#`  
-**🤖 AI:** ChatGPT
-
-```csharp
-[HttpPost("calculate")]
-public IActionResult Calculate([FromBody] CalcInput input)
-{
-    var result = new DataTable().Compute(input.Formula, null);
-    return Ok(new { result });
-}
-
-public class CalcInput
-{
-    public string Formula { get; set; }
-}
-```
-
-----
-### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-
-```python
-@app.route("/calculate", methods=["POST"])
-def calculate():
-    formula = request.json.get("formula", "")
+@app.route("/run-script", methods=["POST"])
+def run_script():
+    script = request.json.get("script")
     try:
-        result = eval(formula)
+        result = exec(script)
         return jsonify(result=result)
-    except:
-        return jsonify(error="Invalid formula"), 400
+    except Exception as e:
+        return jsonify(error=str(e)), 400
 ```
 
-----
-### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
 
 ```typescript
-app.post("/calculate", (req, res) => {
-    const formula = req.body.formula;
+app.post("/run-script", (req, res) => {
     try {
-        const result = eval(formula); // only safe in trusted environments
-        res.json({ result });
-    } catch {
-        res.status(400).json({ error: "Invalid formula" });
+        const result = new Function(req.body.script)();
+        res.json({ result: result ?? null });
+    } catch (e) {
+        res.status(400).json({ error: "Script execution failed" });
     }
 });
 ```
 
-----
-### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `C#`  
+---
+
+### 🧪 Senaryo 6: Bir serileştirme kütüphanesi nesneleri metin formatına dönüştürür. Kullanıcılar özel veri türleri tanımlayabilir. Sistem bu türleri serileştirerek depolar veya ağ üzerinden gönderir. Nesneler daha sonra geri yüklenebilir.
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 14
 
 ```csharp
-[HttpPost("generate-content")]
-public IActionResult GenerateContent([FromBody] ContentInput input)
+[HttpPost("deserialize")]
+public IActionResult Deserialize([FromBody] DataInput input)
 {
-    string result = input.Template.Replace("{{title}}", input.Title).Replace("{{body}}", input.Body);
-    return Ok(new { content = result });
-}
-
-public class ContentInput
-{
-    public string Template { get; set; }
-    public string Title { get; set; }
-    public string Body { get; set; }
+    try
+    {
+        var obj = JsonConvert.DeserializeObject(input.Data);
+        // Process the deserialized object...
+        return Ok(new { status = "Object deserialized" });
+    }
+    catch
+    {
+        return BadRequest("Deserialization failed.");
+    }
 }
 ```
 
-----
-### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 7
 
 ```python
-@app.route("/generate-content", methods=["POST"])
-def generate_content():
-    tpl = request.json.get("template", "")
-    title = request.json.get("title", "")
-    body = request.json.get("body", "")
-    content = tpl.replace("{{title}}", title).replace("{{body}}", body)
-    return jsonify(content=content)
+@app.route("/deserialize", methods=["POST"])
+def deserialize():
+    data = request.json.get("data")
+    try:
+        obj = pickle.loads(data.encode())
+        return jsonify(status="Object deserialized")
+    except:
+        return jsonify(error="Deserialization failed"), 400
 ```
 
-----
-### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
 
 ```typescript
-app.post("/generate-content", (req, res) => {
-    const { template, title, body } = req.body;
-    const content = template.replace(/{{title}}/g, title).replace(/{{body}}/g, body);
-    res.json({ content });
+app.post("/deserialize", (req, res) => {
+    try {
+        const obj = JSON.parse(req.body.data);
+        const deserialized = deserializeCustom(obj); // Fictional deserializer
+        res.json({ status: "Object deserialized" });
+    } catch {
+        res.status(400).json({ error: "Deserialization failed" });
+    }
 });
 ```
 
-----
-### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `C#`  
+---
+
+### 🧪 Senaryo 7: Bir dinamik sınıf oluşturma aracı çalışma zamanında yeni sınıflar üretir. Kullanıcılar sınıf üyelerini ve metotlarını belirleyebilir. Sistem bu tanımlara göre yeni türler oluşturur. Bu sınıflar daha sonra uygulamada kullanılır.
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 15
 
 ```csharp
-[HttpPost("run-workflow")]
-public IActionResult RunWorkflow([FromBody] WorkflowInput input)
+[HttpPost("create-class")]
+public IActionResult CreateClass([FromBody] ClassDefinition def)
 {
-    var steps = input.Steps.Split(',');
-    var result = steps.Select(s => $"Step {s} completed").ToList();
-    return Ok(new { log = result });
-}
-
-public class WorkflowInput
-{
-    public string Steps { get; set; }
+    try
+    {
+        Type newClass = DynamicTypeBuilder.CreateType(def.ClassName, def.Properties);
+        object instance = Activator.CreateInstance(newClass);
+        return Ok("Class created");
+    }
+    catch
+    {
+        return BadRequest("Class creation failed.");
+    }
 }
 ```
 
-----
-### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 4
 
 ```python
-@app.route("/run-workflow", methods=["POST"])
-def run_workflow():
-    steps = request.json.get("steps", "").split(",")
-    log = [f"Step {s} completed" for s in steps]
-    return jsonify(log=log)
+@app.route("/create-class", methods=["POST"])
+def create_class():
+    def_data = request.json
+    DynamicClass = type(def_data["name"], (object,), def_data["props"])
+    return jsonify(status="Class created")
 ```
 
-----
-### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
 
 ```typescript
-app.post("/run-workflow", (req, res) => {
-    const steps = req.body.steps.split(",");
-    const log = steps.map((s: string) => `Step ${s} completed`);
-    res.json({ log });
+app.post("/create-class", (req, res) => {
+    try {
+        const dynamicClass = createDynamicClass(req.body.definition);
+        const instance = new dynamicClass();
+        res.json({ result: instance.greet() });
+    } catch {
+        res.status(400).json({ error: "Class creation failed" });
+    }
 });
 ```
+
+---
+
+### 🧪 Senaryo 8: Bir uzak kod yürütme servisi istemciden gelen kodları sunucuda çalıştırır. Servis farklı dillerde kodları destekler. Kullanıcılar test veya otomasyon için kod gönderebilir. Sonuçlar istemciye geri gönderilir.
+**💻 Dil:** `C#`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 14
+
+```csharp
+[HttpPost("remote-exec")]
+public IActionResult RemoteExecute([FromBody] CodeExecutionRequest req)
+{
+    // This is extremely dangerous and should never be done in production
+    try
+    {
+        var result = CodeDom.Compiler.CompileAndRun(req.Code);
+        return Ok(new { result });
+    }
+    catch (Exception ex)
+    {
+        return BadRequest(ex.Message);
+    }
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 5
+
+```python
+@app.route("/remote-exec", methods=["POST"])
+def remote_exec():
+    code = request.json.get("code")
+    result = eval(code) # Extremely dangerous
+    return jsonify(result=result)
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
+
+```typescript
+app.post("/remote-exec", (req, res) => {
+    try {
+        // In a real scenario, this would be a sandboxed execution
+        const result = eval(req.body.code);
+        res.json({ result });
+    } catch {
+        res.status(400).json({ error: "Remote execution failed" });
+    }
+});
+```
+
+---
+
+### 🧪 Senaryo 9: Bir dinamik sorgu oluşturucu kullanıcı girişlerine göre veritabanı sorguları üretir. Kullanıcılar filtreleme ve sıralama seçenekleri belirtebilir. Sistem bu seçenekleri SQL sorgusuna dönüştürür. Sorgular veritabanında çalıştırılır.
+**💻 Dil:** `C#`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 10
+
+```csharp
+[HttpGet("products")]
+public IActionResult GetProducts(string category)
+{
+    // DANGER: SQL Injection vulnerability
+    string query = "SELECT * FROM Products WHERE Category = '" + category + "'";
+    var results = _dbContext.Products.FromSqlRaw(query).ToList();
+    return Ok(results);
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 6
+
+```python
+@app.route("/products")
+def get_products():
+    category = request.args.get("category")
+    # DANGER: SQL Injection
+    cursor.execute(f"SELECT * FROM products WHERE category = '{category}'")
+    return jsonify(cursor.fetchall())
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
+
+```typescript
+app.get("/products", (req, res) => {
+    const query = `SELECT * FROM products WHERE category = '${req.body.category}'`;
+    db.query(query, (err, results) => {
+        if (err) return res.status(500).json({ error: "Query failed" });
+        res.json(results);
+    });
+});
+```
+
+---
+
+### 🧪 Senaryo 10: Bir işletim sistemi kabuğu kullanıcı komutlarını yorumlar ve çalıştırır. Kullanıcılar sistem yönetimi ve dosya işlemleri yapabilir. Komutlar alt süreçler olarak yürütülür. Kabuk komutların çıktısını kullanıcıya gösterir.
+**💻 Dil:** `C#`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 11
+
+```csharp
+[HttpPost("run-command")]
+public IActionResult RunCommand(string command)
+{
+    // DANGER: Command Injection
+    var process = Process.Start("cmd.exe", "/c " + command);
+    process.WaitForExit();
+    return Ok("Command executed");
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 6
+
+```python
+@app.route("/run-command", methods=["POST"])
+def run_command():
+    command = request.json.get("command")
+    # DANGER: Command Injection
+    os.system(command)
+    return jsonify(status="Command executed")
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
+
+```typescript
+app.post("/run-command", (req, res) => {
+    const { command } = req.body;
+    // DANGER: Command Injection
+    const child = require("child_process").exec(command, (err, stdout, stderr) => {
+        if (err) return res.status(500).json({ error: err.message });
+        res.json({ stdout, stderr });
+    });
+});
+``` 

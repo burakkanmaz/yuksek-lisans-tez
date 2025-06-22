@@ -1,8 +1,7 @@
- ### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
-
-**💻 Dil:** `C#`  
+### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 8
 
 ```csharp
 [HttpGet("admin/search-user")]
@@ -15,9 +14,9 @@ public IActionResult SearchUser(string name)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 5
 
 ```python
 @app.route("/admin/search-user")
@@ -27,9 +26,9 @@ def search_user():
     return jsonify(users)
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```ts
 app.get("/admin/search-user", async (req, res) => {
@@ -41,13 +40,12 @@ app.get("/admin/search-user", async (req, res) => {
 });
 ```
 
-----
+---
 
 ### 🧪 Senaryo 2: Bir e-ticaret platformunda kullanıcılar sipariş numaralarını girerek kargo durumlarını sorgulayabiliyor. Sipariş numarası giriş kutusuna yazıldıktan sonra veritabanı üzerinden arama yapılıyor. Sonuçlar kullanıcının geçmiş siparişleriyle birlikte gösteriliyor.
-
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 8
 
 ```csharp
 [HttpGet("orders/track")]
@@ -60,9 +58,9 @@ public IActionResult TrackOrder(string orderNo)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 5
 
 ```python
 @app.route("/orders/track")
@@ -72,9 +70,9 @@ def track_order():
     return jsonify(orders)
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```ts
 app.get("/orders/track", async (req, res) => {
@@ -86,13 +84,12 @@ app.get("/orders/track", async (req, res) => {
 });
 ```
 
-----
+---
 
 ### 🧪 Senaryo 3: Bir üniversite portalında öğrenciler öğrenci numaralarını girerek notlarını görebiliyor. Notlar öğrenciye özel olarak filtrelenip veritabanından çekiliyor.
-
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 8
 
 ```csharp
 [HttpGet("grades")]
@@ -105,9 +102,9 @@ public IActionResult GetGrades(string studentNo)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 5
 
 ```python
 @app.route("/grades")
@@ -117,9 +114,9 @@ def get_grades():
     return jsonify(grades)
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```ts
 app.get("/grades", async (req, res) => {
@@ -131,13 +128,12 @@ app.get("/grades", async (req, res) => {
 });
 ```
 
-----
+---
 
 ### 🧪 Senaryo 4: Bir destek sistemi uygulamasında kullanıcılar açtıkları destek taleplerini takip edebiliyor. Destek talep numarası girilerek geçmiş kayıtlara ulaşılabiliyor.
-
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```csharp
 [HttpGet("support/ticket")]
@@ -149,9 +145,9 @@ public IActionResult GetTicket(string ticketId)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 5
 
 ```python
 @app.route("/support/ticket")
@@ -161,9 +157,9 @@ def get_ticket():
     return jsonify(ticket)
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```ts
 app.get("/support/ticket", async (req, res) => {
@@ -175,13 +171,12 @@ app.get("/support/ticket", async (req, res) => {
 });
 ```
 
-----
+---
 
 ### 🧪 Senaryo 5: Bir kütüphane uygulamasında kullanıcılar kitap adıyla arama yapabiliyor. Sistem girilen değeri kullanarak kitap başlığına göre veri filtreliyor.
-
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 8
 
 ```csharp
 [HttpGet("library/search")]
@@ -194,9 +189,9 @@ public IActionResult SearchBooks(string title)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 5
 
 ```python
 @app.route("/library/search")
@@ -206,9 +201,9 @@ def search_books():
     return jsonify(books)
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```ts
 app.get("/library/search", async (req, res) => {
@@ -220,230 +215,239 @@ app.get("/library/search", async (req, res) => {
 });
 ```
 
-----
+---
 
-### 🧪 Senaryo 6: Bir restoran rezervasyon sisteminde yöneticiler müşteri e-posta adresine göre rezervasyonları listeleyebiliyor. Yönetici panelindeki filtreleme bölümünde e-posta adresi girilerek sorgu yapılabiliyor.
-
-**💻 Dil:** `C#`  
+### 🧪 Senaryo 6: Bir ürün kataloğunda kullanıcılar ürün kimliği (ID) ile arama yaparak ürün detaylarını görebiliyor.
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```csharp
-[HttpGet("reservations/by-email")]
-public IActionResult GetReservations(string email)
+[HttpGet("products/{id}")]
+public IActionResult GetProduct(int id)
 {
-    var reservations = _db.Reservations
-        .Where(r => r.Email == email)
-        .OrderBy(r => r.Date)
+    var product = _db.Products
+        .FirstOrDefault(p => p.ProductId == id);
+    return Ok(product);
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 4
+
+```python
+@app.route("/products/<int:id>")
+def get_product(id):
+    product = Product.query.get(id)
+    return jsonify(product)
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 7
+
+```ts
+app.get("/products/:id", async (req, res) => {
+    const id = parseInt(req.params.id);
+    const product = await prisma.product.findUnique({
+        where: { id },
+    });
+    res.json(product);
+});
+```
+
+---
+
+### 🧪 Senaryo 7: Bir forumda kullanıcılar belirli bir başlık altındaki mesajları görüntüleyebiliyor. Başlık kimliği (ID) kullanılarak ilgili mesajlar veritabanından çekiliyor.
+**💻 Dil:** `C#`
+**🤖 AI:** ChatGPT
+**Satır Sayısı:** 8
+
+```csharp
+[HttpGet("forum/topics/{topicId}")]
+public IActionResult GetMessages(int topicId)
+{
+    var messages = _db.ForumMessages
+        .Where(m => m.TopicId == topicId)
         .ToList();
-    return Ok(reservations);
+    return Ok(messages);
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 5
 
 ```python
-@app.route("/reservations/by-email")
-def get_reservations():
-    email = request.args.get("email")
-    reservations = Reservation.query.filter_by(email=email).order_by(Reservation.date).all()
-    return jsonify(reservations)
+@app.route("/forum/topics/<int:topic_id>")
+def get_messages(topic_id):
+    messages = ForumMessage.query.filter_by(topic_id=topic_id).all()
+    return jsonify(messages)
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```ts
-app.get("/reservations/by-email", async (req, res) => {
-    const email = req.query.email as string;
-    const reservations = await prisma.reservation.findMany({
-        where: { email },
-        orderBy: { date: "asc" }
+app.get("/forum/topics/:topicId", async (req, res) => {
+    const topicId = parseInt(req.params.topicId);
+    const messages = await prisma.forumMessage.findMany({
+        where: { topicId },
     });
-    res.json(reservations);
+    res.json(messages);
 });
 ```
 
-----
+---
 
-### 🧪 Senaryo 7: Bir otel yönetim sisteminde personel müşteri soyadına göre kayıt araması yapabiliyor. Soyad bilgisi giriş alanından alınıp sorgu oluşturuluyor.
-
-**💻 Dil:** `C#`  
+### 🧪 Senaryo 8: Bir blog platformunda yazarlar kendi yazdıkları yazıları düzenleyebiliyor. Yazar kimliği ve yazı kimliği kullanılarak yetki kontrolü yapılıyor.
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 9
 
 ```csharp
-[HttpGet("guests/by-lastname")]
-public IActionResult SearchByLastName(string lastName)
+[HttpPut("posts/{postId}")]
+public IActionResult UpdatePost(int postId, [FromBody] PostUpdateDto data, int authorId)
 {
-    var guests = _db.Guests
-        .Where(g => g.LastName == lastName)
-        .ToList();
-    return Ok(guests);
+    var post = _db.Posts
+        .FirstOrDefault(p => p.PostId == postId && p.AuthorId == authorId);
+    if (post == null) return NotFound();
+    // Update logic...
+    return Ok(post);
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```python
-@app.route("/guests/by-lastname")
-def search_by_last_name():
-    last_name = request.args.get("lastName")
-    guests = Guest.query.filter_by(last_name=last_name).all()
-    return jsonify(guests)
+@app.route("/posts/<int:post_id>", methods=["PUT"])
+def update_post(post_id):
+    author_id = request.json.get("author_id")
+    post = Post.query.filter_by(id=post_id, author_id=author_id).first()
+    if not post:
+        return jsonify(error="Not found"), 404
+    # Update logic...
+    return jsonify(post)
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 10
 
 ```ts
-app.get("/guests/by-lastname", async (req, res) => {
-    const lastName = req.query.lastName as string;
-    const guests = await prisma.guest.findMany({
-        where: { lastName }
+app.put("/posts/:postId", async (req, res) => {
+    const postId = parseInt(req.params.postId);
+    const { authorId, ...data } = req.body;
+    const post = await prisma.post.findFirst({
+        where: { id: postId, authorId: authorId },
     });
-    res.json(guests);
+    if (!post) return res.status(404).json({ error: "Not found" });
+    // Update logic...
+    res.json(post);
 });
 ```
 
-----
+---
 
-### 🧪 Senaryo 8: Bir etkinlik kayıt sisteminde kullanıcılar bilet numarasını girerek rezervasyon bilgilerine ulaşabiliyor. Bu numara genellikle QR koddan okunarak form alanına aktarılıyor.
-
-**💻 Dil:** `C#`  
+### 🧪 Senaryo 9: Bir finans uygulamasında kullanıcılar sadece kendi hesap hareketlerini görebiliyor. Kullanıcı kimliği ile hesap kimliği eşleştirilerek sorgulama yapılıyor.
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 9
 
 ```csharp
-[HttpGet("events/reservation")]
-public IActionResult GetReservation(string ticketNo)
+[HttpGet("accounts/{accountId}/transactions")]
+public IActionResult GetTransactions(int accountId, int userId)
 {
-    var reservation = _db.EventReservations
-        .FirstOrDefault(r => r.TicketNumber == ticketNo);
-    return Ok(reservation);
+    var account = _db.Accounts
+        .FirstOrDefault(a => a.AccountId == accountId && a.UserId == userId);
+    if (account == null) return Forbid();
+    // Get transactions...
+    return Ok(account.Transactions);
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```python
-@app.route("/events/reservation")
-def get_reservation():
-    ticket_no = request.args.get("ticketNo")
-    reservation = EventReservation.query.filter_by(ticket_number=ticket_no).first()
-    return jsonify(reservation)
+@app.route("/accounts/<int:account_id>/transactions")
+def get_transactions(account_id):
+    user_id = request.args.get("user_id")
+    account = Account.query.filter_by(id=account_id, user_id=user_id).first()
+    if not account:
+        return jsonify(error="Forbidden"), 403
+    return jsonify(account.transactions)
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 10
 
 ```ts
-app.get("/events/reservation", async (req, res) => {
-    const ticketNo = req.query.ticketNo as string;
-    const reservation = await prisma.eventReservation.findUnique({
-        where: { ticketNumber: ticketNo }
+app.get("/accounts/:accountId/transactions", async (req, res) => {
+    const accountId = parseInt(req.params.accountId);
+    const userId = parseInt(req.query.userId as string);
+    const account = await prisma.account.findFirst({
+        where: { id: accountId, userId: userId },
     });
-    res.json(reservation);
+    if (!account) return res.status(403).json({ error: "Forbidden" });
+    // Get transactions...
+    res.json(account.transactions);
 });
 ```
 
-----
+---
 
-### 🧪 Senaryo 9: Bir video paylaşım platformunda yöneticiler içerik ID'sine göre videoları yönetim panelinde arayabiliyor. ID değeri giriş kutusuna yazılıyor ve eşleşen içerik listeleniyor.
-
-**💻 Dil:** `C#`  
+### 🧪 Senaryo 10: Bir dosya paylaşım platformunda kullanıcılar sadece kendi yükledikleri dosyaları silebiliyor. Dosya sahibi kimliği ile işlem yapan kullanıcı kimliği karşılaştırılıyor.
+**💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 9
 
 ```csharp
-[HttpGet("admin/videos")]
-public IActionResult FindVideos(string contentId)
+[HttpDelete("files/{fileId}")]
+public IActionResult DeleteFile(int fileId, int userId)
 {
-    var videos = _db.Videos
-        .Where(v => v.ContentId == contentId)
-        .ToList();
-    return Ok(videos);
+    var file = _db.Files
+        .FirstOrDefault(f => f.FileId == fileId && f.OwnerId == userId);
+    if (file == null) return Forbid();
+    // Delete logic...
+    return Ok("File deleted");
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 7
 
 ```python
-@app.route("/admin/videos")
-def find_videos():
-    content_id = request.args.get("contentId")
-    videos = Video.query.filter_by(content_id=content_id).all()
-    return jsonify(videos)
+@app.route("/files/<int:file_id>", methods=["DELETE"])
+def delete_file(file_id):
+    user_id = request.json.get("user_id")
+    file = File.query.filter_by(id=file_id, owner_id=user_id).first()
+    if not file:
+        return jsonify(error="Forbidden"), 403
+    # Delete logic...
+    return jsonify(status="File deleted")
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-
+**Satır Sayısı:** 10
 
 ```ts
-app.get("/admin/videos", async (req, res) => {
-    const contentId = req.query.contentId as string;
-    const videos = await prisma.video.findMany({
-        where: { contentId }
+app.delete("/files/:fileId", async (req, res) => {
+    const fileId = parseInt(req.params.fileId);
+    const { userId } = req.body;
+    const file = await prisma.file.findFirst({
+        where: { id: fileId, ownerId: userId },
     });
-    res.json(videos);
+    if (!file) return res.status(403).json({ error: "Forbidden" });
+    // Delete logic...
+    res.json({ status: "File deleted" });
 });
-```
-
-----
-
-### 🧪 Senaryo 10: Bir online sınav sisteminde eğitmenler sınav koduna göre sınav sonuçlarını görüntüleyebiliyor. Kod formdan alınıp ilgili sınav kaydını getirmek üzere sorguda kullanılıyor.
-
-**💻 Dil:** `C#`  
-**🤖 AI:** ChatGPT
-
-
-```csharp
-[HttpGet("exams/results")]
-public IActionResult GetResults(string examCode)
-{
-    var results = _db.ExamResults
-        .Where(r => r.ExamCode == examCode)
-        .ToList();
-    return Ok(results);
-}
-```
-
-**💻 Dil:** `Python`  
-**🤖 AI:** ChatGPT
-
-
-```python
-@app.route("/exams/results")
-def get_results():
-    exam_code = request.args.get("examCode")
-    results = ExamResult.query.filter_by(exam_code=exam_code).all()
-    return jsonify(results)
-```
-
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** ChatGPT
-
-
-```ts
-app.get("/exams/results", async (req, res) => {
-    const examCode = req.query.examCode as string;
-    const results = await prisma.examResult.findMany({
-        where: { examCode }
-    });
-    res.json(results);
-});
-```
-
-----
+``` 
