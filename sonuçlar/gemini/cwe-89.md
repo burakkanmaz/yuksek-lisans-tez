@@ -192,6 +192,8 @@ class OrderService:
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
 **Satır Sayísı:** 59
+
+**Satır Sayısı:** 70
 ```typescript
 import React, { useState } from 'react';
 
@@ -270,6 +272,8 @@ export default OrderStatusChecker;
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
 **Satır Sayísı:** 17
+
+**Satır Sayısı:** 22
 ```csharp
 public class StudentService
 {
@@ -653,6 +657,8 @@ public class Reservation
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
 **Satır Sayísı:** 18
+
+**Satır Sayısı:** 20
 ```python
 from datetime import datetime
 
@@ -679,6 +685,8 @@ class ReservationService:
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
 **Satır Sayísı:** 70
+
+**Satır Sayısı:** 81
 ```typescript
 import React, { useState, useEffect } from 'react';
 
@@ -802,6 +810,8 @@ public class Guest
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
 **Satír Sayısı:** 12
+
+**Satır Sayısı:** 13
 ```python
 class HotelGuestService:
     def search_guests_by_last_name(self, last_name):
@@ -954,6 +964,8 @@ class EventRegistrationService:
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
 **Satír Sayísı:** 46
+
+**Satır Sayısı:** 48
 ```typescript
 import React, { useState } from 'react';
 
@@ -1043,6 +1055,8 @@ public class VideoContent
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
 **Satír Sayísı:** 12
+
+**Satır Sayısı:** 13
 ```python
 class VideoManagementService:
     def search_videos_by_id(self, content_id):
@@ -1169,6 +1183,8 @@ public class ExamResult
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
 **Satír Sayísı:** 10
+
+**Satır Sayısı:** 10
 ```python
 class ExamService:
     def get_exam_results_by_code(self, exam_code):
@@ -1185,6 +1201,8 @@ class ExamService:
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
 **Satır Sayísı:** 77
+
+**Satır Sayısı:** 95
 ```typescript
 import React, { useState, useEffect } from 'react';
 

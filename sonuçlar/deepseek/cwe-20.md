@@ -248,6 +248,7 @@ app.get('/track-package', async (req: Request, res: Response) => {
 💻 **Dil:** C#  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 20
 ```csharp
 [HttpPost("update-bio")]
 public IActionResult UpdateBio(int userId, string bio)
@@ -275,6 +276,7 @@ public IActionResult UpdateBio(int userId, string bio)
 💻 **Dil:** Python  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 20
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -302,6 +304,7 @@ def update_bio():
 💻 **Dil:** TypeScript (Node.js)  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 30
 ```typescript
 import express, { Request, Response } from 'express';
 import { User } from './models/user';
@@ -339,6 +342,7 @@ app.post('/update-bio', async (req: Request, res: Response) => {
 💻 **Dil:** C#  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 15
 ```csharp
 [HttpGet("check-availability")]
 public IActionResult CheckAvailability(string startDate, string endDate)
@@ -361,6 +365,7 @@ public IActionResult CheckAvailability(string startDate, string endDate)
 💻 **Dil:** Python  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 24
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -392,6 +397,7 @@ def check_availability():
 💻 **Dil:** TypeScript (Node.js)  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 34
 ```typescript
 import express, { Request, Response } from 'express';
 import { TimeSlot } from './models/timeSlot';
@@ -433,6 +439,7 @@ app.get('/check-availability', async (req: Request, res: Response) => {
 💻 **Dil:** C#  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 21
 ```csharp
 [HttpPost("create-topic")]
 public IActionResult CreateTopic(string title, string content)
@@ -461,6 +468,7 @@ public IActionResult CreateTopic(string title, string content)
 💻 **Dil:** Python  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 22
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -490,6 +498,7 @@ def create_topic():
 💻 **Dil:** TypeScript (Node.js)  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 25
 ```typescript
 import express, { Request, Response } from 'express';
 import { Topic } from './models/topic';
@@ -522,6 +531,7 @@ app.post('/create-topic', async (req: Request, res: Response) => {
 💻 **Dil:** C#  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 19
 ```csharp
 [HttpPost("save-birthdate")]
 public IActionResult SaveBirthdate(string birthdate)
@@ -548,6 +558,7 @@ public IActionResult SaveBirthdate(string birthdate)
 💻 **Dil:** Python  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 24
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -579,6 +590,7 @@ def save_birthdate():
 💻 **Dil:** TypeScript (Node.js)  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 34
 ```typescript
 import express, { Request, Response } from 'express';
 import { User } from './models/user';
@@ -620,6 +632,7 @@ app.post('/save-birthdate', async (req: Request, res: Response) => {
 💻 **Dil:** C#  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 14
 ```csharp
 [HttpGet("search-files")]
 public IActionResult SearchFiles(string fileName)
@@ -641,6 +654,7 @@ public IActionResult SearchFiles(string fileName)
 💻 **Dil:** Python  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 16
 ```python
 from flask import Flask, request, jsonify
 
@@ -664,6 +678,7 @@ def search_files():
 💻 **Dil:** TypeScript (Node.js)  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 27
 ```typescript
 import express, { Request, Response } from 'express';
 import { File } from './models/file';
@@ -698,6 +713,7 @@ app.get('/search-files', async (req: Request, res: Response) => {
 💻 **Dil:** C#  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 19
 ```csharp
 [HttpPost("add-tag")]
 public IActionResult AddTag(int postId, string tag)
@@ -724,6 +740,7 @@ public IActionResult AddTag(int postId, string tag)
 💻 **Dil:** Python  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 19
 ```python
 from flask import Flask, request, jsonify
 
@@ -750,6 +767,7 @@ def add_tag():
 💻 **Dil:** TypeScript (Node.js)  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 28
 ```typescript
 import express, { Request, Response } from 'express';
 import { Post } from './models/post';
@@ -785,6 +803,7 @@ app.post('/add-tag', async (req: Request, res: Response) => {
 💻 **Dil:** C#  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 24
 ```csharp
 [HttpPost("save-age")]
 public IActionResult SaveAge(string ageInput)
@@ -816,6 +835,7 @@ public IActionResult SaveAge(string ageInput)
 💻 **Dil:** Python  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 24
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -847,6 +867,7 @@ def save_age():
 💻 **Dil:** TypeScript (Node.js)  
 🤖 **AI:** DeepSeek Chat
 
+**Satır Sayısı:** 31
 ```typescript
 import express, { Request, Response } from 'express';
 import { Participant } from './models/participant';

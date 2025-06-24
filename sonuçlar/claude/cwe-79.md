@@ -403,4 +403,3 @@ app.post('/share-experience', (req: Request, res: Response) => {
     res.redirect('/restaurants');
 });
 ```
-

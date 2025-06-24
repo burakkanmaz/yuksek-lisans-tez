@@ -619,4 +619,3 @@ const getExamResults = async (examCode: string) => {
   }));
 };
 ```
-

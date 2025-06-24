@@ -6,6 +6,7 @@
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 31
 ```csharp
 [HttpPost("search-files")]
 public IActionResult SearchFiles(string fileName)
@@ -46,6 +47,7 @@ public IActionResult SearchFiles(string fileName)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 31
 ```python
 import os
 import glob
@@ -86,6 +88,7 @@ def search_files():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 48
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -143,6 +146,7 @@ app.post('/search-files', async (req, res) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 54
 ```csharp
 [HttpPost("search-logs")]
 public IActionResult SearchLogs(string pattern)
@@ -206,6 +210,7 @@ public class LogEntry
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 35
 ```python
 import subprocess
 import os
@@ -250,6 +255,7 @@ def search_logs():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 60
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -319,6 +325,7 @@ app.post('/search-logs', (req, res) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 45
 ```csharp
 [HttpPost("monitor-process")]
 public IActionResult MonitorProcess(string processName)
@@ -373,6 +380,7 @@ public class ProcessInfo
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 48
 ```python
 import psutil
 import subprocess
@@ -430,6 +438,7 @@ def monitor_process():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 70
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -509,6 +518,7 @@ app.post('/monitor-process', (req, res) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 75
 ```csharp
 [HttpPost("create-backup")]
 public async Task<IActionResult> CreateBackup(string sourceDirectory, string backupDirectory)
@@ -593,6 +603,7 @@ public class BackupResult
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 73
 ```python
 import subprocess
 import os
@@ -675,6 +686,7 @@ def create_backup():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 92
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -776,6 +788,7 @@ app.post('/create-backup', (req, res) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 78
 ```csharp
 [HttpPost("network-test")]
 public async Task<IActionResult> NetworkTest(string ipAddress)
@@ -863,6 +876,7 @@ public class PingDetail
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 92
 ```python
 import subprocess
 import re
@@ -964,6 +978,7 @@ def network_test():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 116
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -1089,6 +1104,7 @@ app.post('/network-test', (req, res) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 123
 ```csharp
 [HttpPost("convert-file")]
 public async Task<IActionResult> ConvertFile(string sourcePath, string targetPath, string format)
@@ -1221,6 +1237,7 @@ public class ConversionResult
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 96
 ```python
 import subprocess
 import os
@@ -1326,6 +1343,7 @@ def is_audio_format(extension):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 97
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -1432,6 +1450,7 @@ function isAudioFormat(extension: string): boolean {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 144
 ```csharp
 [HttpPost("analyze-disk-usage")]
 public IActionResult AnalyzeDiskUsage(string directoryPath)
@@ -1585,6 +1604,7 @@ public class DirectoryUsage
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 99
 ```python
 import os
 import subprocess
@@ -1693,6 +1713,7 @@ def analyze_disk_usage():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 146
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -1848,6 +1869,7 @@ app.post('/analyze-disk-usage', (req, res) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 133
 ```csharp
 [HttpPost("backup-database")]
 public async Task<IActionResult> BackupDatabase(string databaseName, string backupPath, string dbType = "mssql")
@@ -1990,6 +2012,7 @@ public class DatabaseBackupResult
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 155
 ```python
 import subprocess
 import os
@@ -2154,6 +2177,7 @@ def save_backup_record(result):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 172
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -2339,6 +2363,7 @@ function saveBackupRecord(result: DatabaseBackupResult): void {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 188
 ```csharp
 [HttpPost("check-mailbox")]
 public async Task<IActionResult> CheckMailbox(string mailboxName)
@@ -2536,6 +2561,7 @@ public class MailboxStatusResult
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 185
 ```python
 import subprocess
 import re
@@ -2730,6 +2756,7 @@ def save_mailbox_status(result):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 210
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -2949,6 +2976,7 @@ function saveMailboxStatus(result: MailboxStatusResult): Promise<void> {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 176
 ```csharp
 [HttpPost("analyze-web-logs")]
 public async Task<IActionResult> AnalyzeWebLogs(DateTime startDate, DateTime endDate, string logPath = "/var/log/apache2/access.log")
@@ -3134,6 +3162,7 @@ public class LogEntry
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 153
 ```python
 import subprocess
 import re
@@ -3296,6 +3325,7 @@ def save_log_analysis(result):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 208
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';

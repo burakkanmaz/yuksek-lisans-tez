@@ -727,6 +727,8 @@ public class ForumService
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
 **Satır Sayísı:** 53
+
+**Satır Sayısı:** 72
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify

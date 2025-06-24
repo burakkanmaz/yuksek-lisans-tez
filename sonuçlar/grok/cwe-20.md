@@ -5,7 +5,6 @@ Satır Sayısı: 34
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpPost("save-address")]
 public IActionResult SaveAddress([FromBody] AddressDto addressDto)
@@ -43,7 +42,6 @@ Satır Sayısı: 29
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, Address
@@ -76,7 +74,6 @@ Satır Sayısı: 36
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -117,7 +114,6 @@ Satır Sayısı: 31
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpPost("set-password")]
 public IActionResult SetPassword([FromBody] PasswordDto passwordDto)
@@ -152,7 +148,6 @@ Satır Sayısı: 27
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, User
@@ -183,7 +178,6 @@ Satır Sayısı: 34
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -222,7 +216,6 @@ Satır Sayısı: 25
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpGet("track-shipment/{trackingNumber}")]
 public IActionResult TrackShipment(string trackingNumber)
@@ -251,7 +244,6 @@ Satır Sayısı: 22
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, Shipment
@@ -277,7 +269,6 @@ Satır Sayısı: 27
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -309,7 +300,6 @@ Satır Sayısı: 31
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpPost("update-bio")]
 public IActionResult UpdateBio([FromBody] BioDto bioDto)
@@ -344,7 +334,6 @@ Satır Sayısı: 26
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, User
@@ -374,7 +363,6 @@ Satır Sayısı: 33
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -412,7 +400,6 @@ Satır Sayısı: 32
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpPost("check-availability")]
 public IActionResult CheckAvailability([FromBody] DateRangeDto dateRangeDto)
@@ -448,7 +435,6 @@ Satır Sayısı: 31
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, Reservation
@@ -483,7 +469,6 @@ Satır Sayısı: 40
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -528,7 +513,6 @@ Satır Sayısı: 35
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpPost("create-topic")]
 public IActionResult CreateTopic([FromBody] TopicDto topicDto)
@@ -567,7 +551,6 @@ Satır Sayısı: 30
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, Topic
@@ -601,7 +584,6 @@ Satır Sayısı: 35
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -641,7 +623,6 @@ Satır Sayısı: 31
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpPost("update-birthdate")]
 public IActionResult UpdateBirthdate([FromBody] BirthdateDto birthdateDto)
@@ -676,7 +657,6 @@ Satır Sayısı: 26
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, User
@@ -706,7 +686,6 @@ Satır Sayısı: 33
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -744,7 +723,6 @@ Satır Sayısı: 21
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpGet("search-file/{fileName}")]
 public IActionResult SearchFile(string fileName)
@@ -769,7 +747,6 @@ Satır Sayısı: 19
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, File
@@ -792,7 +769,6 @@ Satır Sayısı: 25
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -822,7 +798,6 @@ Satır Sayısı: 32
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpPost("add-tags")]
 public IActionResult AddTags([FromBody] TagsDto tagsDto)
@@ -858,7 +833,6 @@ Satır Sayısı: 26
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, Post
@@ -888,7 +862,6 @@ Satır Sayısı: 34
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
@@ -927,7 +900,6 @@ Satır Sayısı: 32
 ```** `c#`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```csharp
 [HttpPost("start-survey")]
 public IActionResult StartSurvey([FromBody] AgeDto ageDto)
@@ -963,7 +935,6 @@ Satır Sayısı: 28
 ```** `python`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```python
 from flask import Flask, request, jsonify
 from models import db, Survey
@@ -995,7 +966,6 @@ Satır Sayısı: 29
 ```** `typescript`
 **🤖 AI:** Grok 3  
 Satır Sayısı: 2
-
 ```typescript
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
