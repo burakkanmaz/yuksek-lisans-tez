@@ -1,12 +1,8 @@
- 
-
-
-----
-
 ### 🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Gemini
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 22
 ```csharp
 public class Comment
 {
@@ -34,13 +30,12 @@ public class BlogService
         return Ok(comment);
     }
 }
-🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 33
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -76,13 +71,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 73
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -180,13 +174,14 @@ const CommentForm: React.FC = () => {
 };
 
 export default CommentForm;
-🧪 Senaryo 2: Bir müşteri destek sisteminde kullanıcılar sorun açıklama formları doldurabiliyor. Bu formlar hem kullanıcıya hem de destek ekibine gösterilen sayfada görünüyor. Mesaj alanı çok satırlı metin kutusundan alınıyor ve HTML şablonuna ekleniyor. Mesajlar kullanıcının yardım talebi geçmişinde listeleniyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 2: Bir müşteri destek sisteminde kullanıcılar sorun açıklama formları doldurabiliyor. Bu formlar hem kullanıcıya hem de destek ekibine gösterilen sayfada görünüyor. Mesaj alanı çok satırlı metin kutusundan alınıyor ve HTML şablonuna ekleniyor. Mesajlar kullanıcının yardım talebi geçmişinde listeleniyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 36
+```csharp
 public class SupportTicket
 {
     public int Id { get; set; }
@@ -225,13 +220,12 @@ public class SupportService
         return Ok(tickets);
     }
 }
-🧪 Senaryo 2: Bir müşteri destek sisteminde kullanıcılar sorun açıklama formları doldurabiliyor. Bu formlar hem kullanıcıya hem de destek ekibine gösterilen sayfada göriliyor. Mesaj alanı çok satırlı metin kutusundan alınıyor ve HTML şablonuna ekleniyor. Mesajlar kullanıcının yardım talebi geçmişinde listeleniyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 47
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -285,13 +279,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 2: Bir müşteri destek sisteminde kullanıcılar sorun açıklama formları doldurabiliyor. Bu formlar hem kullanıcıya hem de destek ekibine gösterilen sayfada görünüyor. Mesaj alanı çok satırlı metin kutusundan alınıyor ve HTML şablonuna ekleniyor. Mesajlar kullanıcının yardım talebi geçmişinde listeleniyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 82
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -409,13 +402,14 @@ const SupportTicketForm: React.FC<SupportTicketFormProps> = ({ userId }) => {
 };
 
 export default SupportTicketForm;
-🧪 Senaryo 3: Bir eğitim portalında öğrenciler ders videolarının altında geri bildirim paylaşabiliyor. Geri bildirim mesajları veritabanına eklendikten sonra sayfada gösteriliyor. Mesajlar işlenmeden doğrudan kullanıcılara sunuluyor. Diğer öğrenciler de bu mesajları görebiliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 3: Bir eğitim portalında öğrenciler ders videolarının altında geri bildirim paylaşabiliyor. Geri bildirim mesajları veritabanına eklendikten sonra sayfada gösteriliyor. Mesajlar işlenmeden doğrudan kullanıcılara sunuluyor. Diğer öğrenciler de bu mesajları görebiliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 32
+```csharp
 public class Feedback
 {
     public int Id { get; set; }
@@ -453,13 +447,12 @@ public class EducationService
         return Ok(feedbackMessages);
     }
 }
-🧪 Senaryo 3: Bir eğitim portalında öğrenciler ders videolarının altında geri bildirim paylaşabiliyor. Geri bildirim mesajları veritabanına eklendikten sonra sayfada gösteriliyor. Mesajlar işlenmeden doğrudan kullanıcılara sunuluyor. Diğer öğrenciler de bu mesajları görebiliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 46
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -511,13 +504,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 3: Bir eğitim portalında öğrenciler ders videolarının altında geri bildirim paylaşabiliyor. Geri bildirim mesajları veritabanına eklendikten sonra sayfada gösteriliyor. Mesajlar işlenmeden doğrudan kullanıcılara sunuluyor. Diğer öğrenciler de bu mesajları görebiliyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 101
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -664,13 +656,14 @@ const VideoFeedback: React.FC<VideoFeedbackProps> = ({ videoId, studentId }) => 
 };
 
 export default VideoFeedback;
-🧪 Senaryo 4: Bir forum sitesinde kullanıcılar konulara cevaplar yazabiliyor. Cevaplar her kullanıcının profil bilgileriyle birlikte listeleniyor. Gönderilen içerik HTML template'e yerleştirilerek gösteriliyor. Editör veya işaretleme dili kullanılmadan sade metin desteği sağlanıyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 4: Bir forum sitesinde kullanıcılar konulara cevaplar yazabiliyor. Cevaplar her kullanıcının profil bilgileriyle birlikte listeleniyor. Gönderilen içerik HTML template'e yerleştirilerek gösteriliyor. Editör veya işaretleme dili kullanılmadan sade metin desteği sağlanıyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 42
+```csharp
 public class ForumPost
 {
     public int Id { get; set; }
@@ -729,13 +722,12 @@ public class ForumService
         return Ok(posts);
     }
 }
-🧪 Senaryo 4: Bir forum sitesinde kullanıcılar konulara cevaplar yazabiliyor. Cevaplar her kullanıcının profil bilgileriyle birlikte listeleniyor. Gönderilen içerik HTML template'e yerleştirilerek gösteriliyor. Editör veya işaretleme dili kullanılmadan sade metin desteği sağlanıyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayísı:** 53
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -808,13 +800,12 @@ if __name__ == '__main__':
             db.session.add(dummy_user)
             db.session.commit()
     app.run(debug=True)
-🧪 Senaryo 4: Bir forum sitesinde kullanıcılar konulara cevaplar yazabiliyor. Cevaplar her kullanıcının profil bilgileriyle birlikte listeleniyor. Gönderilen içerik HTML template'e yerleştirilerek gösteriliyor. Editör veya işaretleme dili kullanılmadan sade metin desteği sağlanıyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 129
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -992,13 +983,14 @@ const TopicPosts: React.FC<TopicPostsProps> = ({ topicId }) => {
 };
 
 export default TopicPosts;
-🧪 Senaryo 5: Bir otel rezervasyon sitesinde müşteriler konakladıkları oteller hakkında görüşlerini paylaşabiliyor. Otel sayfasında tüm yorumlar toplu şekilde listeleniyor. Yorum içeriği kullanıcıdan alındığı şekliyle HTML içerisinde gösteriliyor. Aynı içerik yönetici panelinde de görüntülenebiliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 5: Bir otel rezervasyon sitesinde müşteriler konakladıkları oteller hakkında görüşlerini paylaşabiliyor. Otel sayfasında tüm yorumlar toplu şekilde listeleniyor. Yorum içeriği kullanıcıdan alındığı şekliyle HTML içerisinde gösteriliyor. Aynı içerik yönetici panelinde de görüntülenebiliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 28
+```csharp
 public class HotelReview
 {
     public int Id { get; set; }
@@ -1037,13 +1029,12 @@ public class HotelReservationService
         return Ok(reviews);
     }
 }
-🧪 Senaryo 5: Bir otel rezervasyon sitesinde müşteriler konakladıkları oteller hakkında görüşlerini paylaşabiliyor. Otel sayfasında tüm yorumlar toplu şekilde listeleniyor. Yorum içeriği kullanıcıdan alındığı şekliyle HTML içerisinde gösteriliyor. Aynı içerik yönetici panelinde de görüntülenebiliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 45
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -1100,13 +1091,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 5: Bir otel rezervasyon sitesinde müşteriler konakladıkları oteller hakkında görüşlerini paylaşabiliyor. Otel sayfasında tüm yorumlar toplu şekilde listeleniyor. Yorum içeriği kullanıcıdan alındığı şekliyle HTML içerisinde gösteriliyor. Aynı içerik yönetici panelinde de görüntülenebiliyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 103
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -1276,13 +1266,14 @@ const HotelReviews: React.FC<HotelReviewProps> = ({ hotelId, currentUserId }) =>
 };
 
 export default HotelReviews;
-🧪 Senaryo 6: Bir alışveriş sitesinde kullanıcılar ürünlere puan ve açıklama yazabiliyor. Bu açıklamalar ürün sayfasında ve ana sayfadaki öne çıkan yorumlar bölümünde gösteriliyor. Yorumlar HTML template'e veri olarak aktarılıyor. Kullanıcı girişi üzerinde biçimlendirme işlemi yapılmıyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 6: Bir alışveriş sitesinde kullanıcılar ürünlere puan ve açıklama yazabiliyor. Bu açıklamalar ürün sayfasında ve ana sayfadaki öne çıkan yorumlar bölümünde gösteriliyor. Yorumlar HTML template'e veri olarak aktarılıyor. Kullanıcı girişi üzerinde biçimlendirme işlemi yapılmıyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 37
+```csharp
 public class ProductReview
 {
     public int Id { get; set; }
@@ -1332,13 +1323,12 @@ public class ShoppingService
         return Ok(featuredReviews);
     }
 }
-🧪 Senaryo 6: Bir alışveriş sitesinde kullanıcılar ürünlere puan ve açıklama yazabiliyor. Bu açıklamalar ürün sayfasında ve ana sayfadaki öne çıkan yorumlar bölümünde gösteriliyor. Yorumlar HTML template'e veri olarak aktarılıyor. Kullanıcı girişi üzerinde biçimlendirme işlemi yapılmıyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 58
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -1411,13 +1401,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 6: Bir alışveriş sitesinde kullanıcılar ürünlere puan ve açıklama yazabiliyor. Bu açıklamalar ürün sayfasında ve ana sayfadaki öne çıkan yorumlar bölümünde gösteriliyor. Yorumlar HTML template'e veri olarak aktarılıyor. Kullanıcı girişi üzerinde biçimlendirme işlemi yapılmıyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 108
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -1595,13 +1584,14 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId, currentUserI
 };
 
 export default ProductReviews;
-🧪 Senaryo 7: Bir haber uygulamasında okuyucular haberlere tepki bırakabiliyor ve açıklama yazabiliyor. Açıklamalar yorum başlığı, ad ve mesaj içeriyor. Tüm bilgiler formdan alınıp haberin altına ekleniyor. Editoryal onay süreci olmayan sistemde kullanıcılar anında içerik yayınlayabiliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 7: Bir haber uygulamasında okuyucular haberlere tepki bırakabiliyor ve açıklama yazabiliyor. Açıklamalar yorum başlığı, ad ve mesaj içeriyor. Tüm bilgiler formdan alınıp haberin altına ekleniyor. Editoryal onay süreci olmayan sistemde kullanıcılar anında içerik yayınlayabiliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 30
+```csharp
 public class NewsComment
 {
     public int Id { get; set; }
@@ -1640,13 +1630,12 @@ public class NewsService
         return Ok(comments);
     }
 }
-🧪 Senaryo 7: Bir haber uygulamasında okuyucular haberlere tepki bırakabiliyor ve açıklama yazabiliyor. Açıklamalar yorum başlığı, ad ve mesaj içeriyor. Tüm bilgiler formdan alınıp haberin altına ekleniyor. Editoryal onay süreci olmayan sistemde kullanıcılar anında içerik yayınlayabiliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 44
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -1701,13 +1690,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 7: Bir haber uygulamasında okuyucular haberlere tepki bırakabiliyor ve açıklama yazabiliyor. Açıklamalar yorum başlığı, ad ve mesaj içeriyor. Tüm bilgiler formdan alınıp haberin altına ekleniyor. Editoryal onay süreci olmayan sistemde kullanıcılar anında içerik yayınlayabiliyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 99
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -1882,13 +1870,14 @@ const NewsComments: React.FC<NewsCommentsProps> = ({ newsArticleId }) => {
 };
 
 export default NewsComments;
-🧪 Senaryo 8: Bir etkinlik planlama sitesinde katılımcılar etkinlik sonrası değerlendirme formu doldurabiliyor. Kullanıcının yazdığı açıklama etkinlik detay sayfasında görüntüleniyor. Değerlendirme alanı geniş metin kutusu olarak tasarlanmış ve serbest şekilde doldurulabiliyor. Yorumun tamamı HTML içinde gösteriliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 8: Bir etkinlik planlama sitesinde katılımcılar etkinlik sonrası değerlendirme formu doldurabiliyor. Kullanıcının yazdığı açıklama etkinlik detay sayfasında görüntüleniyor. Değerlendirme alanı geniş metin kutusu olarak tasarlanmış ve serbest şekilde doldurulabiliyor. Yorumun tamamı HTML içinde gösteriliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 27
+```csharp
 public class EventEvaluation
 {
     public int Id { get; set; }
@@ -1926,13 +1915,12 @@ public class EventPlanningService
         return Ok(evaluations);
     }
 }
-🧪 Senaryo 8: Bir etkinlik planlama sitesinde katılımcılar etkinlik sonrası değerlendirme formu doldurabiliyor. Kullanıcının yazdığı açıklama etkinlik detay sayfasında görüntüleniyor. Değerlendirme alanı geniş metin kutusu olarak tasarlanmış ve serbest şekilde doldurulabiliyor. Yorumun tamamı HTML içinde gösteriliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 42
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -1984,13 +1972,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 8: Bir etkinlik planlama sitesinde katılımcılar etkinlik sonrası değerlendirme formu doldurabiliyor. Kullanıcının yazdığı açıklama etkinlik detay sayfasında görüntüleniyor. Değerlendirme alanı geniş metin kutusu olarak tasarlanmış ve serbest şekilde doldurulabiliyor. Yorumun tamamı HTML içinde gösteriliyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 90
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -2142,13 +2129,14 @@ const EventEvaluations: React.FC<EventEvaluationProps> = ({ eventId, currentUser
 };
 
 export default EventEvaluations;
-🧪 Senaryo 9: Bir çevrimiçi eğitim sisteminde öğrenciler sınav sonrasında yorum paylaşabiliyor. Yorumlar hem eğitmenin panelinde hem de sınıf arkadaşlarının ekranında listeleniyor. Yorumun metni HTML'e gömülüyor. Ek işleme veya filtreleme uygulanmıyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 9: Bir çevrimiçi eğitim sisteminde öğrenciler sınav sonrasında yorum paylaşabiliyor. Yorumlar hem eğitmenin panelinde hem de sınıf arkadaşlarının ekranında listeleniyor. Yorumun metni HTML'e gömülüyor. Ek işleme veya filtreleme uygulanmıyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 27
+```csharp
 public class ExamComment
 {
     public int Id { get; set; }
@@ -2186,13 +2174,12 @@ public class OnlineEducationService
         return Ok(comments);
     }
 }
-🧪 Senaryo 9: Bir çevrimiçi eğitim sisteminde öğrenciler sınav sonrasında yorum paylaşabiliyor. Yorumlar hem eğitmenin panelinde hem de sınıf arkadaşlarının ekranında listeleniyor. Yorumun metni HTML'e gömülüyor. Ek işleme veya filtreleme uygulanmıyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 42
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -2244,13 +2231,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 9: Bir çevrimiçi eğitim sisteminde öğrenciler sınav sonrasında yorum paylaşabiliyor. Yorumlar hem eğitmenin panelinde hem de sınıf arkadaşlarının ekranında listeleniyor. Yorumun metni HTML'e gömülüyor. Ek işleme veya filtreleme uygulanmıyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 81
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';
@@ -2397,13 +2383,14 @@ const ExamComments: React.FC<ExamCommentsProps> = ({ examId, currentStudentId })
 };
 
 export default ExamComments;
-🧪 Senaryo 10: Bir restoran değerlendirme platformunda kullanıcılar deneyimlerini paylaşabiliyor. Kullanıcılar restoran adını ve görüşlerini yazarak gönderiyor. Görüşler hem mobil uygulamada hem web arayüzünde HTML formatında gösteriliyor. Mesajlar kullanıcı girişiyle oluşturuluyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 10: Bir restoran değerlendirme platformunda kullanıcılar deneyimlerini paylaşabiliyor. Kullanıcılar restoran adını ve görüşlerini yazarak gönderiyor. Görüşler hem mobil uygulamada hem web arayüzünde HTML formatında gösteriliyor. Mesajlar kullanıcı girişiyle oluşturuluyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 43
+```csharp
 public class RestaurantReview
 {
     public int Id { get; set; }
@@ -2452,13 +2439,12 @@ public class RestaurantReviewService
         return Ok(reviews);
     }
 }
-🧪 Senaryo 10: Bir restoran değerlendirme platformunda kullanıcılar deneyimlerini paylaşabiliyor. Kullanıcılar restoran adını ve görüşlerini yazarak gönderiyor. Görüşler hem mobil uygulamada hem web arayüzünde HTML formatında gösteriliyor. Mesajlar kullanıcı girişiyle oluşturuluyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 56
+```python
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -2528,13 +2514,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-🧪 Senaryo 10: Bir restoran değerlendirme platformunda kullanıcılar deneyimlerini paylaşabiliyor. Kullanıcılar restoran adını ve görüşlerini yazarak gönderiyor. Görüşler hem mobil uygulamada hem web arayüzünde HTML formatında gösteriliyor. Mesajlar kullanıcı girişiyle oluşturuluyor.
-💻 Dil: TypeScript
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 108
+```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
 import mongoose from 'mongoose';

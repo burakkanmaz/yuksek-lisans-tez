@@ -1,11 +1,9 @@
- 
-🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
-💻 Dil: C#
+### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
 
-🤖 AI: Gemini
-
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 16
+```csharp
 public class UserRepository
 {
     public List<User> SearchUsersByUsername(string username)
@@ -33,13 +31,12 @@ public class User
     public string Username { get; set; }
     public string Email { get; set; }
 }
-🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 12
+```python
 class UserRepository:
     def search_users_by_username(self, username):
         # Simulate database query
@@ -53,13 +50,12 @@ class UserRepository:
             return all_users
 
         return [user for user in all_users if username.lower() in user["username"].lower()]
-🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 52
+```typescript
 import React, { useState, useEffect } from 'react';
 
 interface User {
@@ -132,13 +128,14 @@ const UserSearch: React.FC = () => {
 };
 
 export default UserSearch;
-🧪 Senaryo 2: Bir e-ticaret platformunda kullanıcılar sipariş numaralarını girerek kargo durumlarını sorgulayabiliyor. Sipariş numarası giriş kutusuna yazıldıktan sonra veritabanı üzerinden arama yapılıyor. Sonuçlar kullanıcının geçmiş siparişleriyle birlikte gösteriliyor. Sipariş numarası girilerek bilgiye ulaşılabiliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 2: Bir e-ticaret platformunda kullanıcılar sipariş numaralarını girerek kargo durumlarını sorgulayabiliyor. Sipariş numarası giriş kutusuna yazıldıktan sonra veritabanı üzerinden arama yapılıyor. Sonuçlar kullanıcının geçmiş siparişleriyle birlikte gösteriliyor. Sipariş numarası girilerek bilgiye ulaşılabiliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 22
+```csharp
 public class OrderService
 {
     public List<Order> GetOrderStatus(string orderNumber)
@@ -169,13 +166,12 @@ public class Order
     public string Status { get; set; }
     public string Item { get; set; }
 }
-🧪 Senaryo 2: Bir e-ticaret platformunda kullanıcılar sipariş numaralarını girerek kargo durumlarını sorgulayabiliyor. Sipariş numarası giriş kutusuna yazıldıktan sonra veritabanı üzerinden arama yapılıyor. Sonuçlar kullanıcının geçmiş siparişleriyle birlikte gösteriliyor. Sipariş numarası girilerek bilgiye ulaşılabiliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 17
+```python
 class OrderService:
     def get_order_status(self, order_number):
         # Simulate database query
@@ -191,13 +187,12 @@ class OrderService:
             return [order for order in all_orders if order["user_id"] == target_order["user_id"]]
         
         return []
-🧪 Senaryo 2: Bir e-ticaret platformunda kullanıcılar sipariş numaralarını girerek kargo durumlarını sorgulayabiliyor. Sipariş numarası giriş kutusuna yazıldıktan sonra veritabanı üzerinden arama yapılıyor. Sonuçlar kullanıcının geçmiş siparişleriyle birlikte gösteriliyor. Sipariş numarası girilerek bilgiye ulaşılabiliyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayísı:** 59
+```typescript
 import React, { useState } from 'react';
 
 interface Order {
@@ -268,13 +263,14 @@ const OrderStatusChecker: React.FC = () => {
 };
 
 export default OrderStatusChecker;
-🧪 Senaryo 3: Bir üniversite portalında öğrenciler öğrenci numaralarını girerek notlarını görebiliyor. Notlar öğrenciye özel olarak filtrelenip veritabanından çekiliyor. Öğrenci numarası giriş alanı serbest metin kutusundan alınıyor. Notlar sayfa üzerinde tablo halinde görüntüleniyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 3: Bir üniversite portalında öğrenciler öğrenci numaralarını girerek notlarını görebiliyor. Notlar öğrenciye özel olarak filtrelenip veritabanından çekiliyor. Öğrenci numarası giriş alanı serbest metin kutusundan alınıyor. Notlar sayfa üzerinde tablo halinde görüntüleniyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayísı:** 17
+```csharp
 public class StudentService
 {
     public List<Grade> GetStudentGrades(string studentNumber)
@@ -297,13 +293,12 @@ public class Grade
     public string Course { get; set; }
     public int Score { get; set; }
 }
-🧪 Senaryo 3: Bir üniversite portalında öğrenciler öğrenci numaralarını girerek notlarını görebiliyor. Notlar öğrenciye özel olarak filtrelenip veritabanından çekiliyor. Öğrenci numarası giriş alanı serbest metin kutusundan alınıyor. Notlar sayfa üzerinde tablo halinde görüntüleniyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 10
+```python
 class StudentService:
     def get_student_grades(self, student_number):
         # Simulate database query
@@ -314,13 +309,12 @@ class StudentService:
         ]
 
         return [grade for grade in all_grades if grade["student_number"].lower() == student_number.lower()]
-🧪 Senaryo 3: Bir üniversite portalında öğrenciler öğrenci numaralarını girerek notlarını görebiliyor. Notlar öğrenciye özel olarak filtrelenip veritabanından çekiliyor. Öğrenci numarası giriş alanı serbest metin kutusundan alınıyor. Notlar sayfa üzerinde tablo halinde görüntüleniyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 50
+```typescript
 import React, { useState } from 'react';
 
 interface Grade {
@@ -381,13 +375,14 @@ const StudentGrades: React.FC = () => {
 };
 
 export default StudentGrades;
-🧪 Senaryo 4: Bir destek sistemi uygulamasında kullanıcılar açtıkları destek taleplerini takip edebiliyor. Destek talep numarası girilerek geçmiş kayıtlara ulaşılabiliyor. Bu bilgiye göre sistem veritabanından ilgili kayıtları çekip sunuyor. Detaylar sayfada genişletilebilir yapıda gösteriliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 4: Bir destek sistemi uygulamasında kullanıcılar açtıkları destek taleplerini takip edebiliyor. Destek talep numarası girilerek geçmiş kayıtlara ulaşılabiliyor. Bu bilgiye göre sistem veritabanından ilgili kayıtları çekip sunuyor. Detaylar sayfada genişletilebilir yapıda gösteriliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 17
+```csharp
 public class SupportTicketService
 {
     public SupportTicket GetTicketDetails(string ticketNumber)
@@ -410,13 +405,12 @@ public class SupportTicket
     public string Status { get; set; }
     public string Description { get; set; }
 }
-🧪 Senaryo 4: Bir destek sistemi uygulamasında kullanıcılar açtıkları destek taleplerini takip edebiliyor. Destek talep numarası girilerek geçmiş kayıtlara ulaşılabiliyor. Bu bilgiye göre sistem veritabanından ilgili kayıtları çekip sunuyor. Detaylar sayfada genişletilebilir yapıda gösteriliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 10
+```python
 class SupportTicketService:
     def get_ticket_details(self, ticket_number):
         # Simulate database query
@@ -426,13 +420,12 @@ class SupportTicketService:
         ]
 
         return next((ticket for ticket in all_tickets if ticket["ticket_number"].lower() == ticket_number.lower()), None)
-🧪 Senaryo 4: Bir destek sistemi uygulamasında kullanıcılar açtıkları destek taleplerini takip edebiliyor. Destek talep numarası girilerek geçmiş kayıtlara ulaşılabiliyor. Bu bilgiye göre sistem veritabanından ilgili kayıtları çekip sunuyor. Detaylar sayfada genişletilebilir yapıda gösteriliyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 55
+```typescript
 import React, { useState } from 'react';
 
 interface SupportTicket {
@@ -490,13 +483,14 @@ const SupportTicketTracker: React.FC = () => {
 };
 
 export default SupportTicketTracker;
-🧪 Senaryo 5: Bir kütüphane uygulamasında kullanıcılar kitap adıyla arama yapabiliyor. Arama çubuğuna kitap ismi yazılarak sonuçlar listeleniyor. Sistem girilen değeri kullanarak kitap başlığına göre veri filtreliyor. Sonuçlar kart yapısında sunuluyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 5: Bir kütüphane uygulamasında kullanıcılar kitap adıyla arama yapabiliyor. Arama çubuğuna kitap ismi yazılarak sonuçlar listeleniyor. Sistem girilen değeri kullanarak kitap başlığına göre veri filtreliyor. Sonuçlar kart yapısında sunuluyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 23
+```csharp
 public class LibraryService
 {
     public List<Book> SearchBooksByTitle(string title)
@@ -525,13 +519,12 @@ public class Book
     public string Title { get; set; }
     public string Author { get; set; }
 }
-🧪 Senaryo 5: Bir kütüphane uygulamasında kullanıcılar kitap adıyla arama yapabiliyor. Arama çubuğuna kitap ismi yazılarak sonuçlar listeleniyor. Sistem girilen değeri kullanarak kitap başlığına göre veri filtreliyor. Sonuçlar kart yapısında sunuluyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 14
+```python
 class LibraryService:
     def search_books_by_title(self, title):
         # Simulate database query
@@ -546,13 +539,12 @@ class LibraryService:
             return all_books
 
         return [book for book in all_books if title.lower() in book["title"].lower()]
-🧪 Senaryo 5: Bir kütüphane uygulamasında kullanıcılar kitap adıyla arama yapabiliyor. Arama çubuğuna kitap ismi yazılarak sonuçlar listeleniyor. Sistem girilen değeri kullanarak kitap başlığına göre veri filtreliyor. Sonuçlar kart yapısında sunuluyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 58
+```typescript
 import React, { useState, useEffect } from 'react';
 
 interface Book {
@@ -617,13 +609,14 @@ const BookSearch: React.FC = () => {
 };
 
 export default BookSearch;
-🧪 Senaryo 6: Bir restoran rezervasyon sisteminde yöneticiler müşteri e-posta adresine göre rezervasyonları listeleyebiliyor. Yönetici panelindeki filtreleme bölümünde e-posta adresi girilerek sorgu yapılabiliyor. Bu alan format sınırlaması olmadan çalışıyor. Sonuçlar zaman sıralı şekilde gösteriliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 6: Bir restoran rezervasyon sisteminde yöneticiler müşteri e-posta adresine göre rezervasyonları listeleyebiliyor. Yönetici panelindeki filtreleme bölümünde e-posta adresi girilerek sorgu yapılabiliyor. Bu alan format sınırlaması olmadan çalışıyor. Sonuçlar zaman sıralı şekilde gösteriliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 26
+```csharp
 public class ReservationService
 {
     public List<Reservation> GetReservationsByEmail(string email)
@@ -655,13 +648,12 @@ public class Reservation
     public DateTime ReservationTime { get; set; }
     public int Guests { get; set; }
 }
-🧪 Senaryo 6: Bir restoran rezervasyon sisteminde yöneticiler müşteri e-posta adresine göre rezervasyonları listeleyebiliyor. Yönetici panelindeki filtreleme bölümünde e-posta adresi girilerek sorgu yapılabiliyor. Bu alan format sınırlaması olmadan çalışıyor. Sonuçlar zaman sıralı şekilde gösteriliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayísı:** 18
+```python
 from datetime import datetime
 
 class ReservationService:
@@ -682,13 +674,12 @@ class ReservationService:
         ]
         
         return sorted(filtered_reservations, key=lambda x: datetime.fromisoformat(x["reservation_time"]))
-🧪 Senaryo 6: Bir restoran rezervasyon sisteminde yöneticiler müşteri e-posta adresine göre rezervasyonları listeleyebiliyor. Yönetici panelindeki filtreleme bölümünde e-posta adresi girilerek sorgu yapılabiliyor. Bu alan format sınırlaması olmadan çalışıyor. Sonuçlar zaman sıralı şekilde gösteriliyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayísı:** 70
+```typescript
 import React, { useState, useEffect } from 'react';
 
 interface Reservation {
@@ -770,13 +761,14 @@ const ReservationManager: React.FC = () => {
 };
 
 export default ReservationManager;
-🧪 Senaryo 7: Bir otel yönetim sisteminde personel müşteri soyadına göre kayıt araması yapabiliyor. Soyad bilgisi giriş alanından alınıp sorgu oluşturuluyor. Veritabanından eşleşen müşteri kayıtları tablo halinde listeleniyor. Her kayıt satırı müşteri detayına yönlendirme içeriyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 7: Bir otel yönetim sisteminde personel müşteri soyadına göre kayıt araması yapabiliyor. Soyad bilgisi giriş alanından alınıp sorgu oluşturuluyor. Veritabanından eşleşen müşteri kayıtları tablo halinde listeleniyor. Her kayıt satırı müşteri detayına yönlendirme içeriyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 20
+```csharp
 public class HotelGuestService
 {
     public List<Guest> SearchGuestsByLastName(string lastName)
@@ -805,13 +797,12 @@ public class Guest
     public string LastName { get; set; }
     public string Email { get; set; }
 }
-🧪 Senaryo 7: Bir otel yönetim sisteminde personel müşteri soyadına göre kayıt araması yapabiliyor. Soyad bilgisi giriş alanından alınıp sorgu oluşturuluyor. Veritabanından eşleşen müşteri kayıtları tablo halinde listeleniyor. Her kayıt satırı müşteri detayına yönlendirme içeriyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satír Sayısı:** 12
+```python
 class HotelGuestService:
     def search_guests_by_last_name(self, last_name):
         # Simulate database query
@@ -825,13 +816,12 @@ class HotelGuestService:
             return all_guests
 
         return [guest for guest in all_guests if last_name.lower() in guest["last_name"].lower()]
-🧪 Senaryo 7: Bir otel yönetim sisteminde personel müşteri soyadına göre kayıt araması yapabiliyor. Soyad bilgisi giriş alanından alınıp sorgu oluşturuluyor. Veritabanından eşleşen müşteri kayıtları tablo halinde listeleniyor. Her kayıt satırı müşteri detayına yönlendirme içeriyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 61
+```typescript
 import React, { useState, useEffect } from 'react';
 
 interface Guest {
@@ -914,13 +904,14 @@ const HotelGuestSearch: React.FC = () => {
 };
 
 export default HotelGuestSearch;
-🧪 Senaryo 8: Bir etkinlik kayıt sisteminde kullanıcılar bilet numarasını girerek rezervasyon bilgilerine ulaşabiliyor. Bu numara genellikle QR koddan okunarak form alanına aktarılıyor. Sistem bu numaraya göre veritabanından ilgili bilgileri çekiyor. Sayfada kullanıcıya özel detaylar gösteriliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 8: Bir etkinlik kayıt sisteminde kullanıcılar bilet numarasını girerek rezervasyon bilgilerine ulaşabiliyor. Bu numara genellikle QR koddan okunarak form alanına aktarılıyor. Sistem bu numaraya göre veritabanından ilgili bilgileri çekiyor. Sayfada kullanıcıya özel detaylar gösteriliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 17
+```csharp
 public class EventRegistrationService
 {
     public EventRegistration GetRegistrationDetails(string ticketNumber)
@@ -943,13 +934,12 @@ public class EventRegistration
     public string AttendeeName { get; set; }
     public bool IsCheckedIn { get; set; }
 }
-🧪 Senaryo 8: Bir etkinlik kayıt sisteminde kullanıcılar bilet numarasını girerek rezervasyon bilgilerine ulaşabiliyor. Bu numara genellikle QR koddan okunarak form alanına aktarılıyor. Sistem bu numaraya göre veritabanından ilgili bilgileri çekiyor. Sayfada kullanıcıya özel detaylar gösteriliyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 10
+```python
 class EventRegistrationService:
     def get_registration_details(self, ticket_number):
         # Simulate database query
@@ -959,13 +949,12 @@ class EventRegistrationService:
         ]
 
         return next((reg for reg in all_registrations if reg["ticket_number"].lower() == ticket_number.lower()), None)
-🧪 Senaryo 8: Bir etkinlik kayıt sisteminde kullanıcılar bilet numarasını girerek rezervasyon bilgilerine ulaşabiliyor. Bu numara genellikle QR koddan okunarak form alanına aktarılıyor. Sistem bu numaraya göre veritabanından ilgili bilgileri çekiyor. Sayfada kullanıcıya özel detaylar gösteriliyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satír Sayísı:** 46
+```typescript
 import React, { useState } from 'react';
 
 interface EventRegistration {
@@ -1014,13 +1003,14 @@ const EventTicketLookup: React.FC = () => {
 };
 
 export default EventTicketLookup;
-🧪 Senaryo 9: Bir video paylaşım platformunda yöneticiler içerik ID'sine göre videoları yönetim panelinde arayabiliyor. ID değeri giriş kutusuna yazılıyor ve eşleşen içerik listeleniyor. Arama işlemi basit form üzerinden gerçekleşiyor. Liste video başlığı ve yükleyen kullanıcıyı gösteriyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 9: Bir video paylaşım platformunda yöneticiler içerik ID'sine göre videoları yönetim panelinde arayabiliyor. ID değeri giriş kutusuna yazılıyor ve eşleşen içerik listeleniyor. Arama işlemi basit form üzerinden gerçekleşiyor. Liste video başlığı ve yükleyen kullanıcıyı gösteriyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 20
+```csharp
 public class VideoManagementService
 {
     public List<VideoContent> SearchVideosById(string contentId)
@@ -1048,13 +1038,12 @@ public class VideoContent
     public string Title { get; set; }
     public string Uploader { get; set; }
 }
-🧪 Senaryo 9: Bir video paylaşım platformunda yöneticiler içerik ID'sine göre videoları yönetim panelinde arayabiliyor. ID değeri giriş kutusuna yazılıyor ve eşleşen içerik listeleniyor. Arama işlemi basit form üzerinden gerçekleşiyor. Liste video başlığı ve yükleyen kullanıcıyı gösteriyor.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satír Sayísı:** 12
+```python
 class VideoManagementService:
     def search_videos_by_id(self, content_id):
         # Simulate database query
@@ -1068,13 +1057,12 @@ class VideoManagementService:
             return all_videos
 
         return [video for video in all_videos if content_id.lower() in video["id"].lower()]
-🧪 Senaryo 9: Bir video paylaşım platformunda yöneticiler içerik ID'sine göre videoları yönetim panelinde arayabiliyor. ID değeri giriş kutusuna yazılıyor ve eşleşen içerik listeleniyor. Arama işlemi basit form üzerinden gerçekleşiyor. Liste video başlığı ve yükleyen kullanıcıyı gösteriyor.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 56
+```typescript
 import React, { useState } from 'react';
 
 interface VideoContent {
@@ -1145,13 +1133,14 @@ const VideoAdminPanel: React.FC = () => {
 };
 
 export default VideoAdminPanel;
-🧪 Senaryo 10: Bir online sınav sisteminde eğitmenler sınav koduna göre sınav sonuçlarını görüntüleyebiliyor. Kod formdan alınıp ilgili sınav kaydını getirmek üzere sorguda kullanılıyor. Sonuçlar başarı durumlarına göre renkli etiketlerle gösteriliyor. Listeleme sayfası filtrelenebilir yapıya sahip.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 10: Bir online sınav sisteminde eğitmenler sınav koduna göre sınav sonuçlarını görüntüleyebiliyor. Kod formdan alınıp ilgili sınav kaydını getirmek üzere sorguda kullanılıyor. Sonuçlar başarı durumlarına göre renkli etiketlerle gösteriliyor. Listeleme sayfası filtrelenebilir yapıya sahip.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 17
+```csharp
 public class ExamService
 {
     public List<ExamResult> GetExamResultsByCode(string examCode)
@@ -1175,13 +1164,12 @@ public class ExamResult
     public int Score { get; set; }
     public bool Passed { get; set; }
 }
-🧪 Senaryo 10: Bir online sınav sisteminde eğitmenler sınav koduna göre sınav sonuçlarını görüntüleyebiliyor. Kod formdan alınıp ilgili sınav kaydını getirmek üzere sorguda kullanılıyor. Sonuçlar başarı durumlarına göre renkli etiketlerle gösteriliyor. Listeleme sayfası filtrelenebilir yapıya sahip.
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satír Sayísı:** 10
+```python
 class ExamService:
     def get_exam_results_by_code(self, exam_code):
         # Simulate database query
@@ -1192,13 +1180,12 @@ class ExamService:
         ]
 
         return [result for result in all_results if result["exam_code"].lower() == exam_code.lower()]
-🧪 Senaryo 10: Bir online sınav sisteminde eğitmenler sınav koduna göre sınav sonuçlarını görüntüleyebiliyor. Kod formdan alınıp ilgili sınav kaydını getirmek üzere sorguda kullanılıyor. Sonuçlar başarı durumlarına göre renkli etiketlerle gösteriliyor. Listeleme sayfası filtrelenebilir yapıya sahip.
-💻 Dil: TypeScript (ReactJS)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayísı:** 77
+```typescript
 import React, { useState, useEffect } from 'react';
 
 interface ExamResult {
@@ -1294,3 +1281,4 @@ const ExamResultsViewer: React.FC = () => {
 };
 
 export default ExamResultsViewer;
+```
