@@ -1,8 +1,8 @@
- markdown
 
-Daralt
 
-Metni gizle
+
+
+
 
 Kopyala
 # Senaryo Kodları
@@ -31,9 +31,9 @@ public IActionResult AddComment([FromBody] CommentDto commentDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -58,9 +58,9 @@ def add_comment():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -85,9 +85,9 @@ export const addComment = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("submit-ticket")]
@@ -109,9 +109,9 @@ public IActionResult SubmitTicket([FromBody] TicketDto ticketDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -136,9 +136,9 @@ def submit_ticket():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -163,9 +163,9 @@ export const submitTicket = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("add-feedback")]
@@ -187,9 +187,9 @@ public IActionResult AddFeedback([FromBody] FeedbackDto feedbackDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -214,9 +214,9 @@ def add_feedback():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -241,9 +241,9 @@ export const addFeedback = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("add-reply")]
@@ -266,9 +266,9 @@ public IActionResult AddReply([FromBody] ReplyDto replyDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -294,9 +294,9 @@ def add_reply():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -322,9 +322,9 @@ export const addReply = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("add-review")]
@@ -347,9 +347,9 @@ public IActionResult AddReview([FromBody] ReviewDto reviewDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -375,9 +375,9 @@ def add_review():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -403,9 +403,9 @@ export const addReview = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("add-product-review")]
@@ -429,9 +429,9 @@ public IActionResult AddProductReview([FromBody] ProductReviewDto reviewDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -458,9 +458,9 @@ def add_product_review():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -487,9 +487,9 @@ export const addProductReview = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("add-news-comment")]
@@ -512,9 +512,9 @@ public IActionResult AddNewsComment([FromBody] NewsCommentDto commentDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -540,9 +540,9 @@ def add_news_comment():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -568,9 +568,9 @@ export const addNewsComment = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("add-evaluation")]
@@ -593,9 +593,9 @@ public IActionResult AddEvaluation([FromBody] EvaluationDto evaluationDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -621,9 +621,9 @@ def add_evaluation():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -649,9 +649,9 @@ export const addEvaluation = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("add-exam-comment")]
@@ -674,9 +674,9 @@ public IActionResult AddExamComment([FromBody] ExamCommentDto commentDto)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -702,9 +702,9 @@ def add_exam_comment():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -730,9 +730,9 @@ export const addExamComment = async (req: Request, res: Response) => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("add-restaurant-review")]
@@ -755,9 +755,9 @@ public IActionResult AddRestaurantReview([FromBody] RestaurantReviewDto reviewDt
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -783,9 +783,9 @@ def add_restaurant_review():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 

@@ -1,8 +1,8 @@
- markdown
 
-Daralt
 
-Metni gizle
+
+
+
 
 Kopyala
 # Senaryo Kodları
@@ -80,9 +80,9 @@ public class DiskUsageReport
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -139,9 +139,9 @@ def calculate_directory_size(path):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -228,9 +228,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("process-file")]
@@ -297,9 +297,9 @@ public class FileProcessResponse
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -354,9 +354,9 @@ def generate_output_path(file_path, target_format):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -427,9 +427,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("view-logs")]
@@ -509,9 +509,9 @@ public class LogViewResponse
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -569,9 +569,9 @@ def paginate_logs(logs, page, page_size):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -648,9 +648,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("backup")]
@@ -733,9 +733,9 @@ public class BackupReport
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -799,9 +799,9 @@ def send_backup_notification(report):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -894,9 +894,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("network-test")]
@@ -956,9 +956,9 @@ public class NetworkTestResult
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1004,9 +1004,9 @@ def execute_network_test(target_address):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1065,9 +1065,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("file-compress")]
@@ -1126,9 +1126,9 @@ public class FileCompressionRequest
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1173,9 +1173,9 @@ def create_archive(files, archive_path, compression_level):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1242,9 +1242,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("monitor-process")]
@@ -1307,9 +1307,9 @@ public class ProcessMetricsResponse
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1353,9 +1353,9 @@ def collect_process_metrics(process_name):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1428,9 +1428,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("file-search")]
@@ -1495,9 +1495,9 @@ public class FileSearchResult
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1548,9 +1548,9 @@ def filter_files(files, min_size):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1623,9 +1623,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("db-execute")]
@@ -1690,9 +1690,9 @@ public class DatabaseOperationResult
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1738,9 +1738,9 @@ def execute_operation(database_name, query):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1807,9 +1807,9 @@ export default router;
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpPost("security-scan")]
@@ -1880,9 +1880,9 @@ public class SecurityScanResult
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -1933,9 +1933,9 @@ def execute_security_scan(target_path, scan_options):
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 

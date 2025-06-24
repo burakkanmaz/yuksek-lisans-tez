@@ -1,8 +1,8 @@
- markdown
 
-Daralt
 
-Metni gizle
+
+
+
 
 Kopyala
 ### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
@@ -25,9 +25,9 @@ public async Task<IActionResult> SearchUsers(string username)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -43,9 +43,9 @@ def search_users():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -72,9 +72,9 @@ const SearchUsers: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("track-order")]
@@ -92,9 +92,9 @@ public async Task<IActionResult> TrackOrder(string orderNumber)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -112,9 +112,9 @@ def track_order():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -138,9 +138,9 @@ const TrackOrder: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("get-grades")]
@@ -158,9 +158,9 @@ public async Task<IActionResult> GetGrades(string studentNumber)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -176,9 +176,9 @@ def get_grades():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -202,9 +202,9 @@ const GetGrades: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("track-ticket")]
@@ -222,9 +222,9 @@ public async Task<IActionResult> TrackTicket(string ticketNumber)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -242,9 +242,9 @@ def track_ticket():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -268,9 +268,9 @@ const TrackTicket: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("search-books")]
@@ -288,9 +288,9 @@ public async Task<IActionResult> SearchBooks(string title)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -306,9 +306,9 @@ def search_books():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -332,9 +332,9 @@ const SearchBooks: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("search-reservations")]
@@ -353,9 +353,9 @@ public async Task<IActionResult> SearchReservations(string email)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -371,9 +371,9 @@ def search_reservations():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -397,9 +397,9 @@ const SearchReservations: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("search-guests")]
@@ -417,9 +417,9 @@ public async Task<IActionResult> SearchGuests(string lastName)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -435,9 +435,9 @@ def search_guests():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -461,9 +461,9 @@ const SearchGuests: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("check-ticket")]
@@ -481,9 +481,9 @@ public async Task<IActionResult> CheckTicket(string ticketNumber)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -501,9 +501,9 @@ def check_ticket():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -527,9 +527,9 @@ const CheckTicket: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("search-videos")]
@@ -547,9 +547,9 @@ public async Task<IActionResult> SearchVideos(string contentId)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -567,9 +567,9 @@ def search_videos():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -593,9 +593,9 @@ const SearchVideos: React.FC = () => {
 
 csharp
 
-Daralt
 
-Metni gizle
+
+
 
 Kopyala
 [HttpGet("exam-results")]
@@ -613,9 +613,9 @@ public async Task<IActionResult> GetExamResults(string examCode)
 
 python
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
@@ -631,9 +631,9 @@ def exam_results():
 
 typescript
 
-Daralt
 
-Metni gizle
+
+
 
 Çalıştır
 
