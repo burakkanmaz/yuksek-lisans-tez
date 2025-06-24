@@ -1,8 +1,9 @@
- 🧪 Senaryo 1: Dosya Yönetimi Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
 
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
 [HttpGet("search-files")]  
 public IActionResult SearchFiles(string fileName)  
 {  
@@ -15,11 +16,13 @@ public IActionResult SearchFiles(string fileName)
     {  
         return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
 import glob  
 
 def search_files(file_name: str) -> dict:  
@@ -27,14 +30,13 @@ def search_files(file_name: str) -> dict:
         files = glob.glob(f"/var/files/{file_name}*")  
         return {"success": True, "files": files}  
     except Exception as e:  
-        return {"success": False, "error": str(e)}  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = search_files("report")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 11
+```typescript
 import fs from 'fs/promises';  
 
 async function searchFiles(fileName: string): Promise<object> {  
@@ -45,15 +47,15 @@ async function searchFiles(fileName: string): Promise<object> {
     } catch (error) {  
         return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await searchFiles("report");  
-🧪 Senaryo 2: Log Analiz Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
 
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
 [HttpGet("search-logs")]  
 public async Task<IActionResult> SearchLogs(string pattern)  
 {  
@@ -67,25 +69,26 @@ public async Task<IActionResult> SearchLogs(string pattern)
     {  
         return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
 def search_logs(pattern: str) -> dict:  
     try:  
         with open('/var/logs/app.log', 'r') as f:  
             matches = [line for line in f if pattern in line]  
         return {"success": True, "matches": matches}  
     except Exception as e:  
-        return {"success": False, "error": str(e)}  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = search_logs("404")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 11
+```typescript
 import fs from 'fs/promises';  
 
 async function searchLogs(pattern: string): Promise<object> {  
@@ -96,15 +99,15 @@ async function searchLogs(pattern: string): Promise<object> {
     } catch (error) {  
         return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await searchLogs("404");  
-🧪 Senaryo 3: Sistem İzleme Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
 
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 14
+```csharp
 [HttpGet("check-process")]  
 public IActionResult CheckProcess(string processName)  
 {  
@@ -121,11 +124,13 @@ public IActionResult CheckProcess(string processName)
     {  
         return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```python
 import psutil  
 
 def check_process(process_name: str) -> dict:  
@@ -137,14 +142,13 @@ def check_process(process_name: str) -> dict:
             "count": len(processes)  
         }  
     except Exception as e:  
-        return {"success": False, "error": str(e)}  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = check_process("nginx")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 17
+```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
 
@@ -162,15 +166,15 @@ async function checkProcess(processName: string): Promise<object> {
     } catch (error) {  
         return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await checkProcess("node");  
-🧪 Senaryo 4: Backup Yönetim Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
 
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 18
+```csharp
 [HttpPost("create-backup")]  
 public IActionResult CreateBackup(string sourcePath)  
 {  
@@ -190,11 +194,13 @@ public IActionResult CreateBackup(string sourcePath)
     {  
         return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 18
+```python
 import shutil  
 import os  
 from datetime import datetime  
@@ -214,14 +220,13 @@ def create_backup(source_path: str) -> dict:
 
         return {"success": True, "backupPath": backup_dir}  
     except Exception as e:  
-        return {"success": False, "error": str(e)}  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = create_backup("/var/www")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 18
+```typescript
 import fs from 'fs/promises';  
 import path from 'path';  
 
@@ -241,589 +246,366 @@ async function createBackup(sourcePath: string): Promise<object> {
     } catch (error) {  
         return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await createBackup("/var/www");  
+### 🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
 
-🧪 Senaryo 5: Ağ Test Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
-
-csharp
-[HttpGet("test-connection")]  
-public async Task<IActionResult> TestConnection(string ipAddress)  
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 20
+```csharp
+[HttpGet("ping")]  
+public async Task<IActionResult> PingHost(string host)  
 {  
     try  
     {  
         using var ping = new System.Net.NetworkInformation.Ping();  
-        var reply = await ping.SendPingAsync(ipAddress, 3000); // 3 saniye timeout  
-        return Ok(new {  
-            success = true,  
-            status = reply.Status.ToString(),  
-            roundtripTime = reply.RoundtripTime  
-        });  
+        var reply = await ping.SendPingAsync(host);  
+
+        if (reply.Status == System.Net.NetworkInformation.IPStatus.Success)  
+        {  
+            return Ok(new { success = true, status = "Success", roundtripTime = reply.RoundtripTime });  
+        }  
+        else  
+        {  
+            return Ok(new { success = false, status = reply.Status.ToString() });  
+        }  
     }  
     catch (Exception ex)  
     {  
         return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 9
+```python
 import subprocess  
 
-def test_connection(ip_address: str) -> dict:  
+def ping_host(host: str) -> dict:  
     try:  
-        result = subprocess.run(  
-            ["ping", "-c", "1", ip_address],  
-            capture_output=True,  
-            text=True,  
-            timeout=5  
-        )  
-        return {  
-            "success": True,  
-            "output": result.stdout  
-        }  
-    except subprocess.TimeoutExpired:  
-        return {"success": False, "error": "Timeout"}  
+        result = subprocess.run(['ping', '-c', '4', host], capture_output=True, text=True, check=True)  
+        return {"success": True, "output": result.stdout}  
+    except subprocess.CalledProcessError as e:  
+        return {"success": False, "error": e.stderr}  
     except Exception as e:  
-        return {"success": False, "error": str(e)}  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = test_connection("8.8.8.8")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 14
+```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
 
 const execAsync = promisify(exec);  
 
-async function testConnection(ipAddress: string): Promise<object> {  
+async function pingHost(host: string): Promise<object> {  
     try {  
-        const { stdout } = await execAsync(`ping -c 1 ${ipAddress}`);  
-        return {  
-            success: true,  
-            output: stdout  
-        };  
+        const { stdout, stderr } = await execAsync(`ping -c 4 ${host}`);  
+        if (stderr) {  
+            return { success: false, error: stderr };  
+        }  
+        return { success: true, output: stdout };  
     } catch (error) {  
-        return {  
-            success: false,  
-            error: error.stderr || error.message  
-        };  
+        return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await testConnection("8.8.8.8");  
-🧪 Senaryo 6: Dosya Dönüştürme Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
 
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 15
+```csharp
 [HttpPost("convert-file")]  
-public IActionResult ConvertFile(IFormFile sourceFile, string targetFormat)  
+public async Task<IActionResult> ConvertFile(string sourceFile, string destFile)  
 {  
     try  
     {  
-        var targetPath = Path.ChangeExtension(  
-            Path.GetTempFileName(),  
-            targetFormat.ToLower()  
-        );  
-
-        using (var stream = new FileStream(targetPath, FileMode.Create))  
-        {  
-            sourceFile.CopyTo(stream);  
-        }  
-
-        return Ok(new {  
-            success = true,  
-            convertedPath = targetPath  
-        });  
+        var processInfo = new System.Diagnostics.ProcessStartInfo("ffmpeg", $"-i {sourceFile} {destFile}");  
+        processInfo.RedirectStandardOutput = true;  
+        processInfo.UseShellExecute = false;  
+        var process = System.Diagnostics.Process.Start(processInfo);  
+        await process.WaitForExitAsync();  
+        return Ok(new { success = true, message = "Conversion completed." });  
     }  
     catch (Exception ex)  
     {  
         return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
-import tempfile  
-import os  
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 9
+```python
+import subprocess  
 
-def convert_file(source_file_path: str, target_format: str) -> dict:  
+def convert_file(source_file: str, dest_file: str) -> dict:  
     try:  
-        with tempfile.NamedTemporaryFile(suffix=f".{target_format}", delete=False) as tf:  
-            target_path = tf.name  
-            with open(source_file_path, 'rb') as sf:  
-                tf.write(sf.read())  
-
-        return {  
-            "success": True,  
-            "convertedPath": target_path  
-        }  
-    except Exception as e:  
+        subprocess.run(['ffmpeg', '-i', source_file, dest_file], check=True)  
+        return {"success": True, "message": "Conversion completed."}  
+    except subprocess.CalledProcessError as e:  
         return {"success": False, "error": str(e)}  
+    except Exception as e:  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = convert_file("input.doc", "pdf")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```typescript
+import { exec } from 'child_process';  
+import { promisify } from 'util';  
 
-typescript
-import fs from 'fs/promises';  
-import path from 'path';  
+const execAsync = promisify(exec);  
 
-async function convertFile(sourceFilePath: string, targetFormat: string): Promise<object> {  
+async function convertFile(sourceFile: string, destFile: string): Promise<object> {  
     try {  
-        const tempDir = await fs.mkdtemp('/tmp/converter-');  
-        const targetPath = path.join(tempDir, `converted.${targetFormat}`);  
-        await fs.copyFile(sourceFilePath, targetPath);  
-        return {  
-            success: true,  
-            convertedPath: targetPath  
-        };  
+        await execAsync(`ffmpeg -i ${sourceFile} ${destFile}`);  
+        return { success: true, message: "Conversion completed." };  
     } catch (error) {  
-        return {  
-            success: false,  
-            error: error.message  
-        };  
+        return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await convertFile("input.doc", "pdf");  
-🧪 Senaryo 7: Disk Alanı Analiz Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
 
-csharp
-[HttpGet("analyze-disk")]  
-public IActionResult AnalyzeDisk(string directoryPath)  
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 11
+```csharp
+[HttpGet("disk-usage")]  
+public IActionResult GetDiskUsage(string path)  
 {  
     try  
     {  
-        var dirInfo = new DirectoryInfo(directoryPath);  
-        var size = dirInfo.EnumerateFiles("*", SearchOption.AllDirectories)  
-                         .Sum(file => file.Length);  
-
-        return Ok(new {  
-            success = true,  
-            totalSizeBytes = size,  
-            totalSizeGB = size / (1024 * 1024 * 1024)  
-        });  
+        var driveInfo = new DriveInfo(path);  
+        return Ok(new { success = true, total = driveInfo.TotalSize, free = driveInfo.AvailableFreeSpace });  
     }  
     catch (Exception ex)  
     {  
         return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
-import os  
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
+import shutil  
 
-def analyze_disk(directory_path: str) -> dict:  
+def get_disk_usage(path: str) -> dict:  
     try:  
-        total_size = 0  
-        for dirpath, _, filenames in os.walk(directory_path):  
-            for f in filenames:  
-                fp = os.path.join(dirpath, f)  
-                total_size += os.path.getsize(fp)  
-
-        return {  
-            "success": True,  
-            "totalSizeBytes": total_size,  
-            "totalSizeGB": total_size / (1024 ** 3)  
-        }  
+        total, used, free = shutil.disk_usage(path)  
+        return {"success": True, "total": total, "used": used, "free": free}  
     except Exception as e:  
-        return {"success": False, "error": str(e)}  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = analyze_disk("/var/www")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```typescript
+import { exec } from 'child_process';  
+import { promisify } from 'util';  
 
-typescript
-import fs from 'fs/promises';  
-import path from 'path';  
+const execAsync = promisify(exec);  
 
-async function analyzeDisk(directoryPath: string): Promise<object> {  
+async function getDiskUsage(path: string): Promise<object> {  
     try {  
-        let totalSize = 0;  
-        const processEntry = async (entryPath: string) => {  
-            const stats = await fs.stat(entryPath);  
-            if (stats.isFile()) {  
-                totalSize += stats.size;  
-            } else if (stats.isDirectory()) {  
-                const entries = await fs.readdir(entryPath);  
-                await Promise.all(entries.map(e =>  
-                    processEntry(path.join(entryPath, e))  
-                );  
-            }  
-        };  
-
-        await processEntry(directoryPath);  
-        return {  
-            success: true,  
-            totalSizeBytes: totalSize,  
-            totalSizeGB: totalSize / (1024 ** 3)  
-        };  
+        const { stdout } = await execAsync(`df -k ${path}`);  
+        return { success: true, usage: stdout };  
     } catch (error) {  
-        return {  
-            success: false,  
-            error: error.message  
-        };  
+        return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await analyzeDisk("/var/www");  
-🧪 Senaryo 8: Veritabanı Yedekleme Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
 
-csharp
-[HttpPost("backup-database")]  
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 15
+```csharp
+[HttpPost("backup-db")]  
 public async Task<IActionResult> BackupDatabase(string dbName)  
 {  
     try  
     {  
-        var backupDir = "/backups/databases";  
-        Directory.CreateDirectory(backupDir);  
-
-        var backupFile = Path.Combine(  
-            backupDir,  
-            $"{dbName}_{DateTime.Now:yyyyMMddHHmmss}.bak"  
-        );  
-
-        using var process = new System.Diagnostics.Process();  
-        process.StartInfo.FileName = "pg_dump";  
-        process.StartInfo.Arguments = $"-U postgres -F c -f {backupFile} {dbName}";  
-        process.StartInfo.RedirectStandardError = true;  
-        process.Start();  
-
+        string backupFile = $"/backups/db_{dbName}_{DateTime.Now:yyyyMMdd}.sql";  
+        var processInfo = new System.Diagnostics.ProcessStartInfo("pg_dump", $"-U user -d {dbName} -f {backupFile}");  
+        processInfo.RedirectStandardOutput = true;  
+        processInfo.UseShellExecute = false;  
+        var process = System.Diagnostics.Process.Start(processInfo);  
         await process.WaitForExitAsync();  
-
-        if (process.ExitCode != 0)  
-        {  
-            throw new Exception(await process.StandardError.ReadToEndAsync());  
-        }  
-
-        return Ok(new {  
-            success = true,  
-            backupPath = backupFile  
-        });  
+        return Ok(new { success = true, message = "Database backup completed.", backupFile });  
     }  
     catch (Exception ex)  
     {  
         return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 10
+```python
 import subprocess  
 from datetime import datetime  
-import os  
 
 def backup_database(db_name: str) -> dict:  
     try:  
-        backup_dir = "/backups/databases"  
-        os.makedirs(backup_dir, exist_ok=True)  
-
-        backup_file = f"{backup_dir}/{db_name}_{datetime.now().strftime('%Y%m%d%H%M%S')}.dump"  
-
-        result = subprocess.run(  
-            ["pg_dump", "-U", "postgres", "-Fc", "-f", backup_file, db_name],  
-            capture_output=True,  
-            text=True  
-        )  
-
-        if result.returncode != 0:  
-            raise Exception(result.stderr)  
-
-        return {  
-            "success": True,  
-            "backupPath": backup_file  
-        }  
+        backup_file = f"/backups/db_{db_name}_{datetime.now().strftime('%Y%m%d')}.sql"  
+        subprocess.run(['pg_dump', '-U', 'user', '-d', db_name, '-f', backup_file], check=True)  
+        return {"success": True, "message": "Database backup completed.", "backupFile": backup_file}  
     except Exception as e:  
-        return {"success": False, "error": str(e)}  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = backup_database("myapp_db")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 13
+```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
-import fs from 'fs/promises';  
 
 const execAsync = promisify(exec);  
 
 async function backupDatabase(dbName: string): Promise<object> {  
     try {  
-        const backupDir = '/backups/databases';  
-        await fs.mkdir(backupDir, { recursive: true });  
-
-        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');  
-        const backupFile = `${backupDir}/${dbName}_${timestamp}.dump`;  
-
-        const { stderr } = await execAsync(  
-            `pg_dump -U postgres -Fc -f ${backupFile} ${dbName}`  
-        );  
-
-        if (stderr) throw new Error(stderr);  
-
-        return {  
-            success: true,  
-            backupPath: backupFile  
-        };  
+        const backupFile = `/backups/db_${dbName}_${new Date().toISOString().slice(0, 10)}.sql`;  
+        await execAsync(`pg_dump -U user -d ${dbName} -f ${backupFile}`);  
+        return { success: true, message: "Database backup completed.", backupFile };  
     } catch (error) {  
-        return {  
-            success: false,  
-            error: error.message  
-        };  
+        return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await backupDatabase("myapp_db");  
+### 🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
 
-🧪 Senaryo 9: Mail Sunucu Yönetim Aracı
-💻 Dil: `C#**
-🤖 AI: DeepSeek Chat
-
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 15
+```csharp
 [HttpGet("check-mailbox")]  
 public async Task<IActionResult> CheckMailbox(string mailboxName)  
 {  
     try  
     {  
-        using var client = new System.Net.Mail.SmtpClient("mail.example.com");  
-        client.Credentials = new System.Net.NetworkCredential("admin", "password");  
-
-        var message = new System.Net.Mail.MailMessage(  
-            "admin@example.com",  
-            mailboxName,  
-            "Test Connection",  
-            "This is a test message"  
-        );  
-
-        await client.SendMailAsync(message);  
-
-        return Ok(new {  
-            success = true,  
-            status = "Mailbox is accessible"  
-        });  
+        var processInfo = new System.Diagnostics.ProcessStartInfo("mailq", $"-A | grep {mailboxName}");  
+        processInfo.RedirectStandardOutput = true;  
+        processInfo.UseShellExecute = false;  
+        var process = System.Diagnostics.Process.Start(processInfo);  
+        var output = await process.StandardOutput.ReadToEndAsync();  
+        await process.WaitForExitAsync();  
+        return Ok(new { success = true, output });  
     }  
     catch (Exception ex)  
     {  
-        return StatusCode(500, new {  
-            success = false,  
-            error = ex.Message  
-        });  
+        return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
-import smtplib  
-from email.message import EmailMessage  
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 9
+```python
+import subprocess  
 
 def check_mailbox(mailbox_name: str) -> dict:  
     try:  
-        msg = EmailMessage()  
-        msg.set_content("Test Connection")  
-        msg["Subject"] = "Test"  
-        msg["From"] = "admin@example.com"  
-        msg["To"] = mailbox_name  
-
-        with smtplib.SMTP("mail.example.com") as server:  
-            server.login("admin", "password")  
-            server.send_message(msg)  
-
-        return {  
-            "success": True,  
-            "status": "Mailbox is accessible"  
-        }  
+        result = subprocess.run(['mailq', '-A'], capture_output=True, text=True, check=True)  
+        output = [line for line in result.stdout.split('\n') if mailbox_name in line]  
+        return {"success": True, "output": output}  
     except Exception as e:  
-        return {  
-            "success": False,  
-            "error": str(e)  
-        }  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# result = check_mailbox("user@example.com")  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 13
+```typescript
+import { exec } from 'child_process';  
+import { promisify } from 'util';  
 
-typescript
-import nodemailer from 'nodemailer';  
+const execAsync = promisify(exec);  
 
 async function checkMailbox(mailboxName: string): Promise<object> {  
     try {  
-        const transporter = nodemailer.createTransport({  
-            host: 'mail.example.com',  
-            port: 587,  
-            auth: {  
-                user: 'admin',  
-                pass: 'password'  
-            }  
-        });  
-
-        await transporter.sendMail({  
-            from: 'admin@example.com',  
-            to: mailboxName,  
-            subject: 'Test Connection',  
-            text: 'This is a test message'  
-        });  
-
-        return {  
-            success: true,  
-            status: 'Mailbox is accessible'  
-        };  
+        const { stdout } = await execAsync('mailq -A');  
+        const output = stdout.split('\n').filter(line => line.includes(mailboxName));  
+        return { success: true, output };  
     } catch (error) {  
-        return {  
-            success: false,  
-            error: error.message  
-        };  
+        return { success: false, error: error.message };  
     }  
-}  
+}
+```
 
-// Kullanım:  
-// const result = await checkMailbox("user@example.com");  
-🧪 Senaryo 10: Web Sunucu Log Analiz Uygulaması
-💻 Dil: `C#**
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
 
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 13
+```csharp
 [HttpGet("filter-logs")]  
-public IActionResult FilterLogs(DateTime startDate, DateTime endDate)  
+public async Task<IActionResult> FilterLogsByDate(string startDate, string endDate)  
 {  
     try  
     {  
-        var logEntries = new List<string>();  
-        var logFiles = Directory.GetFiles("/var/log/nginx", "access.log*");  
-
-        foreach (var file in logFiles)  
-        {  
-            var lines = File.ReadAllLines(file);  
-            foreach (var line in lines)  
-            {  
-                if (DateTime.TryParse(line.Substring(0, 20), out var logDate))  
-                {  
-                    if (logDate >= startDate && logDate <= endDate)  
-                    {  
-                        logEntries.Add(line);  
-                    }  
-                }  
-            }  
-        }  
-
-        return Ok(new {  
-            success = true,  
-            count = logEntries.Count,  
-            logs = logEntries.Take(100) // İlk 100 kaydı göster  
-        });  
+        // Bu örnek basittir ve idealde log formatına göre daha sağlam bir ayrıştırma gerektirir.  
+        var logLines = await File.ReadAllLinesAsync("/var/logs/access.log");  
+        var filtered = logLines.Where(line => {  
+            // Örnek: "2023-10-27 ...", varsayımsal bir log formatı  
+            return line.StartsWith(startDate) || line.StartsWith(endDate);  
+        }).ToList();  
+        return Ok(new { success = true, logs = filtered });  
     }  
     catch (Exception ex)  
     {  
-        return StatusCode(500, new {  
-            success = false,  
-            error = ex.Message  
-        });  
+        return StatusCode(500, new { success = false, error = ex.Message });  
     }  
-}  
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+}
+```
 
-python
-from datetime import datetime  
-
-def filter_logs(start_date: datetime, end_date: datetime) -> dict:  
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 9
+```python
+def filter_logs_by_date(start_date: str, end_date: str) -> dict:  
     try:  
-        import glob  
-        log_entries = []  
-
-        for log_file in glob.glob("/var/log/nginx/access.log*"):  
-            with open(log_file, 'r') as f:  
-                for line in f:  
-                    try:  
-                        log_date_str = line.split('[')[1].split(']')[0]  
-                        log_date = datetime.strptime(log_date_str, '%d/%b/%Y:%H:%M:%S %z')  
-                        if start_date <= log_date <= end_date:  
-                            log_entries.append(line.strip())  
-                    except:  
-                        continue  
-
-        return {  
-            "success": True,  
-            "count": len(log_entries),  
-            "logs": log_entries[:100]  # İlk 100 kaydı göster  
-        }  
+        with open('/var/logs/access.log', 'r') as f:  
+            filtered_logs = [line for line in f if line.startswith(start_date) or line.startswith(end_date)]  
+        return {"success": True, "logs": filtered_logs}  
     except Exception as e:  
-        return {  
-            "success": False,  
-            "error": str(e)  
-        }  
+        return {"success": False, "error": str(e)}
+```
 
-# Kullanım:  
-# start = datetime(2023, 1, 1)  
-# end = datetime(2023, 1, 31)  
-# result = filter_logs(start, end)  
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```typescript
 import fs from 'fs/promises';  
-import path from 'path';  
-import { glob } from 'glob';  
 
-async function filterLogs(startDate: Date, endDate: Date): Promise<object> {  
+async function filterLogsByDate(startDate: string, endDate: string): Promise<object> {  
     try {  
-        const logEntries: string[] = [];  
-        const logFiles = await glob('/var/log/nginx/access.log*');  
-
-        await Promise.all(logFiles.map(async (file) => {  
-            const content = await fs.readFile(file, 'utf-8');  
-            content.split('\n').forEach(line => {  
-                try {  
-                    const dateStr = line.match(/\[(.*?)\]/)?.[1];  
-                    if (dateStr) {  
-                        const logDate = new Date(dateStr);  
-                        if (logDate >= startDate && logDate <= endDate) {  
-                            logEntries.push(line);  
-                        }  
-                    }  
-                } catch {}  
-            });  
-        }));  
-
-        return {  
-            success: true,  
-            count: logEntries.length,  
-            logs: logEntries.slice(0, 100) // İlk 100 kaydı göster  
-        };  
+        const logContent = await fs.readFile('/var/logs/access.log', 'utf-8');  
+        const filteredLogs = logContent.split('\n').filter(line => line.startsWith(startDate) || line.startsWith(endDate));  
+        return { success: true, logs: filteredLogs };  
     } catch (error) {  
-        return {  
-            success: false,  
-            error: error.message  
-        };  
+        return { success: false, error: error.message };  
     }  
-}  
-
-// Kullanım:  
-// const start = new Date('2023-01-01');  
-// const end = new Date('2023-01-31');  
-// const result = await filterLogs(start, end);  
+}
+```

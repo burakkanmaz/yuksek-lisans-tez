@@ -1,8 +1,9 @@
- ✏️ Senaryo 1: Şablon Oluşturma
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
 
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 24
+```csharp
 public class TemplateService
 {
     private readonly ILogger<TemplateService> _logger;
@@ -30,10 +31,12 @@ public class TemplateService
         }
     }
 }
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 16
+```python
 import logging
 
 class TemplateProcessor:
@@ -49,10 +52,12 @@ class TemplateProcessor:
         except Exception as e:
             self.logger.error(f"Template processing failed: {str(e)}")
             raise
-💻 Dil: TypeScript
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 19
+```typescript
 class TemplateService {
     private logger: Console;
 
@@ -73,11 +78,14 @@ class TemplateService {
         }
     }
 }
-✏️ Senaryo 2: Rapor Formül Motoru
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 23
+```csharp
 public class FormulaCalculator
 {
     public decimal Calculate(string formula, Dictionary<string, decimal> variables)
@@ -106,10 +114,12 @@ public class FormulaCalculator
         }
     }
 }
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 26
+```python
 import ast
 import operator
 
@@ -140,10 +150,12 @@ class FormulaEngine:
             )
         else:
             raise ValueError(f"Unsupported operation: {type(node)}")
-💻 Dil: TypeScript
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 22
+```typescript
 class FormulaCalculator {
     private variables: Record<string, number> = {};
 
@@ -169,11 +181,14 @@ class FormulaCalculator {
         }
     }
 }
-✏️ Senaryo 3: HTML İçerik İşleme
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 21
+```csharp
 public class HtmlSanitizerService
 {
     private readonly HtmlSanitizer _sanitizer;
@@ -198,10 +213,12 @@ public class HtmlSanitizerService
         return Regex.Replace(htmlContent, "<.*?>", string.Empty);
     }
 }
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 22
+```python
 from bs4 import BeautifulSoup
 import re
 
@@ -223,10 +240,12 @@ class HtmlProcessor:
     def strip_all_html(html: str) -> str:
         clean_text = re.sub('<[^<]+?>', '', html)
         return clean_text
-💻 Dil: TypeScript
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 29
+```typescript
 class HtmlSanitizer {
     private allowedTags: Set<string> = new Set(['p', 'span', 'br', 'strong']);
     private allowedAttributes: Set<string> = new Set(['class', 'style']);
@@ -241,624 +260,435 @@ class HtmlSanitizer {
         if (node.nodeType === Node.ELEMENT_NODE) {
             const element = node as HTMLElement;
             
-            // Remove disallowed tags
             if (!this.allowedTags.has(element.tagName.toLowerCase())) {
                 element.replaceWith(...Array.from(element.childNodes));
                 return;
             }
 
-            // Remove disallowed attributes
-            Array.from(element.attributes).forEach(attr => {
-                if (!this.allowedAttributes.has(attr.name.toLowerCase())) {
-                    element.removeAttribute(attr.name);
+            const attributeNames = Array.from(element.attributes).map(attr => attr.name);
+            for (const name of attributeNames) {
+                if (!this.allowedAttributes.has(name)) {
+                    element.removeAttribute(name);
                 }
-            });
-        }
-
-        // Process child nodes
-        Array.from(node.childNodes).forEach(child => this.cleanNode(child));
-    }
-}
-
-✏️ Senaryo 4: Konfigürasyon Yönetimi
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
-
-csharp
-public class ConfigurationManager
-{
-    private readonly string _configPath;
-    private readonly ILogger<ConfigurationManager> _logger;
-
-    public ConfigurationManager(string configPath, ILogger<ConfigurationManager> logger)
-    {
-        _configPath = configPath;
-        _logger = logger;
-    }
-
-    public async Task<T> LoadConfigAsync<T>() where T : new()
-    {
-        try
-        {
-            if (!File.Exists(_configPath))
-            {
-                _logger.LogWarning("Config file not found, creating default");
-                return new T();
             }
-
-            string json = await File.ReadAllTextAsync(_configPath);
-            return JsonSerializer.Deserialize<T>(json) ?? new T();
         }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Failed to load configuration");
-            throw;
-        }
-    }
-
-    public async Task SaveConfigAsync<T>(T config)
-    {
-        try
-        {
-            string json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
-            await File.WriteAllTextAsync(_configPath, json);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Failed to save configuration");
-            throw;
-        }
+        
+        node.childNodes.forEach(child => this.cleanNode(child));
     }
 }
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 16
+```csharp
+public class ConfigManager
+{
+    private readonly IConfiguration _configuration;
+
+    public ConfigManager(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
+    public string GetSetting(string key)
+    {
+        return _configuration[key];
+    }
+
+    public void UpdateSetting(string key, string value)
+    {
+        // This is a simplified example. In a real application, you would need to persist the changes.
+        _configuration[key] = value;
+    }
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 15
+```python
 import json
-import logging
-from pathlib import Path
-from typing import TypeVar, Type
 
-T = TypeVar('T')
+class ConfigHandler:
+    def __init__(self, config_file='config.json'):
+        self.config_file = config_file
+        with open(self.config_file, 'r') as f:
+            self.config = json.load(f)
 
-class ConfigManager:
-    def __init__(self, config_path: str):
-        self.config_path = Path(config_path)
-        self.logger = logging.getLogger(__name__)
+    def get_setting(self, key):
+        return self.config.get(key)
 
-    def load_config(self, config_class: Type[T]) -> T:
-        try:
-            if not self.config_path.exists():
-                self.logger.warning("Config file not found, creating default")
-                return config_class()
+    def update_setting(self, key, value):
+        self.config[key] = value
+        with open(self.config_file, 'w') as f:
+            json.dump(self.config, f, indent=4)
+```
 
-            with open(self.config_path, 'r') as f:
-                return json.load(f)
-        except Exception as e:
-            self.logger.error(f"Failed to load configuration: {str(e)}")
-            raise
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 16
+```typescript
+import * as fs from 'fs';
 
-    def save_config(self, config: T) -> None:
-        try:
-            with open(self.config_path, 'w') as f:
-                json.dump(config, f, indent=4)
-        except Exception as e:
-            self.logger.error(f"Failed to save configuration: {str(e)}")
-            raise
-💻 Dil: TypeScript
-🤖 AI: DeepSeek Chat
+class ConfigManager {
+    private config: Record<string, any>;
 
-typescript
-import fs from 'fs/promises';
-import path from 'path';
-
-interface IConfigManager<T> {
-    loadConfig(): Promise<T>;
-    saveConfig(config: T): Promise<void>;
-}
-
-class JsonConfigManager<T> implements IConfigManager<T> {
-    private configPath: string;
-    private defaultConfig: T;
-
-    constructor(configPath: string, defaultConfig: T) {
-        this.configPath = path.resolve(configPath);
-        this.defaultConfig = defaultConfig;
+    constructor(private configFile: string = 'config.json') {
+        const data = fs.readFileSync(this.configFile, 'utf-8');
+        this.config = JSON.parse(data);
     }
 
-    async loadConfig(): Promise<T> {
-        try {
-            await fs.access(this.configPath);
-            const data = await fs.readFile(this.configPath, 'utf-8');
-            return JSON.parse(data) as T;
-        } catch (error) {
-            if (error.code === 'ENOENT') {
-                console.warn('Config file not found, returning default');
-                return this.defaultConfig;
+    getSetting(key: string): any {
+        return this.config[key];
+    }
+
+    updateSetting(key: string, value: any): void {
+        this.config[key] = value;
+        fs.writeFileSync(this.configFile, JSON.stringify(this.config, null, 2));
+    }
+}
+```
+
+### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
+public class MacroRunner
+{
+    public void Execute(string macro)
+    {
+        // In a real scenario, this would involve a proper parser and execution engine.
+        // For demonstration, this is a simplified version.
+        var commands = macro.Split(';');
+        foreach (var command in commands)
+        {
+            Console.WriteLine($"Executing: {command.Trim()}");
+        }
+    }
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 10
+```python
+class MacroInterpreter:
+    def run_macro(self, macro_script):
+        commands = macro_script.split(';')
+        for command in commands:
+            command = command.strip()
+            if command:
+                print(f"Running command: {command}")
+                # In a real app, this would execute the command
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 11
+```typescript
+class MacroRunner {
+    run(macroScript: string): void {
+        const commands = macroScript.split(';').filter(cmd => cmd.trim());
+        
+        commands.forEach(command => {
+            console.log(`Executing: ${command.trim()}`);
+            // This would be replaced with actual command execution logic.
+        });
+    }
+}
+```
+
+### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 15
+```csharp
+public class DataTransformer
+{
+    public JObject Transform(JObject data, string rule)
+    {
+        // A simplified example using a hardcoded rule.
+        // A real implementation would parse and apply the rule dynamically.
+        if (rule == "uppercase_name")
+        {
+            if (data["name"] != null)
+            {
+                data["name"] = data["name"].ToString().ToUpper();
             }
-            throw new Error(`Failed to load config: ${error.message}`);
         }
-    }
-
-    async saveConfig(config: T): Promise<void> {
-        try {
-            const data = JSON.stringify(config, null, 4);
-            await fs.writeFile(this.configPath, data);
-        } catch (error) {
-            throw new Error(`Failed to save config: ${error.message}`);
-        }
+        return data;
     }
 }
-✏️ Senaryo 5: Makro Editörü
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
-public class MacroProcessor
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 11
+```python
+class DataTransformer:
+    def transform(self, data: dict, rule: str) -> dict:
+        # Example rule: 'field_to_upper:name'
+        if rule.startswith('field_to_upper:'):
+            field = rule.split(':')[1]
+            if field in data and isinstance(data[field], str):
+                data[field] = data[field].upper()
+        return data
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 14
+```typescript
+class DataTransformer {
+    transform(data: Record<string, any>, rule: string): Record<string, any> {
+        // Example rule: 'uppercase:fieldName'
+        if (rule.startsWith('uppercase:')) {
+            const fieldName = rule.split(':')[1];
+            if (data[fieldName] && typeof data[fieldName] === 'string') {
+                data[fieldName] = data[fieldName].toUpperCase();
+            }
+        }
+        return data;
+    }
+}
+```
+
+### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 13
+```csharp
+public class TestRunner
 {
-    private readonly IScriptEngine _engine;
-    private readonly List<string> _executionHistory = new();
-    
-    public MacroProcessor(IScriptEngine engine)
+    public TestResult RunTest(string testScript)
     {
-        _engine = engine;
+        // This is a mock implementation.
+        // A real system would use a scripting engine to run the test.
+        Console.WriteLine($"Running test script: {testScript}");
+        
+        // Simulate a result
+        return new TestResult { Passed = !testScript.Contains("fail") };
     }
+}
+```
 
-    public ExecutionResult ExecuteMacro(string macroScript, object context)
-    {
-        try
-        {
-            var result = _engine.Execute(macroScript, context);
-            _executionHistory.Add($"Success: {DateTime.UtcNow}");
-            return ExecutionResult.Success(result);
-        }
-        catch (ScriptExecutionException ex)
-        {
-            _executionHistory.Add($"Error: {DateTime.UtcNow} - {ex.Message}");
-            return ExecutionResult.Failure(ex.Message);
-        }
-    }
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 10
+```python
+class TestExecutor:
+    def execute_test(self, script):
+        print(f"Executing test script:\n{script}")
+        # In a real scenario, this would use a more robust execution model
+        if "assert False" in script:
+            return {"status": "Failed"}
+        return {"status": "Passed"}
+```
 
-    public IReadOnlyList<string> GetExecutionHistory() => _executionHistory.AsReadOnly();
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 14
+```typescript
+interface TestResult {
+    status: 'Passed' | 'Failed';
+    message?: string;
 }
 
-public record ExecutionResult(object? Result, bool IsSuccess, string? ErrorMessage)
+class TestRunner {
+    run(script: string): TestResult {
+        console.log(`Executing test script: ${script}`);
+        // Mock implementation
+        if (script.includes('fail')) {
+            return { status: 'Failed', message: 'Assertion failed' };
+        }
+        return { status: 'Passed' };
+    }
+}
+```
+
+### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 10
+```csharp
+public class CalculationEngine
 {
-    public static ExecutionResult Success(object? result) => new(result, true, null);
-    public static ExecutionResult Failure(string error) => new(null, false, error);
+    public object Evaluate(string expression)
+    {
+        // Using DataTable.Compute for safe evaluation of simple expressions.
+        // Not suitable for complex logic.
+        return new System.Data.DataTable().Compute(expression, null);
+    }
 }
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
-from datetime import datetime
-from typing import Any, Optional, List, Tuple
-import traceback
-
-class MacroResult:
-    def __init__(self, result: Any = None, error: Optional[str] = None):
-        self.result = result
-        self.error = error
-        self.success = error is None
-
-class MacroProcessor:
-    def __init__(self):
-        self._execution_history: List[Tuple[datetime, str]] = []
-        self._globals = {}
-
-    def execute(self, macro_script: str, **kwargs) -> MacroResult:
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 9
+```python
+class CalculationEngine:
+    def evaluate(self, expression):
         try:
-            local_vars = kwargs.copy()
-            exec(macro_script, self._globals, local_vars)
-            self._log_execution(success=True)
-            return MacroResult(result=local_vars.get('result'))
+            # WARNING: eval is dangerous if the expression is not sanitized.
+            // This is for demonstration only.
+            return eval(expression)
         except Exception as e:
-            error_msg = f"{type(e).__name__}: {str(e)}"
-            self._log_execution(success=False, error=error_msg)
-            return MacroResult(error=error_msg)
+            return f"Error: {str(e)}"
+```
 
-    def _log_execution(self, success: bool, error: str = ""):
-        status = "SUCCESS" if success else f"ERROR: {error}"
-        self._execution_history.append((datetime.now(), status))
-
-    @property
-    def execution_history(self) -> List[Tuple[datetime, str]]:
-        return self._execution_history.copy()
-💻 Dil: TypeScript
-🤖 AI: DeepSeek Chat
-
-typescript
-interface MacroResult {
-    success: boolean;
-    result?: any;
-    error?: string;
-}
-
-class MacroEngine {
-    private executionHistory: Array<{timestamp: Date; status: string}> = [];
-    private context: Record<string, any> = {};
-
-    setContext(context: Record<string, any>): void {
-        this.context = {...this.context, ...context};
-    }
-
-    execute(macroScript: string): MacroResult {
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 10
+```typescript
+class CalculationEngine {
+    evaluate(expression: string): any {
         try {
-            const result = new Function(...Object.keys(this.context), macroScript)
-                (...Object.values(this.context));
-            
-            this.logExecution(true);
-            return { success: true, result };
-        } catch (error) {
-            this.logExecution(false, error.message);
-            return { success: false, error: error.message };
+            // Using Function constructor for safer evaluation than eval().
+            return new Function(`return ${expression}`)();
+        } catch (e) {
+            return `Error: ${e.message}`;
+        }
+    }
+}
+```
+
+### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
+public class ContentGenerator
+{
+    public string Generate(string template, object model)
+    {
+        // A simple example of template processing.
+        // Real-world scenarios would use a templating engine like Razor or Scriban.
+        var result = template.Replace("{{Model.Title}}", model.GetType().GetProperty("Title")?.GetValue(model)?.ToString());
+        result = result.Replace("{{Model.Content}}", model.GetType().GetProperty("Content")?.GetValue(model)?.ToString());
+        return result;
+    }
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 9
+```python
+class ContentGenerator:
+    def generate(self, template, model):
+        # A basic templating replacement
+        for key, value in model.items():
+            placeholder = f"{{{{{key}}}}}"
+            template = template.replace(placeholder, str(value))
+        return template
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```typescript
+class ContentGenerator {
+    generate(template: string, model: Record<string, any>): string {
+        let content = template;
+        Object.keys(model).forEach(key => {
+            const regex = new RegExp(`\\{\\{\\s*${key}\\s*\\}\\}`, 'g');
+            content = content.replace(regex, model[key]);
+        });
+        return content;
+    }
+}
+```
+
+### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 20
+```csharp
+public class WorkflowEngine
+{
+    public void ExecuteWorkflow(WorkflowDefinition workflow, WorkflowContext context)
+    {
+        foreach (var step in workflow.Steps)
+        {
+            if (EvaluateCondition(step.Condition, context))
+            {
+                ExecuteAction(step.Action, context);
+            }
         }
     }
 
-    private logExecution(success: boolean, errorMessage: string = ""): void {
-        this.executionHistory.push({
-            timestamp: new Date(),
-            status: success ? "SUCCESS" : `ERROR: ${errorMessage}`
+    private bool EvaluateCondition(string condition, WorkflowContext context)
+    {
+        // Simplified condition evaluation
+        return condition.ToLower() == "true" || string.IsNullOrEmpty(condition);
+    }
+
+    private void ExecuteAction(string action, WorkflowContext context)
+    {
+        // Simplified action execution
+        Console.WriteLine($"Executing action: {action}");
+    }
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 16
+```python
+class WorkflowEngine:
+    def execute(self, workflow, context):
+        for step in workflow['steps']:
+            if self._evaluate_condition(step.get('condition'), context):
+                self._execute_action(step['action'], context)
+
+    def _evaluate_condition(self, condition, context):
+        # Simplified condition check
+        if not condition:
+            return True
+        # In a real app, this would be a proper expression evaluation
+        return eval(condition, {"context": context})
+
+    def _execute_action(self, action, context):
+        # Simplified action execution
+        print(f"Executing action: {action} with context {context}")
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 20
+```typescript
+interface WorkflowStep {
+    condition?: string;
+    action: string;
+}
+
+class WorkflowEngine {
+    execute(steps: WorkflowStep[], context: any): void {
+        steps.forEach(step => {
+            if (this.evaluateCondition(step.condition, context)) {
+                this.executeAction(step.action, context);
+            }
         });
     }
 
-    getExecutionHistory(): Array<{timestamp: Date; status: string}> {
-        return [...this.executionHistory];
+    private evaluateCondition(condition: string | undefined, context: any): boolean {
+        if (!condition) return true;
+        // Simplified, unsafe evaluation for demonstration
+        return new Function('context', `return ${condition}`)(context);
+    }
+
+    private executeAction(action: string, context: any): void {
+        console.log(`Executing action: ${action}`, context);
     }
 }
-✏️ Senaryo 6: Veri Dönüştürme Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
-
-csharp
-public class DataTransformer
-{
-    public delegate string TransformationRule(string input);
-
-    public string TransformData(string input, TransformationRule rule)
-    {
-        if (string.IsNullOrEmpty(input))
-            throw new ArgumentException("Input cannot be null or empty");
-
-        try
-        {
-            return rule(input);
-        }
-        catch (Exception ex)
-        {
-            throw new TransformationException("Data transformation failed", ex);
-        }
-    }
-
-    public string ApplyTransformationPipeline(string input, IEnumerable<TransformationRule> rules)
-    {
-        string result = input;
-        foreach (var rule in rules)
-        {
-            result = TransformData(result, rule);
-        }
-        return result;
-    }
-}
-
-public class TransformationException : Exception
-{
-    public TransformationException(string message, Exception inner) 
-        : base(message, inner) { }
-}
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
-
-python
-from typing import Callable, List, Optional
-from functools import reduce
-
-class DataTransformationError(Exception):
-    pass
-
-class DataTransformer:
-    @staticmethod
-    def transform(input_data: str, transformation: Callable[[str], str]) -> str:
-        if not input_data:
-            raise ValueError("Input data cannot be empty")
-        
-        try:
-            return transformation(input_data)
-        except Exception as e:
-            raise DataTransformationError(f"Transformation failed: {str(e)}") from e
-
-    @staticmethod
-    def pipeline(input_data: str, transformations: List[Callable[[str], str]]) -> str:
-        def apply_step(data: str, transform: Callable[[str], str]) -> str:
-            return DataTransformer.transform(data, transform)
-        
-        return reduce(apply_step, transformations, input_data)
-💻 Dil: TypeScript
-🤖 AI: DeepSeek Chat
-
-typescript
-type TransformationRule = (input: string) => string;
-
-class DataTransformer {
-    static transform(input: string, rule: TransformationRule): string {
-        if (!input) {
-            throw new Error("Input cannot be empty");
-        }
-
-        try {
-            return rule(input);
-        } catch (error) {
-            throw new Error(`Transformation failed: ${error.message}`);
-        }
-    }
-
-    static pipeline(input: string, rules: TransformationRule[]): string {
-        return rules.reduce((result, rule) => {
-            return this.transform(result, rule);
-        }, input);
-    }
-}
-
-// Example usage:
-const rules = [
-    (s: string) => s.toUpperCase(),
-    (s: string) => s.replace(/ /g, "_"),
-    (s: string) => `transformed_${s}`
-];
-const result = DataTransformer.pipeline("hello world", rules);
-// Result: "transformed_HELLO_WORLD"
-
-✏️ Senaryo 7: Otomatik Test Aracı
-💻 Dil: `C#**
-
-csharp
-public class TestRunner
-{
-    private readonly ITestReporter _reporter;
-    private readonly List<TestResult> _results = new();
-
-    public TestRunner(ITestReporter reporter)
-    {
-        _reporter = reporter;
-    }
-
-    public TestResult RunTest(ITestCase testCase)
-    {
-        var stopwatch = Stopwatch.StartNew();
-        TestResult result = new(testCase.Name);
-        
-        try
-        {
-            testCase.SetUp();
-            testCase.Execute();
-            result.MarkSuccess();
-        }
-        catch (AssertionException ex)
-        {
-            result.MarkFailure($"Assertion failed: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            result.MarkError($"Unexpected error: {ex.Message}");
-        }
-        finally
-        {
-            testCase.TearDown();
-            stopwatch.Stop();
-            result.SetDuration(stopwatch.Elapsed);
-            _results.Add(result);
-            _reporter.Report(result);
-        }
-        
-        return result;
-    }
-
-    public TestSummary GetSummary() => new(_results);
-}
-
-public record TestResult(string TestName)
-{
-    public TestStatus Status { get; private set; } = TestStatus.Pending;
-    public string? ErrorMessage { get; private set; }
-    public TimeSpan Duration { get; private set; }
-    
-    public void MarkSuccess() => Status = TestStatus.Passed;
-    public void MarkFailure(string message) {
-        Status = TestStatus.Failed;
-        ErrorMessage = message;
-    }
-    public void SetDuration(TimeSpan duration) => Duration = duration;
-}
-💻 Dil: `Python**
-
-python
-from enum import Enum
-from time import perf_counter
-from typing import Protocol, List
-
-class TestStatus(Enum):
-    PENDING = 0
-    PASSED = 1
-    FAILED = 2
-    ERROR = 3
-
-class TestResult:
-    def __init__(self, name: str):
-        self.name = name
-        self.status = TestStatus.PENDING
-        self.error_message = None
-        self.duration = 0.0
-
-    def mark_passed(self):
-        self.status = TestStatus.PASSED
-
-    def mark_failed(self, message: str):
-        self.status = TestStatus.FAILED
-        self.error_message = message
-
-class TestCase(Protocol):
-    def setup(self): ...
-    def execute(self): ...
-    def teardown(self): ...
-
-class TestRunner:
-    def __init__(self):
-        self.results: List[TestResult] = []
-    
-    def run_test(self, test_case: TestCase) -> TestResult:
-        result = TestResult(test_case.__class__.__name__)
-        start_time = perf_counter()
-        
-        try:
-            test_case.setup()
-            test_case.execute()
-            result.mark_passed()
-        except AssertionError as e:
-            result.mark_failed(str(e))
-        except Exception as e:
-            result.mark_failed(f"Test error: {str(e)}")
-        finally:
-            test_case.teardown()
-            result.duration = perf_counter() - start_time
-            self.results.append(result)
-        
-        return result
-✏️ Senaryo 8: Hesaplama Motoru
-💻 Dil: `TypeScript**
-
-typescript
-interface CalculationContext {
-    variables: Record<string, number>;
-    functions: Record<string, (...args: number[]) => number>;
-}
-
-class CalculationEngine {
-    private context: CalculationContext = {
-        variables: {},
-        functions: {
-            sqrt: Math.sqrt,
-            pow: Math.pow
-        }
-    };
-
-    addVariable(name: string, value: number): void {
-        this.context.variables[name] = value;
-    }
-
-    addFunction(name: string, fn: (...args: number[]) => number): void {
-        this.context.functions[name] = fn;
-    }
-
-    evaluate(expression: string): number {
-        try {
-            const tokens = this.tokenize(expression);
-            const parsed = this.parse(tokens);
-            return this.evaluateNode(parsed);
-        } catch (error) {
-            throw new Error(`Calculation error: ${error.message}`);
-        }
-    }
-
-    private evaluateNode(node: ExpressionNode): number {
-        if (node.type === 'number') return node.value;
-        if (node.type === 'variable') {
-            if (!(node.name in this.context.variables)) {
-                throw new Error(`Undefined variable: ${node.name}`);
-            }
-            return this.context.variables[node.name];
-        }
-        if (node.type === 'function') {
-            const args = node.args.map(arg => this.evaluateNode(arg));
-            return this.context.functions[node.name](...args);
-        }
-        throw new Error("Unknown node type");
-    }
-}
-✏️ Senaryo 9: İçerik Yönetim Sistemi
-💻 Dil: `C#**
-
-csharp
-public class ContentTemplateEngine
-{
-    private readonly IContentRepository _repository;
-    private readonly ITemplateCompiler _compiler;
-
-    public ContentTemplateEngine(IContentRepository repository, ITemplateCompiler compiler)
-    {
-        _repository = repository;
-        _compiler = compiler;
-    }
-
-    public async Task<string> RenderTemplate(string templateId, dynamic model)
-    {
-        var template = await _repository.GetTemplateAsync(templateId);
-        if (template == null) 
-            throw new TemplateNotFoundException(templateId);
-
-        var compiledTemplate = _compiler.Compile(template.Content);
-        return compiledTemplate.Render(model);
-    }
-
-    public async Task UpdateTemplate(string templateId, string newContent)
-    {
-        var template = new ContentTemplate {
-            Id = templateId,
-            Content = newContent,
-            ModifiedDate = DateTime.UtcNow
-        };
-        await _repository.SaveTemplateAsync(template);
-    }
-}
-
-public interface IContentRepository
-{
-    Task<ContentTemplate?> GetTemplateAsync(string id);
-    Task SaveTemplateAsync(ContentTemplate template);
-}
-✏️ Senaryo 10: İş Akışı Motoru
-💻 Dil: `Python**
-
-python
-from abc import ABC, abstractmethod
-from typing import Dict, Any, Optional
-
-class WorkflowStep(ABC):
-    @abstractmethod
-    def execute(self, context: Dict[str, Any]) -> Dict[str, Any]:
-        pass
-
-class WorkflowEngine:
-    def __init__(self):
-        self.steps: Dict[str, WorkflowStep] = {}
-    
-    def add_step(self, name: str, step: WorkflowStep):
-        self.steps[name] = step
-    
-    def execute_workflow(self, initial_context: Optional[Dict[str, Any]] = None):
-        context = initial_context or {}
-        results = {}
-        
-        for name, step in self.steps.items():
-            try:
-                context = step.execute(context)
-                results[name] = {
-                    'status': 'success',
-                    'output': context
-                }
-            except Exception as e:
-                results[name] = {
-                    'status': 'failed',
-                    'error': str(e)
-                }
-                break
-        
-        return {
-            'final_context': context,
-            'step_results': results
-        }
-
-class SampleWorkflowStep(WorkflowStep):
-    def execute(self, context):
-        if 'input' not in context:
-            raise ValueError("Missing input in context")
-        return {'processed': context['input'].upper()}
+```

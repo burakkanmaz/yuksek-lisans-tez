@@ -1,8 +1,9 @@
- � Senaryo 1: Disk Kullanım Raporu
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
 
-csharp
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 27
+```csharp
 [HttpGet("disk-usage")]
 public IActionResult GetDiskUsageReport(string directoryPath, string format = "json")
 {
@@ -33,15 +34,18 @@ private long CalculateDirectorySize(string path)
     return Directory.EnumerateFiles(path, "*", SearchOption.AllDirectories)
                     .Sum(file => new FileInfo(file).Length);
 }
-🧪 Senaryo 1: Disk Kullanım Raporu
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 29
+```python
 from fastapi import FastAPI, HTTPException
 import os
 import shutil
 from fastapi.responses import JSONResponse, FileResponse
+import csv
+import io
 
 app = FastAPI()
 
@@ -66,18 +70,19 @@ async def get_disk_usage(directory_path: str, format: str = "json"):
     if format == "json":
         return report
     elif format == "csv":
-        return generate_csv_response(report)
+        output = io.StringIO()
+        writer = csv.writer(output)
+        writer.writerow(report.keys())
+        writer.writerow(report.values())
+        return FileResponse(io.BytesIO(output.getvalue().encode()), media_type="text/csv", filename="report.csv")
     else:
         raise HTTPException(status_code=400, detail="Unsupported format")
+```
 
-def generate_csv_response(data):
-    # CSV generation logic here
-    pass
-🧪 Senaryo 1: Disk Kullanım Raporu
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 42
+```typescript
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
@@ -106,7 +111,10 @@ app.get('/disk-usage', (req, res) => {
         case 'json':
             return res.json(report);
         case 'csv':
-            return generateCsvResponse(res, report);
+            const csvData = `${Object.keys(report).join(',')}\n${Object.values(report).join(',')}`;
+            res.header('Content-Type', 'text/csv');
+            res.attachment('report.csv');
+            return res.send(csvData);
         default:
             return res.status(400).json({ error: 'Unsupported format' });
     }
@@ -129,11 +137,14 @@ function calculateDirectorySize(dirPath: string): number {
     
     return totalSize;
 }
-🧪 Senaryo 2: Dosya İşleme Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 27
+```csharp
 [HttpPost("process-file")]
 public async Task<IActionResult> ProcessFile(string filePath, string operation)
 {
@@ -165,11 +176,12 @@ public async Task<IActionResult> ProcessFile(string filePath, string operation)
         return StatusCode(500, $"Processing failed: {ex.Message}");
     }
 }
-🧪 Senaryo 2: Dosya İşleme Uygulaması
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 20
+```python
 from fastapi import FastAPI, HTTPException
 import file_processor
 
@@ -190,11 +202,12 @@ async def process_file(file_path: str, operation: str):
         return {"processed_file": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Processing failed: {str(e)}")
-🧪 Senaryo 2: Dosya İşleme Uygulaması
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 29
+```typescript
 import express from 'express';
 import fs from 'fs';
 import { processFile } from './file-processor';
@@ -230,11 +243,14 @@ app.post('/process-file', async (req, res) => {
         return res.status(500).json({ error: `Processing failed: ${error.message}` });
     }
 });
-🧪 Senaryo 3: Log Görüntüleme Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 21
+```csharp
 [HttpGet("view-logs")]
 public IActionResult ViewLogs(string logFileName, string filter = "", int page = 1, int pageSize = 50)
 {
@@ -248,56 +264,55 @@ public IActionResult ViewLogs(string logFileName, string filter = "", int page =
     {
         logEntries = logEntries.Where(line => line.Contains(filter)).ToArray();
     }
-
-    var paginatedLogs = logEntries
-        .Skip((page - 1) * pageSize)
-        .Take(pageSize)
-        .ToList();
-
+    
+    var pagedLogs = logEntries.Skip((page - 1) * pageSize).Take(pageSize);
+    
     return Ok(new {
         TotalEntries = logEntries.Length,
-        CurrentPage = page,
+        Page = page,
         PageSize = pageSize,
-        Logs = paginatedLogs
+        Logs = pagedLogs
     });
 }
-🧪 Senaryo 3: Log Görüntüleme Aracı
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 20
+```python
 from fastapi import FastAPI, HTTPException
-from typing import List
+import os
 
 app = FastAPI()
 
 @app.get("/view-logs/")
 async def view_logs(log_file_name: str, filter: str = "", page: int = 1, page_size: int = 50):
-    log_path = f"logs/{log_file_name}"
-    
-    try:
-        with open(log_path, 'r') as file:
-            log_entries = file.readlines()
-    except FileNotFoundError:
+    log_path = os.path.join("Logs", log_file_name)
+    if not os.path.exists(log_path):
         raise HTTPException(status_code=404, detail="Log file not found")
-    
+
+    with open(log_path, "r") as f:
+        log_entries = f.readlines()
+        
     if filter:
         log_entries = [line for line in log_entries if filter in line]
-    
-    start_idx = (page - 1) * page_size
-    paginated_logs = log_entries[start_idx:start_idx + page_size]
+        
+    start = (page - 1) * page_size
+    end = start + page_size
+    paged_logs = log_entries[start:end]
     
     return {
         "total_entries": len(log_entries),
-        "current_page": page,
+        "page": page,
         "page_size": page_size,
-        "logs": paginated_logs
+        "logs": paged_logs
     }
-🧪 Senaryo 3: Log Görüntüleme Aracı
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 23
+```typescript
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
@@ -306,814 +321,652 @@ const app = express();
 
 app.get('/view-logs', (req, res) => {
     const { logFileName, filter = '', page = 1, pageSize = 50 } = req.query;
-    const logPath = path.join('logs', logFileName as string);
-    
+    const logPath = path.join('Logs', logFileName as string);
+
     if (!fs.existsSync(logPath)) {
         return res.status(404).json({ error: 'Log file not found' });
     }
 
-    const logContent = fs.readFileSync(logPath, 'utf-8');
-    let logEntries = logContent.split('\n');
-    
+    let logEntries = fs.readFileSync(logPath, 'utf8').split('\n');
+
     if (filter) {
         logEntries = logEntries.filter(line => line.includes(filter as string));
     }
 
-    const startIdx = (Number(page) - 1) * Number(pageSize);
-    const paginatedLogs = logEntries.slice(startIdx, startIdx + Number(pageSize));
-    
-    return res.json({
+    const pagedLogs = logEntries.slice((+page - 1) * +pageSize, +page * +pageSize);
+
+    res.json({
         totalEntries: logEntries.length,
-        currentPage: Number(page),
-        pageSize: Number(pageSize),
-        logs: paginatedLogs
+        page: +page,
+        pageSize: +pageSize,
+        logs: pagedLogs
     });
 });
-🧪 Senaryo 4: Backup Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
-[HttpPost("create-backup")]
-public async Task<IActionResult> CreateBackup(string sourceDirectory, string backupLocation)
+### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 21
+```csharp
+[HttpPost("backup-directory")]
+public IActionResult BackupDirectory(string directoryPath)
 {
-    if (!Directory.Exists(sourceDirectory))
-        return BadRequest("Source directory not found");
+    if (!Directory.Exists(directoryPath))
+        return BadRequest("Directory not found");
 
+    var backupPath = Path.Combine("Backups", $"{Path.GetFileName(directoryPath)}_{DateTime.Now:yyyyMMddHHmmss}.zip");
+    
     try
     {
-        var backupPath = Path.Combine(backupLocation, $"backup_{DateTime.Now:yyyyMMddHHmmss}.zip");
-        
-        await Task.Run(() => 
-        {
-            ZipFile.CreateFromDirectory(sourceDirectory, backupPath);
-        });
-
-        // Save backup record to database
-        var backupRecord = new BackupRecord {
-            SourcePath = sourceDirectory,
-            BackupPath = backupPath,
-            CreatedAt = DateTime.Now,
-            Status = "Completed"
-        };
-        
-        _dbContext.BackupRecords.Add(backupRecord);
-        await _dbContext.SaveChangesAsync();
-
-        return Ok(new { 
-            Message = "Backup completed successfully",
-            BackupPath = backupPath 
-        });
+        System.IO.Compression.ZipFile.CreateFromDirectory(directoryPath, backupPath);
+        // Send notification logic here
+        return Ok(new { Message = "Backup completed successfully.", BackupFile = backupPath });
     }
     catch (Exception ex)
     {
         return StatusCode(500, $"Backup failed: {ex.Message}");
     }
 }
-🧪 Senaryo 4: Backup Uygulaması
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 16
+```python
 from fastapi import FastAPI, HTTPException
-import shutil
 import os
-from datetime import datetime
-from databases import Database
+import shutil
+import datetime
 
 app = FastAPI()
-database = Database("sqlite:///backups.db")
 
-@app.post("/create-backup/")
-async def create_backup(source_directory: str, backup_location: str):
-    if not os.path.isdir(source_directory):
-        raise HTTPException(status_code=400, detail="Source directory not found")
-    
+@app.post("/backup-directory/")
+async def backup_directory(directory_path: str):
+    if not os.path.isdir(directory_path):
+        raise HTTPException(status_code=400, detail="Directory not found")
+
+    backup_file = f"Backups/{os.path.basename(directory_path)}_{datetime.datetime.now():%Y%m%d%H%M%S}"
     try:
-        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        backup_path = os.path.join(backup_location, f"backup_{timestamp}.zip")
-        
-        shutil.make_archive(backup_path.replace('.zip', ''), 'zip', source_directory)
-        
-        # Save to database
-        query = "INSERT INTO backups(source_path, backup_path, created_at, status) VALUES (:source, :backup, :created, 'Completed')"
-        values = {
-            "source": source_directory,
-            "backup": backup_path,
-            "created": datetime.now()
-        }
-        await database.execute(query=query, values=values)
-        
-        return {
-            "message": "Backup completed successfully",
-            "backup_path": backup_path
-        }
+        shutil.make_archive(backup_file, 'zip', directory_path)
+        # Send notification logic here
+        return {"message": "Backup completed successfully.", "backup_file": f"{backup_file}.zip"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Backup failed: {str(e)}")
-🧪 Senaryo 4: Backup Uygulaması
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 19
+```typescript
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
-import { exec } from 'child_process';
-import { promisify } from 'util';
-import { Database } from 'sqlite3';
+import archiver from 'archiver';
 
 const app = express();
-const execAsync = promisify(exec);
-const db = new Database('backups.db');
 
-app.post('/create-backup', async (req, res) => {
-    const { sourceDirectory, backupLocation } = req.body;
-    
-    if (!fs.existsSync(sourceDirectory) || !fs.lstatSync(sourceDirectory).isDirectory()) {
-        return res.status(400).json({ error: 'Source directory not found' });
+app.post('/backup-directory', (req, res) => {
+    const { directoryPath } = req.body;
+    if (!fs.existsSync(directoryPath) || !fs.lstatSync(directoryPath).isDirectory()) {
+        return res.status(400).json({ error: 'Directory not found' });
     }
 
-    try {
-        const timestamp = new Date().toISOString().replace(/[-:]/g, '').replace('T', '').split('.')[0];
-        const backupPath = path.join(backupLocation, `backup_${timestamp}.zip`);
-        
-        await execAsync(`zip -r ${backupPath} ${sourceDirectory}`);
-        
-        // Save to database
-        db.run(
-            'INSERT INTO backups(source_path, backup_path, created_at, status) VALUES (?, ?, ?, ?)',
-            [sourceDirectory, backupPath, new Date().toISOString(), 'Completed'],
-            (err) => {
-                if (err) throw err;
-            }
-        );
+    const backupPath = path.join('Backups', `${path.basename(directoryPath)}_${Date.now()}.zip`);
+    const output = fs.createWriteStream(backupPath);
+    const archive = archiver('zip');
 
-        return res.json({
-            message: 'Backup completed successfully',
-            backupPath: backupPath
-        });
-    } catch (error) {
-        return res.status(500).json({ error: `Backup failed: ${error.message}` });
-    }
+    output.on('close', () => {
+        // Send notification logic here
+        res.json({ message: 'Backup completed successfully.', backupFile: backupPath });
+    });
+
+    archive.on('error', (err) => {
+        res.status(500).json({ error: `Backup failed: ${err.message}` });
+    });
+
+    archive.pipe(output);
+    archive.directory(directoryPath, false);
+    archive.finalize();
 });
-� Senaryo 5: Ağ Test Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 24
+```csharp
 [HttpGet("test-connection")]
 public async Task<IActionResult> TestConnection(string targetAddress)
 {
     try
     {
-        using var ping = new Ping();
-        var reply = await ping.SendPingAsync(targetAddress, 5000);
-        
-        if (reply.Status != IPStatus.Success)
-            return BadRequest($"Connection failed: {reply.Status}");
+        using var ping = new System.Net.NetworkInformation.Ping();
+        var reply = await ping.SendPingAsync(targetAddress, 5000); // 5s timeout
 
-        var traceroute = await NetworkTools.TraceRouteAsync(targetAddress);
-        var speedTest = await NetworkTools.TestSpeedAsync(targetAddress);
-
-        return Ok(new {
-            Status = "Success",
-            PingTime = reply.RoundtripTime,
-            Hops = traceroute,
-            DownloadSpeed = speedTest.DownloadSpeed,
-            UploadSpeed = speedTest.UploadSpeed,
-            Latency = speedTest.Latency
-        });
+        if (reply.Status == System.Net.NetworkInformation.IPStatus.Success)
+        {
+            return Ok(new {
+                Status = "Success",
+                Address = reply.Address.ToString(),
+                RoundtripTime = reply.RoundtripTime,
+                Ttl = reply.Options.Ttl,
+                BufferSize = reply.Buffer.Length
+            });
+        }
+        else
+        {
+            return Ok(new { Status = reply.Status.ToString() });
+        }
     }
     catch (Exception ex)
     {
         return StatusCode(500, $"Connection test failed: {ex.Message}");
     }
 }
-� Senaryo 5: Ağ Test Aracı
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 15
+```python
 from fastapi import FastAPI, HTTPException
 import subprocess
-import re
 
 app = FastAPI()
 
 @app.get("/test-connection/")
 async def test_connection(target_address: str):
     try:
-        # Ping test
-        ping_result = subprocess.run(['ping', '-c', '4', target_address], capture_output=True, text=True)
-        if ping_result.returncode != 0:
-            raise HTTPException(status_code=400, detail=f"Ping failed: {ping_result.stderr}")
+        # The '-c 4' sends 4 packets. Adjust as needed.
+        result = subprocess.run(['ping', '-c', '4', target_address], capture_output=True, text=True, timeout=10)
         
-        # Extract ping statistics
-        ping_stats = re.search(r'min/avg/max/mdev = (\d+\.\d+)/(\d+\.\d+)/(\d+\.\d+)', ping_result.stdout)
-        
-        return {
-            "status": "Success",
-            "ping_time_avg": float(ping_stats.group(2)),
-            # Additional network metrics would be added here
-        }
+        if result.returncode == 0:
+            return {"status": "Success", "output": result.stdout}
+        else:
+            return {"status": "Failed", "error": result.stderr}
+            
+    except subprocess.TimeoutExpired:
+        raise HTTPException(status_code=408, detail="Connection test timed out.")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Connection test failed: {str(e)}")
-🧪 Senaryo 5: Ağ Test Aracı
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 16
+```typescript
 import express from 'express';
 import { exec } from 'child_process';
-import { promisify } from 'util';
 
 const app = express();
-const execAsync = promisify(exec);
 
-app.get('/test-connection', async (req, res) => {
+app.get('/test-connection', (req, res) => {
     const { targetAddress } = req.query;
-    
-    try {
-        // Ping test
-        const { stdout: pingOutput } = await execAsync(`ping -c 4 ${targetAddress}`);
-        
-        // Extract ping time
-        const pingMatch = pingOutput.match(/min\/avg\/max\/mdev = \d+\.\d+\/(\d+\.\d+)\//);
-        if (!pingMatch) {
-            throw new Error('Ping statistics not found');
+
+    exec(`ping -c 4 ${targetAddress}`, (error, stdout, stderr) => {
+        if (error) {
+            return res.status(500).json({ status: 'Failed', error: error.message });
         }
-        
-        return res.json({
-            status: 'Success',
-            pingTime: parseFloat(pingMatch[1]),
-            // Additional network metrics would be added here
-        });
-    } catch (error) {
-        return res.status(500).json({ error: `Connection test failed: ${error.message}` });
-    }
+        res.json({ status: 'Success', output: stdout });
+    });
 });
-🧪 Senaryo 6: Dosya Sıkıştırma Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 22
+```csharp
 [HttpPost("compress-files")]
-public IActionResult CompressFiles(List<string> filePaths, string outputPath, string compressionLevel = "Normal")
+public IActionResult CompressFiles([FromBody] List<string> filePaths, string compressionLevel = "Optimal")
 {
-    if (filePaths == null || !filePaths.Any())
-        return BadRequest("No files selected");
+    var zipPath = Path.Combine("Archives", $"archive_{DateTime.Now:yyyyMMddHHmmss}.zip");
     
-    if (filePaths.Any(path => !System.IO.File.Exists(path)))
-        return BadRequest("One or more files not found");
-
     try
     {
-        var compressionLevelEnum = Enum.Parse<CompressionLevel>(compressionLevel);
-        using var archive = ZipFile.Open(outputPath, ZipArchiveMode.Create);
+        using var zipStream = new FileStream(zipPath, FileMode.Create);
+        using var archive = new System.IO.Compression.ZipArchive(zipStream, System.IO.Compression.ZipArchiveMode.Create);
         
+        var level = (System.IO.Compression.CompressionLevel)Enum.Parse(typeof(System.IO.Compression.CompressionLevel), compressionLevel, true);
+
         foreach (var filePath in filePaths)
         {
-            var entry = archive.CreateEntry(Path.GetFileName(filePath), compressionLevelEnum);
-            using var entryStream = entry.Open();
-            using var fileStream = System.IO.File.OpenRead(filePath);
-            fileStream.CopyTo(entryStream);
+            if (System.IO.File.Exists(filePath))
+            {
+                archive.CreateEntryFromFile(filePath, Path.GetFileName(filePath), level);
+            }
         }
-
-        return Ok(new { 
-            Message = "Compression completed successfully",
-            ArchivePath = outputPath,
-            CompressedFiles = filePaths.Count
-        });
+        return PhysicalFile(zipPath, "application/zip", Path.GetFileName(zipPath));
     }
-    catch (Exception ex)
+    catch(Exception ex)
     {
         return StatusCode(500, $"Compression failed: {ex.Message}");
     }
 }
-🧪 Senaryo 6: Dosya Sıkıştırma Uygulaması
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 17
+```python
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
 import zipfile
 import os
+import datetime
 
 app = FastAPI()
 
 @app.post("/compress-files/")
-async def compress_files(file_paths: list[str], output_path: str, compression_level: str = "ZIP_DEFLATED"):
-    if not file_paths:
-        raise HTTPException(status_code=400, detail="No files selected")
-    
-    for file_path in file_paths:
-        if not os.path.isfile(file_path):
-            raise HTTPException(status_code=400, detail=f"File not found: {file_path}")
-    
+async def compress_files(file_paths: list[str], compression_level: int = zipfile.ZIP_DEFLATED):
+    zip_path = f"Archives/archive_{datetime.datetime.now():%Y%m%d%H%M%S}.zip"
     try:
-        compression = getattr(zipfile, compression_level, zipfile.ZIP_DEFLATED)
-        
-        with zipfile.ZipFile(output_path, 'w', compression) as zipf:
+        with zipfile.ZipFile(zip_path, 'w', compression=compression_level) as zf:
             for file_path in file_paths:
-                zipf.write(file_path, os.path.basename(file_path))
-        
-        return {
-            "message": "Compression completed successfully",
-            "archive_path": output_path,
-            "compressed_files": len(file_paths)
-        }
+                if os.path.exists(file_path):
+                    zf.write(file_path, os.path.basename(file_path))
+        return FileResponse(zip_path, media_type='application/zip', filename=os.path.basename(zip_path))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Compression failed: {str(e)}")
-🧪 Senaryo 6: Dosya Sıkıştırma Uygulaması
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 22
+```typescript
 import express from 'express';
 import fs from 'fs';
+import path from 'path';
 import archiver from 'archiver';
 
 const app = express();
 app.use(express.json());
 
 app.post('/compress-files', (req, res) => {
-    const { filePaths, outputPath } = req.body;
+    const { filePaths, compressionLevel = 9 } = req.body;
+    const zipPath = path.join('Archives', `archive_${Date.now()}.zip`);
     
-    if (!filePaths || filePaths.length === 0) {
-        return res.status(400).json({ error: 'No files selected' });
-    }
+    const output = fs.createWriteStream(zipPath);
+    const archive = archiver('zip', { zlib: { level: compressionLevel } });
+
+    output.on('close', () => res.download(zipPath));
+    archive.on('error', (err) => res.status(500).json({ error: `Compression failed: ${err.message}` }));
     
-    for (const filePath of filePaths) {
-        if (!fs.existsSync(filePath)) {
-            return res.status(400).json({ error: `File not found: ${filePath}` });
+    archive.pipe(output);
+    filePaths.forEach((filePath: string) => {
+        if(fs.existsSync(filePath)) {
+            archive.file(filePath, { name: path.basename(filePath) });
         }
+    });
+    archive.finalize();
+});
+```
+
+### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 23
+```csharp
+[HttpGet("monitor-process")]
+public async Task<IActionResult> MonitorProcess(string processName)
+{
+    var process = System.Diagnostics.Process.GetProcessesByName(processName).FirstOrDefault();
+    if (process == null)
+        return NotFound("Process not found.");
+
+    var cts = new CancellationTokenSource(TimeSpan.FromMinutes(1)); // Monitor for 1 minute
+    var monitoringData = new List<object>();
+
+    while (!cts.Token.IsCancellationRequested)
+    {
+        process.Refresh();
+        monitoringData.Add(new {
+            Timestamp = DateTime.UtcNow,
+            CpuUsage = process.TotalProcessorTime, // Note: This is total time, not current usage %
+            MemoryUsage = process.WorkingSet64
+        });
+        await Task.Delay(5000, cts.Token); // every 5 seconds
     }
     
-    try {
-        const output = fs.createWriteStream(outputPath);
-        const archive = archiver('zip');
-        
-        output.on('close', () => {
-            return res.json({
-                message: 'Compression completed successfully',
-                archivePath: outputPath,
-                compressedFiles: filePaths.length
-            });
-        });
-        
-        archive.pipe(output);
-        
-        filePaths.forEach(filePath => {
-            archive.file(filePath, { name: filePath.split('/').pop() });
-        });
-        
-        archive.finalize();
-    } catch (error) {
-        return res.status(500).json({ error: `Compression failed: ${error.message}` });
-    }
-});
-🧪 Senaryo 7: Sistem İzleme Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
-
-csharp
-[HttpGet("monitor-process")]
-public IActionResult MonitorProcess(int processId)
-{
-    try
-    {
-        var process = Process.GetProcessById(processId);
-        var cpuCounter = new PerformanceCounter("Process", "% Processor Time", process.ProcessName);
-        var ramCounter = new PerformanceCounter("Process", "Working Set", process.ProcessName);
-        
-        // First call returns 0, so we need to call NextValue() twice
-        cpuCounter.NextValue();
-        System.Threading.Thread.Sleep(500);
-        
-        var cpuUsage = cpuCounter.NextValue();
-        var ramUsage = ramCounter.NextValue();
-
-        return Ok(new {
-            ProcessName = process.ProcessName,
-            CpuUsage = cpuUsage,
-            MemoryUsage = ramUsage / (1024 * 1024), // Convert to MB
-            ThreadCount = process.Threads.Count,
-            StartTime = process.StartTime
-        });
-    }
-    catch (ArgumentException)
-    {
-        return NotFound($"Process with ID {processId} not found");
-    }
-    catch (Exception ex)
-    {
-        return StatusCode(500, $"Monitoring failed: {ex.Message}");
-    }
+    // In a real app, you'd probably return this data formatted for a graph
+    return Ok(monitoringData);
 }
-🧪 Senaryo 7: Sistem İzleme Aracı
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 20
+```python
 from fastapi import FastAPI, HTTPException
 import psutil
+import time
+import asyncio
 
 app = FastAPI()
 
 @app.get("/monitor-process/")
-async def monitor_process(process_id: int):
+async def monitor_process(process_name: str):
     try:
-        process = psutil.Process(process_id)
+        proc = next(p for p in psutil.process_iter(['name']) if p.info['name'] == process_name)
+    except StopIteration:
+        raise HTTPException(status_code=404, detail="Process not found.")
         
-        cpu_percent = process.cpu_percent(interval=0.5)
-        memory_info = process.memory_info()
+    monitoring_data = []
+    for _ in range(12): # Monitor for 1 minute (12 * 5 seconds)
+        monitoring_data.append({
+            "timestamp": time.time(),
+            "cpu_percent": proc.cpu_percent(interval=1),
+            "memory_info": proc.memory_info()
+        })
+        await asyncio.sleep(4) # sleep for 4, interval is 1
         
-        return {
-            "process_name": process.name(),
-            "cpu_usage": cpu_percent,
-            "memory_usage": memory_info.rss / (1024 * 1024),  # Convert to MB
-            "thread_count": process.num_threads(),
-            "start_time": process.create_time()
-        }
-    except psutil.NoSuchProcess:
-        raise HTTPException(status_code=404, detail=f"Process with ID {process_id} not found")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Monitoring failed: {str(e)}")
-🧪 Senaryo 7: Sistem İzleme Aracı
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+    return monitoring_data
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 19
+```typescript
 import express from 'express';
-import { exec } from 'child_process';
-import { promisify } from 'util';
+import pidusage from 'pidusage';
 
 const app = express();
-const execAsync = promisify(exec);
 
 app.get('/monitor-process', async (req, res) => {
-    const { processId } = req.query;
-    
+    const { processName } = req.query;
+    // Finding PID from process name is platform-specific and complex in Node.js.
+    // Assuming we have the PID for this example.
+    const pid = 12345; // Placeholder PID
+
     try {
-        // Note: This is a simplified example for Linux systems
-        const { stdout: psOutput } = await execAsync(`ps -p ${processId} -o %cpu,rss,comm`);
-        const lines = psOutput.trim().split('\n');
-        
-        if (lines.length < 2) {
-            throw new Error('Process not found');
-        }
-        
-        const [cpu, mem, name] = lines[1].trim().split(/\s+/);
-        
-        return res.json({
-            processName: name,
-            cpuUsage: parseFloat(cpu),
-            memoryUsage: Math.round(parseInt(mem) / 1024),  // Convert KB to MB
-            // Additional metrics would be added here
+        const stats = await pidusage(pid);
+        // This gives a single snapshot. For continuous monitoring, this would be in a loop.
+        res.json({
+            processName,
+            pid: stats.pid,
+            cpu: stats.cpu,
+            memory: stats.memory,
+            timestamp: stats.timestamp
         });
-    } catch (error) {
-        return res.status(500).json({ error: `Monitoring failed: ${error.message}` });
+    } catch(error) {
+        res.status(404).json({ error: 'Process not found or failed to get stats.' });
     }
 });
-🧪 Senaryo 8: Dosya Arama Uygulaması
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 20
+```csharp
 [HttpGet("search-files")]
-public IActionResult SearchFiles(string searchTerm, string directoryPath = null)
+public IActionResult SearchFiles(string basePath, string searchPattern, bool recursive = true)
 {
+    if (!Directory.Exists(basePath))
+        return BadRequest("Base path does not exist.");
+
     try
     {
-        directoryPath = directoryPath ?? Directory.GetCurrentDirectory();
+        var searchOption = recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
+        var files = Directory.EnumerateFiles(basePath, searchPattern, searchOption);
         
-        var searchOption = SearchOption.AllDirectories;
-        var files = Directory.EnumerateFiles(directoryPath, $"*{searchTerm}*", searchOption)
-                            .Select(f => new {
-                                Path = f,
-                                Size = new FileInfo(f).Length,
-                                LastModified = File.GetLastWriteTime(f)
-                            })
-                            .ToList();
-
-        return Ok(new {
-            SearchTerm = searchTerm,
-            Directory = directoryPath,
-            ResultsCount = files.Count,
-            Files = files
+        var result = files.Select(f => new {
+            FileName = Path.GetFileName(f),
+            FilePath = f,
+            FileSize = new FileInfo(f).Length,
+            LastModified = new FileInfo(f).LastWriteTimeUtc
         });
+        
+        return Ok(result);
     }
-    catch (Exception ex)
+    catch(Exception ex)
     {
-        return StatusCode(500, $"Search failed: {ex.Message}");
+        return StatusCode(500, $"File search failed: {ex.Message}");
     }
 }
-🧪 Senaryo 8: Dosya Arama Uygulaması
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 21
+```python
 from fastapi import FastAPI, HTTPException
 import os
-from typing import List
+import fnmatch
 
 app = FastAPI()
 
 @app.get("/search-files/")
-async def search_files(search_term: str, directory_path: str = None):
-    try:
-        directory_path = directory_path or os.getcwd()
+async def search_files(base_path: str, search_pattern: str, recursive: bool = True):
+    if not os.path.isdir(base_path):
+        raise HTTPException(status_code=400, detail="Base path does not exist.")
         
-        results = []
-        for root, _, files in os.walk(directory_path):
-            for file in files:
-                if search_term.lower() in file.lower():
-                    file_path = os.path.join(root, file)
-                    stat = os.stat(file_path)
-                    results.append({
-                        "path": file_path,
-                        "size": stat.st_size,
-                        "last_modified": stat.st_mtime
-                    })
+    results = []
+    if recursive:
+        for dirpath, _, filenames in os.walk(base_path):
+            for filename in fnmatch.filter(filenames, search_pattern):
+                full_path = os.path.join(dirpath, filename)
+                stat = os.stat(full_path)
+                results.append({
+                    "file_name": filename,
+                    "file_path": full_path,
+                    "file_size": stat.st_size,
+                    "last_modified": stat.st_mtime
+                })
+    else:
+        # Non-recursive implementation
+        pass
         
-        return {
-            "search_term": search_term,
-            "directory": directory_path,
-            "results_count": len(results),
-            "files": results
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Search failed: {str(e)}")
-🧪 Senaryo 8: Dosya Arama Uygulaması
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+    return results
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 28
+```typescript
 import express from 'express';
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
+import { minimatch } from 'minimatch';
 
 const app = express();
 
-app.get('/search-files', (req, res) => {
-    const { searchTerm, directoryPath = process.cwd() } = req.query;
-    
-    try {
-        const results: any[] = [];
-        
-        function searchDirectory(dir: string) {
-            const files = fs.readdirSync(dir);
-            
-            files.forEach(file => {
-                const filePath = path.join(dir, file);
-                const stat = fs.statSync(filePath);
-                
-                if (stat.isDirectory()) {
-                    searchDirectory(filePath);
-                } else if (file.toLowerCase().includes((searchTerm as string).toLowerCase())) {
-                    results.push({
-                        path: filePath,
-                        size: stat.size,
-                        lastModified: stat.mtime
-                    });
-                }
-            });
+app.get('/search-files', async (req, res) => {
+    const { basePath, searchPattern, recursive = 'true' } = req.query;
+
+    if (!await fs.stat(basePath as string).then(s => s.isDirectory()).catch(() => false)) {
+        return res.status(400).json({ error: 'Base path does not exist.' });
+    }
+
+    const results: object[] = [];
+    async function findFiles(currentPath: string) {
+        const entries = await fs.readdir(currentPath, { withFileTypes: true });
+        for (const entry of entries) {
+            const fullPath = path.join(currentPath, entry.name);
+            if (entry.isDirectory() && recursive === 'true') {
+                await findFiles(fullPath);
+            } else if (entry.isFile() && minimatch(entry.name, searchPattern as string)) {
+                const stats = await fs.stat(fullPath);
+                results.push({
+                    fileName: entry.name,
+                    filePath: fullPath,
+                    fileSize: stats.size,
+                    lastModified: stats.mtime
+                });
+            }
         }
-        
-        searchDirectory(directoryPath as string);
-        
-        return res.json({
-            searchTerm,
-            directory: directoryPath,
-            resultsCount: results.length,
-            files: results
-        });
-    } catch (error) {
-        return res.status(500).json({ error: `Search failed: ${error.message}` });
+    }
+
+    try {
+        await findFiles(basePath as string);
+        res.json(results);
+    } catch(error) {
+        res.status(500).json({ error: `File search failed: ${error.message}` });
     }
 });
-🧪 Senaryo 9: Veritabanı Yönetim Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
-[HttpPost("execute-query")]
-public IActionResult ExecuteQuery(string databaseName, string query)
+### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 17
+```csharp
+[HttpPost("manage-database")]
+public async Task<IActionResult> ManageDatabase(string dbName, string command)
 {
+    // WARNING: This is a highly simplified and insecure example.
+    // In a real application, never pass raw commands. Use a proper DB driver.
+    var connectionString = $"Server=localhost;Database={dbName};User Id=admin;Password=password;";
+    
     try
     {
-        using var connection = new SqlConnection($"Server=.;Database={databaseName};Integrated Security=True;");
-        connection.Open();
-        
-        using var command = new SqlCommand(query, connection);
-        
-        if (query.Trim().StartsWith("SELECT", StringComparison.OrdinalIgnoreCase))
-        {
-            using var reader = command.ExecuteReader();
-            var results = new List<Dictionary<string, object>>();
-            
-            while (reader.Read())
-            {
-                var row = new Dictionary<string, object>();
-                for (var i = 0; i < reader.FieldCount; i++)
-                {
-                    row[reader.GetName(i)] = reader.GetValue(i);
-                }
-                results.Add(row);
-            }
-            
-            return Ok(new {
-                Database = databaseName,
-                Query = query,
-                Results = results
-            });
-        }
-        else
-        {
-            var affectedRows = command.ExecuteNonQuery();
-            return Ok(new {
-                Database = databaseName,
-                Query = query,
-                AffectedRows = affectedRows
-            });
-        }
+        using var connection = new Npgsql.NpgsqlConnection(connectionString);
+        await connection.OpenAsync();
+        using var cmd = new Npgsql.NpgsqlCommand(command, connection);
+        var result = await cmd.ExecuteScalarAsync(); // or ExecuteNonQueryAsync
+        return Ok(new { Success = true, Result = result });
     }
     catch (Exception ex)
     {
-        return StatusCode(500, $"Query execution failed: {ex.Message}");
+        return StatusCode(500, $"Database operation failed: {ex.Message}");
     }
 }
-🧪 Senaryo 9: Veritabanı Yönetim Aracı
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 16
+```python
 from fastapi import FastAPI, HTTPException
-import pyodbc
-from typing import List, Dict, Any
+import psycopg2
 
 app = FastAPI()
 
-@app.post("/execute-query/")
-async def execute_query(database_name: str, query: str):
+@app.post("/manage-database/")
+async def manage_database(db_name: str, command: str):
+    # WARNING: Highly insecure. Use a proper ORM or parameterized queries.
+    conn_string = f"dbname='{db_name}' user='admin' host='localhost' password='password'"
     try:
-        connection = pyodbc.connect(
-            f"Driver={{SQL Server}};Server=.;Database={database_name};Trusted_Connection=yes;")
-        cursor = connection.cursor()
-        
-        if query.strip().upper().startswith("SELECT"):
-            cursor.execute(query)
-            columns = [column[0] for column in cursor.description]
-            results = [dict(zip(columns, row)) for row in cursor.fetchall()]
-            
-            return {
-                "database": database_name,
-                "query": query,
-                "results": results
-            }
-        else:
-            affected_rows = cursor.execute(query).rowcount
-            connection.commit()
-            
-            return {
-                "database": database_name,
-                "query": query,
-                "affected_rows": affected_rows
-            }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Query execution failed: {str(e)}")
-    finally:
+        conn = psycopg2.connect(conn_string)
+        cursor = conn.cursor()
+        cursor.execute(command)
+        conn.commit()
+        # Fetching results might be needed for some commands
         cursor.close()
-        connection.close()
-🧪 Senaryo 9: Veritabanı Yönetim Aracı
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+        conn.close()
+        return {"success": True, "message": "Command executed."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database operation failed: {str(e)}")
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 17
+```typescript
 import express from 'express';
-import { Connection, Request } from 'tedious';
+import { Client } from 'pg';
 
 const app = express();
 app.use(express.json());
 
-app.post('/execute-query', (req, res) => {
-    const { databaseName, query } = req.body;
-    
-    const config = {
-        server: 'localhost',
-        authentication: {
-            type: 'default',
-            options: {
-                userName: 'username',
-                password: 'password'
-            }
-        },
-        options: {
-            database: databaseName,
-            encrypt: true
-        }
-    };
-    
-    const connection = new Connection(config);
-    
-    connection.on('connect', (err) => {
-        if (err) {
-            return res.status(500).json({ error: `Connection failed: ${err.message}` });
-        }
-        
-        const request = new Request(query, (err, rowCount, rows) => {
-            connection.close();
-            
-            if (err) {
-                return res.status(500).json({ error: `Query execution failed: ${err.message}` });
-            }
-            
-            if (query.trim().toUpperCase().startsWith('SELECT')) {
-                const results = rows.map(row => {
-                    const result: any = {};
-                    row.forEach(column => {
-                        result[column.metadata.colName] = column.value;
-                    });
-                    return result;
-                });
-                
-                return res.json({
-                    database: databaseName,
-                    query,
-                    results,
-                    rowCount
-                });
-            } else {
-                return res.json({
-                    database: databaseName,
-                    query,
-                    affectedRows: rowCount
-                });
-            }
-        });
-        
-        connection.execSql(request);
+app.post('/manage-database', async (req, res) => {
+    const { dbName, command } = req.body;
+    // WARNING: Insecure. Do not use in production.
+    const client = new Client({
+        user: 'admin',
+        host: 'localhost',
+        database: dbName,
+        password: 'password',
+        port: 5432,
     });
-    
-    connection.connect();
+    try {
+        await client.connect();
+        const result = await client.query(command);
+        await client.end();
+        res.json({ success: true, result: result.rows });
+    } catch (error) {
+        res.status(500).json({ error: `Database operation failed: ${error.message}` });
+    }
 });
-🧪 Senaryo 10: Sistem Güvenlik Aracı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
-[HttpPost("security-scan")]
-public IActionResult PerformSecurityScan(string scanType, string targetPath)
+### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 15
+```csharp
+[HttpPost("run-security-scan")]
+public async Task<IActionResult> RunSecurityScan(string target, string scanType)
 {
-    try
+    // WARNING: Insecure example. Real-world use requires careful validation.
+    var arguments = $"-T4 -A -v {target}"; // Default arguments
+    if(scanType == "stealth")
     {
-        var scanResults = new List<SecurityIssue>();
-        
-        switch (scanType.ToLower())
-        {
-            case "vulnerability":
-                scanResults = SecurityScanner.CheckForVulnerabilities(targetPath);
-                break;
-            case "malware":
-                scanResults = SecurityScanner.ScanForMalware(targetPath);
-                break;
-            case "permissions":
-                scanResults = SecurityScanner.CheckPermissions(targetPath);
-                break;
-            default:
-                return BadRequest("Unsupported scan type");
-        }
-
-        return Ok(new {
-            ScanType = scanType,
-            Target = targetPath,
-            IssuesFound = scanResults.Count,
-            Issues = scanResults
-        });
+        arguments = $"-sS -sV -T4 {target}";
     }
-    catch (Exception ex)
-    {
-        return StatusCode(500, $"Security scan failed: {ex.Message}");
-    }
+    
+    var process = System.Diagnostics.Process.Start("nmap", arguments);
+    await process.WaitForExitAsync();
+    
+    // Process and return scan results from a file, etc.
+    return Ok(new { Success = true, Message = "Scan completed."});
 }
-🧪 Senaryo 10: Sistem Güvenlik Aracı
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 15
+```python
 from fastapi import FastAPI, HTTPException
-from typing import List
-import security_scanner
+import subprocess
 
 app = FastAPI()
 
-@app.post("/security-scan/")
-async def perform_security_scan(scan_type: str, target_path: str):
-    try:
-        scan_results = []
+@app.post("/run-security-scan/")
+async def run_security_scan(target: str, scan_type: str):
+    # WARNING: Insecure example.
+    arguments = ["-T4", "-A", "-v", target]
+    if scan_type == "stealth":
+        arguments = ["-sS", "-sV", "-T4", target]
         
-        if scan_type.lower() == "vulnerability":
-            scan_results = await security_scanner.check_vulnerabilities(target_path)
-        elif scan_type.lower() == "malware":
-            scan_results = await security_scanner.scan_malware(target_path)
-        elif scan_type.lower
+    try:
+        result = subprocess.run(["nmap"] + arguments, capture_output=True, text=True, check=True)
+        return {"success": True, "report": result.stdout}
+    except subprocess.CalledProcessError as e:
+        raise HTTPException(status_code=500, detail=f"Scan failed: {e.stderr}")
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 18
+```typescript
+import express from 'express';
+import { exec } from 'child_process';
+
+const app = express();
+app.use(express.json());
+
+app.post('/run-security-scan', (req, res) => {
+    const { target, scanType } = req.body;
+    // WARNING: Insecure example.
+    let arguments = `-T4 -A -v ${target}`;
+    if (scanType === 'stealth') {
+        arguments = `-sS -sV -T4 ${target}`;
+    }
+
+    exec(`nmap ${arguments}`, (error, stdout, stderr) => {
+        if (error) {
+            return res.status(500).json({ error: error.message });
+        }
+        res.json({ success: true, report: stdout, errors: stderr });
+    });
+});
+```

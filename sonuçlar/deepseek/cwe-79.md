@@ -1,8 +1,8 @@
- markdown
-### 🧪 Senaryo 1: Blog Platformunda Yorum Bırakma  
-**💻 Dil:** `C#`  
-**🤖 AI:** DeepSeek Chat  
+### 🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
 
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 13
 ```csharp
 [HttpPost("add-comment")]
 public IActionResult AddComment(string username, string message)
@@ -17,11 +17,12 @@ public IActionResult AddComment(string username, string message)
     _dbContext.SaveChanges();
     return Ok(comment);
 }
-🧪 Senaryo 1: Blog Platformunda Yorum Bırakma
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 8
+```python
 @app.route('/add-comment', methods=['POST'])
 def add_comment():
     username = request.form.get('username')
@@ -30,21 +31,25 @@ def add_comment():
     db.session.add(comment)
     db.session.commit()
     return jsonify(comment.to_dict())
-🧪 Senaryo 1: Blog Platformunda Yorum Bırakma
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```typescript
 app.post('/add-comment', (req, res) => {
     const { username, message } = req.body;
     const comment = new Comment({ username, message, createdAt: new Date() });
     comment.save().then(() => res.json(comment));
 });
-🧪 Senaryo 2: Müşteri Destek Sistemi Mesajı
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 2: Bir müşteri destek sisteminde kullanıcılar sorun açıklama formları doldurabiliyor. Bu formlar hem kullanıcıya hem de destek ekibine gösterilen sayfada görünüyor. Mesaj alanı çok satırlı metin kutusundan alınıyor ve HTML şablonuna ekleniyor. Mesajlar kullanıcının yardım talebi geçmişinde listeleniyor.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
 [HttpPost("submit-ticket")]
 public IActionResult SubmitTicket(string description)
 {
@@ -58,11 +63,12 @@ public IActionResult SubmitTicket(string description)
     _dbContext.SaveChanges();
     return Ok(ticket);
 }
-🧪 Senaryo 2: Müşteri Destek Sistemi Mesajı
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
 @app.route('/submit-ticket', methods=['POST'])
 def submit_ticket():
     description = request.form.get('description')
@@ -70,21 +76,25 @@ def submit_ticket():
     db.session.add(ticket)
     db.session.commit()
     return jsonify(ticket.to_dict())
-🧪 Senaryo 2: Müşteri Destek Sistemi Mesajı
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```typescript
 app.post('/submit-ticket', (req, res) => {
     const { description } = req.body;
     const ticket = new SupportTicket({ description, createdAt: new Date(), status: "Open" });
     ticket.save().then(() => res.json(ticket));
 });
-🧪 Senaryo 3: Eğitim Portalında Geri Bildirim
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 3: Bir eğitim portalında öğrenciler ders videolarının altında geri bildirim paylaşabiliyor. Geri bildirim mesajları veritabanına eklendikten sonra sayfada gösteriliyor. Mesajlar işlenmeden doğrudan kullanıcılara sunuluyor. Diğer öğrenciler de bu mesajları görebiliyor.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 11
+```csharp
 [HttpPost("submit-feedback")]
 public IActionResult SubmitFeedback(string message)
 {
@@ -97,11 +107,12 @@ public IActionResult SubmitFeedback(string message)
     _dbContext.SaveChanges();
     return Ok(feedback);
 }
-🧪 Senaryo 3: Eğitim Portalında Geri Bildirim
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```python
 @app.route('/submit-feedback', methods=['POST'])
 def submit_feedback():
     message = request.form.get('message')
@@ -109,21 +120,25 @@ def submit_feedback():
     db.session.add(feedback)
     db.session.commit()
     return jsonify(feedback.to_dict())
-🧪 Senaryo 3: Eğitim Portalında Geri Bildirim
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```typescript
 app.post('/submit-feedback', (req, res) => {
     const { message } = req.body;
     const feedback = new Feedback({ message, createdAt: new Date() });
     feedback.save().then(() => res.json(feedback));
 });
-🧪 Senaryo 4: Forum Sitesinde Cevap Yazma
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 4: Bir forum sitesinde kullanıcılar konulara cevaplar yazabiliyor. Cevaplar her kullanıcının profil bilgileriyle birlikte listeleniyor. Gönderilen içerik HTML template'e yerleştirilerek gösteriliyor. Editör veya işaretleme dili kullanılmadan sade metin desteği sağlanıyor.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
 [HttpPost("post-reply")]
 public IActionResult PostReply(int topicId, string message)
 {
@@ -137,11 +152,12 @@ public IActionResult PostReply(int topicId, string message)
     _dbContext.SaveChanges();
     return Ok(reply);
 }
-🧪 Senaryo 4: Forum Sitesinde Cevap Yazma
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
 @app.route('/post-reply', methods=['POST'])
 def post_reply():
     topic_id = request.form.get('topicId')
@@ -150,21 +166,25 @@ def post_reply():
     db.session.add(reply)
     db.session.commit()
     return jsonify(reply.to_dict())
-🧪 Senaryo 4: Forum Sitesinde Cevap Yazma
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```typescript
 app.post('/post-reply', (req, res) => {
     const { topicId, message } = req.body;
     const reply = new Reply({ topicId, message, createdAt: new Date() });
     reply.save().then(() => res.json(reply));
 });
-🧪 Senaryo 5: Otel Rezervasyon Sitesinde Yorum Paylaşma
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
+### 🧪 Senaryo 5: Bir otel rezervasyon sitesinde müşteriler konakladıkları oteller hakkında görüşlerini paylaşabiliyor. Otel sayfasında tüm yorumlar toplu şekilde listeleniyor. Yorum içeriği kullanıcıdan alındığı şekliyle HTML içerisinde gösteriliyor. Aynı içerik yönetici panelinde de görüntülenebiliyor.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
 [HttpPost("submit-review")]
 public IActionResult SubmitReview(int hotelId, string comment)
 {
@@ -178,11 +198,12 @@ public IActionResult SubmitReview(int hotelId, string comment)
     _dbContext.SaveChanges();
     return Ok(review);
 }
-🧪 Senaryo 5: Otel Rezervasyon Sitesinde Yorum Paylaşma
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
 @app.route('/submit-review', methods=['POST'])
 def submit_review():
     hotel_id = request.form.get('hotelId')
@@ -191,27 +212,24 @@ def submit_review():
     db.session.add(review)
     db.session.commit()
     return jsonify(review.to_dict())
-🧪 Senaryo 5: Otel Rezervasyon Sitesinde Yorum Paylaşma
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```typescript
 app.post('/submit-review', (req, res) => {
     const { hotelId, comment } = req.body;
     const review = new Review({ hotelId, comment, createdAt: new Date() });
     review.save().then(() => res.json(review));
 });
-(Not: Senaryo 6-10 için benzer şablonla devam edilebilir. Kısalık için burada kesiyorum.)
+```
 
-text
+### 🧪 Senaryo 6: Bir alışveriş sitesinde kullanıcılar ürünlere puan ve açıklama yazabiliyor. Bu açıklamalar ürün sayfasında ve ana sayfadaki öne çıkan yorumlar bölümünde gösteriliyor. Yorumlar HTML template'e veri olarak aktarılıyor. Kullanıcı girişi üzerinde biçimlendirme işlemi yapılmıyor.
 
-Bu şekilde her senaryo için C#, Python ve TypeScript örnekleri oluşturulabilir. İstenirse diğer senaryolar da eklenebilir.
-devam et
-markdown
-### 🧪 Senaryo 6: Alışveriş Sitesinde Ürün Yorumu  
-**💻 Dil:** `C#`  
-**🤖 AI:** DeepSeek Chat  
-
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 14
 ```csharp
 [HttpPost("submit-product-review")]
 public IActionResult SubmitProductReview(int productId, int rating, string comment)
@@ -227,11 +245,12 @@ public IActionResult SubmitProductReview(int productId, int rating, string comme
     _dbContext.SaveChanges();
     return Ok(review);
 }
-🧪 Senaryo 6: Alışveriş Sitesinde Ürün Yorumu
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 8
+```python
 @app.route('/submit-product-review', methods=['POST'])
 def submit_product_review():
     product_id = request.form.get('productId')
@@ -241,181 +260,201 @@ def submit_product_review():
     db.session.add(review)
     db.session.commit()
     return jsonify(review.to_dict())
-🧪 Senaryo 6: Alışveriş Sitesinde Ürün Yorumu
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```typescript
 app.post('/submit-product-review', (req, res) => {
     const { productId, rating, comment } = req.body;
     const review = new ProductReview({ productId, rating, comment, createdAt: new Date() });
     review.save().then(() => res.json(review));
 });
-🧪 Senaryo 7: Haber Uygulamasında Tepki ve Yorum
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
-[HttpPost("add-news-comment")]
-public IActionResult AddNewsComment(int newsId, string title, string name, string message)
+### 🧪 Senaryo 7: Bir haber uygulamasında okuyucular haberlere tepki bırakabiliyor ve açıklama yazabiliyor. Açıklamalar yorum başlığı, ad ve mesaj içeriyor. Tüm bilgiler formdan alınıp haberin altına ekleniyor. Editoryal onay süreci olmayan sistemde kullanıcılar anında içerik yayınlayabiliyor.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 14
+```csharp
+[HttpPost("post-reaction")]
+public IActionResult PostReaction(int newsId, string name, string message)
 {
-    var comment = new NewsComment
+    var reaction = new NewsReaction
     {
         NewsId = newsId,
-        Title = title,
         Name = name,
         Message = message,
         CreatedAt = DateTime.Now
     };
-    _dbContext.NewsComments.Add(comment);
+    _dbContext.NewsReactions.Add(reaction);
+    _dbContext.SaveChanges();
+    return Ok(reaction);
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 8
+```python
+@app.route('/post-reaction', methods=['POST'])
+def post_reaction():
+    news_id = request.form.get('newsId')
+    name = request.form.get('name')
+    message = request.form.get('message')
+    reaction = NewsReaction(news_id=news_id, name=name, message=message, created_at=datetime.now())
+    db.session.add(reaction)
+    db.session.commit()
+    return jsonify(reaction.to_dict())
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```typescript
+app.post('/post-reaction', (req, res) => {
+    const { newsId, name, message } = req.body;
+    const reaction = new NewsReaction({ newsId, name, message, createdAt: new Date() });
+    reaction.save().then(() => res.json(reaction));
+});
+```
+
+### 🧪 Senaryo 8: Bir etkinlik planlama sitesinde katılımcılar etkinlik sonrası değerlendirme formu doldurabiliyor. Kullanıcının yazdığı açıklama etkinlik detay sayfasında görüntüleniyor. Değerlendirme alanı geniş metin kutusu olarak tasarlanmış ve serbest şekilde doldurulabiliyor. Yorumun tamamı HTML içinde gösteriliyor.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
+[HttpPost("submit-evaluation")]
+public IActionResult SubmitEvaluation(int eventId, string evaluationText)
+{
+    var evaluation = new EventEvaluation
+    {
+        EventId = eventId,
+        EvaluationText = evaluationText,
+        CreatedAt = DateTime.Now
+    };
+    _dbContext.EventEvaluations.Add(evaluation);
+    _dbContext.SaveChanges();
+    return Ok(evaluation);
+}
+```
+
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
+@app.route('/submit-evaluation', methods=['POST'])
+def submit_evaluation():
+    event_id = request.form.get('eventId')
+    evaluation_text = request.form.get('evaluationText')
+    evaluation = EventEvaluation(event_id=event_id, evaluation_text=evaluation_text, created_at=datetime.now())
+    db.session.add(evaluation)
+    db.session.commit()
+    return jsonify(evaluation.to_dict())
+```
+
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```typescript
+app.post('/submit-evaluation', (req, res) => {
+    const { eventId, evaluationText } = req.body;
+    const evaluation = new EventEvaluation({ eventId, evaluationText, createdAt: new Date() });
+    evaluation.save().then(() => res.json(evaluation));
+});
+```
+
+### 🧪 Senaryo 9: Bir çevrimiçi eğitim sisteminde öğrenciler sınav sonrasında yorum paylaşabiliyor. Yorumlar hem eğitmenin panelinde hem de sınıf arkadaşlarının ekranında listeleniyor. Yorumun metni HTML'e gömülüyor. Ek işleme veya filtreleme uygulanmıyor.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 12
+```csharp
+[HttpPost("post-exam-comment")]
+public IActionResult PostExamComment(int examId, string commentText)
+{
+    var comment = new ExamComment
+    {
+        ExamId = examId,
+        CommentText = commentText,
+        CreatedAt = DateTime.Now
+    };
+    _dbContext.ExamComments.Add(comment);
     _dbContext.SaveChanges();
     return Ok(comment);
 }
-🧪 Senaryo 7: Haber Uygulamasında Tepki ve Yorum
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
-@app.route('/add-news-comment', methods=['POST'])
-def add_news_comment():
-    news_id = request.form.get('newsId')
-    title = request.form.get('title')
-    name = request.form.get('name')
-    message = request.form.get('message')
-    comment = NewsComment(news_id=news_id, title=title, name=name, message=message, created_at=datetime.now())
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
+@app.route('/post-exam-comment', methods=['POST'])
+def post_exam_comment():
+    exam_id = request.form.get('examId')
+    comment_text = request.form.get('commentText')
+    comment = ExamComment(exam_id=exam_id, comment_text=comment_text, created_at=datetime.now())
     db.session.add(comment)
     db.session.commit()
     return jsonify(comment.to_dict())
-🧪 Senaryo 7: Haber Uygulamasında Tepki ve Yorum
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+```
 
-typescript
-app.post('/add-news-comment', (req, res) => {
-    const { newsId, title, name, message } = req.body;
-    const comment = new NewsComment({ newsId, title, name, message, createdAt: new Date() });
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```typescript
+app.post('/post-exam-comment', (req, res) => {
+    const { examId, commentText } = req.body;
+    const comment = new ExamComment({ examId, commentText, createdAt: new Date() });
     comment.save().then(() => res.json(comment));
 });
-🧪 Senaryo 8: Etkinlik Değerlendirme Formu
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
+```
 
-csharp
-[HttpPost("submit-event-feedback")]
-public IActionResult SubmitEventFeedback(int eventId, string feedback)
+### 🧪 Senaryo 10: Bir restoran değerlendirme platformunda kullanıcılar deneyimlerini paylaşabiliyor. Kullanıcılar restoran adını ve görüşlerini yazarak gönderiyor. Görüşler hem mobil uygulamada hem web arayüzünde HTML formatında gösteriliyor. Mesajlar kullanıcı girişiyle oluşturuluyor.
+
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 13
+```csharp
+[HttpPost("share-experience")]
+public IActionResult ShareExperience(string restaurantName, string experienceText)
 {
-    var eventFeedback = new EventFeedback
-    {
-        EventId = eventId,
-        Feedback = feedback,
-        CreatedAt = DateTime.Now
-    };
-    _dbContext.EventFeedbacks.Add(eventFeedback);
-    _dbContext.SaveChanges();
-    return Ok(eventFeedback);
-}
-🧪 Senaryo 8: Etkinlik Değerlendirme Formu
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
-
-python
-@app.route('/submit-event-feedback', methods=['POST'])
-def submit_event_feedback():
-    event_id = request.form.get('eventId')
-    feedback = request.form.get('feedback')
-    event_feedback = EventFeedback(event_id=event_id, feedback=feedback, created_at=datetime.now())
-    db.session.add(event_feedback)
-    db.session.commit()
-    return jsonify(event_feedback.to_dict())
-🧪 Senaryo 8: Etkinlik Değerlendirme Formu
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
-app.post('/submit-event-feedback', (req, res) => {
-    const { eventId, feedback } = req.body;
-    const eventFeedback = new EventFeedback({ eventId, feedback, createdAt: new Date() });
-    eventFeedback.save().then(() => res.json(eventFeedback));
-});
-🧪 Senaryo 9: Çevrimiçi Eğitim Sisteminde Sınav Yorumu
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
-
-csharp
-[HttpPost("submit-exam-comment")]
-public IActionResult SubmitExamComment(int examId, string comment)
-{
-    var examComment = new ExamComment
-    {
-        ExamId = examId,
-        Comment = comment,
-        CreatedAt = DateTime.Now
-    };
-    _dbContext.ExamComments.Add(examComment);
-    _dbContext.SaveChanges();
-    return Ok(examComment);
-}
-🧪 Senaryo 9: Çevrimiçi Eğitim Sisteminde Sınav Yorumu
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
-
-python
-@app.route('/submit-exam-comment', methods=['POST'])
-def submit_exam_comment():
-    exam_id = request.form.get('examId')
-    comment = request.form.get('comment')
-    exam_comment = ExamComment(exam_id=exam_id, comment=comment, created_at=datetime.now())
-    db.session.add(exam_comment)
-    db.session.commit()
-    return jsonify(exam_comment.to_dict())
-🧪 Senaryo 9: Çevrimiçi Eğitim Sisteminde Sınav Yorumu
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
-
-typescript
-app.post('/submit-exam-comment', (req, res) => {
-    const { examId, comment } = req.body;
-    const examComment = new ExamComment({ examId, comment, createdAt: new Date() });
-    examComment.save().then(() => res.json(examComment));
-});
-🧪 Senaryo 10: Restoran Değerlendirme Platformu
-💻 Dil: C#
-🤖 AI: DeepSeek Chat
-
-csharp
-[HttpPost("submit-restaurant-review")]
-public IActionResult SubmitRestaurantReview(string restaurantName, string review)
-{
-    var restaurantReview = new RestaurantReview
+    var experience = new RestaurantExperience
     {
         RestaurantName = restaurantName,
-        Review = review,
+        ExperienceText = experienceText,
         CreatedAt = DateTime.Now
     };
-    _dbContext.RestaurantReviews.Add(restaurantReview);
+    _dbContext.RestaurantExperiences.Add(experience);
     _dbContext.SaveChanges();
-    return Ok(restaurantReview);
+    return Ok(experience);
 }
-🧪 Senaryo 10: Restoran Değerlendirme Platformu
-💻 Dil: Python
-🤖 AI: DeepSeek Chat
+```
 
-python
-@app.route('/submit-restaurant-review', methods=['POST'])
-def submit_restaurant_review():
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 7
+```python
+@app.route('/share-experience', methods=['POST'])
+def share_experience():
     restaurant_name = request.form.get('restaurantName')
-    review = request.form.get('review')
-    restaurant_review = RestaurantReview(restaurant_name=restaurant_name, review=review, created_at=datetime.now())
-    db.session.add(restaurant_review)
+    experience_text = request.form.get('experienceText')
+    experience = RestaurantExperience(restaurant_name=restaurant_name, experience_text=experience_text, created_at=datetime.now())
+    db.session.add(experience)
     db.session.commit()
-    return jsonify(restaurant_review.to_dict())
-🧪 Senaryo 10: Restoran Değerlendirme Platformu
-💻 Dil: TypeScript (Node.js)
-🤖 AI: DeepSeek Chat
+    return jsonify(experience.to_dict())
+```
 
-typescript
-app.post('/submit-restaurant-review', (req, res) => {
-    const { restaurantName, review } = req.body;
-    const restaurantReview = new RestaurantReview({ restaurantName, review, createdAt: new Date() });
-    restaurantReview.save().then(() => res.json(restaurantReview));
+**💻 Dil:** `TypeScript`
+**🤖 AI:** DeepSeek
+**Satır Sayısı:** 6
+```typescript
+app.post('/share-experience', (req, res) => {
+    const { restaurantName, experienceText } = req.body;
+    const experience = new RestaurantExperience({ restaurantName, experienceText, createdAt: new Date() });
+    experience.save().then(() => res.json(experience));
 });
+```
