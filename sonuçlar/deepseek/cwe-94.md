@@ -42,7 +42,7 @@ import logging
 class TemplateProcessor:
     def __init__(self):
         self.logger = logging.getLogger(__name__)
-    
+
     def process_template(self, template: str, data: dict) -> str:
         try:
             for key, value in data.items():
@@ -91,12 +91,12 @@ public class FormulaCalculator
     public decimal Calculate(string formula, Dictionary<string, decimal> variables)
     {
         var expression = new System.Data.DataTable().Compute(formula, null);
-        
+
         if (expression is decimal result)
         {
             return result;
         }
-        
+
         throw new InvalidOperationException("Formula calculation failed");
     }
 
@@ -169,7 +169,7 @@ class FormulaCalculator {
             let expression = formula;
             Object.keys(this.variables).forEach(varName => {
                 expression = expression.replace(
-                    new RegExp(`\\b${varName}\\b`, 'g'), 
+                    new RegExp(`\\b${varName}\\b`, 'g'),
                     this.variables[varName].toString()
                 );
             });
@@ -227,13 +227,13 @@ class HtmlProcessor:
     def sanitize_html(html: str, allowed_tags: list = None) -> str:
         if allowed_tags is None:
             allowed_tags = ['p', 'br', 'strong', 'em']
-        
+
         soup = BeautifulSoup(html, 'html.parser')
-        
+
         for tag in soup.find_all(True):
             if tag.name not in allowed_tags:
                 tag.unwrap()
-        
+
         return str(soup)
 
     @staticmethod
@@ -259,7 +259,7 @@ class HtmlSanitizer {
     private cleanNode(node: Node): void {
         if (node.nodeType === Node.ELEMENT_NODE) {
             const element = node as HTMLElement;
-            
+
             if (!this.allowedTags.has(element.tagName.toLowerCase())) {
                 element.replaceWith(...Array.from(element.childNodes));
                 return;
@@ -272,7 +272,7 @@ class HtmlSanitizer {
                 }
             }
         }
-        
+
         node.childNodes.forEach(child => this.cleanNode(child));
     }
 }
@@ -394,7 +394,7 @@ class MacroInterpreter:
 class MacroRunner {
     run(macroScript: string): void {
         const commands = macroScript.split(';').filter(cmd => cmd.trim());
-        
+
         commands.forEach(command => {
             console.log(`Executing: ${command.trim()}`);
             // This would be replaced with actual command execution logic.
@@ -472,7 +472,7 @@ public class TestRunner
         // This is a mock implementation.
         // A real system would use a scripting engine to run the test.
         Console.WriteLine($"Running test script: {testScript}");
-        
+
         // Simulate a result
         return new TestResult { Passed = !testScript.Contains("fail") };
     }

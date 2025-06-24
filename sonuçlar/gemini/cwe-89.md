@@ -185,7 +185,7 @@ class OrderService:
 
         if target_order:
             return [order for order in all_orders if order["user_id"] == target_order["user_id"]]
-        
+
         return []
 ```
 
@@ -678,7 +678,7 @@ class ReservationService:
         filtered_reservations = [
             r for r in all_reservations if email.lower() in r["customer_email"].lower()
         ]
-        
+
         return sorted(filtered_reservations, key=lambda x: datetime.fromisoformat(x["reservation_time"]))
 ```
 

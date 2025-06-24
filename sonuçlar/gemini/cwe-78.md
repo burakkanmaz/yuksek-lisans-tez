@@ -1,7 +1,5 @@
-----
-
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Gemini
 
 **Satır Sayısı:** 245
@@ -322,10 +320,10 @@ app.get('/api/disk-usage/report', async (req: Request, res: Response) => {
 
     try {
         const totalSizeInBytes = await getDirectorySize(directoryPath);
-        
+
         let filesCount = 0;
         let subDirectoriesCount = 0;
-        
+
         // Walk the directory to count files and subdirectories
         const walk = async (currentPath: string) => {
             const items = await readdir(currentPath);
@@ -382,10 +380,10 @@ app.get('/api/disk-usage/download-report', async (req: Request, res: Response) =
 
     try {
         const totalSizeInBytes = await getDirectorySize(directoryPath);
-        
+
         let filesCount = 0;
         let subDirectoriesCount = 0;
-        
+
         const walk = async (currentPath: string) => {
             const items = await readdir(currentPath);
             for (const item of items) {
@@ -404,7 +402,7 @@ app.get('/api/disk-usage/download-report', async (req: Request, res: Response) =
                     filesCount++;
                 } else if (itemStats.isDirectory()) {
                     subDirectoriesCount++;
-                    await walk(itemPath); 
+                    await walk(itemPath);
                 }
             }
         };
@@ -446,6 +444,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
 **💻 Dil:** `C#`
 
@@ -616,7 +615,7 @@ def process_xml_file(file_path):
 def process_file():
     if 'file' not in request.files:
         return jsonify({"error": "No file part in the request."}), 400
-    
+
     file = request.files['file']
     if file.filename == '':
         return jsonify({"error": "No selected file."}), 400
@@ -653,7 +652,7 @@ def process_file():
             return jsonify({"error": "Access to the specified file or directory is denied."}), 403
         except Exception as e:
             return jsonify({"error": f"An error occurred during file processing: {str(e)}"}), 500
-    
+
     return jsonify({"error": "Failed to process file."}), 500
 
 @app.route('/api/file-processor/download-processed-file', methods=['GET'])
@@ -770,7 +769,7 @@ app.post('/api/file-processor/process', upload.single('file'), async (req: Reque
 
     } catch (error: any) {
         // Clean up uploaded file in case of processing error
-        await fs.unlink(filePath).catch(err => console.error("Error cleaning up uploaded file:", err)); 
+        await fs.unlink(filePath).catch(err => console.error("Error cleaning up uploaded file:", err));
         if (error.code === 'EACCES' || error.code === 'EPERM') {
             return res.status(403).json({ error: "Access to the specified file or directory is denied." });
         }
@@ -815,6 +814,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
 **💻 Dil:** `C#`
 
@@ -985,7 +985,7 @@ def view_log():
     try:
         with open(log_file_path, 'r', encoding='utf-8') as f:
             all_lines = f.readlines()
-        
+
         filtered_lines = all_lines
 
         if filter_param:
@@ -993,9 +993,9 @@ def view_log():
 
         if search_param:
             filtered_lines = [line for line in filtered_lines if search_param.lower() in line.lower()]
-        
+
         total_records = len(filtered_lines)
-        
+
         # Pagination
         start_index = (page - 1) * page_size
         end_index = start_index + page_size
@@ -1123,6 +1123,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
 **💻 Dil:** `C#`
 
@@ -1415,6 +1416,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
 **💻 Dil:** `C#`
 
@@ -1492,7 +1494,7 @@ public class NetworkTestController : ControllerBase
         {
             using var client = new TcpClient();
             var connectTask = client.ConnectAsync(targetAddress, port);
-            
+
             var timeoutTask = Task.Delay(timeoutMs);
 
             var completedTask = await Task.WhenAny(connectTask, timeoutTask);
@@ -1554,7 +1556,7 @@ def ping_host_native(host, count=4):
     try:
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8')
         stdout, stderr = process.communicate(timeout=10) # 10 second timeout for the ping command itself
-        
+
         if process.returncode == 0:
             # Parse ping output for metrics (simplified for brevity)
             # This is highly dependent on OS output. A more robust solution would parse line by line.
@@ -1602,9 +1604,9 @@ def ping_endpoint():
     target_address = request.args.get('targetAddress')
     if not target_address:
         return jsonify({"error": "Target address cannot be empty."}), 400
-    
+
     ping_result = ping_host_native(target_address)
-    
+
     if ping_result["status"] == "Success":
         analysis = "Connection successful and responsive."
         if ping_result["average_rtt_ms"] is not None:
@@ -1638,7 +1640,7 @@ def port_scan_endpoint():
             return jsonify({"error": "Invalid port number. Port must be between 1 and 65535."}), 400
     except ValueError:
         return jsonify({"error": "Port must be a valid integer."}), 400
-    
+
     scan_result = scan_port(target_address, port)
 
     if scan_result["status"] == "Open":
@@ -1821,6 +1823,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
 **💻 Dil:** `C#`
 
@@ -1882,7 +1885,7 @@ public class FileCompressorController : ControllerBase
                     if (!System.IO.File.Exists(filePath))
                     {
                         // Optionally, skip missing files or return an error
-                        continue; 
+                        continue;
                     }
 
                     var entry = zipArchive.CreateEntry(fileName, compressionLevel);
@@ -1988,7 +1991,7 @@ def compress_files():
         'optimal': zipfile.ZIP_DEFLATED # Default for deflate, often good
     }
     compression_method = compression_map.get(compression_level_str.lower(), zipfile.ZIP_DEFLATED)
-    
+
     # Python's zipfile.ZIP_DEFLATED is generally good enough; no direct mapping for "fastest" vs "optimal" like C#
     # unless you use external libraries or lower-level zlib directly.
 
@@ -2001,9 +2004,9 @@ def compress_files():
                 file_path = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(file_name))
                 if not os.path.exists(file_path):
                     continue # Skip if file not found
-                
+
                 zipf.write(file_path, arcname=file_name) # Add file to archive with its original name
-        
+
         archive_size_in_bytes = os.path.getsize(archive_path)
 
         return jsonify({
@@ -2090,7 +2093,7 @@ app.post('/api/file-compressor/compress', async (req: Request, res: Response) =>
     const archivePath = path.join(archivesDirectory, archiveName);
 
     const output = fs.createWriteStream(archivePath);
-    
+
     // Map compression level string to archiver's zlib level (0-9)
     let zlibLevel = 9; // Default to optimal
     if (compressionLevel === 'fastest') {
@@ -2191,6 +2194,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
 **💻 Dil:** `C#`
 
@@ -2377,12 +2381,12 @@ def monitor_process():
 
     if not process_name:
         return jsonify({"error": "Process name cannot be empty."}), 400
-    
+
     found_processes = [p for p in psutil.process_iter(['pid', 'name']) if p.info['name'] == process_name]
 
     if not found_processes:
         return jsonify({"error": f"No running process found with name: {process_name}"}), 404
-    
+
     # Monitor the first one found for simplicity
     process_info = found_processes[0]
     pid = process_info.info['pid']
@@ -2408,7 +2412,7 @@ def get_monitoring_data():
 
     if process_name not in _monitored_processes:
         return jsonify({"error": f"Process '{process_name}' is not currently being monitored."}), 404
-    
+
     monitored_data = _monitored_processes[process_name]
     pid = monitored_data['pid']
 
@@ -2417,7 +2421,7 @@ def get_monitoring_data():
         if not process.is_running():
             del _monitored_processes[process_name] # Clean up if process exited
             return jsonify({"error": f"Monitored process '{process_name}' (PID: {pid}) has exited."}), 404
-        
+
         # Get current performance data
         cpu_percent = process.cpu_percent(interval=0.1) # Non-blocking for 0.1s
         memory_info = process.memory_info()
@@ -2440,7 +2444,7 @@ def get_monitoring_data():
         if len(monitored_data['snapshots']) > 1:
             initial_mem_rss = monitored_data['snapshots'][0]['memoryInfo']['rss']
             current_mem_rss = monitored_data['snapshots'][-1]['memoryInfo']['rss']
-            
+
             if current_mem_rss > initial_mem_rss * 1.5:
                 performance_analysis = "Memory usage has significantly increased (over 50% since monitoring started)."
             elif current_mem_rss < initial_mem_rss * 0.8:
@@ -2510,7 +2514,7 @@ interface ProcessMonitoringData {
     processName: string;
     snapshots: ProcessSnapshot[];
     // You might also store initial CPU times for accurate calculation over time
-    lastCpuTime: number | null; 
+    lastCpuTime: number | null;
     lastUpdateTime: number | null;
 }
 
@@ -2544,7 +2548,7 @@ async function getProcessInfo(pid: number): Promise<ProcessSnapshot | null> {
 
             const tasklistParts = tasklistLine.split(',').map(p => p.trim().replace(/"/g, ''));
             // console.log("tasklistParts:", tasklistParts);
-            
+
             // WMIC output parsing
             let workingSetSize: number | null = null;
             let threadCount: number | null = null;
@@ -2601,7 +2605,7 @@ app.post('/api/system-monitor/monitor-process', async (req: Request, res: Respon
     try {
         const isWindows = process.platform === 'win32';
         const findProcessCommand = isWindows ? `tasklist /FI "IMAGENAME eq ${processName}.exe" /FO CSV /NH` : `pgrep -l ${processName}`;
-        
+
         const { stdout } = await execPromise(findProcessCommand);
         let pid: number | null = null;
 
@@ -2725,6 +2729,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
 **💻 Dil:** `C#`
 
@@ -2917,7 +2922,7 @@ def search_files():
         for root, _, files in os.walk(BASE_SEARCH_DIRECTORY):
             for file_name in files:
                 file_path = os.path.join(root, file_name)
-                
+
                 try:
                     file_info = os.stat(file_path)
                     file_size_bytes = file_info.st_size
@@ -2935,13 +2940,13 @@ def search_files():
                         continue
                     if max_size_kb is not None and file_size_kb > max_size_kb:
                         continue
-                    
+
                     matches_search_term = False
 
                     # Search by file name
                     if search_term.lower() in file_name.lower():
                         matches_search_term = True
-                    
+
                     # Search by content
                     if search_content and not matches_search_term:
                         # Try to read common text files, skip binary for content search
@@ -3194,6 +3199,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
 **💻 Dil:** `C#`
 
@@ -3339,7 +3345,7 @@ if \(string\.IsNullOrWhiteSpace\(newDatabaseName\)\)
 return BadRequest\("New database name cannot be empty\."\);
 \}
 // Connect to master to create a new database
-string connectionString \= GetConnectionString\("master"\); 
+string connectionString \= GetConnectionString\("master"\);
 using var connection \= new SqlConnection\(connectionString\);
 try
 \{
@@ -3400,7 +3406,7 @@ def get_database_status():
 
     if not os.path.exists(db_file_path):
         return jsonify({"error": f"Database '{database_name}' not found."}), 404
-    
+
     try:
         conn = get_db_connection(database_name)
         conn.close() # Just try to open and close to check accessibility
@@ -3429,7 +3435,7 @@ def execute_query():
         return jsonify({"error": "Database name cannot be empty."}), 400
     if not query:
         return jsonify({"error": "Query cannot be empty."}), 400
-    
+
     db_file_path = os.path.join(app.config['DATABASE_DIR'], f"{database_name}.db")
     if not os.path.exists(db_file_path):
         return jsonify({"error": f"Database '{database_name}' not found."}), 404
@@ -3440,7 +3446,7 @@ def execute_query():
         cursor = conn.cursor()
 
         query_upper = query.strip().upper()
-        
+
         if query_upper.startswith("SELECT"):
             cursor.execute(query)
             rows = cursor.fetchall()
@@ -3475,7 +3481,7 @@ def create_database():
 
     if not new_database_name:
         return jsonify({"error": "New database name cannot be empty."}), 400
-    
+
     db_file_path = os.path.join(app.config['DATABASE_DIR'], f"{new_database_name}.db")
 
     if os.path.exists(db_file_path):
@@ -3640,6 +3646,7 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
+
 ### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
 **💻 Dil:** `C#`
 
@@ -3734,7 +3741,7 @@ public class SecurityScannerController : ControllerBase
                 try
                 {
                     // Only read text files to avoid issues with binary files
-                    if (!IsTextFile(filePath)) continue; 
+                    if (!IsTextFile(filePath)) continue;
                     fileContent = await System.IO.File.ReadAllTextAsync(filePath);
                 }
                 catch (IOException) { continue; /* File in use, skip */ }
@@ -4014,7 +4021,7 @@ def start_security_scan():
                             "issue": "Found common weak password string.",
                             "context": get_context_line(file_content, "password123") or get_context_line(file_content, "weakpass")
                         })
-                
+
                 # --- Scan for Sensitive File Names/Patterns ---
                 if scan_for_sensitive_files:
                     file_name_lower = file_name.lower()
@@ -4242,7 +4249,7 @@ app.post('/api/security-scanner/start-scan', async (req: Request, res: Response)
         for (const filePath of allFilePaths) {
             totalFilesScanned++;
             const fileExtension = path.extname(filePath).toLowerCase();
-            
+
             if (parameters.excludeExtensions && parameters.excludeExtensions.map(ext => ext.toLowerCase()).includes(fileExtension)) {
                 continue; // Skip excluded extensions
             }

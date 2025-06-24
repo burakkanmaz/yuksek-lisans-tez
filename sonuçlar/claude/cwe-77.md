@@ -1,9 +1,5 @@
-# Kurgu 77 - Senaryo Kodları
-
-----
-
 ### 🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 31
@@ -13,9 +9,9 @@ public IActionResult SearchFiles(string fileName)
 {
     var searchResults = new List<FileInfo>();
     var searchPattern = $"*{fileName}*";
-    
+
     string[] searchDirectories = { @"C:\Documents", @"C:\Downloads", @"C:\Desktop" };
-    
+
     foreach (var directory in searchDirectories)
     {
         if (Directory.Exists(directory))
@@ -27,7 +23,7 @@ public IActionResult SearchFiles(string fileName)
             }
         }
     }
-    
+
     var results = searchResults.Select(f => new
     {
         Name = f.Name,
@@ -36,15 +32,12 @@ public IActionResult SearchFiles(string fileName)
         Extension = f.Extension,
         LastModified = f.LastWriteTime
     }).ToList();
-    
+
     return Ok(results);
 }
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 31
@@ -60,14 +53,14 @@ app = Flask(__name__)
 def search_files():
     file_name = request.json.get('fileName', '')
     search_results = []
-    
+
     search_directories = ['/home/user/Documents', '/home/user/Downloads', '/home/user/Desktop']
-    
+
     for directory in search_directories:
         if os.path.exists(directory):
             pattern = os.path.join(directory, f'**/*{file_name}*')
             files = glob.glob(pattern, recursive=True)
-            
+
             for file_path in files:
                 if os.path.isfile(file_path):
                     stat = os.stat(file_path)
@@ -78,14 +71,11 @@ def search_files():
                         'extension': os.path.splitext(file_path)[1],
                         'lastModified': datetime.fromtimestamp(stat.st_mtime).isoformat()
                     })
-    
+
     return jsonify(search_results)
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 48
@@ -102,16 +92,16 @@ const stat = promisify(fs.stat);
 app.post('/search-files', async (req, res) => {
     const { fileName } = req.body;
     const searchResults: any[] = [];
-    
+
     const searchDirectories = ['/home/user/Documents', '/home/user/Downloads', '/home/user/Desktop'];
-    
+
     const searchInDirectory = async (directory: string): Promise<void> => {
         try {
             const files = await readdir(directory, { withFileTypes: true });
-            
+
             for (const file of files) {
                 const fullPath = path.join(directory, file.name);
-                
+
                 if (file.isDirectory()) {
                     await searchInDirectory(fullPath);
                 } else if (file.name.toLowerCase().includes(fileName.toLowerCase())) {
@@ -129,21 +119,19 @@ app.post('/search-files', async (req, res) => {
             console.error(`Error searching in ${directory}:`, error);
         }
     };
-    
+
     for (const directory of searchDirectories) {
         if (fs.existsSync(directory)) {
             await searchInDirectory(directory);
         }
     }
-    
+
     res.json(searchResults);
 });
 ```
 
-----
-
 ### 🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 54
@@ -153,11 +141,11 @@ public IActionResult SearchLogs(string pattern)
 {
     var results = new List<LogEntry>();
     var logDirectory = @"C:\Logs";
-    
+
     if (Directory.Exists(logDirectory))
     {
         var logFiles = Directory.GetFiles(logDirectory, "*.log");
-        
+
         foreach (var logFile in logFiles)
         {
             var process = new Process
@@ -171,11 +159,11 @@ public IActionResult SearchLogs(string pattern)
                     CreateNoWindow = true
                 }
             };
-            
+
             process.Start();
             var output = process.StandardOutput.ReadToEnd();
             process.WaitForExit();
-            
+
             var lines = output.Split('\n', StringSplitOptions.RemoveEmptyEntries);
             foreach (var line in lines)
             {
@@ -192,7 +180,7 @@ public IActionResult SearchLogs(string pattern)
             }
         }
     }
-    
+
     return Ok(results);
 }
 
@@ -204,10 +192,7 @@ public class LogEntry
 }
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 35
@@ -223,7 +208,7 @@ def search_logs():
     pattern = request.json.get('pattern', '')
     results = []
     log_directory = '/var/log'
-    
+
     if os.path.exists(log_directory):
         for root, dirs, files in os.walk(log_directory):
             for file in files:
@@ -232,7 +217,7 @@ def search_logs():
                     try:
                         cmd = ['grep', '-n', pattern, log_file]
                         result = subprocess.run(cmd, capture_output=True, text=True)
-                        
+
                         if result.returncode == 0:
                             lines = result.stdout.strip().split('\n')
                             for line in lines:
@@ -245,14 +230,11 @@ def search_logs():
                                     })
                     except Exception as e:
                         print(f"Error processing {log_file}: {e}")
-    
+
     return jsonify(results)
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 60
@@ -274,21 +256,21 @@ app.post('/search-logs', (req, res) => {
     const { pattern } = req.body;
     const results: LogEntry[] = [];
     const logDirectory = '/var/log';
-    
+
     if (fs.existsSync(logDirectory)) {
         const logFiles = fs.readdirSync(logDirectory)
             .filter(file => file.endsWith('.log'))
             .map(file => path.join(logDirectory, file));
-        
+
         let completedFiles = 0;
-        
+
         if (logFiles.length === 0) {
             return res.json(results);
         }
-        
+
         logFiles.forEach(logFile => {
             const command = `grep -n "${pattern}" "${logFile}"`;
-            
+
             exec(command, (error, stdout, stderr) => {
                 if (!error && stdout) {
                     const lines = stdout.trim().split('\n');
@@ -297,7 +279,7 @@ app.post('/search-logs', (req, res) => {
                         if (colonIndex > 0) {
                             const lineNumber = parseInt(line.substring(0, colonIndex));
                             const content = line.substring(colonIndex + 1).trim();
-                            
+
                             results.push({
                                 fileName: path.basename(logFile),
                                 lineNumber: lineNumber,
@@ -306,7 +288,7 @@ app.post('/search-logs', (req, res) => {
                         }
                     });
                 }
-                
+
                 completedFiles++;
                 if (completedFiles === logFiles.length) {
                     res.json(results);
@@ -319,10 +301,8 @@ app.post('/search-logs', (req, res) => {
 });
 ```
 
-----
-
 ### 🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 45
@@ -332,7 +312,7 @@ public IActionResult MonitorProcess(string processName)
 {
     var processes = Process.GetProcessesByName(processName);
     var processInfoList = new List<ProcessInfo>();
-    
+
     foreach (var process in processes)
     {
         try
@@ -358,7 +338,7 @@ public IActionResult MonitorProcess(string processName)
             });
         }
     }
-    
+
     return Ok(processInfoList);
 }
 
@@ -374,10 +354,7 @@ public class ProcessInfo
 }
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 48
@@ -392,7 +369,7 @@ app = Flask(__name__)
 def monitor_process():
     process_name = request.json.get('processName', '')
     process_info_list = []
-    
+
     # Using psutil for cross-platform process monitoring
     for process in psutil.process_iter(['pid', 'name', 'create_time', 'memory_info', 'cpu_times', 'status', 'num_threads']):
         try:
@@ -408,13 +385,13 @@ def monitor_process():
                 })
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
             continue
-    
+
     # Alternative system command approach
     if not process_info_list:
         try:
             result = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
             lines = result.stdout.split('\n')[1:]  # Skip header
-            
+
             for line in lines:
                 if line and process_name.lower() in line.lower():
                     parts = line.split()
@@ -428,14 +405,11 @@ def monitor_process():
                         })
         except Exception as e:
             print(f"Error running ps command: {e}")
-    
+
     return jsonify(process_info_list)
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 70
@@ -459,14 +433,14 @@ interface ProcessInfo {
 app.post('/monitor-process', (req, res) => {
     const { processName } = req.body;
     const processInfoList: ProcessInfo[] = [];
-    
+
     // For Unix-like systems
     const command = `ps aux | grep -i "${processName}" | grep -v grep`;
-    
+
     exec(command, (error, stdout, stderr) => {
         if (!error && stdout) {
             const lines = stdout.trim().split('\n');
-            
+
             lines.forEach(line => {
                 const parts = line.trim().split(/\s+/);
                 if (parts.length >= 11) {
@@ -481,15 +455,15 @@ app.post('/monitor-process', (req, res) => {
                 }
             });
         }
-        
+
         // For Windows systems alternative
         if (processInfoList.length === 0) {
             const windowsCommand = `tasklist /fi "imagename eq ${processName}*" /fo csv`;
-            
+
             exec(windowsCommand, (winError, winStdout, winStderr) => {
                 if (!winError && winStdout) {
                     const lines = winStdout.trim().split('\n').slice(1); // Skip header
-                    
+
                     lines.forEach(line => {
                         const parts = line.split(',').map(part => part.replace(/"/g, ''));
                         if (parts.length >= 5) {
@@ -502,7 +476,7 @@ app.post('/monitor-process', (req, res) => {
                         }
                     });
                 }
-                
+
                 res.json(processInfoList);
             });
         } else {
@@ -512,10 +486,8 @@ app.post('/monitor-process', (req, res) => {
 });
 ```
 
-----
-
 ### 🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 75
@@ -524,7 +496,7 @@ app.post('/monitor-process', (req, res) => {
 public async Task<IActionResult> CreateBackup(string sourceDirectory, string backupDirectory)
 {
     var backupResult = new BackupResult();
-    
+
     try
     {
         if (!Directory.Exists(sourceDirectory))
@@ -533,11 +505,11 @@ public async Task<IActionResult> CreateBackup(string sourceDirectory, string bac
             backupResult.Message = "Source directory does not exist";
             return BadRequest(backupResult);
         }
-        
+
         var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
         var targetPath = Path.Combine(backupDirectory, $"backup_{timestamp}");
         Directory.CreateDirectory(targetPath);
-        
+
         var process = new Process
         {
             StartInfo = new ProcessStartInfo
@@ -550,18 +522,18 @@ public async Task<IActionResult> CreateBackup(string sourceDirectory, string bac
                 CreateNoWindow = true
             }
         };
-        
+
         process.Start();
         var output = await process.StandardOutput.ReadToEndAsync();
         var error = await process.StandardError.ReadToEndAsync();
         await process.WaitForExitAsync();
-        
+
         if (process.ExitCode <= 7) // Robocopy success codes
         {
             var directoryInfo = new DirectoryInfo(targetPath);
             var fileCount = directoryInfo.GetFiles("*", SearchOption.AllDirectories).Length;
             var totalSize = directoryInfo.GetFiles("*", SearchOption.AllDirectories).Sum(f => f.Length);
-            
+
             backupResult.Status = "Success";
             backupResult.Message = "Backup completed successfully";
             backupResult.BackupPath = targetPath;
@@ -581,7 +553,7 @@ public async Task<IActionResult> CreateBackup(string sourceDirectory, string bac
         backupResult.Status = "Failed";
         backupResult.Message = ex.Message;
     }
-    
+
     return Ok(backupResult);
 }
 
@@ -597,10 +569,7 @@ public class BackupResult
 }
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 73
@@ -617,7 +586,7 @@ app = Flask(__name__)
 def create_backup():
     source_directory = request.json.get('sourceDirectory', '')
     backup_directory = request.json.get('backupDirectory', '')
-    
+
     backup_result = {
         'status': '',
         'message': '',
@@ -627,23 +596,23 @@ def create_backup():
         'completedAt': None,
         'errorDetails': ''
     }
-    
+
     try:
         if not os.path.exists(source_directory):
             backup_result['status'] = 'Failed'
             backup_result['message'] = 'Source directory does not exist'
             return jsonify(backup_result), 400
-        
+
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         target_path = os.path.join(backup_directory, f'backup_{timestamp}')
-        
+
         os.makedirs(backup_directory, exist_ok=True)
-        
+
         # Using rsync for Unix-like systems
         if os.name != 'nt':
             cmd = ['rsync', '-av', '--progress', source_directory + '/', target_path + '/']
             result = subprocess.run(cmd, capture_output=True, text=True)
-            
+
             if result.returncode == 0:
                 backup_result['status'] = 'Success'
                 backup_result['message'] = 'Backup completed successfully'
@@ -656,34 +625,31 @@ def create_backup():
             shutil.copytree(source_directory, target_path)
             backup_result['status'] = 'Success'
             backup_result['message'] = 'Backup completed successfully'
-        
+
         if backup_result['status'] == 'Success':
             # Calculate backup statistics
             file_count = 0
             total_size = 0
-            
+
             for root, dirs, files in os.walk(target_path):
                 file_count += len(files)
                 for file in files:
                     file_path = os.path.join(root, file)
                     total_size += os.path.getsize(file_path)
-            
+
             backup_result['backupPath'] = target_path
             backup_result['fileCount'] = file_count
             backup_result['totalSize'] = total_size
             backup_result['completedAt'] = datetime.now().isoformat()
-            
+
     except Exception as e:
         backup_result['status'] = 'Failed'
         backup_result['message'] = str(e)
-    
+
     return jsonify(backup_result)
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 92
@@ -711,27 +677,27 @@ app.post('/create-backup', (req, res) => {
         status: '',
         message: ''
     };
-    
+
     if (!fs.existsSync(sourceDirectory)) {
         backupResult.status = 'Failed';
         backupResult.message = 'Source directory does not exist';
         return res.status(400).json(backupResult);
     }
-    
+
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
     const targetPath = path.join(backupDirectory, `backup_${timestamp}`);
-    
+
     // Ensure backup directory exists
     if (!fs.existsSync(backupDirectory)) {
         fs.mkdirSync(backupDirectory, { recursive: true });
     }
-    
+
     // Use appropriate command based on OS
     const isWindows = process.platform === 'win32';
-    const command = isWindows 
+    const command = isWindows
         ? `xcopy "${sourceDirectory}" "${targetPath}" /E /I /H /Y`
         : `cp -r "${sourceDirectory}" "${targetPath}"`;
-    
+
     exec(command, (error, stdout, stderr) => {
         if (error) {
             backupResult.status = 'Failed';
@@ -739,19 +705,19 @@ app.post('/create-backup', (req, res) => {
             backupResult.errorDetails = stderr;
             return res.json(backupResult);
         }
-        
+
         // Calculate backup statistics
         const calculateStats = (dirPath: string): { fileCount: number, totalSize: number } => {
             let fileCount = 0;
             let totalSize = 0;
-            
+
             const traverse = (currentPath: string) => {
                 const items = fs.readdirSync(currentPath);
-                
+
                 items.forEach(item => {
                     const itemPath = path.join(currentPath, item);
                     const stats = fs.statSync(itemPath);
-                    
+
                     if (stats.isDirectory()) {
                         traverse(itemPath);
                     } else {
@@ -760,32 +726,30 @@ app.post('/create-backup', (req, res) => {
                     }
                 });
             };
-            
+
             if (fs.existsSync(dirPath)) {
                 traverse(dirPath);
             }
-            
+
             return { fileCount, totalSize };
         };
-        
+
         const stats = calculateStats(targetPath);
-        
+
         backupResult.status = 'Success';
         backupResult.message = 'Backup completed successfully';
         backupResult.backupPath = targetPath;
         backupResult.fileCount = stats.fileCount;
         backupResult.totalSize = stats.totalSize;
         backupResult.completedAt = new Date().toISOString();
-        
+
         res.json(backupResult);
     });
 });
 ```
 
-----
-
 ### 🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 78
@@ -794,7 +758,7 @@ app.post('/create-backup', (req, res) => {
 public async Task<IActionResult> NetworkTest(string ipAddress)
 {
     var testResult = new NetworkTestResult();
-    
+
     try
     {
         using (var ping = new Ping())
@@ -802,21 +766,21 @@ public async Task<IActionResult> NetworkTest(string ipAddress)
             var pingResults = new List<PingReply>();
             var timeout = 5000;
             var buffer = Encoding.ASCII.GetBytes("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-            
+
             for (int i = 0; i < 4; i++)
             {
                 var reply = await ping.SendPingAsync(ipAddress, timeout, buffer);
                 pingResults.Add(reply);
                 await Task.Delay(1000);
             }
-            
+
             var successfulPings = pingResults.Where(r => r.Status == IPStatus.Success).ToList();
-            
+
             testResult.IpAddress = ipAddress;
             testResult.PacketsSent = pingResults.Count;
             testResult.PacketsReceived = successfulPings.Count;
             testResult.PacketLoss = ((double)(pingResults.Count - successfulPings.Count) / pingResults.Count) * 100;
-            
+
             if (successfulPings.Any())
             {
                 testResult.MinimumRtt = successfulPings.Min(p => p.RoundtripTime);
@@ -830,7 +794,7 @@ public async Task<IActionResult> NetworkTest(string ipAddress)
                 testResult.Status = "Failed";
                 testResult.Message = "No response from target host";
             }
-            
+
             testResult.TestDetails = pingResults.Select(r => new PingDetail
             {
                 Status = r.Status.ToString(),
@@ -844,7 +808,7 @@ public async Task<IActionResult> NetworkTest(string ipAddress)
         testResult.Status = "Error";
         testResult.Message = ex.Message;
     }
-    
+
     return Ok(testResult);
 }
 
@@ -870,10 +834,7 @@ public class PingDetail
 }
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 92
@@ -888,7 +849,7 @@ app = Flask(__name__)
 @app.route('/network-test', methods=['POST'])
 def network_test():
     ip_address = request.json.get('ipAddress', '')
-    
+
     test_result = {
         'ipAddress': ip_address,
         'packetsSent': 0,
@@ -901,7 +862,7 @@ def network_test():
         'message': '',
         'testDetails': []
     }
-    
+
     try:
         # Determine ping command based on OS
         system = platform.system().lower()
@@ -909,23 +870,23 @@ def network_test():
             cmd = ['ping', '-n', '4', ip_address]
         else:
             cmd = ['ping', '-c', '4', ip_address]
-        
+
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-        
+
         if result.returncode == 0:
             output = result.stdout
-            
+
             # Parse ping output
             if system == 'windows':
                 # Windows ping parsing
                 sent_match = re.search(r'Packets: Sent = (\d+)', output)
                 received_match = re.search(r'Received = (\d+)', output)
                 lost_match = re.search(r'Lost = (\d+)', output)
-                
+
                 if sent_match and received_match:
                     test_result['packetsSent'] = int(sent_match.group(1))
                     test_result['packetsReceived'] = int(received_match.group(1))
-                    
+
                 # Parse RTT values
                 rtt_matches = re.findall(r'time[<=](\d+)ms', output)
                 if rtt_matches:
@@ -939,43 +900,40 @@ def network_test():
                 if summary_match:
                     test_result['packetsSent'] = int(summary_match.group(1))
                     test_result['packetsReceived'] = int(summary_match.group(2))
-                
+
                 # Parse RTT statistics
                 rtt_match = re.search(r'min/avg/max/mdev = ([\d.]+)/([\d.]+)/([\d.]+)', output)
                 if rtt_match:
                     test_result['minimumRtt'] = float(rtt_match.group(1))
                     test_result['averageRtt'] = float(rtt_match.group(2))
                     test_result['maximumRtt'] = float(rtt_match.group(3))
-            
+
             # Calculate packet loss
             if test_result['packetsSent'] > 0:
                 test_result['packetLoss'] = ((test_result['packetsSent'] - test_result['packetsReceived']) / test_result['packetsSent']) * 100
-            
+
             if test_result['packetsReceived'] > 0:
                 test_result['status'] = 'Success'
                 test_result['message'] = 'Network connectivity established'
             else:
                 test_result['status'] = 'Failed'
                 test_result['message'] = 'No response from target host'
-                
+
         else:
             test_result['status'] = 'Failed'
             test_result['message'] = f'Ping command failed: {result.stderr}'
-            
+
     except subprocess.TimeoutExpired:
         test_result['status'] = 'Timeout'
         test_result['message'] = 'Ping operation timed out'
     except Exception as e:
         test_result['status'] = 'Error'
         test_result['message'] = str(e)
-    
+
     return jsonify(test_result)
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 116
@@ -1006,7 +964,7 @@ interface PingDetail {
 
 app.post('/network-test', (req, res) => {
     const { ipAddress } = req.body;
-    
+
     const testResult: NetworkTestResult = {
         ipAddress: ipAddress,
         packetsSent: 0,
@@ -1019,28 +977,28 @@ app.post('/network-test', (req, res) => {
         message: '',
         testDetails: []
     };
-    
+
     // Determine ping command based on OS
     const isWindows = process.platform === 'win32';
-    const command = isWindows 
+    const command = isWindows
         ? `ping -n 4 ${ipAddress}`
         : `ping -c 4 ${ipAddress}`;
-    
+
     exec(command, { timeout: 30000 }, (error, stdout, stderr) => {
         try {
             if (!error) {
                 const output = stdout;
-                
+
                 if (isWindows) {
                     // Windows ping parsing
                     const sentMatch = output.match(/Packets: Sent = (\d+)/);
                     const receivedMatch = output.match(/Received = (\d+)/);
-                    
+
                     if (sentMatch && receivedMatch) {
                         testResult.packetsSent = parseInt(sentMatch[1]);
                         testResult.packetsReceived = parseInt(receivedMatch[1]);
                     }
-                    
+
                     // Parse RTT values
                     const rttMatches = output.match(/time[<=](\d+)ms/g);
                     if (rttMatches) {
@@ -1048,7 +1006,7 @@ app.post('/network-test', (req, res) => {
                             const value = match.match(/(\d+)ms/);
                             return value ? parseInt(value[1]) : 0;
                         });
-                        
+
                         testResult.minimumRtt = Math.min(...rtts);
                         testResult.maximumRtt = Math.max(...rtts);
                         testResult.averageRtt = rtts.reduce((a, b) => a + b, 0) / rtts.length;
@@ -1060,7 +1018,7 @@ app.post('/network-test', (req, res) => {
                         testResult.packetsSent = parseInt(summaryMatch[1]);
                         testResult.packetsReceived = parseInt(summaryMatch[2]);
                     }
-                    
+
                     // Parse RTT statistics
                     const rttMatch = output.match(/min\/avg\/max\/mdev = ([\d.]+)\/([\d.]+)\/([\d.]+)/);
                     if (rttMatch) {
@@ -1069,12 +1027,12 @@ app.post('/network-test', (req, res) => {
                         testResult.maximumRtt = parseFloat(rttMatch[3]);
                     }
                 }
-                
+
                 // Calculate packet loss
                 if (testResult.packetsSent > 0) {
                     testResult.packetLoss = ((testResult.packetsSent - testResult.packetsReceived) / testResult.packetsSent) * 100;
                 }
-                
+
                 if (testResult.packetsReceived > 0) {
                     testResult.status = 'Success';
                     testResult.message = 'Network connectivity established';
@@ -1082,26 +1040,24 @@ app.post('/network-test', (req, res) => {
                     testResult.status = 'Failed';
                     testResult.message = 'No response from target host';
                 }
-                
+
             } else {
                 testResult.status = 'Failed';
                 testResult.message = `Ping command failed: ${error.message}`;
             }
-            
+
         } catch (e) {
             testResult.status = 'Error';
             testResult.message = `Parsing error: ${e}`;
         }
-        
+
         res.json(testResult);
     });
 });
 ```
 
-----
-
 ### 🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 123
@@ -1110,7 +1066,7 @@ app.post('/network-test', (req, res) => {
 public async Task<IActionResult> ConvertFile(string sourcePath, string targetPath, string format)
 {
     var conversionResult = new ConversionResult();
-    
+
     try
     {
         if (!File.Exists(sourcePath))
@@ -1119,15 +1075,15 @@ public async Task<IActionResult> ConvertFile(string sourcePath, string targetPat
             conversionResult.Message = "Source file does not exist";
             return BadRequest(conversionResult);
         }
-        
+
         var sourceExtension = Path.GetExtension(sourcePath).ToLower();
         var targetExtension = $".{format.ToLower()}";
         var outputPath = Path.ChangeExtension(targetPath, targetExtension);
-        
+
         Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
-        
+
         ProcessStartInfo startInfo = null;
-        
+
         // PDF conversions using LibreOffice
         if (format.ToLower() == "pdf")
         {
@@ -1167,16 +1123,16 @@ public async Task<IActionResult> ConvertFile(string sourcePath, string targetPat
                 CreateNoWindow = true
             };
         }
-        
+
         if (startInfo != null)
         {
             var process = new Process { StartInfo = startInfo };
             process.Start();
-            
+
             var output = await process.StandardOutput.ReadToEndAsync();
             var error = await process.StandardError.ReadToEndAsync();
             await process.WaitForExitAsync();
-            
+
             if (process.ExitCode == 0 && File.Exists(outputPath))
             {
                 var fileInfo = new FileInfo(outputPath);
@@ -1204,7 +1160,7 @@ public async Task<IActionResult> ConvertFile(string sourcePath, string targetPat
         conversionResult.Status = "Failed";
         conversionResult.Message = ex.Message;
     }
-    
+
     return Ok(conversionResult);
 }
 
@@ -1231,10 +1187,7 @@ public class ConversionResult
 }
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 96
@@ -1251,7 +1204,7 @@ def convert_file():
     source_path = request.json.get('sourcePath', '')
     target_path = request.json.get('targetPath', '')
     format_type = request.json.get('format', '')
-    
+
     conversion_result = {
         'status': '',
         'message': '',
@@ -1260,21 +1213,21 @@ def convert_file():
         'completedAt': None,
         'errorDetails': ''
     }
-    
+
     try:
         if not os.path.exists(source_path):
             conversion_result['status'] = 'Failed'
             conversion_result['message'] = 'Source file does not exist'
             return jsonify(conversion_result), 400
-        
+
         source_ext = os.path.splitext(source_path)[1].lower()
         target_ext = f'.{format_type.lower()}'
         output_path = os.path.splitext(target_path)[0] + target_ext
-        
+
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        
+
         cmd = None
-        
+
         # PDF conversions using LibreOffice
         if format_type.lower() == 'pdf':
             cmd = [
@@ -1284,22 +1237,22 @@ def convert_file():
                 '--outdir', os.path.dirname(output_path),
                 source_path
             ]
-        
+
         # Image conversions using ImageMagick
         elif is_image_format(source_ext) and is_image_format(target_ext):
             cmd = ['convert', source_path, output_path]
-        
+
         # Video conversions using FFmpeg
         elif is_video_format(source_ext) and is_video_format(target_ext):
             cmd = ['ffmpeg', '-i', source_path, '-y', output_path]
-        
+
         # Audio conversions using FFmpeg
         elif is_audio_format(source_ext) and is_audio_format(target_ext):
             cmd = ['ffmpeg', '-i', source_path, '-y', output_path]
-        
+
         if cmd:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-            
+
             if result.returncode == 0 and os.path.exists(output_path):
                 file_size = os.path.getsize(output_path)
                 conversion_result['status'] = 'Success'
@@ -1314,14 +1267,14 @@ def convert_file():
         else:
             conversion_result['status'] = 'Failed'
             conversion_result['message'] = 'Unsupported conversion format'
-            
+
     except subprocess.TimeoutExpired:
         conversion_result['status'] = 'Failed'
         conversion_result['message'] = 'Conversion timed out'
     except Exception as e:
         conversion_result['status'] = 'Failed'
         conversion_result['message'] = str(e)
-    
+
     return jsonify(conversion_result)
 
 def is_image_format(extension):
@@ -1337,10 +1290,7 @@ def is_audio_format(extension):
     return extension.lower() in audio_formats
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 97
@@ -1363,30 +1313,30 @@ interface ConversionResult {
 
 app.post('/convert-file', (req, res) => {
     const { sourcePath, targetPath, format } = req.body;
-    
+
     const conversionResult: ConversionResult = {
         status: '',
         message: ''
     };
-    
+
     if (!fs.existsSync(sourcePath)) {
         conversionResult.status = 'Failed';
         conversionResult.message = 'Source file does not exist';
         return res.status(400).json(conversionResult);
     }
-    
+
     const sourceExt = path.extname(sourcePath).toLowerCase();
     const targetExt = `.${format.toLowerCase()}`;
     const outputPath = path.join(path.dirname(targetPath), path.basename(targetPath, path.extname(targetPath)) + targetExt);
-    
+
     // Ensure output directory exists
     const outputDir = path.dirname(outputPath);
     if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
     }
-    
+
     let command = '';
-    
+
     // PDF conversions using LibreOffice
     if (format.toLowerCase() === 'pdf') {
         command = `libreoffice --headless --convert-to pdf --outdir "${path.dirname(outputPath)}" "${sourcePath}"`;
@@ -1403,7 +1353,7 @@ app.post('/convert-file', (req, res) => {
     else if (isAudioFormat(sourceExt) && isAudioFormat(targetExt)) {
         command = `ffmpeg -i "${sourcePath}" -y "${outputPath}"`;
     }
-    
+
     if (command) {
         exec(command, { timeout: 300000 }, (error, stdout, stderr) => {
             if (!error && fs.existsSync(outputPath)) {
@@ -1418,7 +1368,7 @@ app.post('/convert-file', (req, res) => {
                 conversionResult.message = 'Conversion failed';
                 conversionResult.errorDetails = error ? error.message : stderr;
             }
-            
+
             res.json(conversionResult);
         });
     } else {
@@ -1444,10 +1394,8 @@ function isAudioFormat(extension: string): boolean {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 144
@@ -1456,7 +1404,7 @@ function isAudioFormat(extension: string): boolean {
 public IActionResult AnalyzeDiskUsage(string directoryPath)
 {
     var analysisResult = new DiskAnalysisResult();
-    
+
     try
     {
         if (!Directory.Exists(directoryPath))
@@ -1465,15 +1413,15 @@ public IActionResult AnalyzeDiskUsage(string directoryPath)
             analysisResult.Message = "Directory does not exist";
             return BadRequest(analysisResult);
         }
-        
+
         var directoryInfo = new DirectoryInfo(directoryPath);
         var subdirectories = new List<DirectoryUsage>();
         var fileTypes = new Dictionary<string, long>();
-        
+
         long totalSize = 0;
         int totalFiles = 0;
         int totalDirectories = 0;
-        
+
         // Analyze subdirectories
         foreach (var subdir in directoryInfo.GetDirectories())
         {
@@ -1488,7 +1436,7 @@ public IActionResult AnalyzeDiskUsage(string directoryPath)
                     FileCount = usage.FileCount,
                     DirectoryCount = usage.DirectoryCount
                 });
-                
+
                 totalSize += usage.Size;
                 totalFiles += usage.FileCount;
                 totalDirectories += usage.DirectoryCount;
@@ -1506,7 +1454,7 @@ public IActionResult AnalyzeDiskUsage(string directoryPath)
                 });
             }
         }
-        
+
         // Analyze file types
         foreach (var file in directoryInfo.GetFiles("*", SearchOption.AllDirectories))
         {
@@ -1515,7 +1463,7 @@ public IActionResult AnalyzeDiskUsage(string directoryPath)
                 var extension = string.IsNullOrEmpty(file.Extension) ? "No Extension" : file.Extension.ToUpper();
                 if (!fileTypes.ContainsKey(extension))
                     fileTypes[extension] = 0;
-                
+
                 fileTypes[extension] += file.Length;
             }
             catch (UnauthorizedAccessException)
@@ -1523,7 +1471,7 @@ public IActionResult AnalyzeDiskUsage(string directoryPath)
                 // Skip files with access issues
             }
         }
-        
+
         analysisResult.Status = "Success";
         analysisResult.Message = "Disk analysis completed successfully";
         analysisResult.DirectoryPath = directoryPath;
@@ -1539,7 +1487,7 @@ public IActionResult AnalyzeDiskUsage(string directoryPath)
         analysisResult.Status = "Failed";
         analysisResult.Message = ex.Message;
     }
-    
+
     return Ok(analysisResult);
 }
 
@@ -1548,7 +1496,7 @@ private (long Size, int FileCount, int DirectoryCount) CalculateDirectorySize(Di
     long size = 0;
     int fileCount = 0;
     int directoryCount = 0;
-    
+
     try
     {
         foreach (var file in directory.GetFiles())
@@ -1556,7 +1504,7 @@ private (long Size, int FileCount, int DirectoryCount) CalculateDirectorySize(Di
             size += file.Length;
             fileCount++;
         }
-        
+
         foreach (var subdir in directory.GetDirectories())
         {
             directoryCount++;
@@ -1570,7 +1518,7 @@ private (long Size, int FileCount, int DirectoryCount) CalculateDirectorySize(Di
     {
         // Skip directories with access issues
     }
-    
+
     return (size, fileCount, directoryCount);
 }
 
@@ -1598,10 +1546,7 @@ public class DirectoryUsage
 }
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 99
@@ -1617,7 +1562,7 @@ app = Flask(__name__)
 @app.route('/analyze-disk-usage', methods=['POST'])
 def analyze_disk_usage():
     directory_path = request.json.get('directoryPath', '')
-    
+
     analysis_result = {
         'status': '',
         'message': '',
@@ -1629,20 +1574,20 @@ def analyze_disk_usage():
         'fileTypes': [],
         'analyzedAt': None
     }
-    
+
     try:
         if not os.path.exists(directory_path):
             analysis_result['status'] = 'Failed'
             analysis_result['message'] = 'Directory does not exist'
             return jsonify(analysis_result), 400
-        
+
         # Use du command for Unix-like systems
         if os.name != 'nt':
             try:
                 # Get directory sizes
                 cmd = ['du', '-s', '--block-size=1'] + [os.path.join(directory_path, d) for d in os.listdir(directory_path) if os.path.isdir(os.path.join(directory_path, d))]
                 result = subprocess.run(cmd, capture_output=True, text=True)
-                
+
                 subdirectories = []
                 if result.returncode == 0:
                     lines = result.stdout.strip().split('\n')
@@ -1653,7 +1598,7 @@ def analyze_disk_usage():
                                 size = int(parts[0])
                                 path = parts[1]
                                 name = os.path.basename(path)
-                                
+
                                 subdirectories.append({
                                     'name': name,
                                     'path': path,
@@ -1661,56 +1606,53 @@ def analyze_disk_usage():
                                     'fileCount': 0,
                                     'directoryCount': 0
                                 })
-                
+
                 analysis_result['subdirectories'] = sorted(subdirectories, key=lambda x: x['size'], reverse=True)[:20]
-                
+
             except Exception as e:
                 print(f"Error running du command: {e}")
-        
+
         # Manual calculation as fallback or for detailed analysis
         file_types = defaultdict(int)
         total_size = 0
         total_files = 0
         total_directories = 0
-        
+
         for root, dirs, files in os.walk(directory_path):
             total_directories += len(dirs)
-            
+
             for file in files:
                 try:
                     file_path = os.path.join(root, file)
                     file_size = os.path.getsize(file_path)
                     total_size += file_size
                     total_files += 1
-                    
+
                     # Track file types
                     _, ext = os.path.splitext(file)
                     ext = ext.upper() if ext else 'NO EXTENSION'
                     file_types[ext] += file_size
-                    
+
                 except (OSError, PermissionError):
                     continue
-        
+
         analysis_result['totalSize'] = total_size
         analysis_result['totalFiles'] = total_files
         analysis_result['totalDirectories'] = total_directories
-        analysis_result['fileTypes'] = sorted([{'extension': k, 'size': v} for k, v in file_types.items()], 
+        analysis_result['fileTypes'] = sorted([{'extension': k, 'size': v} for k, v in file_types.items()],
                                              key=lambda x: x['size'], reverse=True)[:10]
         analysis_result['status'] = 'Success'
         analysis_result['message'] = 'Disk analysis completed successfully'
         analysis_result['analyzedAt'] = datetime.now().isoformat()
-        
+
     except Exception as e:
         analysis_result['status'] = 'Failed'
         analysis_result['message'] = str(e)
-    
+
     return jsonify(analysis_result)
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 146
@@ -1749,7 +1691,7 @@ interface FileTypeUsage {
 
 app.post('/analyze-disk-usage', (req, res) => {
     const { directoryPath } = req.body;
-    
+
     const analysisResult: DiskAnalysisResult = {
         status: '',
         message: '',
@@ -1760,25 +1702,25 @@ app.post('/analyze-disk-usage', (req, res) => {
         subdirectories: [],
         fileTypes: []
     };
-    
+
     if (!fs.existsSync(directoryPath)) {
         analysisResult.status = 'Failed';
         analysisResult.message = 'Directory does not exist';
         return res.status(400).json(analysisResult);
     }
-    
+
     try {
         // Use system commands for better performance
         const isWindows = process.platform === 'win32';
-        const command = isWindows 
+        const command = isWindows
             ? `dir "${directoryPath}" /s /-c`
             : `du -sb "${directoryPath}"/* 2>/dev/null || true`;
-        
+
         exec(command, { maxBuffer: 1024 * 1024 * 10 }, (error, stdout, stderr) => {
             try {
                 const subdirectories: DirectoryUsage[] = [];
                 const fileTypes: { [key: string]: number } = {};
-                
+
                 if (!isWindows && !error) {
                     // Parse du output for Unix-like systems
                     const lines = stdout.trim().split('\n');
@@ -1788,7 +1730,7 @@ app.post('/analyze-disk-usage', (req, res) => {
                             const size = parseInt(parts[0]);
                             const dirPath = parts[1];
                             const name = path.basename(dirPath);
-                            
+
                             subdirectories.push({
                                 name: name,
                                 path: dirPath,
@@ -1799,15 +1741,15 @@ app.post('/analyze-disk-usage', (req, res) => {
                         }
                     }
                 }
-                
+
                 // Manual calculation for detailed analysis
                 const calculateDirectoryUsage = (dirPath: string): void => {
                     try {
                         const items = fs.readdirSync(dirPath, { withFileTypes: true });
-                        
+
                         for (const item of items) {
                             const fullPath = path.join(dirPath, item.name);
-                            
+
                             if (item.isDirectory()) {
                                 analysisResult.totalDirectories++;
                                 calculateDirectoryUsage(fullPath);
@@ -1816,7 +1758,7 @@ app.post('/analyze-disk-usage', (req, res) => {
                                     const stats = fs.statSync(fullPath);
                                     analysisResult.totalSize += stats.size;
                                     analysisResult.totalFiles++;
-                                    
+
                                     // Track file types
                                     const ext = path.extname(item.name).toUpperCase() || 'NO EXTENSION';
                                     fileTypes[ext] = (fileTypes[ext] || 0) + stats.size;
@@ -1829,32 +1771,32 @@ app.post('/analyze-disk-usage', (req, res) => {
                         // Skip directories with permission issues
                     }
                 };
-                
+
                 calculateDirectoryUsage(directoryPath);
-                
+
                 // Sort and limit results
                 analysisResult.subdirectories = subdirectories
                     .sort((a, b) => b.size - a.size)
                     .slice(0, 20);
-                
+
                 analysisResult.fileTypes = Object.entries(fileTypes)
                     .map(([extension, size]) => ({ extension, size }))
                     .sort((a, b) => b.size - a.size)
                     .slice(0, 10);
-                
+
                 analysisResult.status = 'Success';
                 analysisResult.message = 'Disk analysis completed successfully';
                 analysisResult.analyzedAt = new Date().toISOString();
-                
+
                 res.json(analysisResult);
-                
+
             } catch (e) {
                 analysisResult.status = 'Failed';
                 analysisResult.message = `Analysis error: ${e}`;
                 res.json(analysisResult);
             }
         });
-        
+
     } catch (e) {
         analysisResult.status = 'Failed';
         analysisResult.message = `Error: ${e}`;
@@ -1863,10 +1805,8 @@ app.post('/analyze-disk-usage', (req, res) => {
 });
 ```
 
-----
-
 ### 🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 133
@@ -1875,21 +1815,21 @@ app.post('/analyze-disk-usage', (req, res) => {
 public async Task<IActionResult> BackupDatabase(string databaseName, string backupPath, string dbType = "mssql")
 {
     var backupResult = new DatabaseBackupResult();
-    
+
     try
     {
         var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
         var backupFileName = $"{databaseName}_backup_{timestamp}";
         var fullBackupPath = "";
-        
+
         ProcessStartInfo startInfo = null;
-        
+
         switch (dbType.ToLower())
         {
             case "mssql":
                 fullBackupPath = Path.Combine(backupPath, $"{backupFileName}.bak");
                 var sqlCmd = $"BACKUP DATABASE [{databaseName}] TO DISK = '{fullBackupPath}' WITH FORMAT, COMPRESSION";
-                
+
                 startInfo = new ProcessStartInfo
                 {
                     FileName = "sqlcmd",
@@ -1900,7 +1840,7 @@ public async Task<IActionResult> BackupDatabase(string databaseName, string back
                     CreateNoWindow = true
                 };
                 break;
-                
+
             case "mysql":
                 fullBackupPath = Path.Combine(backupPath, $"{backupFileName}.sql");
                 startInfo = new ProcessStartInfo
@@ -1913,7 +1853,7 @@ public async Task<IActionResult> BackupDatabase(string databaseName, string back
                     CreateNoWindow = true
                 };
                 break;
-                
+
             case "postgresql":
                 fullBackupPath = Path.Combine(backupPath, $"{backupFileName}.sql");
                 startInfo = new ProcessStartInfo
@@ -1926,22 +1866,22 @@ public async Task<IActionResult> BackupDatabase(string databaseName, string back
                     CreateNoWindow = true
                 };
                 break;
-                
+
             default:
                 backupResult.Status = "Failed";
                 backupResult.Message = "Unsupported database type";
                 return BadRequest(backupResult);
         }
-        
+
         Directory.CreateDirectory(backupPath);
-        
+
         var process = new Process { StartInfo = startInfo };
         process.Start();
-        
+
         var output = await process.StandardOutput.ReadToEndAsync();
         var error = await process.StandardError.ReadToEndAsync();
         await process.WaitForExitAsync();
-        
+
         if (process.ExitCode == 0 && File.Exists(fullBackupPath))
         {
             var fileInfo = new FileInfo(fullBackupPath);
@@ -1965,10 +1905,10 @@ public async Task<IActionResult> BackupDatabase(string databaseName, string back
         backupResult.Status = "Failed";
         backupResult.Message = ex.Message;
     }
-    
+
     // Save backup record to database
     await SaveBackupRecord(backupResult);
-    
+
     return Ok(backupResult);
 }
 
@@ -1978,7 +1918,7 @@ private async Task SaveBackupRecord(DatabaseBackupResult result)
     {
         var sql = @"INSERT INTO BackupHistory (DatabaseName, BackupPath, BackupSize, Status, Message, DatabaseType, CompletedAt, CreatedAt)
                    VALUES (@DatabaseName, @BackupPath, @BackupSize, @Status, @Message, @DatabaseType, @CompletedAt, @CreatedAt)";
-        
+
         await connection.ExecuteAsync(sql, new
         {
             result.DatabaseName,
@@ -2006,10 +1946,7 @@ public class DatabaseBackupResult
 }
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 155
@@ -2027,7 +1964,7 @@ def backup_database():
     database_name = request.json.get('databaseName', '')
     backup_path = request.json.get('backupPath', '')
     db_type = request.json.get('dbType', 'mysql')
-    
+
     backup_result = {
         'status': '',
         'message': '',
@@ -2038,16 +1975,16 @@ def backup_database():
         'completedAt': None,
         'errorDetails': ''
     }
-    
+
     try:
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         backup_filename = f"{database_name}_backup_{timestamp}"
-        
+
         os.makedirs(backup_path, exist_ok=True)
-        
+
         cmd = None
         full_backup_path = ""
-        
+
         if db_type.lower() == 'mysql':
             full_backup_path = os.path.join(backup_path, f"{backup_filename}.sql")
             cmd = [
@@ -2058,7 +1995,7 @@ def backup_database():
                 '--triggers',
                 database_name
             ]
-            
+
         elif db_type.lower() == 'postgresql':
             full_backup_path = os.path.join(backup_path, f"{backup_filename}.sql")
             cmd = [
@@ -2068,7 +2005,7 @@ def backup_database():
                 '-d', database_name,
                 '-f', full_backup_path
             ]
-            
+
         elif db_type.lower() == 'mongodb':
             full_backup_path = os.path.join(backup_path, f"{backup_filename}")
             cmd = [
@@ -2076,7 +2013,7 @@ def backup_database():
                 '--db', database_name,
                 '--out', full_backup_path
             ]
-            
+
         elif db_type.lower() == 'sqlite':
             # For SQLite, copy the database file
             source_db = f"{database_name}.db"
@@ -2089,7 +2026,7 @@ def backup_database():
             else:
                 backup_result['status'] = 'Failed'
                 backup_result['message'] = 'Source database file not found'
-        
+
         if cmd:
             if db_type.lower() == 'mysql':
                 # For MySQL, redirect output to file
@@ -2097,7 +2034,7 @@ def backup_database():
                     result = subprocess.run(cmd, stdout=f, stderr=subprocess.PIPE, text=True, timeout=300)
             else:
                 result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-            
+
             if result.returncode == 0 and os.path.exists(full_backup_path):
                 backup_result['status'] = 'Success'
                 backup_result['message'] = 'Database backup completed successfully'
@@ -2105,7 +2042,7 @@ def backup_database():
                 backup_result['status'] = 'Failed'
                 backup_result['message'] = 'Database backup failed'
                 backup_result['errorDetails'] = result.stderr if result else ''
-        
+
         if backup_result['status'] == 'Success':
             if os.path.isfile(full_backup_path):
                 backup_size = os.path.getsize(full_backup_path)
@@ -2114,28 +2051,28 @@ def backup_database():
                 backup_size = sum(os.path.getsize(os.path.join(dirpath, filename))
                                 for dirpath, dirnames, filenames in os.walk(full_backup_path)
                                 for filename in filenames)
-            
+
             backup_result['backupPath'] = full_backup_path
             backup_result['backupSize'] = backup_size
             backup_result['completedAt'] = datetime.now().isoformat()
-        
+
         # Save backup record to database
         save_backup_record(backup_result)
-        
+
     except subprocess.TimeoutExpired:
         backup_result['status'] = 'Failed'
         backup_result['message'] = 'Backup operation timed out'
     except Exception as e:
         backup_result['status'] = 'Failed'
         backup_result['message'] = str(e)
-    
+
     return jsonify(backup_result)
 
 def save_backup_record(result):
     try:
         conn = sqlite3.connect('backup_history.db')
         cursor = conn.cursor()
-        
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS backup_history (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -2149,9 +2086,9 @@ def save_backup_record(result):
                 created_at TEXT
             )
         ''')
-        
+
         cursor.execute('''
-            INSERT INTO backup_history 
+            INSERT INTO backup_history
             (database_name, backup_path, backup_size, status, message, database_type, completed_at, created_at)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
@@ -2164,17 +2101,14 @@ def save_backup_record(result):
             result['completedAt'],
             datetime.now().isoformat()
         ))
-        
+
         conn.commit()
         conn.close()
     except Exception as e:
         print(f"Error saving backup record: {e}")
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 172
@@ -2200,7 +2134,7 @@ interface DatabaseBackupResult {
 
 app.post('/backup-database', (req, res) => {
     const { databaseName, backupPath, dbType = 'mysql' } = req.body;
-    
+
     const backupResult: DatabaseBackupResult = {
         status: '',
         message: '',
@@ -2209,49 +2143,49 @@ app.post('/backup-database', (req, res) => {
         backupSize: 0,
         databaseType: dbType
     };
-    
+
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
     const backupFilename = `${databaseName}_backup_${timestamp}`;
-    
+
     // Ensure backup directory exists
     if (!fs.existsSync(backupPath)) {
         fs.mkdirSync(backupPath, { recursive: true });
     }
-    
+
     let command = '';
     let fullBackupPath = '';
-    
+
     switch (dbType.toLowerCase()) {
         case 'mysql':
             fullBackupPath = path.join(backupPath, `${backupFilename}.sql`);
             command = `mysqldump -u root --single-transaction --routines --triggers ${databaseName} > "${fullBackupPath}"`;
             break;
-            
+
         case 'postgresql':
             fullBackupPath = path.join(backupPath, `${backupFilename}.sql`);
             command = `pg_dump -h localhost -U postgres -d ${databaseName} -f "${fullBackupPath}"`;
             break;
-            
+
         case 'mongodb':
             fullBackupPath = path.join(backupPath, backupFilename);
             command = `mongodump --db ${databaseName} --out "${fullBackupPath}"`;
             break;
-            
+
         case 'sqlite':
             // For SQLite, copy the database file
             const sourceDb = `${databaseName}.db`;
             fullBackupPath = path.join(backupPath, `${backupFilename}.db`);
-            
+
             if (fs.existsSync(sourceDb)) {
                 fs.copyFileSync(sourceDb, fullBackupPath);
                 const stats = fs.statSync(fullBackupPath);
-                
+
                 backupResult.status = 'Success';
                 backupResult.message = 'Database backup completed successfully';
                 backupResult.backupPath = fullBackupPath;
                 backupResult.backupSize = stats.size;
                 backupResult.completedAt = new Date().toISOString();
-                
+
                 saveBackupRecord(backupResult);
                 return res.json(backupResult);
             } else {
@@ -2260,27 +2194,27 @@ app.post('/backup-database', (req, res) => {
                 return res.json(backupResult);
             }
             break;
-            
+
         default:
             backupResult.status = 'Failed';
             backupResult.message = 'Unsupported database type';
             return res.json(backupResult);
     }
-    
+
     exec(command, { timeout: 300000 }, (error, stdout, stderr) => {
         if (!error && fs.existsSync(fullBackupPath)) {
             let backupSize = 0;
-            
+
             if (fs.statSync(fullBackupPath).isDirectory()) {
                 // Calculate directory size for MongoDB backups
                 const calculateDirSize = (dirPath: string): number => {
                     let size = 0;
                     const files = fs.readdirSync(dirPath);
-                    
+
                     for (const file of files) {
                         const filePath = path.join(dirPath, file);
                         const stats = fs.statSync(filePath);
-                        
+
                         if (stats.isDirectory()) {
                             size += calculateDirSize(filePath);
                         } else {
@@ -2289,12 +2223,12 @@ app.post('/backup-database', (req, res) => {
                     }
                     return size;
                 };
-                
+
                 backupSize = calculateDirSize(fullBackupPath);
             } else {
                 backupSize = fs.statSync(fullBackupPath).size;
             }
-            
+
             backupResult.status = 'Success';
             backupResult.message = 'Database backup completed successfully';
             backupResult.backupPath = fullBackupPath;
@@ -2305,7 +2239,7 @@ app.post('/backup-database', (req, res) => {
             backupResult.message = 'Database backup failed';
             backupResult.errorDetails = error ? error.message : stderr;
         }
-        
+
         saveBackupRecord(backupResult);
         res.json(backupResult);
     });
@@ -2313,7 +2247,7 @@ app.post('/backup-database', (req, res) => {
 
 function saveBackupRecord(result: DatabaseBackupResult): void {
     const db = new sqlite3.Database('backup_history.db');
-    
+
     db.serialize(() => {
         db.run(`
             CREATE TABLE IF NOT EXISTS backup_history (
@@ -2328,13 +2262,13 @@ function saveBackupRecord(result: DatabaseBackupResult): void {
                 created_at TEXT
             )
         `);
-        
+
         const stmt = db.prepare(`
-            INSERT INTO backup_history 
+            INSERT INTO backup_history
             (database_name, backup_path, backup_size, status, message, database_type, completed_at, created_at)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         `);
-        
+
         stmt.run(
             result.databaseName,
             result.backupPath,
@@ -2345,22 +2279,18 @@ function saveBackupRecord(result: DatabaseBackupResult): void {
             result.completedAt,
             new Date().toISOString()
         );
-        
+
         stmt.finalize();
     });
-    
+
     db.close();
 }
 ```
 
-----
-
 # Senaryo 9 ve 10 - Tamamlanmış Kodlar
 
-----
-
 ### 🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 188
@@ -2369,18 +2299,18 @@ function saveBackupRecord(result: DatabaseBackupResult): void {
 public async Task<IActionResult> CheckMailbox(string mailboxName)
 {
     var mailboxResult = new MailboxStatusResult();
-    
+
     try
     {
         // Check mailbox existence and size
         var sizeInfo = await GetMailboxSize(mailboxName);
-        
+
         // Check mail queue status
         var queueStatus = await GetMailQueueStatus(mailboxName);
-        
+
         // Check recent mail activity
         var recentActivity = await GetRecentMailActivity(mailboxName);
-        
+
         mailboxResult.MailboxName = mailboxName;
         mailboxResult.Status = "Active";
         mailboxResult.TotalSize = sizeInfo.TotalSize;
@@ -2390,7 +2320,7 @@ public async Task<IActionResult> CheckMailbox(string mailboxName)
         mailboxResult.SentToday = recentActivity.SentToday;
         mailboxResult.ReceivedToday = recentActivity.ReceivedToday;
         mailboxResult.CheckedAt = DateTime.Now;
-        
+
         // Save mailbox status to database
         await SaveMailboxStatus(mailboxResult);
     }
@@ -2399,7 +2329,7 @@ public async Task<IActionResult> CheckMailbox(string mailboxName)
         mailboxResult.Status = "Error";
         mailboxResult.Message = ex.Message;
     }
-    
+
     return Ok(mailboxResult);
 }
 
@@ -2417,16 +2347,16 @@ private async Task<(long TotalSize, int MessageCount, DateTime? LastAccess)> Get
             CreateNoWindow = true
         }
     };
-    
+
     process.Start();
     var output = await process.StandardOutput.ReadToEndAsync();
     await process.WaitForExitAsync();
-    
+
     // Parse doveadm output
     long totalSize = 0;
     int messageCount = 0;
     DateTime? lastAccess = null;
-    
+
     var lines = output.Split('\n', StringSplitOptions.RemoveEmptyEntries);
     foreach (var line in lines)
     {
@@ -2447,7 +2377,7 @@ private async Task<(long TotalSize, int MessageCount, DateTime? LastAccess)> Get
             }
         }
     }
-    
+
     // Get last access time
     var accessProcess = new Process
     {
@@ -2460,11 +2390,11 @@ private async Task<(long TotalSize, int MessageCount, DateTime? LastAccess)> Get
             CreateNoWindow = true
         }
     };
-    
+
     accessProcess.Start();
     var accessOutput = await accessProcess.StandardOutput.ReadToEndAsync();
     await accessProcess.WaitForExitAsync();
-    
+
     // Parse last access time from logs
     if (!string.IsNullOrEmpty(accessOutput))
     {
@@ -2474,7 +2404,7 @@ private async Task<(long TotalSize, int MessageCount, DateTime? LastAccess)> Get
             lastAccess = parsedDate;
         }
     }
-    
+
     return (totalSize, messageCount, lastAccess);
 }
 
@@ -2491,21 +2421,21 @@ private async Task<(int QueuedCount)> GetMailQueueStatus(string mailboxName)
             CreateNoWindow = true
         }
     };
-    
+
     process.Start();
     var output = await process.StandardOutput.ReadToEndAsync();
     await process.WaitForExitAsync();
-    
+
     var queuedCount = output.Split('\n')
         .Count(line => line.Contains(mailboxName));
-    
+
     return (queuedCount);
 }
 
 private async Task<(int SentToday, int ReceivedToday)> GetRecentMailActivity(string mailboxName)
 {
     var today = DateTime.Today.ToString("yyyy-MM-dd");
-    
+
     var process = new Process
     {
         StartInfo = new ProcessStartInfo
@@ -2517,15 +2447,15 @@ private async Task<(int SentToday, int ReceivedToday)> GetRecentMailActivity(str
             CreateNoWindow = true
         }
     };
-    
+
     process.Start();
     var output = await process.StandardOutput.ReadToEndAsync();
     await process.WaitForExitAsync();
-    
+
     var lines = output.Split('\n', StringSplitOptions.RemoveEmptyEntries);
     var sentToday = lines.Count(line => line.Contains("sent"));
     var receivedToday = lines.Count(line => line.Contains("delivered"));
-    
+
     return (sentToday, receivedToday);
 }
 
@@ -2535,7 +2465,7 @@ private async Task SaveMailboxStatus(MailboxStatusResult result)
     {
         var sql = @"INSERT INTO MailboxStatus (MailboxName, Status, TotalSize, MessageCount, LastAccess, QueuedMessages, SentToday, ReceivedToday, CheckedAt)
                    VALUES (@MailboxName, @Status, @TotalSize, @MessageCount, @LastAccess, @QueuedMessages, @SentToday, @ReceivedToday, @CheckedAt)";
-        
+
         await connection.ExecuteAsync(sql, result);
     }
 }
@@ -2555,10 +2485,7 @@ public class MailboxStatusResult
 }
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 185
@@ -2574,7 +2501,7 @@ app = Flask(__name__)
 @app.route('/check-mailbox', methods=['POST'])
 def check_mailbox():
     mailbox_name = request.json.get('mailboxName', '')
-    
+
     mailbox_result = {
         'mailboxName': mailbox_name,
         'status': '',
@@ -2587,29 +2514,29 @@ def check_mailbox():
         'checkedAt': datetime.now().isoformat(),
         'message': ''
     }
-    
+
     try:
         # Check mailbox size and message count
         size_info = get_mailbox_size(mailbox_name)
         mailbox_result.update(size_info)
-        
+
         # Check mail queue status
         queue_status = get_mail_queue_status(mailbox_name)
         mailbox_result['queuedMessages'] = queue_status
-        
+
         # Check recent mail activity
         activity = get_recent_mail_activity(mailbox_name)
         mailbox_result.update(activity)
-        
+
         mailbox_result['status'] = 'Active'
-        
+
         # Save mailbox status to database
         save_mailbox_status(mailbox_result)
-        
+
     except Exception as e:
         mailbox_result['status'] = 'Error'
         mailbox_result['message'] = str(e)
-    
+
     return jsonify(mailbox_result)
 
 def get_mailbox_size(mailbox_name):
@@ -2618,12 +2545,12 @@ def get_mailbox_size(mailbox_name):
         'messageCount': 0,
         'lastAccess': None
     }
-    
+
     try:
         # Using doveadm for Dovecot mail server
         cmd = ['doveadm', 'quota', 'get', '-u', mailbox_name]
         process_result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-        
+
         if process_result.returncode == 0:
             lines = process_result.stdout.strip().split('\n')
             for line in lines:
@@ -2633,11 +2560,11 @@ def get_mailbox_size(mailbox_name):
                         result['totalSize'] = int(parts[2]) if parts[2].isdigit() else 0
                     elif 'MESSAGE' in parts[0]:
                         result['messageCount'] = int(parts[2]) if parts[2].isdigit() else 0
-        
+
         # Get last access from mail logs
         log_cmd = ['grep', '-i', mailbox_name, '/var/log/mail.log']
         log_result = subprocess.run(log_cmd, capture_output=True, text=True)
-        
+
         if log_result.returncode == 0:
             log_lines = log_result.stdout.strip().split('\n')
             if log_lines:
@@ -2653,29 +2580,29 @@ def get_mailbox_size(mailbox_name):
                         result['lastAccess'] = last_access.isoformat()
                     except ValueError:
                         pass
-                        
+
     except subprocess.TimeoutExpired:
         print("Timeout while checking mailbox size")
     except Exception as e:
         print(f"Error getting mailbox size: {e}")
-    
+
     return result
 
 def get_mail_queue_status(mailbox_name):
     queued_count = 0
-    
+
     try:
         # Using postqueue for Postfix
         cmd = ['postqueue', '-p']
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-        
+
         if result.returncode == 0:
             lines = result.stdout.split('\n')
             queued_count = sum(1 for line in lines if mailbox_name in line)
-            
+
     except Exception as e:
         print(f"Error checking mail queue: {e}")
-    
+
     return queued_count
 
 def get_recent_mail_activity(mailbox_name):
@@ -2683,36 +2610,36 @@ def get_recent_mail_activity(mailbox_name):
         'sentToday': 0,
         'receivedToday': 0
     }
-    
+
     try:
         today_str = date.today().strftime('%b %d')
-        
+
         # Search today's mail logs
         cmd = ['grep', today_str, '/var/log/mail.log']
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-        
+
         if result.returncode == 0:
             lines = result.stdout.split('\n')
             mailbox_lines = [line for line in lines if mailbox_name in line]
-            
-            activity['sentToday'] = sum(1 for line in mailbox_lines 
-                                      if any(keyword in line.lower() 
+
+            activity['sentToday'] = sum(1 for line in mailbox_lines
+                                      if any(keyword in line.lower()
                                            for keyword in ['sent', 'smtp', 'relay']))
-            
-            activity['receivedToday'] = sum(1 for line in mailbox_lines 
-                                          if any(keyword in line.lower() 
+
+            activity['receivedToday'] = sum(1 for line in mailbox_lines
+                                          if any(keyword in line.lower()
                                                for keyword in ['delivered', 'receive', 'accept']))
-                                               
+
     except Exception as e:
         print(f"Error checking mail activity: {e}")
-    
+
     return activity
 
 def save_mailbox_status(result):
     try:
         conn = sqlite3.connect('mailbox_status.db')
         cursor = conn.cursor()
-        
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS mailbox_status (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -2727,9 +2654,9 @@ def save_mailbox_status(result):
                 checked_at TEXT
             )
         ''')
-        
+
         cursor.execute('''
-            INSERT INTO mailbox_status 
+            INSERT INTO mailbox_status
             (mailbox_name, status, total_size, message_count, last_access, queued_messages, sent_today, received_today, checked_at)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
@@ -2743,17 +2670,14 @@ def save_mailbox_status(result):
             result['receivedToday'],
             result['checkedAt']
         ))
-        
+
         conn.commit()
         conn.close()
     except Exception as e:
         print(f"Error saving mailbox status: {e}")
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 210
@@ -2779,7 +2703,7 @@ interface MailboxStatusResult {
 
 app.post('/check-mailbox', async (req, res) => {
     const { mailboxName } = req.body;
-    
+
     const mailboxResult: MailboxStatusResult = {
         mailboxName: mailboxName,
         status: '',
@@ -2790,27 +2714,27 @@ app.post('/check-mailbox', async (req, res) => {
         receivedToday: 0,
         checkedAt: new Date().toISOString()
     };
-    
+
     try {
         // Get mailbox size and message count
         const sizeInfo = await getMailboxSize(mailboxName);
         Object.assign(mailboxResult, sizeInfo);
-        
+
         // Get mail queue status
         const queueStatus = await getMailQueueStatus(mailboxName);
         mailboxResult.queuedMessages = queueStatus;
-        
+
         // Get recent mail activity
         const activity = await getRecentMailActivity(mailboxName);
         Object.assign(mailboxResult, activity);
-        
+
         mailboxResult.status = 'Active';
-        
+
         // Save mailbox status to database
         await saveMailboxStatus(mailboxResult);
-        
+
         res.json(mailboxResult);
-        
+
     } catch (error) {
         mailboxResult.status = 'Error';
         mailboxResult.message = error instanceof Error ? error.message : 'Unknown error';
@@ -2825,14 +2749,14 @@ function getMailboxSize(mailboxName: string): Promise<{ totalSize: number; messa
             messageCount: 0,
             lastAccess: undefined as string | undefined
         };
-        
+
         // Using doveadm for Dovecot mail server
         const command = `doveadm quota get -u ${mailboxName}`;
-        
+
         exec(command, { timeout: 30000 }, (error, stdout, stderr) => {
             if (!error && stdout) {
                 const lines = stdout.trim().split('\n');
-                
+
                 for (const line of lines) {
                     const parts = line.split('\t');
                     if (parts.length >= 3) {
@@ -2844,17 +2768,17 @@ function getMailboxSize(mailboxName: string): Promise<{ totalSize: number; messa
                     }
                 }
             }
-            
+
             // Get last access from mail logs
             const logCommand = `grep -i "${mailboxName}" /var/log/mail.log | tail -1`;
-            
+
             exec(logCommand, (logError, logStdout) => {
                 if (!logError && logStdout) {
                     const timestampMatch = logStdout.match(/(\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})/);
                     if (timestampMatch) {
                         const currentYear = new Date().getFullYear();
                         const timestampStr = `${currentYear} ${timestampMatch[1]}`;
-                        
+
                         try {
                             const lastAccess = new Date(timestampStr);
                             result.lastAccess = lastAccess.toISOString();
@@ -2863,7 +2787,7 @@ function getMailboxSize(mailboxName: string): Promise<{ totalSize: number; messa
                         }
                     }
                 }
-                
+
                 resolve(result);
             });
         });
@@ -2873,15 +2797,15 @@ function getMailboxSize(mailboxName: string): Promise<{ totalSize: number; messa
 function getMailQueueStatus(mailboxName: string): Promise<number> {
     return new Promise((resolve) => {
         const command = 'postqueue -p';
-        
+
         exec(command, { timeout: 30000 }, (error, stdout, stderr) => {
             let queuedCount = 0;
-            
+
             if (!error && stdout) {
                 const lines = stdout.split('\n');
                 queuedCount = lines.filter(line => line.includes(mailboxName)).length;
             }
-            
+
             resolve(queuedCount);
         });
     });
@@ -2891,27 +2815,27 @@ function getRecentMailActivity(mailboxName: string): Promise<{ sentToday: number
     return new Promise((resolve) => {
         const today = new Date();
         const todayStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        
+
         const command = `grep "${todayStr}" /var/log/mail.log | grep -i "${mailboxName}"`;
-        
+
         exec(command, { timeout: 30000 }, (error, stdout, stderr) => {
             const activity = {
                 sentToday: 0,
                 receivedToday: 0
             };
-            
+
             if (!error && stdout) {
                 const lines = stdout.split('\n').filter(line => line.trim());
-                
-                activity.sentToday = lines.filter(line => 
+
+                activity.sentToday = lines.filter(line =>
                     /sent|smtp|relay/i.test(line)
                 ).length;
-                
-                activity.receivedToday = lines.filter(line => 
+
+                activity.receivedToday = lines.filter(line =>
                     /delivered|receive|accept/i.test(line)
                 ).length;
             }
-            
+
             resolve(activity);
         });
     });
@@ -2920,7 +2844,7 @@ function getRecentMailActivity(mailboxName: string): Promise<{ sentToday: number
 function saveMailboxStatus(result: MailboxStatusResult): Promise<void> {
     return new Promise((resolve, reject) => {
         const db = new sqlite3.Database('mailbox_status.db');
-        
+
         db.serialize(() => {
             db.run(`
                 CREATE TABLE IF NOT EXISTS mailbox_status (
@@ -2936,13 +2860,13 @@ function saveMailboxStatus(result: MailboxStatusResult): Promise<void> {
                     checked_at TEXT
                 )
             `);
-            
+
             const stmt = db.prepare(`
-                INSERT INTO mailbox_status 
+                INSERT INTO mailbox_status
                 (mailbox_name, status, total_size, message_count, last_access, queued_messages, sent_today, received_today, checked_at)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             `);
-            
+
             stmt.run(
                 result.mailboxName,
                 result.status,
@@ -2961,19 +2885,17 @@ function saveMailboxStatus(result: MailboxStatusResult): Promise<void> {
                     }
                 }
             );
-            
+
             stmt.finalize();
         });
-        
+
         db.close();
     });
 }
 ```
 
-----
-
 ### 🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 176
@@ -2982,7 +2904,7 @@ function saveMailboxStatus(result: MailboxStatusResult): Promise<void> {
 public async Task<IActionResult> AnalyzeWebLogs(DateTime startDate, DateTime endDate, string logPath = "/var/log/apache2/access.log")
 {
     var analysisResult = new WebLogAnalysisResult();
-    
+
     try
     {
         if (!File.Exists(logPath))
@@ -2991,16 +2913,16 @@ public async Task<IActionResult> AnalyzeWebLogs(DateTime startDate, DateTime end
             analysisResult.Message = "Log file does not exist";
             return BadRequest(analysisResult);
         }
-        
+
         var filteredLogs = new List<LogEntry>();
         var ipCounts = new Dictionary<string, int>();
         var statusCodes = new Dictionary<string, int>();
         var userAgents = new Dictionary<string, int>();
         var topPages = new Dictionary<string, int>();
-        
+
         var startDateStr = startDate.ToString("dd/MMM/yyyy");
         var endDateStr = endDate.ToString("dd/MMM/yyyy");
-        
+
         // Use awk to filter logs by date range
         var process = new Process
         {
@@ -3014,45 +2936,45 @@ public async Task<IActionResult> AnalyzeWebLogs(DateTime startDate, DateTime end
                 CreateNoWindow = true
             }
         };
-        
+
         process.Start();
         var output = await process.StandardOutput.ReadToEndAsync();
         await process.WaitForExitAsync();
-        
+
         var lines = output.Split('\n', StringSplitOptions.RemoveEmptyEntries);
-        
+
         foreach (var line in lines)
         {
             var logEntry = ParseApacheLogLine(line);
             if (logEntry != null && logEntry.Timestamp >= startDate && logEntry.Timestamp <= endDate)
             {
                 filteredLogs.Add(logEntry);
-                
+
                 // Count IPs
                 if (!ipCounts.ContainsKey(logEntry.ClientIP))
                     ipCounts[logEntry.ClientIP] = 0;
                 ipCounts[logEntry.ClientIP]++;
-                
+
                 // Count status codes
                 if (!statusCodes.ContainsKey(logEntry.StatusCode))
                     statusCodes[logEntry.StatusCode] = 0;
                 statusCodes[logEntry.StatusCode]++;
-                
+
                 // Count user agents
-                var userAgent = logEntry.UserAgent.Length > 50 
+                var userAgent = logEntry.UserAgent.Length > 50
                     ? logEntry.UserAgent.Substring(0, 50) + "..."
                     : logEntry.UserAgent;
                 if (!userAgents.ContainsKey(userAgent))
                     userAgents[userAgent] = 0;
                 userAgents[userAgent]++;
-                
+
                 // Count page requests
                 if (!topPages.ContainsKey(logEntry.RequestPath))
                     topPages[logEntry.RequestPath] = 0;
                 topPages[logEntry.RequestPath]++;
             }
         }
-        
+
         analysisResult.Status = "Success";
         analysisResult.Message = "Log analysis completed successfully";
         analysisResult.StartDate = startDate;
@@ -3064,7 +2986,7 @@ public async Task<IActionResult> AnalyzeWebLogs(DateTime startDate, DateTime end
         analysisResult.TopUserAgents = userAgents.OrderByDescending(kv => kv.Value).Take(10).ToList();
         analysisResult.TopPages = topPages.OrderByDescending(kv => kv.Value).Take(20).ToList();
         analysisResult.AnalyzedAt = DateTime.Now;
-        
+
         // Save analysis result to database
         await SaveLogAnalysis(analysisResult);
     }
@@ -3073,7 +2995,7 @@ public async Task<IActionResult> AnalyzeWebLogs(DateTime startDate, DateTime end
         analysisResult.Status = "Failed";
         analysisResult.Message = ex.Message;
     }
-    
+
     return Ok(analysisResult);
 }
 
@@ -3084,7 +3006,7 @@ private LogEntry ParseApacheLogLine(string line)
         // Apache Common Log Format: IP - - [timestamp] "method path protocol" status size "referer" "user-agent"
         var regex = new Regex(@"^(\S+) \S+ \S+ \[([^\]]+)\] ""(\S+) (\S+) \S+"" (\d+) (\S+) ""([^""]*)"" ""([^""]*)""");
         var match = regex.Match(line);
-        
+
         if (match.Success)
         {
             return new LogEntry
@@ -3104,7 +3026,7 @@ private LogEntry ParseApacheLogLine(string line)
     {
         // Skip malformed lines
     }
-    
+
     return null;
 }
 
@@ -3114,7 +3036,7 @@ private async Task SaveLogAnalysis(WebLogAnalysisResult result)
     {
         var sql = @"INSERT INTO LogAnalysis (StartDate, EndDate, TotalRequests, UniqueIPs, Status, Message, AnalyzedAt)
                    VALUES (@StartDate, @EndDate, @TotalRequests, @UniqueIPs, @Status, @Message, @AnalyzedAt)";
-        
+
         await connection.ExecuteAsync(sql, new
         {
             result.StartDate,
@@ -3156,10 +3078,7 @@ public class LogEntry
 }
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 153
@@ -3178,7 +3097,7 @@ def analyze_web_logs():
     start_date_str = request.json.get('startDate', '')
     end_date_str = request.json.get('endDate', '')
     log_path = request.json.get('logPath', '/var/log/apache2/access.log')
-    
+
     analysis_result = {
         'status': '',
         'message': '',
@@ -3192,47 +3111,47 @@ def analyze_web_logs():
         'topPages': [],
         'analyzedAt': datetime.now().isoformat()
     }
-    
+
     try:
         start_date = datetime.fromisoformat(start_date_str.replace('Z', '+00:00'))
         end_date = datetime.fromisoformat(end_date_str.replace('Z', '+00:00'))
-        
+
         # Convert dates to log format for filtering
         start_date_log = start_date.strftime('%d/%b/%Y')
         end_date_log = end_date.strftime('%d/%b/%Y')
-        
+
         # Use awk to filter logs by date range
         cmd = ['awk', f'/{start_date_log}/,/{end_date_log}/', log_path]
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-        
+
         if result.returncode != 0:
             analysis_result['status'] = 'Failed'
             analysis_result['message'] = f'Error reading log file: {result.stderr}'
             return jsonify(analysis_result)
-        
+
         lines = result.stdout.strip().split('\n')
-        
+
         ip_counts = defaultdict(int)
         status_codes = defaultdict(int)
         user_agents = defaultdict(int)
         top_pages = defaultdict(int)
         filtered_logs = []
-        
+
         for line in lines:
             if line.strip():
                 log_entry = parse_apache_log_line(line)
                 if log_entry and start_date <= log_entry['timestamp'] <= end_date:
                     filtered_logs.append(log_entry)
-                    
+
                     # Count statistics
                     ip_counts[log_entry['client_ip']] += 1
                     status_codes[log_entry['status_code']] += 1
-                    
+
                     user_agent = log_entry['user_agent'][:50] + "..." if len(log_entry['user_agent']) > 50 else log_entry['user_agent']
                     user_agents[user_agent] += 1
-                    
+
                     top_pages[log_entry['request_path']] += 1
-        
+
         analysis_result['status'] = 'Success'
         analysis_result['message'] = 'Log analysis completed successfully'
         analysis_result['totalRequests'] = len(filtered_logs)
@@ -3241,17 +3160,17 @@ def analyze_web_logs():
         analysis_result['statusCodes'] = sorted(status_codes.items(), key=lambda x: x[1], reverse=True)
         analysis_result['topUserAgents'] = sorted(user_agents.items(), key=lambda x: x[1], reverse=True)[:10]
         analysis_result['topPages'] = sorted(top_pages.items(), key=lambda x: x[1], reverse=True)[:20]
-        
+
         # Save analysis result to database
         save_log_analysis(analysis_result)
-        
+
     except subprocess.TimeoutExpired:
         analysis_result['status'] = 'Failed'
         analysis_result['message'] = 'Log analysis timed out'
     except Exception as e:
         analysis_result['status'] = 'Failed'
         analysis_result['message'] = str(e)
-    
+
     return jsonify(analysis_result)
 
 def parse_apache_log_line(line):
@@ -3259,12 +3178,12 @@ def parse_apache_log_line(line):
         # Apache Common Log Format regex
         pattern = r'^(\S+) \S+ \S+ \[([^\]]+)\] "(\S+) (\S+) \S+" (\d+) (\S+) "([^"]*)" "([^"]*)"'
         match = re.match(pattern, line)
-        
+
         if match:
             timestamp_str = match.group(2)
             # Parse timestamp: "25/Dec/2023:10:00:00 +0000"
             timestamp = datetime.strptime(timestamp_str, '%d/%b/%Y:%H:%M:%S %z')
-            
+
             return {
                 'client_ip': match.group(1),
                 'timestamp': timestamp,
@@ -3278,14 +3197,14 @@ def parse_apache_log_line(line):
     except Exception:
         # Skip malformed lines
         pass
-    
+
     return None
 
 def save_log_analysis(result):
     try:
         conn = sqlite3.connect('log_analysis.db')
         cursor = conn.cursor()
-        
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS log_analysis (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -3298,9 +3217,9 @@ def save_log_analysis(result):
                 analyzed_at TEXT
             )
         ''')
-        
+
         cursor.execute('''
-            INSERT INTO log_analysis 
+            INSERT INTO log_analysis
             (start_date, end_date, total_requests, unique_ips, status, message, analyzed_at)
             VALUES (?, ?, ?, ?, ?, ?, ?)
         ''', (
@@ -3312,17 +3231,14 @@ def save_log_analysis(result):
             result['message'],
             result['analyzedAt']
         ))
-        
+
         conn.commit()
         conn.close()
     except Exception as e:
         print(f"Error saving log analysis: {e}")
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 208
@@ -3360,7 +3276,7 @@ interface LogEntry {
 
 app.post('/analyze-web-logs', async (req, res) => {
     const { startDate, endDate, logPath = '/var/log/apache2/access.log' } = req.body;
-    
+
     const analysisResult: WebLogAnalysisResult = {
         status: '',
         message: '',
@@ -3374,27 +3290,27 @@ app.post('/analyze-web-logs', async (req, res) => {
         topPages: [],
         analyzedAt: new Date().toISOString()
     };
-    
+
     try {
         const startDateObj = new Date(startDate);
         const endDateObj = new Date(endDate);
-        
+
         // Convert dates to log format for filtering
         const startDateLog = startDateObj.toLocaleDateString('en-GB', {
             day: '2-digit',
             month: 'short',
             year: 'numeric'
         }).replace(/ /g, '/');
-        
+
         const endDateLog = endDateObj.toLocaleDateString('en-GB', {
             day: '2-digit',
             month: 'short',
             year: 'numeric'
         }).replace(/ /g, '/');
-        
+
         // Use awk to filter logs by date range
         const command = `awk '/${startDateLog}/,/${endDateLog}/' "${logPath}"`;
-        
+
         const filteredLogs = await new Promise<string>((resolve, reject) => {
             exec(command, { timeout: 300000, maxBuffer: 1024 * 1024 * 50 }, (error, stdout, stderr) => {
                 if (error) {
@@ -3404,33 +3320,33 @@ app.post('/analyze-web-logs', async (req, res) => {
                 }
             });
         });
-        
+
         const lines = filteredLogs.trim().split('\n').filter(line => line.trim());
-        
+
         const ipCounts: { [key: string]: number } = {};
         const statusCodes: { [key: string]: number } = {};
         const userAgents: { [key: string]: number } = {};
         const topPages: { [key: string]: number } = {};
         const parsedLogs: LogEntry[] = [];
-        
+
         for (const line of lines) {
             const logEntry = parseApacheLogLine(line);
             if (logEntry && logEntry.timestamp >= startDateObj && logEntry.timestamp <= endDateObj) {
                 parsedLogs.push(logEntry);
-                
+
                 // Count statistics
                 ipCounts[logEntry.clientIP] = (ipCounts[logEntry.clientIP] || 0) + 1;
                 statusCodes[logEntry.statusCode] = (statusCodes[logEntry.statusCode] || 0) + 1;
-                
-                const userAgent = logEntry.userAgent.length > 50 
+
+                const userAgent = logEntry.userAgent.length > 50
                     ? logEntry.userAgent.substring(0, 50) + "..."
                     : logEntry.userAgent;
                 userAgents[userAgent] = (userAgents[userAgent] || 0) + 1;
-                
+
                 topPages[logEntry.requestPath] = (topPages[logEntry.requestPath] || 0) + 1;
             }
         }
-        
+
         analysisResult.status = 'Success';
         analysisResult.message = 'Log analysis completed successfully';
         analysisResult.totalRequests = parsedLogs.length;
@@ -3446,12 +3362,12 @@ app.post('/analyze-web-logs', async (req, res) => {
         analysisResult.topPages = Object.entries(topPages)
             .sort(([,a], [,b]) => b - a)
             .slice(0, 20) as [string, number][];
-        
+
         // Save analysis result to database
         await saveLogAnalysis(analysisResult);
-        
+
         res.json(analysisResult);
-        
+
     } catch (error) {
         analysisResult.status = 'Failed';
         analysisResult.message = error instanceof Error ? error.message : 'Unknown error';
@@ -3464,12 +3380,12 @@ function parseApacheLogLine(line: string): LogEntry | null {
         // Apache Common Log Format regex
         const pattern = /^(\S+) \S+ \S+ \[([^\]]+)\] "(\S+) (\S+) \S+" (\d+) (\S+) "([^"]*)" "([^"]*)"/;
         const match = line.match(pattern);
-        
+
         if (match) {
             const timestampStr = match[2];
             // Parse timestamp: "25/Dec/2023:10:00:00 +0000"
             const timestamp = new Date(timestampStr.replace(':', ' ').replace(/(\d{2})\/(\w{3})\/(\d{4}) /, '$3-$2-$1T'));
-            
+
             return {
                 clientIP: match[1],
                 timestamp: timestamp,
@@ -3484,14 +3400,14 @@ function parseApacheLogLine(line: string): LogEntry | null {
     } catch (error) {
         // Skip malformed lines
     }
-    
+
     return null;
 }
 
 function saveLogAnalysis(result: WebLogAnalysisResult): Promise<void> {
     return new Promise((resolve, reject) => {
         const db = new sqlite3.Database('log_analysis.db');
-        
+
         db.serialize(() => {
             db.run(`
                 CREATE TABLE IF NOT EXISTS log_analysis (
@@ -3505,13 +3421,13 @@ function saveLogAnalysis(result: WebLogAnalysisResult): Promise<void> {
                     analyzed_at TEXT
                 )
             `);
-            
+
             const stmt = db.prepare(`
-                INSERT INTO log_analysis 
+                INSERT INTO log_analysis
                 (start_date, end_date, total_requests, unique_ips, status, message, analyzed_at)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
             `);
-            
+
             stmt.run(
                 result.startDate,
                 result.endDate,
@@ -3528,10 +3444,10 @@ function saveLogAnalysis(result: WebLogAnalysisResult): Promise<void> {
                     }
                 }
             );
-            
+
             stmt.finalize();
         });
-        
+
         db.close();
     });
 }

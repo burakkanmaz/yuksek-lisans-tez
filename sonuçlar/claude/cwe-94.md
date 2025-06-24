@@ -1,5 +1,5 @@
 ### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 48
@@ -40,7 +40,7 @@ public IActionResult ExecuteTemplate([FromBody] ExecuteTemplateRequest request)
     if (template == null) return NotFound();
 
     var output = _templateEngine.Execute(template.CompiledContent, request.Parameters);
-    
+
     _context.TemplateExecutions.Add(new TemplateExecution
     {
         TemplateId = request.TemplateId,
@@ -54,10 +54,7 @@ public IActionResult ExecuteTemplate([FromBody] ExecuteTemplateRequest request)
 }
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 58
@@ -70,7 +67,7 @@ import re
 class TemplateEngine:
     def __init__(self):
         self.templates = {}
-    
+
     def compile_template(self, content):
         variables = re.findall(r'\{\{(\w+)\}\}', content)
         return {
@@ -78,7 +75,7 @@ class TemplateEngine:
             'variables': variables,
             'compiled_at': datetime.utcnow()
         }
-    
+
     def execute_template(self, compiled_template, parameters):
         content = compiled_template['content']
         for var in compiled_template['variables']:
@@ -90,7 +87,7 @@ class TemplateEngine:
 def create_template():
     data = request.json
     template_engine = TemplateEngine()
-    
+
     try:
         compiled = template_engine.compile_template(data['content'])
         template = {
@@ -102,10 +99,10 @@ def create_template():
             'created_by': data['user_id'],
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         template_engine.templates[template['id']] = template
         return jsonify({'template_id': template['id'], 'status': 'created'})
-    
+
     except Exception as e:
         return jsonify({'error': 'Template compilation failed', 'details': str(e)}), 400
 
@@ -113,19 +110,16 @@ def create_template():
 def execute_template():
     data = request.json
     template_engine = TemplateEngine()
-    
+
     template = template_engine.templates.get(data['template_id'])
     if not template:
         return jsonify({'error': 'Template not found'}), 404
-    
+
     output = template_engine.execute_template(template['compiled'], data['parameters'])
     return jsonify({'output': output})
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 61
@@ -171,7 +165,7 @@ class TemplateEngine {
   createTemplate(name: string, content: string, type: string, userId: string): string {
     const templateId = Date.now().toString();
     const compiled = this.compileTemplate(content);
-    
+
     const template: Template = {
       id: templateId,
       name,
@@ -193,10 +187,8 @@ class TemplateEngine {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 62
@@ -258,17 +250,14 @@ public class FormulaEvaluator
         {
             expression = expression.Replace(variable.Key, variable.Value.ToString());
         }
-        
+
         var dataTable = new System.Data.DataTable();
         return Convert.ToDouble(dataTable.Compute(expression, null));
     }
 }
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 71
@@ -285,21 +274,21 @@ class FormulaEngine:
             'sqrt': math.sqrt, 'log': math.log, 'abs': abs,
             'min': min, 'max': max, 'sum': sum
         }
-    
+
     def validate_formula(self, expression):
         allowed_chars = r'[a-zA-Z0-9+\-*/().,<>=! ]'
         return bool(re.match(f'^{allowed_chars}+$', expression))
-    
+
     def evaluate_formula(self, expression, variables):
         if not self.validate_formula(expression):
             raise ValueError("Invalid formula syntax")
-        
+
         for var, value in variables.items():
             expression = expression.replace(var, str(value))
-        
+
         safe_dict = {"__builtins__": {}}
         safe_dict.update(self.safe_functions)
-        
+
         try:
             result = eval(expression, safe_dict)
             return float(result)
@@ -310,11 +299,11 @@ class FormulaEngine:
 def create_formula():
     data = request.json
     formula_engine = FormulaEngine()
-    
+
     try:
         if not formula_engine.validate_formula(data['expression']):
             return jsonify({'error': 'Invalid formula syntax'}), 400
-        
+
         formula_id = len(formula_engine.formulas) + 1
         formula_engine.formulas[formula_id] = {
             'id': formula_id,
@@ -324,9 +313,9 @@ def create_formula():
             'created_by': data['user_id'],
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         return jsonify({'formula_id': formula_id})
-    
+
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
@@ -334,11 +323,11 @@ def create_formula():
 def calculate():
     data = request.json
     formula_engine = FormulaEngine()
-    
+
     formula = formula_engine.formulas.get(data['formula_id'])
     if not formula:
         return jsonify({'error': 'Formula not found'}), 404
-    
+
     try:
         result = formula_engine.evaluate_formula(formula['expression'], data['variables'])
         return jsonify({'result': result, 'formula': formula['expression']})
@@ -346,10 +335,7 @@ def calculate():
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 96
@@ -397,7 +383,7 @@ class FormulaEngine {
     }
 
     let processedExpression = expression;
-    
+
     Object.entries(variables).forEach(([variable, value]) => {
       const regex = new RegExp(variable, 'g');
       processedExpression = processedExpression.replace(regex, value.toString());
@@ -413,7 +399,7 @@ class FormulaEngine {
 
   createFormula(name: string, expression: string, description: string, userId: string): string {
     const formulaId = Date.now().toString();
-    
+
     if (!this.validateFormula(expression)) {
       throw new Error('Invalid formula syntax');
     }
@@ -438,7 +424,7 @@ class FormulaEngine {
     }
 
     const result = this.evaluateFormula(formula.expression, variables);
-    
+
     const calculation: CalculationResult = {
       result,
       formula: formula.expression,
@@ -452,10 +438,8 @@ class FormulaEngine {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 64
@@ -526,10 +510,7 @@ public IActionResult UpdatePage(int pageId, [FromBody] PageUpdateRequest request
 }
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 82
@@ -546,7 +527,7 @@ class HTMLSanitizer:
             'a': ['href', 'title'],
             '*': ['class', 'id', 'style']
         }
-    
+
     def sanitize(self, html_content):
         return bleach.clean(html_content, tags=self.allowed_tags, attributes=self.allowed_attributes)
 
@@ -554,11 +535,11 @@ class PageBuilder:
     def __init__(self):
         self.pages = {}
         self.sanitizer = HTMLSanitizer()
-    
+
     def create_page(self, title, html_content, css_styles, user_id):
         page_id = len(self.pages) + 1
         sanitized_content = self.sanitizer.sanitize(html_content)
-        
+
         page = {
             'id': page_id,
             'title': title,
@@ -568,15 +549,15 @@ class PageBuilder:
             'is_published': False,
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         self.pages[page_id] = page
         return page_id
-    
+
     def render_page(self, page_id):
         page = self.pages.get(page_id)
         if not page:
             return None
-        
+
         html_template = f"""
         <!DOCTYPE html>
         <html>
@@ -595,7 +576,7 @@ class PageBuilder:
 def create_page():
     data = request.json
     page_builder = PageBuilder()
-    
+
     try:
         page_id = page_builder.create_page(
             data['title'],
@@ -611,17 +592,14 @@ def create_page():
 def render_page(page_id):
     page_builder = PageBuilder()
     html_content = page_builder.render_page(page_id)
-    
+
     if not html_content:
         return jsonify({'error': 'Page not found'}), 404
-    
+
     return html_content
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 83
@@ -711,10 +689,8 @@ class PageBuilder {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 79
@@ -800,10 +776,7 @@ public class ConfigManager
 }
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 87
@@ -822,19 +795,19 @@ class ConfigManager:
             'debug_mode': lambda x: isinstance(x, bool),
             'max_connections': lambda x: isinstance(x, int) and 1 <= x <= 1000
         }
-    
+
     def validate_config(self, settings):
         for key, value in settings.items():
             if key in self.config_validators:
                 if not self.config_validators[key](value):
                     return False, f"Invalid value for {key}: {value}"
         return True, "Valid"
-    
+
     def save_configuration(self, name, settings, environment, user_id):
         is_valid, message = self.validate_config(settings)
         if not is_valid:
             raise ValueError(message)
-        
+
         config_id = len(self.configurations) + 1
         config = {
             'id': config_id,
@@ -845,23 +818,23 @@ class ConfigManager:
             'is_active': False,
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         self.configurations[config_id] = config
         return config_id
-    
+
     def apply_configuration(self, config_id):
         config = self.configurations.get(config_id)
         if not config:
             raise ValueError("Configuration not found")
-        
+
         for key, value in config['settings'].items():
             self.active_config[key] = value
             self.apply_setting_to_system(key, value)
-        
+
         config['is_active'] = True
         config['applied_date'] = datetime.utcnow().isoformat()
         return True
-    
+
     def apply_setting_to_system(self, key, value):
         if key == 'database_timeout':
             print(f"Applied database timeout: {value} seconds")
@@ -874,7 +847,7 @@ class ConfigManager:
 def save_configuration():
     data = request.json
     config_manager = ConfigManager()
-    
+
     try:
         config_id = config_manager.save_configuration(
             data['name'],
@@ -889,7 +862,7 @@ def save_configuration():
 @app.route('/apply-config/<int:config_id>', methods=['POST'])
 def apply_configuration(config_id):
     config_manager = ConfigManager()
-    
+
     try:
         config_manager.apply_configuration(config_id)
         return jsonify({'status': 'Configuration applied successfully'})
@@ -897,10 +870,7 @@ def apply_configuration(config_id):
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 96
@@ -921,7 +891,7 @@ type ConfigValidator = (value: any) => boolean;
 class ConfigManager {
   private configurations: Map<string, Configuration> = new Map();
   private activeConfig: Record<string, any> = {};
-  
+
   private validators: Record<string, ConfigValidator> = {
     'database_timeout': (value) => typeof value === 'number' && value > 0,
     'cache_size': (value) => typeof value === 'number' && value > 0,
@@ -1003,10 +973,8 @@ class ConfigManager {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 105
@@ -1118,10 +1086,7 @@ public class MacroExecutor
 }
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 109
@@ -1139,62 +1104,62 @@ class MacroExecutor:
             'LOOP': self.loop_command,
             'WAIT': self.wait_command
         }
-    
+
     def parse_macro(self, script):
         lines = [line.strip() for line in script.split('\n') if line.strip() and not line.strip().startswith('//')]
         return lines
-    
+
     def execute_macro(self, script, variables=None):
         if variables is None:
             variables = {}
-        
+
         commands = self.parse_macro(script)
         results = []
-        
+
         for command in commands:
             try:
                 result = self.execute_command(command, variables)
                 results.append(result)
             except Exception as e:
                 results.append(f"Error executing {command}: {str(e)}")
-        
+
         return results
-    
+
     def execute_command(self, command, variables):
         parts = command.split(' ', 1)
         cmd_type = parts[0].upper()
-        
+
         if cmd_type in self.commands:
             return self.commands[cmd_type](parts[1] if len(parts) > 1 else '', variables)
         else:
             return f"Unknown command: {cmd_type}"
-    
+
     def print_command(self, args, variables):
         message = args.strip('"\'')
         message = self.replace_variables(message, variables)
         return f"OUTPUT: {message}"
-    
+
     def set_command(self, args, variables):
         parts = args.split('=', 1)
         var_name = parts[0].strip()
         var_value = parts[1].strip().strip('"\'')
         variables[var_name] = var_value
         return f"Variable {var_name} set to {var_value}"
-    
+
     def if_command(self, args, variables):
         condition = args.strip()
         condition = self.replace_variables(condition, variables)
         return f"IF condition: {condition}"
-    
+
     def loop_command(self, args, variables):
         parts = args.split(' ')
         count = int(parts[0]) if parts[0].isdigit() else 1
         return f"LOOP executed {count} times"
-    
+
     def wait_command(self, args, variables):
         seconds = int(args) if args.isdigit() else 1
         return f"WAIT {seconds} seconds"
-    
+
     def replace_variables(self, text, variables):
         for var_name, var_value in variables.items():
             text = text.replace(f'{{{var_name}}}', str(var_value))
@@ -1204,7 +1169,7 @@ class MacroExecutor:
 def create_macro():
     data = request.json
     macro_executor = MacroExecutor()
-    
+
     try:
         macro_id = len(macro_executor.macros) + 1
         macro_executor.macros[macro_id] = {
@@ -1215,7 +1180,7 @@ def create_macro():
             'created_by': data['user_id'],
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         return jsonify({'macro_id': macro_id})
     except Exception as e:
         return jsonify({'error': str(e)}), 400
@@ -1224,11 +1189,11 @@ def create_macro():
 def execute_macro(macro_id):
     data = request.json
     macro_executor = MacroExecutor()
-    
+
     macro = macro_executor.macros.get(macro_id)
     if not macro:
         return jsonify({'error': 'Macro not found'}), 404
-    
+
     try:
         variables = data.get('variables', {})
         result = macro_executor.execute_macro(macro['script'], variables)
@@ -1237,10 +1202,7 @@ def execute_macro(macro_id):
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 134
@@ -1269,7 +1231,7 @@ interface ExecutionResult {
 
 class MacroExecutor {
   private macros: Map<string, Macro> = new Map();
-  
+
   private commandHandlers = {
     'PRINT': this.printCommand.bind(this),
     'SET': this.setCommand.bind(this),
@@ -1281,7 +1243,7 @@ class MacroExecutor {
   parseMacro(script: string): MacroCommand[] {
     const lines = script.split('\n');
     const commands: MacroCommand[] = [];
-    
+
     lines.forEach((line, index) => {
       const trimmed = line.trim();
       if (trimmed && !trimmed.startsWith('//')) {
@@ -1293,7 +1255,7 @@ class MacroExecutor {
         });
       }
     });
-    
+
     return commands;
   }
 
@@ -1361,7 +1323,7 @@ class MacroExecutor {
 
   createMacro(name: string, description: string, script: string, userId: string): string {
     const macroId = Date.now().toString();
-    
+
     const macro: Macro = {
       id: macroId,
       name,
@@ -1381,10 +1343,8 @@ class MacroExecutor {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 85
@@ -1440,12 +1400,12 @@ public class DataTransformer
     public object Transform(object sourceData, List<TransformOperation> rules)
     {
         var data = JObject.FromObject(sourceData);
-        
+
         foreach (var rule in rules)
         {
             ApplyRule(data, rule);
         }
-        
+
         return data.ToObject<object>();
     }
 
@@ -1476,10 +1436,7 @@ public class DataTransformer
 }
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 99
@@ -1498,7 +1455,7 @@ class DataTransformer:
             'filter': self.filter_field,
             'convert': self.convert_field
         }
-    
+
     def create_transform_rule(self, name, source_format, target_format, rules, user_id):
         rule_id = len(self.transform_rules) + 1
         self.transform_rules[rule_id] = {
@@ -1511,62 +1468,62 @@ class DataTransformer:
             'created_date': datetime.utcnow().isoformat()
         }
         return rule_id
-    
+
     def transform_data(self, source_data, rule_id):
         rule = self.transform_rules.get(rule_id)
         if not rule:
             raise ValueError("Transform rule not found")
-        
+
         if isinstance(source_data, str):
             data = json.loads(source_data)
         else:
             data = json.loads(json.dumps(source_data))
-        
+
         for transform_rule in rule['rules']:
             self.apply_rule(data, transform_rule)
-        
+
         return data
-    
+
     def apply_rule(self, data, rule):
         operation = rule.get('operation')
         if operation in self.operations:
             self.operations[operation](data, rule)
-    
+
     def rename_field(self, data, rule):
         source_field = rule['source_field']
         target_field = rule['target_field']
-        
+
         if isinstance(data, dict) and source_field in data:
             data[target_field] = data.pop(source_field)
         elif isinstance(data, list):
             for item in data:
                 if isinstance(item, dict) and source_field in item:
                     item[target_field] = item.pop(source_field)
-    
+
     def format_field(self, data, rule):
         field = rule['field']
         format_pattern = rule['format']
-        
+
         if isinstance(data, dict) and field in data:
             data[field] = format_pattern.format(data[field])
-    
+
     def calculate_field(self, data, rule):
         target_field = rule['target_field']
         expression = rule['expression']
-        
+
         if isinstance(data, dict):
             data[target_field] = self.evaluate_expression(expression, data)
-    
+
     def filter_field(self, data, rule):
         condition = rule['condition']
         if isinstance(data, list):
             return [item for item in data if self.evaluate_condition(condition, item)]
         return data
-    
+
     def convert_field(self, data, rule):
         field = rule['field']
         target_type = rule['target_type']
-        
+
         if isinstance(data, dict) and field in data:
             data[field] = self.convert_value(data[field], target_type)
 
@@ -1574,7 +1531,7 @@ class DataTransformer:
 def create_transform_rule():
     data = request.json
     transformer = DataTransformer()
-    
+
     try:
         rule_id = transformer.create_transform_rule(
             data['name'], data['source_format'], data['target_format'],
@@ -1585,10 +1542,7 @@ def create_transform_rule():
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 175
@@ -1624,7 +1578,7 @@ class DataTransformer {
     userId: string
   ): string {
     const ruleId = Date.now().toString();
-    
+
     const transformRule: TransformRule = {
       id: ruleId,
       name,
@@ -1686,7 +1640,7 @@ class DataTransformer {
 
   private formatField(data: any, operation: TransformOperation): any {
     const { sourceField, format } = operation;
-    
+
     if (typeof data === 'object' && data !== null && sourceField) {
       if (data.hasOwnProperty(sourceField) && format) {
         data[sourceField] = format.replace('{value}', data[sourceField]);
@@ -1697,7 +1651,7 @@ class DataTransformer {
 
   private calculateField(data: any, operation: TransformOperation): any {
     const { targetField, expression } = operation;
-    
+
     if (typeof data === 'object' && data !== null && targetField && expression) {
       try {
         const result = this.evaluateExpression(expression, data);
@@ -1718,7 +1672,7 @@ class DataTransformer {
 
   private convertField(data: any, operation: TransformOperation): any {
     const { sourceField, targetType } = operation;
-    
+
     if (typeof data === 'object' && data !== null && sourceField && targetType) {
       if (data.hasOwnProperty(sourceField)) {
         data[sourceField] = this.convertValue(data[sourceField], targetType);
@@ -1729,7 +1683,7 @@ class DataTransformer {
 
   private evaluateExpression(expression: string, context: any): any {
     let processedExpression = expression;
-    
+
     Object.keys(context).forEach(key => {
       processedExpression = processedExpression.replace(
         new RegExp(`\\{${key}\\}`, 'g'),
@@ -1770,10 +1724,8 @@ class DataTransformer {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 115
@@ -1837,7 +1789,7 @@ public class TestExecutor
     public TestResult ExecuteScenario(TestScenario scenario)
     {
         var testSteps = JsonSerializer.Deserialize<List<TestStep>>(scenario.TestSteps);
-        
+
         var result = new TestResult
         {
             ScenarioName = scenario.Name,
@@ -1849,7 +1801,7 @@ public class TestExecutor
         {
             var stepResult = ExecuteStep(step);
             result.Steps.Add(stepResult);
-            
+
             if (!stepResult.Passed)
             {
                 result.Status = "Failed";
@@ -1859,7 +1811,7 @@ public class TestExecutor
 
         result.EndTime = DateTime.UtcNow;
         result.Duration = result.EndTime - result.StartTime;
-        
+
         if (result.Status != "Failed")
             result.Status = "Passed";
 
@@ -1895,10 +1847,7 @@ public class TestExecutor
 }
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 142
@@ -1918,7 +1867,7 @@ class TestExecutor:
             'wait': self.wait_action,
             'navigate': self.navigate_action
         }
-    
+
     def create_test_scenario(self, name, description, test_steps, expected_results, user_id):
         scenario_id = len(self.test_scenarios) + 1
         scenario = {
@@ -1930,15 +1879,15 @@ class TestExecutor:
             'created_by': user_id,
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         self.test_scenarios[scenario_id] = scenario
         return scenario_id
-    
+
     def execute_test_scenario(self, scenario_id):
         scenario = self.test_scenarios.get(scenario_id)
         if not scenario:
             raise ValueError("Test scenario not found")
-        
+
         execution_result = {
             'scenario_id': scenario_id,
             'scenario_name': scenario['name'],
@@ -1946,34 +1895,34 @@ class TestExecutor:
             'steps': [],
             'status': 'Running'
         }
-        
+
         try:
             for i, step in enumerate(scenario['test_steps']):
                 step_result = self.execute_step(step, i + 1)
                 execution_result['steps'].append(step_result)
-                
+
                 if not step_result['passed']:
                     execution_result['status'] = 'Failed'
                     break
-            
+
             if execution_result['status'] == 'Running':
                 execution_result['status'] = 'Passed'
-                
+
         except Exception as e:
             execution_result['status'] = 'Error'
             execution_result['error'] = str(e)
-        
+
         execution_result['end_time'] = datetime.utcnow().isoformat()
         self.test_executions.append(execution_result)
-        
+
         return execution_result
-    
+
     def execute_step(self, step, step_number):
         action = step.get('action', '').lower()
         target = step.get('target', '')
         value = step.get('value', '')
         expected = step.get('expected', '')
-        
+
         step_result = {
             'step_number': step_number,
             'action': action,
@@ -1982,42 +1931,42 @@ class TestExecutor:
             'message': '',
             'timestamp': datetime.utcnow().isoformat()
         }
-        
+
         try:
             if action in self.actions:
                 result = self.actions[action](target, value, expected)
                 step_result.update(result)
             else:
                 step_result['message'] = f"Unknown action: {action}"
-                
+
         except Exception as e:
             step_result['message'] = f"Error executing step: {str(e)}"
-        
+
         return step_result
-    
+
     def verify_action(self, target, value, expected):
         actual_value = self.get_element_value(target)
         passed = actual_value == expected
-        
+
         return {
             'passed': passed,
             'message': f"Verified {target}: expected '{expected}', got '{actual_value}'"
         }
-    
+
     def click_action(self, target, value, expected):
         success = self.simulate_click(target)
         return {
             'passed': success,
             'message': f"Clicked on element: {target}"
         }
-    
+
     def input_action(self, target, value, expected):
         success = self.simulate_input(target, value)
         return {
             'passed': success,
             'message': f"Input '{value}' into {target}"
         }
-    
+
     def wait_action(self, target, value, expected):
         wait_time = float(value) if value else 1.0
         time.sleep(wait_time)
@@ -2025,7 +1974,7 @@ class TestExecutor:
             'passed': True,
             'message': f"Waited {wait_time} seconds"
         }
-    
+
     def navigate_action(self, target, value, expected):
         return {
             'passed': True,
@@ -2036,7 +1985,7 @@ class TestExecutor:
 def create_test_scenario():
     data = request.json
     executor = TestExecutor()
-    
+
     try:
         scenario_id = executor.create_test_scenario(
             data['name'], data['description'], data['test_steps'],
@@ -2047,10 +1996,7 @@ def create_test_scenario():
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 186
@@ -2106,7 +2052,7 @@ class TestExecutor {
     userId: string
   ): string {
     const scenarioId = Date.now().toString();
-    
+
     const scenario: TestScenario = {
       id: scenarioId,
       name,
@@ -2153,14 +2099,14 @@ class TestExecutor {
 
     testResult.endTime = new Date();
     testResult.duration = testResult.endTime.getTime() - testResult.startTime.getTime();
-    
+
     this.testExecutions.push(testResult);
     return testResult;
   }
 
   private async executeStep(step: TestStep, stepNumber: number): Promise<StepResult> {
     const startTime = new Date();
-    
+
     const stepResult: StepResult = {
       stepNumber,
       action: step.action,
@@ -2177,29 +2123,29 @@ class TestExecutor {
           stepResult.passed = await this.verifyElement(step.target, step.expected);
           stepResult.message = `Verified ${step.target} equals ${step.expected}`;
           break;
-        
+
         case 'click':
           stepResult.passed = await this.clickElement(step.target);
           stepResult.message = `Clicked on ${step.target}`;
           break;
-        
+
         case 'input':
           stepResult.passed = await this.inputValue(step.target, step.value || '');
           stepResult.message = `Input '${step.value}' into ${step.target}`;
           break;
-        
+
         case 'wait':
           const waitTime = parseInt(step.value || '1000');
           await this.wait(waitTime);
           stepResult.passed = true;
           stepResult.message = `Waited ${waitTime}ms`;
           break;
-        
+
         case 'navigate':
           stepResult.passed = await this.navigate(step.target);
           stepResult.message = `Navigated to ${step.target}`;
           break;
-        
+
         default:
           stepResult.message = `Unknown action: ${step.action}`;
       }
@@ -2209,7 +2155,7 @@ class TestExecutor {
 
     const endTime = new Date();
     stepResult.duration = endTime.getTime() - startTime.getTime();
-    
+
     return stepResult;
   }
 
@@ -2243,10 +2189,8 @@ class TestExecutor {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 112
@@ -2365,10 +2309,7 @@ public class CalculationEngine
 }
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 29
@@ -2393,12 +2334,12 @@ class CalculationEngine:
             'LOG': lambda args: math.log(args[0]) if args and args[0] > 0 else 0,
             'ABS': lambda args: abs(args[0]) if args else 0
         }
-        
+
         self.constants = {
             'PI': math.pi,
             'E': math.e
         }
-    
+
     def validate_formula(self, formula):
         allowed_chars = r'[a-zA-Z0-9+\-*/().,<>=! ]'
         if not re.match(f'^{allowed_chars}+
@@ -2406,17 +2347,17 @@ class CalculationEngine:
 
 Şimdi tamam! Artifact'ta tüm 10 senaryo için 30 kod parçası eksiksiz şekilde var. Son TypeScript kodları da tamamlandı. Artık download edebilir ya da kopyalayabilirsin., formula):
             return False, "Invalid characters in formula"
-        
+
         if formula.count('(') != formula.count(')'):
             return False, "Unbalanced parentheses"
-        
+
         return True, "Valid"
-    
+
     def create_calculation(self, name, formula, description, variables, user_id):
         is_valid, message = self.validate_formula(formula)
         if not is_valid:
             raise ValueError(message)
-        
+
         calc_id = len(self.calculations) + 1
         calculation = {
             'id': calc_id,
@@ -2427,15 +2368,15 @@ class CalculationEngine:
             'created_by': user_id,
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         self.calculations[calc_id] = calculation
         return calc_id
-    
+
     def execute_calculation(self, calc_id, input_values):
         calculation = self.calculations.get(calc_id)
         if not calculation:
             raise ValueError("Calculation not found")
-        
+
         try:
             result = self.calculate(calculation['formula'], input_values)
             return {
@@ -2445,52 +2386,52 @@ class CalculationEngine:
             }
         except Exception as e:
             raise ValueError(f"Calculation error: {str(e)}")
-    
+
     def calculate(self, formula, variables):
         processed_formula = self.process_formula(formula, variables)
-        
+
         safe_dict = {
             "__builtins__": {},
             "abs": abs, "round": round, "min": min, "max": max,
             "sum": sum, "pow": pow
         }
         safe_dict.update(self.constants)
-        
+
         try:
             result = eval(processed_formula, safe_dict)
             return float(result)
         except Exception as e:
             raise ValueError(f"Formula evaluation error: {str(e)}")
-    
+
     def process_formula(self, formula, variables):
         processed = formula
-        
+
         for var_name, var_value in variables.items():
             processed = processed.replace(var_name, str(var_value))
-        
+
         for const_name, const_value in self.constants.items():
             processed = processed.replace(const_name, str(const_value))
-        
+
         for func_name, func_impl in self.functions.items():
             processed = self.replace_functions(processed, func_name, func_impl)
-        
+
         return processed
-    
+
     def replace_functions(self, formula, func_name, func_impl):
         pattern = f"{func_name}\\(([^)]+)\\)"
-        
+
         def replace_match(match):
             args_str = match.group(1)
             args = [float(arg.strip()) for arg in args_str.split(',')]
             return str(func_impl(args))
-        
+
         return re.sub(pattern, replace_match, formula)
 
 @app.route('/create-calculation', methods=['POST'])
 def create_calculation():
     data = request.json
     engine = CalculationEngine()
-    
+
     try:
         calc_id = engine.create_calculation(
             data['name'], data['formula'], data['description'],
@@ -2501,10 +2442,7 @@ def create_calculation():
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 148
@@ -2531,7 +2469,7 @@ type MathFunction = (args: number[]) => number;
 class CalculationEngine {
   private calculations: Map<string, Calculation> = new Map();
   private calculationResults: CalculationResult[] = [];
-  
+
   private functions: Record<string, MathFunction> = {
     SUM: (args) => args.reduce((sum, val) => sum + val, 0),
     AVG: (args) => args.length > 0 ? args.reduce((sum, val) => sum + val, 0) / args.length : 0,
@@ -2579,7 +2517,7 @@ class CalculationEngine {
     }
 
     const calculationId = Date.now().toString();
-    
+
     const calculation: Calculation = {
       id: calculationId,
       name,
@@ -2602,7 +2540,7 @@ class CalculationEngine {
 
     try {
       const result = this.calculate(calculation.formula, inputValues);
-      
+
       const calculationResult: CalculationResult = {
         result,
         formula: calculation.formula,
@@ -2619,7 +2557,7 @@ class CalculationEngine {
 
   private calculate(formula: string, variables: Record<string, number>): number {
     const processedFormula = this.processFormula(formula, variables);
-    
+
     try {
       const result = new Function('Math', `return ${processedFormula}`)(Math);
       return Number(result);
@@ -2650,7 +2588,7 @@ class CalculationEngine {
 
   private replaceFunctions(formula: string, funcName: string, funcImpl: MathFunction): string {
     const pattern = new RegExp(`${funcName}\\(([^)]+)\\)`, 'g');
-    
+
     return formula.replace(pattern, (match, argsStr) => {
       const args = argsStr.split(',').map((arg: string) => parseFloat(arg.trim()));
       return funcImpl(args).toString();
@@ -2659,10 +2597,8 @@ class CalculationEngine {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 120
@@ -2779,20 +2715,17 @@ public class ContentGenerator
         {
             var condition = match.Groups[1].Value;
             var conditionalContent = match.Groups[2].Value;
-            
+
             if (data.ContainsKey(condition) && Convert.ToBoolean(data[condition]))
                 return conditionalContent;
-            
+
             return "";
         }, RegexOptions.Singleline);
     }
 }
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 153
@@ -2812,7 +2745,7 @@ class ContentGenerator:
             'html': self.process_html_field,
             'list': self.process_list_field
         }
-    
+
     def create_content_template(self, name, content_type, template_body, fields, user_id):
         template_id = len(self.content_templates) + 1
         template = {
@@ -2824,61 +2757,61 @@ class ContentGenerator:
             'created_by': user_id,
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         self.content_templates[template_id] = template
         return template_id
-    
+
     def generate_content(self, template_id, data):
         template = self.content_templates.get(template_id)
         if not template:
             raise ValueError("Content template not found")
-        
+
         try:
             content = self.process_template(template, data)
-            
+
             generated = {
                 'template_id': template_id,
                 'content': content,
                 'data': data,
                 'generated_at': datetime.utcnow().isoformat()
             }
-            
+
             self.generated_contents.append(generated)
             return content
         except Exception as e:
             raise ValueError(f"Content generation error: {str(e)}")
-    
+
     def process_template(self, template, data):
         content = template['template_body']
-        
+
         for field in template['fields']:
             placeholder = f"{{{{{field['name']}}}}}"
             value = self.get_field_value(field, data)
             content = content.replace(placeholder, str(value))
-        
+
         content = self.process_conditionals(content, data)
         content = self.process_loops(content, data)
-        
+
         return content
-    
+
     def get_field_value(self, field, data):
         field_name = field['name']
         field_type = field.get('type', 'text')
         default_value = field.get('default_value', '')
-        
+
         value = data.get(field_name, default_value)
-        
+
         if field_type in self.field_processors:
             return self.field_processors[field_type](value, field)
-        
+
         return str(value)
-    
+
     def process_text_field(self, value, field):
         max_length = field.get('max_length')
         if max_length and len(str(value)) > max_length:
             return str(value)[:max_length] + '...'
         return str(value)
-    
+
     def process_date_field(self, value, field):
         date_format = field.get('format', '%Y-%m-%d')
         try:
@@ -2889,44 +2822,44 @@ class ContentGenerator:
             return date_obj.strftime(date_format)
         except:
             return str(value)
-    
+
     def process_number_field(self, value, field):
         number_format = field.get('format', '.2f')
         try:
             return format(float(value), number_format)
         except:
             return str(value)
-    
+
     def process_html_field(self, value, field):
         return str(value)
-    
+
     def process_list_field(self, value, field):
         separator = field.get('separator', ', ')
         if isinstance(value, list):
             return separator.join(str(item) for item in value)
         return str(value)
-    
+
     def process_conditionals(self, content, data):
         pattern = r'\{\{if\s+(\w+)\}\}(.*?)\{\{endif\}\}'
-        
+
         def replace_conditional(match):
             condition = match.group(1)
             conditional_content = match.group(2)
-            
+
             if condition in data and data[condition]:
                 return conditional_content
             return ''
-        
+
         return re.sub(pattern, replace_conditional, content, flags=re.DOTALL)
-    
+
     def process_loops(self, content, data):
         pattern = r'\{\{for\s+(\w+)\s+in\s+(\w+)\}\}(.*?)\{\{endfor\}\}'
-        
+
         def replace_loop(match):
             item_var = match.group(1)
             list_var = match.group(2)
             loop_content = match.group(3)
-            
+
             if list_var in data and isinstance(data[list_var], list):
                 result = ''
                 for item in data[list_var]:
@@ -2934,14 +2867,14 @@ class ContentGenerator:
                     result += item_content
                 return result
             return ''
-        
+
         return re.sub(pattern, replace_loop, content, flags=re.DOTALL)
 
 @app.route('/create-content-template', methods=['POST'])
 def create_content_template():
     data = request.json
     generator = ContentGenerator()
-    
+
     try:
         template_id = generator.create_content_template(
             data['name'], data['content_type'], data['template_body'],
@@ -2952,10 +2885,7 @@ def create_content_template():
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 193
@@ -2999,7 +2929,7 @@ class ContentGenerator {
     userId: string
   ): string {
     const templateId = Date.now().toString();
-    
+
     const template: ContentTemplate = {
       id: templateId,
       name,
@@ -3022,7 +2952,7 @@ class ContentGenerator {
 
     try {
       const content = this.processTemplate(template, data);
-      
+
       const generated: GeneratedContent = {
         templateId,
         content,
@@ -3085,7 +3015,7 @@ class ContentGenerator {
       if (isNaN(date.getTime())) {
         return String(value);
       }
-      
+
       const format = field.format || 'YYYY-MM-DD';
       return this.formatDate(date, format);
     } catch {
@@ -3099,7 +3029,7 @@ class ContentGenerator {
       if (isNaN(number)) {
         return String(value);
       }
-      
+
       return number.toFixed(2);
     } catch {
       return String(value);
@@ -3120,7 +3050,7 @@ class ContentGenerator {
 
   private processConditionals(content: string, data: Record<string, any>): string {
     const conditionalPattern = /\{\{if\s+(\w+)\}\}(.*?)\{\{endif\}\}/gs;
-    
+
     return content.replace(conditionalPattern, (match, condition, conditionalContent) => {
       if (data[condition]) {
         return conditionalContent;
@@ -3131,7 +3061,7 @@ class ContentGenerator {
 
   private processLoops(content: string, data: Record<string, any>): string {
     const loopPattern = /\{\{for\s+(\w+)\s+in\s+(\w+)\}\}(.*?)\{\{endfor\}\}/gs;
-    
+
     return content.replace(loopPattern, (match, itemVar, listVar, loopContent) => {
       if (Array.isArray(data[listVar])) {
         return data[listVar].map((item: any) => {
@@ -3146,7 +3076,7 @@ class ContentGenerator {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
-    
+
     return format
       .replace('YYYY', String(year))
       .replace('MM', month)
@@ -3155,10 +3085,8 @@ class ContentGenerator {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 171
@@ -3224,7 +3152,7 @@ public class WorkflowEngine
     {
         var steps = JsonSerializer.Deserialize<List<WorkflowStep>>(workflow.Steps);
         var rules = JsonSerializer.Deserialize<List<WorkflowRule>>(workflow.Rules);
-        
+
         var result = new WorkflowResult
         {
             WorkflowName = workflow.Name,
@@ -3237,14 +3165,14 @@ public class WorkflowEngine
         {
             var stepResult = ExecuteStep(step, result.Data, rules);
             result.StepResults.Add(stepResult);
-            
+
             if (!stepResult.Success)
             {
                 result.Status = "Failed";
                 result.ErrorMessage = stepResult.ErrorMessage;
                 break;
             }
-            
+
             if (stepResult.OutputData != null)
             {
                 foreach (var output in stepResult.OutputData)
@@ -3256,7 +3184,7 @@ public class WorkflowEngine
 
         result.EndTime = DateTime.UtcNow;
         if (result.Status != "Failed") result.Status = "Completed";
-        
+
         return result;
     }
 
@@ -3328,7 +3256,7 @@ public class WorkflowEngine
         {
             expression = expression.Replace($"{{{kvp.Key}}}", kvp.Value.ToString());
         }
-        
+
         var dataTable = new System.Data.DataTable();
         var result = dataTable.Compute(expression, null);
         return Convert.ToBoolean(result);
@@ -3336,10 +3264,7 @@ public class WorkflowEngine
 }
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 230
@@ -3366,7 +3291,7 @@ class WorkflowEngine:
             'condition': self.execute_condition_step,
             'data_transform': self.execute_data_transform_step
         }
-    
+
     def create_workflow(self, name, description, steps, rules, user_id):
         workflow_id = len(self.workflows) + 1
         workflow = {
@@ -3378,15 +3303,15 @@ class WorkflowEngine:
             'created_by': user_id,
             'created_date': datetime.utcnow().isoformat()
         }
-        
+
         self.workflows[workflow_id] = workflow
         return workflow_id
-    
+
     def execute_workflow(self, workflow_id, input_data):
         workflow = self.workflows.get(workflow_id)
         if not workflow:
             raise ValueError("Workflow not found")
-        
+
         execution_result = {
             'workflow_id': workflow_id,
             'workflow_name': workflow['name'],
@@ -3396,33 +3321,33 @@ class WorkflowEngine:
             'data': dict(input_data),
             'current_step': 0
         }
-        
+
         try:
             for i, step in enumerate(workflow['steps']):
                 execution_result['current_step'] = i + 1
                 step_result = self.execute_step(step, execution_result['data'], workflow['rules'])
                 execution_result['step_results'].append(step_result)
-                
+
                 if not step_result['success']:
                     execution_result['status'] = 'Failed'
                     execution_result['error_message'] = step_result.get('error_message', 'Step execution failed')
                     break
-                
+
                 if 'output_data' in step_result and step_result['output_data']:
                     execution_result['data'].update(step_result['output_data'])
-            
+
             if execution_result['status'] == 'Running':
                 execution_result['status'] = 'Completed'
-                
+
         except Exception as e:
             execution_result['status'] = 'Error'
             execution_result['error_message'] = str(e)
-        
+
         execution_result['end_time'] = datetime.utcnow().isoformat()
         self.workflow_executions.append(execution_result)
-        
+
         return execution_result
-    
+
     def execute_step(self, step, workflow_data, rules):
         step_result = {
             'step_name': step['name'],
@@ -3432,7 +3357,7 @@ class WorkflowEngine:
             'message': '',
             'output_data': {}
         }
-        
+
         try:
             applicable_rules = [r for r in rules if r.get('step_name') == step['name']]
             for rule in applicable_rules:
@@ -3440,7 +3365,7 @@ class WorkflowEngine:
                     step_result['success'] = False
                     step_result['error_message'] = f"Rule validation failed: {rule.get('description', 'Unknown rule')}"
                     return step_result
-            
+
             step_type = step['type'].lower()
             if step_type in self.step_handlers:
                 result = self.step_handlers[step_type](step, workflow_data)
@@ -3448,45 +3373,45 @@ class WorkflowEngine:
             else:
                 step_result['success'] = True
                 step_result['message'] = f"Executed custom step: {step['name']}"
-                
+
         except Exception as e:
             step_result['success'] = False
             step_result['error_message'] = str(e)
-        
+
         step_result['end_time'] = datetime.utcnow().isoformat()
         return step_result
-    
+
     def execute_approval_step(self, step, workflow_data):
         approver = step.get('approver', 'system')
         approval_required = step.get('approval_required', True)
-        
+
         return {
             'success': True,
             'message': f"Approval step executed by {approver}",
             'output_data': {'approval_status': 'pending'}
         }
-    
+
     def execute_notification_step(self, step, workflow_data):
         recipients = step.get('recipients', [])
         message = step.get('message', '').format(**workflow_data)
-        
+
         return {
             'success': True,
             'message': f"Notification sent to {len(recipients)} recipients",
             'output_data': {'notification_sent': True}
         }
-    
+
     def execute_calculation_step(self, step, workflow_data):
         formula = step.get('formula', '')
         result_field = step.get('result_field', 'calculation_result')
-        
+
         try:
             processed_formula = formula
             for key, value in workflow_data.items():
                 processed_formula = processed_formula.replace(f'{{{key}}}', str(value))
-            
+
             result = eval(processed_formula)
-            
+
             return {
                 'success': True,
                 'message': f"Calculation completed: {formula} = {result}",
@@ -3497,10 +3422,10 @@ class WorkflowEngine:
                 'success': False,
                 'error_message': f"Calculation error: {str(e)}"
             }
-    
+
     def execute_condition_step(self, step, workflow_data):
         condition = step.get('condition', '')
-        
+
         try:
             result = self.evaluate_condition(condition, workflow_data)
             return {
@@ -3513,16 +3438,16 @@ class WorkflowEngine:
                 'success': False,
                 'error_message': f"Condition evaluation error: {str(e)}"
             }
-    
+
     def execute_data_transform_step(self, step, workflow_data):
         transformations = step.get('transformations', [])
         output_data = {}
-        
+
         for transform in transformations:
             source_field = transform['source_field']
             target_field = transform['target_field']
             operation = transform.get('operation', 'copy')
-            
+
             if source_field in workflow_data:
                 if operation == 'copy':
                     output_data[target_field] = workflow_data[source_field]
@@ -3530,34 +3455,34 @@ class WorkflowEngine:
                     output_data[target_field] = str(workflow_data[source_field]).upper()
                 elif operation == 'lowercase':
                     output_data[target_field] = str(workflow_data[source_field]).lower()
-        
+
         return {
             'success': True,
             'message': f"Data transformation completed for {len(transformations)} fields",
             'output_data': output_data
         }
-    
+
     def evaluate_rule(self, rule, data):
         rule_type = rule.get('type', 'condition')
         expression = rule.get('expression', '')
-        
+
         if rule_type == 'condition':
             return self.evaluate_condition(expression, data)
         elif rule_type == 'validation':
             return self.validate_data(expression, data)
-        
+
         return True
-    
+
     def evaluate_condition(self, condition, data):
         processed_condition = condition
         for key, value in data.items():
             processed_condition = processed_condition.replace(f'{{{key}}}', str(value))
-        
+
         try:
             return bool(eval(processed_condition))
         except:
             return False
-    
+
     def validate_data(self, validation_rule, data):
         return True
 
@@ -3565,7 +3490,7 @@ class WorkflowEngine:
 def create_workflow():
     data = request.json
     engine = WorkflowEngine()
-    
+
     try:
         workflow_id = engine.create_workflow(
             data['name'], data['description'], data['steps'],
@@ -3576,10 +3501,7 @@ def create_workflow():
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 330
@@ -3645,7 +3567,7 @@ class WorkflowEngine {
     userId: string
   ): string {
     const workflowId = Date.now().toString();
-    
+
     const workflow: Workflow = {
       id: workflowId,
       name,
@@ -3680,7 +3602,7 @@ class WorkflowEngine {
       for (let i = 0; i < workflow.steps.length; i++) {
         const step = workflow.steps[i];
         execution.currentStep = i + 1;
-        
+
         const stepResult = await this.executeStep(step, execution.data, workflow.rules);
         execution.stepResults.push(stepResult);
 
@@ -3705,7 +3627,7 @@ class WorkflowEngine {
 
     execution.endTime = new Date();
     this.workflowExecutions.push(execution);
-    
+
     return execution;
   }
 
@@ -3764,7 +3686,7 @@ class WorkflowEngine {
 
   private async executeApprovalStep(step: WorkflowStep, workflowData: Record<string, any>) {
     const approver = step.config.approver || 'system';
-    
+
     return {
       success: true,
       message: `Approval step executed by ${approver}`,
@@ -3775,7 +3697,7 @@ class WorkflowEngine {
   private async executeNotificationStep(step: WorkflowStep, workflowData: Record<string, any>) {
     const recipients = step.config.recipients || [];
     const message = this.processTemplate(step.config.message || '', workflowData);
-    
+
     return {
       success: true,
       message: `Notification sent to ${recipients.length} recipients`,
@@ -3786,10 +3708,10 @@ class WorkflowEngine {
   private async executeCalculationStep(step: WorkflowStep, workflowData: Record<string, any>) {
     const formula = step.config.formula || '';
     const resultField = step.config.resultField || 'calculation_result';
-    
+
     try {
       const result = this.evaluateFormula(formula, workflowData);
-      
+
       return {
         success: true,
         message: `Calculation completed: ${formula} = ${result}`,
@@ -3805,10 +3727,10 @@ class WorkflowEngine {
 
   private async executeConditionStep(step: WorkflowStep, workflowData: Record<string, any>) {
     const condition = step.config.condition || '';
-    
+
     try {
       const result = this.evaluateCondition(condition, workflowData);
-      
+
       return {
         success: true,
         message: `Condition evaluation: ${condition} = ${result}`,
@@ -3825,10 +3747,10 @@ class WorkflowEngine {
   private async executeDataTransformStep(step: WorkflowStep, workflowData: Record<string, any>) {
     const transformations = step.config.transformations || [];
     const outputData: Record<string, any> = {};
-    
+
     transformations.forEach((transform: any) => {
       const { sourceField, targetField, operation = 'copy' } = transform;
-      
+
       if (workflowData[sourceField] !== undefined) {
         switch (operation) {
           case 'copy':
@@ -3843,7 +3765,7 @@ class WorkflowEngine {
         }
       }
     });
-    
+
     return {
       success: true,
       message: `Data transformation completed for ${transformations.length} fields`,
@@ -3864,7 +3786,7 @@ class WorkflowEngine {
 
   private evaluateCondition(condition: string, data: Record<string, any>): boolean {
     let processedCondition = condition;
-    
+
     Object.entries(data).forEach(([key, value]) => {
       processedCondition = processedCondition.replace(
         new RegExp(`\\{${key}\\}`, 'g'),
@@ -3881,7 +3803,7 @@ class WorkflowEngine {
 
   private evaluateFormula(formula: string, data: Record<string, any>): number {
     let processedFormula = formula;
-    
+
     Object.entries(data).forEach(([key, value]) => {
       processedFormula = processedFormula.replace(
         new RegExp(`\\{${key}\\}`, 'g'),
@@ -3903,7 +3825,7 @@ class WorkflowEngine {
 
   private processTemplate(template: string, data: Record<string, any>): string {
     let processed = template;
-    
+
     Object.entries(data).forEach(([key, value]) => {
       processed = processed.replace(
         new RegExp(`\\{${key}\\}`, 'g'),

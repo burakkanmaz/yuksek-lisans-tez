@@ -37,7 +37,7 @@ def save_address():
     address = data.get('address')
     city = data.get('city')
     postal_code = data.get('postalCode')
-    
+
     # Database save operation would go here
     # Example: db.addresses.insert_one({
     #     'address': address,
@@ -45,7 +45,7 @@ def save_address():
     #     'postal_code': postal_code,
     #     'created_date': datetime.now()
     # })
-    
+
     return jsonify({'success': True, 'message': 'Address saved successfully'})
 ```
 
@@ -61,16 +61,16 @@ app.use(express.json());
 
 app.post('/save-address', async (req: Request, res: Response) => {
     const { address, city, postalCode } = req.body;
-    
+
     const newAddress = Address.create({
         addressLine: address,
         city: city,
         postalCode: postalCode,
         createdAt: new Date()
     });
-    
+
     await newAddress.save();
-    
+
     res.json({ success: true, message: 'Address saved successfully' });
 });
 ```
@@ -90,8 +90,8 @@ public IActionResult CreatePassword(string password)
     }
 
     var hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
-    
-    _dbContext.UserPasswords.Add(new UserPassword 
+
+    _dbContext.UserPasswords.Add(new UserPassword
     {
         PasswordHash = hashedPassword,
         CreatedDate = DateTime.Now
@@ -114,15 +114,15 @@ app = Flask(__name__)
 @app.route('/create-password', methods=['POST'])
 def create_password():
     password = request.json.get('password')
-    
+
     if len(password) < 8:
         return jsonify({'success': False, 'message': 'Password must be at least 8 characters long'}), 400
-    
+
     hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-    
+
     # Database save operation would go here
     # Example: db.passwords.insert_one({'hash': hashed, 'created_date': datetime.now()})
-    
+
     return jsonify({'success': True, 'message': 'Password created successfully'})
 ```
 
@@ -139,21 +139,21 @@ app.use(express.json());
 
 app.post('/create-password', async (req: Request, res: Response) => {
     const { password } = req.body;
-    
+
     if (password.length < 8) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'Password must be at least 8 characters long' 
+        return res.status(400).json({
+            success: false,
+            message: 'Password must be at least 8 characters long'
         });
     }
-    
+
     const hashedPassword = await bcrypt.hash(password, 10);
-    
+
     await User.create({
         password: hashedPassword,
         createdAt: new Date()
     });
-    
+
     res.json({ success: true, message: 'Password created successfully' });
 });
 ```
@@ -174,7 +174,7 @@ public IActionResult TrackPackage(string trackingNumber)
 
     var package = _dbContext.Packages
         .FirstOrDefault(p => p.TrackingNumber == trackingNumber);
-    
+
     if (package == null)
     {
         return NotFound("Package not found");
@@ -195,17 +195,17 @@ app = Flask(__name__)
 @app.route('/track-package', methods=['GET'])
 def track_package():
     tracking_number = request.args.get('trackingNumber')
-    
+
     if not tracking_number or len(tracking_number) > 50:
         return jsonify({'success': False, 'message': 'Invalid tracking number'}), 400
-    
+
     # Database query would go here
     # Example: package = db.packages.find_one({'tracking_number': tracking_number})
     package = None  # Replace with actual query
-    
+
     if not package:
         return jsonify({'success': False, 'message': 'Package not found'}), 404
-    
+
     return jsonify({'success': True, 'package': package})
 ```
 
@@ -221,31 +221,31 @@ app.use(express.json());
 
 app.get('/track-package', async (req: Request, res: Response) => {
     const { trackingNumber } = req.query;
-    
+
     if (!trackingNumber || trackingNumber.length > 50) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'Invalid tracking number' 
+        return res.status(400).json({
+            success: false,
+            message: 'Invalid tracking number'
         });
     }
-    
-    const package = await Package.findOne({ 
-        where: { trackingNumber } 
+
+    const package = await Package.findOne({
+        where: { trackingNumber }
     });
-    
+
     if (!package) {
-        return res.status(404).json({ 
-            success: false, 
-            message: 'Package not found' 
+        return res.status(404).json({
+            success: false,
+            message: 'Package not found'
         });
     }
-    
+
     res.json({ success: true, package });
 });
 ```
 
 ## 🧪 Senaryo 4: Biyografi Güncelleme
-💻 **Dil:** C#  
+💻 **Dil:** C#
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 20
@@ -273,7 +273,7 @@ public IActionResult UpdateBio(int userId, string bio)
 ```
 
 ## 🧪 Senaryo 4: Biyografi Güncelleme
-💻 **Dil:** Python  
+💻 **Dil:** Python
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 20
@@ -287,21 +287,21 @@ app = Flask(__name__)
 def update_bio():
     user_id = request.json.get('userId')
     bio = request.json.get('bio')
-    
+
     if len(bio) > 500:
         return jsonify({'success': False, 'message': 'Bio cannot exceed 500 characters'}), 400
-    
+
     # Database update would go here
     # Example: db.users.update_one(
     #     {'_id': user_id},
     #     {'$set': {'bio': bio, 'updated_date': datetime.now()}}
     # )
-    
+
     return jsonify({'success': True, 'message': 'Bio updated successfully'})
 ```
 
 ## 🧪 Senaryo 4: Biyografi Güncelleme
-💻 **Dil:** TypeScript (Node.js)  
+💻 **Dil:** TypeScript (Node.js)
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 30
@@ -314,32 +314,32 @@ app.use(express.json());
 
 app.post('/update-bio', async (req: Request, res: Response) => {
     const { userId, bio } = req.body;
-    
+
     if (bio.length > 500) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'Bio cannot exceed 500 characters' 
+        return res.status(400).json({
+            success: false,
+            message: 'Bio cannot exceed 500 characters'
         });
     }
-    
+
     const user = await User.findByPk(userId);
     if (!user) {
-        return res.status(404).json({ 
-            success: false, 
-            message: 'User not found' 
+        return res.status(404).json({
+            success: false,
+            message: 'User not found'
         });
     }
-    
+
     user.bio = bio;
     user.updatedAt = new Date();
     await user.save();
-    
+
     res.json({ success: true, message: 'Bio updated successfully' });
 });
 ```
 
 ## 🧪 Senaryo 5: Tarih Aralığı Sorgulama
-💻 **Dil:** C#  
+💻 **Dil:** C#
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 15
@@ -347,7 +347,7 @@ app.post('/update-bio', async (req: Request, res: Response) => {
 [HttpGet("check-availability")]
 public IActionResult CheckAvailability(string startDate, string endDate)
 {
-    if (!DateTime.TryParse(startDate, out var parsedStartDate) || 
+    if (!DateTime.TryParse(startDate, out var parsedStartDate) ||
         !DateTime.TryParse(endDate, out var parsedEndDate))
     {
         return BadRequest("Invalid date format");
@@ -362,7 +362,7 @@ public IActionResult CheckAvailability(string startDate, string endDate)
 ```
 
 ## 🧪 Senaryo 5: Tarih Aralığı Sorgulama
-💻 **Dil:** Python  
+💻 **Dil:** Python
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 24
@@ -376,25 +376,25 @@ app = Flask(__name__)
 def check_availability():
     start_date = request.args.get('startDate')
     end_date = request.args.get('endDate')
-    
+
     try:
         parsed_start = datetime.strptime(start_date, '%Y-%m-%d')
         parsed_end = datetime.strptime(end_date, '%Y-%m-%d')
     except ValueError:
         return jsonify({'success': False, 'message': 'Invalid date format'}), 400
-    
+
     # Database query would go here
     # Example: slots = db.time_slots.find({
     #     'date': {'$gte': parsed_start, '$lte': parsed_end},
     #     'is_available': True
     # })
     slots = []  # Replace with actual query
-    
+
     return jsonify({'success': True, 'slots': slots})
 ```
 
 ## 🧪 Senaryo 5: Tarih Aralığı Sorgulama
-💻 **Dil:** TypeScript (Node.js)  
+💻 **Dil:** TypeScript (Node.js)
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 34
@@ -407,15 +407,15 @@ app.use(express.json());
 
 app.get('/check-availability', async (req: Request, res: Response) => {
     const { startDate, endDate } = req.query;
-    
+
     try {
         const parsedStart = new Date(startDate as string);
         const parsedEnd = new Date(endDate as string);
-        
+
         if (isNaN(parsedStart.getTime()) || isNaN(parsedEnd.getTime())) {
             throw new Error('Invalid date');
         }
-        
+
         const slots = await TimeSlot.findAll({
             where: {
                 date: {
@@ -424,19 +424,19 @@ app.get('/check-availability', async (req: Request, res: Response) => {
                 isAvailable: true
             }
         });
-        
+
         res.json({ success: true, slots });
     } catch (error) {
-        res.status(400).json({ 
-            success: false, 
-            message: 'Invalid date format' 
+        res.status(400).json({
+            success: false,
+            message: 'Invalid date format'
         });
     }
 });
 ```
 
 ## 🧪 Senaryo 6: Forum Konusu Oluşturma
-💻 **Dil:** C#  
+💻 **Dil:** C#
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 21
@@ -465,7 +465,7 @@ public IActionResult CreateTopic(string title, string content)
 ```
 
 ## 🧪 Senaryo 6: Forum Konusu Oluşturma
-💻 **Dil:** Python  
+💻 **Dil:** Python
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 22
@@ -479,10 +479,10 @@ app = Flask(__name__)
 def create_topic():
     title = request.json.get('title')
     content = request.json.get('content')
-    
+
     if len(title) > 100 or len(content) > 5000:
         return jsonify({'success': False, 'message': 'Title or content exceeds maximum length'}), 400
-    
+
     # Database save operation would go here
     # Example: db.topics.insert_one({
     #     'title': title,
@@ -490,12 +490,12 @@ def create_topic():
     #     'created_date': datetime.now(),
     #     'author_id': get_current_user_id()
     # })
-    
+
     return jsonify({'success': True, 'message': 'Topic created successfully'})
 ```
 
 ## 🧪 Senaryo 6: Forum Konusu Oluşturma
-💻 **Dil:** TypeScript (Node.js)  
+💻 **Dil:** TypeScript (Node.js)
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 25
@@ -508,27 +508,27 @@ app.use(express.json());
 
 app.post('/create-topic', async (req: Request, res: Response) => {
     const { title, content } = req.body;
-    
+
     if (title.length > 100 || content.length > 5000) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'Title or content exceeds maximum length' 
+        return res.status(400).json({
+            success: false,
+            message: 'Title or content exceeds maximum length'
         });
     }
-    
+
     await Topic.create({
         title,
         content,
         createdAt: new Date(),
         authorId: getCurrentUserId()
     });
-    
+
     res.json({ success: true, message: 'Topic created successfully' });
 });
 ```
 
 ## 🧪 Senaryo 7: Doğum Tarihi Girişi
-💻 **Dil:** C#  
+💻 **Dil:** C#
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 19
@@ -555,7 +555,7 @@ public IActionResult SaveBirthdate(string birthdate)
 ```
 
 ## 🧪 Senaryo 7: Doğum Tarihi Girişi
-💻 **Dil:** Python  
+💻 **Dil:** Python
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 24
@@ -568,26 +568,26 @@ app = Flask(__name__)
 @app.route('/save-birthdate', methods=['POST'])
 def save_birthdate():
     birthdate = request.json.get('birthdate')
-    
+
     if not birthdate:
         return jsonify({'success': False, 'message': 'Birthdate is required'}), 400
-    
+
     try:
         parsed_date = datetime.strptime(birthdate, '%Y-%m-%d')
     except ValueError:
         return jsonify({'success': False, 'message': 'Invalid date format'}), 400
-    
+
     # Database update would go here
     # Example: db.users.update_one(
     #     {'_id': get_current_user_id()},
     #     {'$set': {'birthdate': parsed_date}}
     # )
-    
+
     return jsonify({'success': True, 'message': 'Birthdate saved successfully'})
 ```
 
 ## 🧪 Senaryo 7: Doğum Tarihi Girişi
-💻 **Dil:** TypeScript (Node.js)  
+💻 **Dil:** TypeScript (Node.js)
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 34
@@ -600,36 +600,36 @@ app.use(express.json());
 
 app.post('/save-birthdate', async (req: Request, res: Response) => {
     const { birthdate } = req.body;
-    
+
     if (!birthdate) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'Birthdate is required' 
+        return res.status(400).json({
+            success: false,
+            message: 'Birthdate is required'
         });
     }
-    
+
     try {
         const parsedDate = new Date(birthdate);
         if (isNaN(parsedDate.getTime())) {
             throw new Error('Invalid date');
         }
-        
+
         const user = await User.findByPk(getCurrentUserId());
         user.birthdate = parsedDate;
         await user.save();
-        
+
         res.json({ success: true, message: 'Birthdate saved successfully' });
     } catch (error) {
-        res.status(400).json({ 
-            success: false, 
-            message: 'Invalid date format' 
+        res.status(400).json({
+            success: false,
+            message: 'Invalid date format'
         });
     }
 });
 ```
 
 ## 🧪 Senaryo 8: Dosya Arama
-💻 **Dil:** C#  
+💻 **Dil:** C#
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 14
@@ -651,7 +651,7 @@ public IActionResult SearchFiles(string fileName)
 ```
 
 ## 🧪 Senaryo 8: Dosya Arama
-💻 **Dil:** Python  
+💻 **Dil:** Python
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 16
@@ -663,19 +663,19 @@ app = Flask(__name__)
 @app.route('/search-files', methods=['GET'])
 def search_files():
     file_name = request.args.get('fileName')
-    
+
     if not file_name:
         return jsonify({'success': False, 'message': 'File name is required'}), 400
-    
+
     # Database query would go here
     # Example: files = db.files.find({'name': {'$regex': file_name, '$options': 'i'}})
     files = []  # Replace with actual query
-    
+
     return jsonify({'success': True, 'files': files})
 ```
 
 ## 🧪 Senaryo 8: Dosya Arama
-💻 **Dil:** TypeScript (Node.js)  
+💻 **Dil:** TypeScript (Node.js)
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 27
@@ -689,14 +689,14 @@ app.use(express.json());
 
 app.get('/search-files', async (req: Request, res: Response) => {
     const { fileName } = req.query;
-    
+
     if (!fileName) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'File name is required' 
+        return res.status(400).json({
+            success: false,
+            message: 'File name is required'
         });
     }
-    
+
     const files = await File.findAll({
         where: {
             name: {
@@ -704,13 +704,13 @@ app.get('/search-files', async (req: Request, res: Response) => {
             }
         }
     });
-    
+
     res.json({ success: true, files });
 });
 ```
 
 ## 🧪 Senaryo 9: Etiket Ekleme
-💻 **Dil:** C#  
+💻 **Dil:** C#
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 19
@@ -737,7 +737,7 @@ public IActionResult AddTag(int postId, string tag)
 ```
 
 ## 🧪 Senaryo 9: Etiket Ekleme
-💻 **Dil:** Python  
+💻 **Dil:** Python
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 19
@@ -750,21 +750,21 @@ app = Flask(__name__)
 def add_tag():
     post_id = request.json.get('postId')
     tag = request.json.get('tag')
-    
+
     if not tag:
         return jsonify({'success': False, 'message': 'Tag is required'}), 400
-    
+
     # Database update would go here
     # Example: db.posts.update_one(
     #     {'_id': post_id},
     #     {'$push': {'tags': tag}}
     # )
-    
+
     return jsonify({'success': True, 'message': 'Tag added successfully'})
 ```
 
 ## 🧪 Senaryo 9: Etiket Ekleme
-💻 **Dil:** TypeScript (Node.js)  
+💻 **Dil:** TypeScript (Node.js)
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 28
@@ -777,30 +777,30 @@ app.use(express.json());
 
 app.post('/add-tag', async (req: Request, res: Response) => {
     const { postId, tag } = req.body;
-    
+
     if (!tag) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'Tag is required' 
+        return res.status(400).json({
+            success: false,
+            message: 'Tag is required'
         });
     }
-    
+
     const post = await Post.findByPk(postId);
     if (!post) {
-        return res.status(404).json({ 
-            success: false, 
-            message: 'Post not found' 
+        return res.status(404).json({
+            success: false,
+            message: 'Post not found'
         });
     }
-    
+
     await post.addTag(tag);
-    
+
     res.json({ success: true, message: 'Tag added successfully' });
 });
 ```
 
 ## 🧪 Senaryo 10: Yaş Bilgisi Girişi
-💻 **Dil:** C#  
+💻 **Dil:** C#
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 24
@@ -832,7 +832,7 @@ public IActionResult SaveAge(string ageInput)
 ```
 
 ## 🧪 Senaryo 10: Yaş Bilgisi Girişi
-💻 **Dil:** Python  
+💻 **Dil:** Python
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 24
@@ -845,26 +845,26 @@ app = Flask(__name__)
 @app.route('/save-age', methods=['POST'])
 def save_age():
     age_input = request.json.get('ageInput')
-    
+
     if not age_input:
         return jsonify({'success': False, 'message': 'Age is required'}), 400
-    
+
     try:
         age = int(age_input)
     except ValueError:
         return jsonify({'success': False, 'message': 'Invalid age format'}), 400
-    
+
     # Database save operation would go here
     # Example: db.participants.insert_one({
     #     'age': age,
     #     'created_date': datetime.now()
     # })
-    
+
     return jsonify({'success': True, 'message': 'Age saved successfully'})
 ```
 
 ## 🧪 Senaryo 10: Yaş Bilgisi Girişi
-💻 **Dil:** TypeScript (Node.js)  
+💻 **Dil:** TypeScript (Node.js)
 🤖 **AI:** DeepSeek Chat
 
 **Satır Sayısı:** 31
@@ -877,27 +877,27 @@ app.use(express.json());
 
 app.post('/save-age', async (req: Request, res: Response) => {
     const { ageInput } = req.body;
-    
+
     if (!ageInput) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'Age is required' 
+        return res.status(400).json({
+            success: false,
+            message: 'Age is required'
         });
     }
-    
+
     const age = parseInt(ageInput);
     if (isNaN(age)) {
-        return res.status(400).json({ 
-            success: false, 
-            message: 'Invalid age format' 
+        return res.status(400).json({
+            success: false,
+            message: 'Invalid age format'
         });
     }
-    
+
     await Participant.create({
         age,
         createdAt: new Date()
     });
-    
+
     res.json({ success: true, message: 'Age saved successfully' });
 });
 ```

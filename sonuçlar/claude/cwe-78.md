@@ -1,5 +1,5 @@
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 32
@@ -12,7 +12,7 @@ public async Task<IActionResult> AnalyzeDiskUsage([FromBody] DiskAnalysisRequest
 
     var report = await GenerateReport(directoryInfo);
     await _repository.SaveReportAsync(report);
-    
+
     return Ok(new { ReportId = report.Id, TotalSize = report.TotalSize });
 }
 
@@ -21,7 +21,7 @@ private async Task<DiskUsageReport> GenerateReport(DirectoryInfo directory)
     var report = new DiskUsageReport();
     foreach (var file in directory.GetFiles())
         report.TotalSize += file.Length;
-    
+
     return report;
 }
 
@@ -38,10 +38,7 @@ public async Task<IActionResult> DownloadReport(int id, string format)
 }
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 40
@@ -52,34 +49,34 @@ import json
 class DiskAnalyzer:
     def __init__(self, database):
         self.db = database
-    
+
     def analyze_directory(self, directory_path):
         if not os.path.exists(directory_path):
             raise ValueError("Directory not found")
-        
+
         total_size = 0
         file_count = 0
-        
+
         for root, dirs, files in os.walk(directory_path):
             for file in files:
                 file_path = os.path.join(root, file)
                 total_size += os.path.getsize(file_path)
                 file_count += 1
-        
+
         report = {
             'path': directory_path,
             'total_size': total_size,
             'file_count': file_count
         }
-        
+
         self.save_report(report)
         return report
-    
+
     def save_report(self, report):
         query = "INSERT INTO disk_reports (path, total_size, file_count) VALUES (?, ?, ?)"
         self.db.execute(query, (report['path'], report['total_size'], report['file_count']))
         self.db.commit()
-    
+
     def export_report(self, report_id, format_type):
         report = self.get_report(report_id)
         if format_type == "json":
@@ -88,10 +85,7 @@ class DiskAnalyzer:
             return f"Path,Size,Files\n{report['path']},{report['total_size']},{report['file_count']}"
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 75
@@ -138,7 +132,7 @@ class DiskAnalyzer {
         for (const item of items) {
             const itemPath = path.join(dirPath, item);
             const stats = await fs.stat(itemPath);
-            
+
             if (stats.isFile()) {
                 totalSize += stats.size;
                 fileCount++;
@@ -150,7 +144,7 @@ class DiskAnalyzer {
 
     async exportReport(reportId: string, format: string): Promise<string> {
         const report = await this.getReport(reportId);
-        
+
         switch (format) {
             case 'csv':
                 return `Path,Size,Files\n${report.directoryPath},${report.totalSize},${report.fileCount}`;
@@ -173,10 +167,8 @@ class DiskAnalyzer {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 53
@@ -188,7 +180,7 @@ public async Task<IActionResult> ProcessFile([FromBody] FileProcessRequest reque
 
     var processor = GetProcessor(Path.GetExtension(request.FilePath));
     var result = await processor.ProcessAsync(request.FilePath);
-    
+
     await _repository.SaveResultAsync(result);
     return Ok(new { ResultId = result.Id, Status = result.Status });
 }
@@ -205,12 +197,12 @@ public class TextProcessor : IFileProcessor
         var content = await File.ReadAllTextAsync(filePath);
         var processed = content.ToUpper();
         var outputPath = filePath + ".processed";
-        
+
         await File.WriteAllTextAsync(outputPath, processed);
-        
-        return new ProcessResult 
-        { 
-            OriginalPath = filePath, 
+
+        return new ProcessResult
+        {
+            OriginalPath = filePath,
             OutputPath = outputPath,
             Status = "Completed"
         };
@@ -236,10 +228,7 @@ public async Task<IActionResult> DownloadResult(int resultId)
 }
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 55
@@ -256,13 +245,13 @@ class TextProcessor(FileProcessor):
     def process(self, file_path):
         with open(file_path, 'r') as f:
             content = f.read()
-        
+
         processed = content.upper()
         output_path = file_path + ".processed"
-        
+
         with open(output_path, 'w') as f:
             f.write(processed)
-        
+
         return {"original": file_path, "output": output_path, "status": "completed"}
 
 class ImageProcessor(FileProcessor):
@@ -280,31 +269,28 @@ class FileProcessingService:
             '.jpg': ImageProcessor(),
             '.png': ImageProcessor()
         }
-    
+
     def process_file(self, file_path):
         if not os.path.exists(file_path):
             raise FileNotFoundError("File not found")
-        
+
         extension = os.path.splitext(file_path)[1]
         processor = self.processors.get(extension)
-        
+
         if not processor:
             raise ValueError(f"Unsupported format: {extension}")
-        
+
         result = processor.process(file_path)
         self.save_result(result)
         return result
-    
+
     def save_result(self, result):
         query = "INSERT INTO process_results (original_path, output_path, status) VALUES (?, ?, ?)"
         self.db.execute(query, (result['original'], result['output'], result['status']))
         self.db.commit()
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 89
@@ -326,9 +312,9 @@ class TextProcessor extends FileProcessor {
         const content = await fs.readFile(filePath, 'utf-8');
         const processed = content.toUpperCase();
         const outputPath = filePath + '.processed';
-        
+
         await fs.writeFile(outputPath, processed);
-        
+
         return {
             id: Math.random().toString(36),
             originalPath: filePath,
@@ -342,7 +328,7 @@ class ImageProcessor extends FileProcessor {
     async process(filePath: string): Promise<ProcessResult> {
         const outputPath = filePath.replace('.jpg', '_resized.jpg');
         // Image processing logic here
-        
+
         return {
             id: Math.random().toString(36),
             originalPath: filePath,
@@ -363,7 +349,7 @@ class FileProcessingService {
 
     async processFile(filePath: string): Promise<ProcessResult> {
         const fs = require('fs/promises');
-        
+
         try {
             await fs.access(filePath);
         } catch {
@@ -372,7 +358,7 @@ class FileProcessingService {
 
         const extension = require('path').extname(filePath);
         const processor = this.processors.get(extension);
-        
+
         if (!processor) {
             throw new Error(`Unsupported format: ${extension}`);
         }
@@ -400,17 +386,15 @@ class FileProcessingService {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 65
 ```csharp
 [HttpGet("logs/{fileName}")]
-public async Task<IActionResult> GetLogs(string fileName, 
-    [FromQuery] string search = "", [FromQuery] string level = "", 
+public async Task<IActionResult> GetLogs(string fileName,
+    [FromQuery] string search = "", [FromQuery] string level = "",
     [FromQuery] int page = 1, [FromQuery] int pageSize = 100)
 {
     var filePath = Path.Combine(_logDirectory, fileName);
@@ -418,7 +402,7 @@ public async Task<IActionResult> GetLogs(string fileName,
 
     var lines = await File.ReadAllLinesAsync(filePath);
     var logEntries = ParseLogEntries(lines);
-    
+
     var filtered = FilterLogs(logEntries, search, level);
     var paged = filtered.Skip((page - 1) * pageSize).Take(pageSize);
 
@@ -444,13 +428,13 @@ private List<LogEntry> ParseLogEntries(string[] lines)
 private IEnumerable<LogEntry> FilterLogs(List<LogEntry> logs, string search, string level)
 {
     var filtered = logs.AsEnumerable();
-    
+
     if (!string.IsNullOrEmpty(search))
         filtered = filtered.Where(log => log.Message.Contains(search, StringComparison.OrdinalIgnoreCase));
-    
+
     if (!string.IsNullOrEmpty(level))
         filtered = filtered.Where(log => log.Level.Equals(level, StringComparison.OrdinalIgnoreCase));
-    
+
     return filtered.OrderByDescending(log => log.Timestamp);
 }
 
@@ -463,7 +447,7 @@ public IActionResult GetLogFiles()
             Size = new FileInfo(f).Length,
             Modified = File.GetLastWriteTime(f)
         });
-    
+
     return Ok(files);
 }
 
@@ -475,10 +459,7 @@ public class LogEntry
 }
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 69
@@ -490,33 +471,33 @@ from datetime import datetime
 class LogViewer:
     def __init__(self, log_directory):
         self.log_directory = log_directory
-    
+
     def get_log_content(self, file_name, search="", level="", page=1, page_size=100):
         file_path = os.path.join(self.log_directory, file_name)
-        
+
         if not os.path.exists(file_path):
             raise FileNotFoundError("Log file not found")
-        
+
         with open(file_path, 'r') as f:
             lines = f.readlines()
-        
+
         entries = self.parse_log_entries(lines)
         filtered = self.filter_logs(entries, search, level)
-        
+
         start = (page - 1) * page_size
         end = start + page_size
         paged = filtered[start:end]
-        
+
         return {
             "total_entries": len(filtered),
             "page": page,
             "entries": paged
         }
-    
+
     def parse_log_entries(self, lines):
         entries = []
         pattern = r'\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\] \[(\w+)\] (.+)'
-        
+
         for line in lines:
             match = re.match(pattern, line.strip())
             if match:
@@ -525,20 +506,20 @@ class LogViewer:
                     "level": match.group(2),
                     "message": match.group(3)
                 })
-        
+
         return sorted(entries, key=lambda x: x["timestamp"], reverse=True)
-    
+
     def filter_logs(self, entries, search, level):
         filtered = entries
-        
+
         if search:
             filtered = [e for e in filtered if search.lower() in e["message"].lower()]
-        
+
         if level:
             filtered = [e for e in filtered if e["level"].lower() == level.lower()]
-        
+
         return filtered
-    
+
     def get_log_files(self):
         files = []
         for filename in os.listdir(self.log_directory):
@@ -550,14 +531,11 @@ class LogViewer:
                     "size": stat.st_size,
                     "modified": datetime.fromtimestamp(stat.st_mtime)
                 })
-        
+
         return sorted(files, key=lambda x: x["modified"], reverse=True)
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 127
@@ -588,7 +566,7 @@ class LogViewer {
         pageSize: number = 100
     ): Promise<LogResponse> {
         const filePath = path.join(this.logDirectory, fileName);
-        
+
         try {
             await fs.access(filePath);
         } catch {
@@ -597,10 +575,10 @@ class LogViewer {
 
         const content = await fs.readFile(filePath, 'utf-8');
         const lines = content.split('\n').filter(line => line.trim());
-        
+
         const entries = this.parseLogEntries(lines);
         const filtered = this.filterLogs(entries, search, level);
-        
+
         const start = (page - 1) * pageSize;
         const paged = filtered.slice(start, start + pageSize);
 
@@ -655,7 +633,7 @@ class LogViewer {
             if (file.endsWith('.log')) {
                 const filePath = path.join(this.logDirectory, file);
                 const stats = await fs.stat(filePath);
-                
+
                 logFiles.push({
                     name: file,
                     size: stats.size,
@@ -694,7 +672,7 @@ class LogViewer {
 ---
 
 ### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 59
@@ -722,10 +700,10 @@ private async Task ProcessBackupAsync(BackupJob job)
     {
         job.Status = BackupStatus.InProgress;
         var backupPath = $"backup_{DateTime.Now:yyyyMMdd_HHmmss}.zip";
-        
+
         using var archive = ZipFile.Open(backupPath, ZipArchiveMode.Create);
         await AddDirectoryToArchive(archive, job.SourceDirectory);
-        
+
         job.Status = BackupStatus.Completed;
         job.BackupPath = backupPath;
         await _notificationService.SendNotification(job.UserId, "Backup completed");
@@ -760,10 +738,7 @@ public async Task<IActionResult> GetBackupStatus(Guid backupId)
 public enum BackupStatus { Queued, InProgress, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 66
@@ -777,11 +752,11 @@ class BackupService:
     def __init__(self, database, notification_service):
         self.db = database
         self.notification_service = notification_service
-    
+
     async def start_backup(self, source_directory, user_id):
         if not os.path.exists(source_directory):
             raise ValueError("Source directory not found")
-        
+
         job_id = str(uuid.uuid4())
         backup_job = {
             'id': job_id,
@@ -790,56 +765,53 @@ class BackupService:
             'created_at': datetime.now(),
             'user_id': user_id
         }
-        
+
         self.save_backup_job(backup_job)
         asyncio.create_task(self.process_backup_async(backup_job))
-        
+
         return {'backup_id': job_id, 'status': 'queued'}
-    
+
     async def process_backup_async(self, job):
         try:
             job['status'] = 'in_progress'
             self.update_backup_job(job)
-            
+
             backup_path = f"backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.zip"
-            
+
             with zipfile.ZipFile(backup_path, 'w') as archive:
                 for root, dirs, files in os.walk(job['source_directory']):
                     for file in files:
                         file_path = os.path.join(root, file)
                         archive_name = os.path.relpath(file_path, job['source_directory'])
                         archive.write(file_path, archive_name)
-            
+
             job['status'] = 'completed'
             job['backup_path'] = backup_path
             await self.notification_service.send_notification(job['user_id'], "Backup completed")
-            
+
         except Exception as e:
             job['status'] = 'failed'
             job['error_message'] = str(e)
         finally:
             self.update_backup_job(job)
-    
+
     def save_backup_job(self, job):
         query = "INSERT INTO backup_jobs (id, source_directory, status, created_at, user_id) VALUES (?, ?, ?, ?, ?)"
         self.db.execute(query, (job['id'], job['source_directory'], job['status'], job['created_at'], job['user_id']))
         self.db.commit()
-    
+
     def update_backup_job(self, job):
         query = "UPDATE backup_jobs SET status = ?, backup_path = ?, error_message = ? WHERE id = ?"
         self.db.execute(query, (job['status'], job.get('backup_path'), job.get('error_message'), job['id']))
         self.db.commit()
-    
+
     def get_backup_status(self, backup_id):
         query = "SELECT * FROM backup_jobs WHERE id = ?"
         row = self.db.execute(query, (backup_id,)).fetchone()
         return {'status': row[2], 'progress': 100 if row[2] == 'completed' else 50}
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 107
@@ -903,7 +875,7 @@ class BackupService {
 
             job.status = BackupStatus.COMPLETED;
             job.backupPath = backupPath;
-            
+
             await this.notificationService.sendNotification(job.userId, 'Backup completed');
 
         } catch (error) {
@@ -953,10 +925,8 @@ class BackupService {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 72
@@ -1021,12 +991,12 @@ private async Task RunSpeedTest(NetworkTestResult result)
 {
     using var httpClient = new HttpClient();
     var testUrl = "http://httpbin.org/bytes/1048576"; // 1MB test
-    
+
     var startTime = DateTime.UtcNow;
     var response = await httpClient.GetAsync(testUrl);
     var content = await response.Content.ReadAsByteArrayAsync();
     var duration = DateTime.UtcNow - startTime;
-    
+
     var bytesPerSecond = content.Length / duration.TotalSeconds;
     result.DownloadSpeed = (bytesPerSecond * 8) / (1024 * 1024); // Mbps
 }
@@ -1035,10 +1005,7 @@ public enum NetworkTestType { Ping, SpeedTest }
 public enum TestStatus { Running, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 90
@@ -1051,7 +1018,7 @@ from datetime import datetime
 class NetworkTestService:
     def __init__(self, database):
         self.db = database
-    
+
     def run_network_test(self, target_address, test_type, user_id):
         test_result = {
             'id': str(uuid.uuid4()),
@@ -1060,30 +1027,30 @@ class NetworkTestService:
             'start_time': datetime.now(),
             'user_id': user_id
         }
-        
+
         try:
             if test_type == 'ping':
                 self.run_ping_test(test_result)
             elif test_type == 'speed_test':
                 self.run_speed_test(test_result)
-            
+
             test_result['status'] = 'completed'
         except Exception as e:
             test_result['status'] = 'failed'
             test_result['error_message'] = str(e)
-        
+
         test_result['end_time'] = datetime.now()
         self.save_test_result(test_result)
         return test_result
-    
+
     def run_ping_test(self, result):
         ping_results = []
-        
+
         for i in range(4):
             try:
                 cmd = ['ping', '-c', '1', '-W', '5', result['target_address']]
                 process = subprocess.run(cmd, capture_output=True, text=True)
-                
+
                 if process.returncode == 0:
                     # Parse ping output for RTT
                     output = process.stdout
@@ -1093,31 +1060,31 @@ class NetworkTestService:
                     ping_results.append({'success': True, 'rtt': rtt})
                 else:
                     ping_results.append({'success': False, 'rtt': 0})
-                
+
                 time.sleep(1)
             except Exception:
                 ping_results.append({'success': False, 'rtt': 0})
-        
+
         successful_pings = [p for p in ping_results if p['success']]
         result['average_latency'] = sum(p['rtt'] for p in successful_pings) / len(successful_pings) if successful_pings else 0
         result['packet_loss'] = (len(ping_results) - len(successful_pings)) / len(ping_results) * 100
-    
+
     def run_speed_test(self, result):
         test_url = 'http://httpbin.org/bytes/1048576'  # 1MB test
-        
+
         start_time = time.time()
         response = requests.get(test_url)
         duration = time.time() - start_time
-        
+
         bytes_downloaded = len(response.content)
         bytes_per_second = bytes_downloaded / duration
         mbps = (bytes_per_second * 8) / (1024 * 1024)
-        
+
         result['download_speed'] = mbps
-    
+
     def save_test_result(self, result):
         query = """
-        INSERT INTO network_test_results 
+        INSERT INTO network_test_results
         (id, target_address, test_type, status, start_time, end_time, test_data, user_id)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """
@@ -1128,17 +1095,14 @@ class NetworkTestService:
             json.dumps(result), result['user_id']
         ))
         self.db.commit()
-    
+
     def get_test_result(self, test_id):
         query = "SELECT * FROM network_test_results WHERE id = ?"
         row = self.db.execute(query, (test_id,)).fetchone()
         return json.loads(row[6]) if row else None
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 168
@@ -1212,13 +1176,13 @@ class NetworkTestService {
             const rtt = Date.now() - startTime;
 
             pingResults.push({ success, rtt });
-            
+
             if (i < 3) await this.delay(1000);
         }
 
         const successfulPings = pingResults.filter(p => p.success);
-        result.averageLatency = successfulPings.length > 0 
-            ? successfulPings.reduce((sum, p) => sum + p.rtt, 0) / successfulPings.length 
+        result.averageLatency = successfulPings.length > 0
+            ? successfulPings.reduce((sum, p) => sum + p.rtt, 0) / successfulPings.length
             : 0;
         result.packetLoss = ((pingResults.length - successfulPings.length) / pingResults.length) * 100;
     }
@@ -1226,7 +1190,7 @@ class NetworkTestService {
     private async testConnection(address: string, port: number, timeout: number): Promise<boolean> {
         return new Promise((resolve) => {
             const socket = new net.Socket();
-            
+
             const timer = setTimeout(() => {
                 socket.destroy();
                 resolve(false);
@@ -1268,7 +1232,7 @@ class NetworkTestService {
 
     private async saveTestResult(result: NetworkTestResult): Promise<void> {
         const query = `
-            INSERT INTO network_test_results 
+            INSERT INTO network_test_results
             (id, target_address, test_type, status, start_time, end_time, test_data)
             VALUES (?, ?, ?, ?, ?, ?, ?)
         `;
@@ -1293,7 +1257,7 @@ class NetworkTestService {
     async getTestResult(testId: string): Promise<NetworkTestResult | null> {
         const query = 'SELECT * FROM network_test_results WHERE id = ?';
         const row = await this.database.get(query, [testId]);
-        
+
         if (row) {
             const testData = JSON.parse(row.test_data);
             return {
@@ -1313,10 +1277,8 @@ class NetworkTestService {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 86
@@ -1353,11 +1315,11 @@ private async Task ProcessCompressionAsync(CompressionJob job)
             {
                 var fileName = Path.GetFileName(filePath);
                 var entry = archive.CreateEntry(fileName, GetCompressionLevel(job.CompressionLevel));
-                
+
                 using var entryStream = entry.Open();
                 using var fileStream = File.OpenRead(filePath);
                 await fileStream.CopyToAsync(entryStream);
-                
+
                 job.ProcessedFiles++;
             }
         }
@@ -1392,7 +1354,7 @@ public async Task<IActionResult> GetStatus(Guid jobId)
 {
     var job = await _repository.GetByIdAsync(jobId);
     var progress = job.Files.Count > 0 ? (job.ProcessedFiles * 100 / job.Files.Count) : 0;
-    
+
     return Ok(new { Status = job.Status, Progress = progress });
 }
 
@@ -1409,10 +1371,7 @@ public async Task<IActionResult> DownloadArchive(Guid jobId)
 public enum CompressionStatus { Queued, Processing, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 96
@@ -1425,7 +1384,7 @@ from datetime import datetime
 class CompressionService:
     def __init__(self, database):
         self.db = database
-    
+
     async def compress_files(self, files, compression_level, format_type, user_id):
         job = {
             'id': str(uuid.uuid4()),
@@ -1437,51 +1396,51 @@ class CompressionService:
             'processed_files': 0,
             'user_id': user_id
         }
-        
+
         self.save_compression_job(job)
         await self.process_compression_async(job)
-        
+
         return {'job_id': job['id'], 'status': job['status']}
-    
+
     async def process_compression_async(self, job):
         try:
             job['status'] = 'processing'
             output_path = f"archive_{datetime.now().strftime('%Y%m%d_%H%M%S')}.zip"
-            
-            with zipfile.ZipFile(output_path, 'w', zipfile.ZIP_DEFLATED, 
+
+            with zipfile.ZipFile(output_path, 'w', zipfile.ZIP_DEFLATED,
                                compresslevel=job['compression_level']) as archive:
                 for file_path in job['files']:
                     if os.path.exists(file_path):
                         file_name = os.path.basename(file_path)
                         archive.write(file_path, file_name)
                         job['processed_files'] += 1
-            
+
             job['status'] = 'completed'
             job['output_path'] = output_path
             job['compressed_size'] = os.path.getsize(output_path)
-            
+
         except Exception as e:
             job['status'] = 'failed'
             job['error_message'] = str(e)
         finally:
             self.update_compression_job(job)
-    
+
     def get_compression_status(self, job_id):
         job = self.get_compression_job(job_id)
         progress = (job['processed_files'] * 100 // len(job['files'])) if job['files'] else 0
         return {'status': job['status'], 'progress': progress}
-    
+
     def download_archive(self, job_id):
         job = self.get_compression_job(job_id)
         if job['status'] != 'completed':
             return None
-        
+
         with open(job['output_path'], 'rb') as f:
             return f.read()
-    
+
     def save_compression_job(self, job):
         query = """
-        INSERT INTO compression_jobs 
+        INSERT INTO compression_jobs
         (id, files, compression_level, format, status, created_at, user_id)
         VALUES (?, ?, ?, ?, ?, ?, ?)
         """
@@ -1491,11 +1450,11 @@ class CompressionService:
             job['format'], job['status'], job['created_at'], job['user_id']
         ))
         self.db.commit()
-    
+
     def update_compression_job(self, job):
         query = """
-        UPDATE compression_jobs SET 
-        status = ?, processed_files = ?, output_path = ?, 
+        UPDATE compression_jobs SET
+        status = ?, processed_files = ?, output_path = ?,
         compressed_size = ?, error_message = ? WHERE id = ?
         """
         self.db.execute(query, (
@@ -1503,7 +1462,7 @@ class CompressionService:
             job.get('compressed_size'), job.get('error_message'), job['id']
         ))
         self.db.commit()
-    
+
     def get_compression_job(self, job_id):
         query = "SELECT * FROM compression_jobs WHERE id = ?"
         row = self.db.execute(query, (job_id,)).fetchone()
@@ -1515,10 +1474,7 @@ class CompressionService:
         } if row else None
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 127
@@ -1612,7 +1568,7 @@ class CompressionService {
     async getCompressionStatus(jobId: string): Promise<any> {
         const job = await this.getCompressionJob(jobId);
         const progress = job.files.length > 0 ? Math.floor((job.processedFiles * 100) / job.files.length) : 0;
-        
+
         return { status: job.status, progress };
     }
 
@@ -1636,7 +1592,7 @@ class CompressionService {
     private async getCompressionJob(jobId: string): Promise<CompressionJob> {
         const query = 'SELECT * FROM compression_jobs WHERE id = ?';
         const row = await this.database.get(query, [jobId]);
-        
+
         return {
             id: row.id,
             files: JSON.parse(row.files),
@@ -1655,7 +1611,7 @@ class CompressionService {
 ---
 
 ### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 75
@@ -1700,7 +1656,7 @@ public class ProcessMonitoringService
 
                 await _metricsRepository.SaveAsync(session.Id, metric);
                 await AnalyzePerformance(session, metric);
-                
+
                 await Task.Delay(TimeSpan.FromSeconds(5));
             }
             catch (ArgumentException)
@@ -1715,7 +1671,7 @@ public class ProcessMonitoringService
     {
         if (metric.CpuUsage > 80)
             await _alertService.SendAlert(session.UserId, "High CPU usage detected");
-        
+
         if (metric.MemoryUsage > 1024 * 1024 * 1024) // 1GB
             await _alertService.SendAlert(session.UserId, "High memory usage detected");
     }
@@ -1737,10 +1693,7 @@ public async Task<IActionResult> GetMonitoringData(Guid sessionId)
 public enum MonitoringStatus { Active, Stopped, ProcessTerminated }
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 90
@@ -1754,14 +1707,14 @@ class ProcessMonitoringService:
         self.db = database
         self.alert_service = alert_service
         self.active_sessions = {}
-    
+
     async def start_monitoring(self, process_name, user_id):
-        processes = [p for p in psutil.process_iter(['pid', 'name']) 
+        processes = [p for p in psutil.process_iter(['pid', 'name'])
                     if p.info['name'] == process_name]
-        
+
         if not processes:
             raise ValueError("Process not found")
-        
+
         session = {
             'id': str(uuid.uuid4()),
             'process_name': process_name,
@@ -1770,45 +1723,45 @@ class ProcessMonitoringService:
             'start_time': datetime.now(),
             'user_id': user_id
         }
-        
+
         self.save_monitoring_session(session)
         self.active_sessions[session['id']] = session
         asyncio.create_task(self.monitor_process_async(session))
-        
+
         return {'session_id': session['id'], 'status': session['status']}
-    
+
     async def monitor_process_async(self, session):
         while session['status'] == 'active':
             try:
                 process = psutil.Process(session['process_id'])
-                
+
                 metric = {
                     'timestamp': datetime.now(),
                     'cpu_usage': process.cpu_percent(interval=1.0),
                     'memory_usage': process.memory_info().rss,
                     'thread_count': process.num_threads()
                 }
-                
+
                 self.save_metric(session['id'], metric)
                 await self.analyze_performance(session, metric)
-                
+
                 await asyncio.sleep(5)
-                
+
             except psutil.NoSuchProcess:
                 session['status'] = 'process_terminated'
                 break
             except Exception as e:
                 session['status'] = 'error'
                 break
-    
+
     async def analyze_performance(self, session, metric):
         if metric['cpu_usage'] > 80:
             await self.alert_service.send_alert(session['user_id'], "High CPU usage detected")
-        
+
         memory_mb = metric['memory_usage'] / (1024 * 1024)
         if memory_mb > 1000:  # 1GB
             await self.alert_service.send_alert(session['user_id'], "High memory usage detected")
-    
+
     def get_monitoring_data(self, session_id):
         metrics = self.get_metrics(session_id)
         return {
@@ -1818,29 +1771,26 @@ class ProcessMonitoringService:
                 'peak_memory': max(m['memory_usage'] for m in metrics) if metrics else 0
             }
         }
-    
+
     def save_monitoring_session(self, session):
         query = "INSERT INTO monitoring_sessions (id, process_name, process_id, status, start_time, user_id) VALUES (?, ?, ?, ?, ?, ?)"
-        self.db.execute(query, (session['id'], session['process_name'], session['process_id'], 
+        self.db.execute(query, (session['id'], session['process_name'], session['process_id'],
                                session['status'], session['start_time'], session['user_id']))
         self.db.commit()
-    
+
     def save_metric(self, session_id, metric):
         query = "INSERT INTO process_metrics (session_id, timestamp, cpu_usage, memory_usage, thread_count) VALUES (?, ?, ?, ?, ?)"
-        self.db.execute(query, (session_id, metric['timestamp'], metric['cpu_usage'], 
+        self.db.execute(query, (session_id, metric['timestamp'], metric['cpu_usage'],
                                metric['memory_usage'], metric['thread_count']))
         self.db.commit()
-    
+
     def get_metrics(self, session_id):
         query = "SELECT * FROM process_metrics WHERE session_id = ? ORDER BY timestamp"
         rows = self.db.execute(query, (session_id,)).fetchall()
         return [{'timestamp': row[1], 'cpu_usage': row[2], 'memory_usage': row[3], 'thread_count': row[4]} for row in rows]
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 194
@@ -2041,10 +1991,8 @@ class ProcessMonitoringService {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 95
@@ -2108,7 +2056,7 @@ private async Task ExecuteSearchAsync(FileSearchJob job)
 private bool MatchesSearchCriteria(string filePath, FileSearchJob job)
 {
     var fileName = Path.GetFileName(filePath);
-    
+
     if (!string.IsNullOrEmpty(job.SearchCriteria))
     {
         var comparison = job.CaseSensitive ? StringComparison.Ordinal : StringComparison.OrdinalIgnoreCase;
@@ -2146,10 +2094,7 @@ public async Task<IActionResult> GetSearchResults(Guid searchId, [FromQuery] str
 public enum SearchStatus { Running, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 107
@@ -2161,11 +2106,11 @@ from datetime import datetime
 class FileSearchService:
     def __init__(self, database):
         self.db = database
-    
+
     async def search_files(self, search_criteria, search_path, include_subdirectories=True, case_sensitive=False, user_id=""):
         if not os.path.exists(search_path):
             raise ValueError("Search path does not exist")
-        
+
         search_job = {
             'id': str(uuid.uuid4()),
             'search_criteria': search_criteria,
@@ -2177,16 +2122,16 @@ class FileSearchService:
             'processed_files': 0,
             'user_id': user_id
         }
-        
+
         self.save_search_job(search_job)
         asyncio.create_task(self.execute_search_async(search_job))
-        
+
         return {'search_id': search_job['id'], 'status': search_job['status']}
-    
+
     async def execute_search_async(self, job):
         try:
             results = []
-            
+
             if job['include_subdirectories']:
                 for root, dirs, files in os.walk(job['search_path']):
                     for file in files:
@@ -2200,7 +2145,7 @@ class FileSearchService:
                     if os.path.isfile(file_path) and self.matches_search_criteria(file_path, job):
                         results.append(self.create_search_result(file_path))
                     job['processed_files'] += 1
-            
+
             job['results'] = results
             job['status'] = 'completed'
         except Exception as e:
@@ -2209,19 +2154,19 @@ class FileSearchService:
         finally:
             job['end_time'] = datetime.now()
             self.update_search_job(job)
-    
+
     def matches_search_criteria(self, file_path, job):
         file_name = os.path.basename(file_path)
-        
+
         if job['search_criteria']:
             search_text = job['search_criteria'] if job['case_sensitive'] else job['search_criteria'].lower()
             file_name_to_search = file_name if job['case_sensitive'] else file_name.lower()
-            
+
             if search_text not in file_name_to_search:
                 return False
-        
+
         return True
-    
+
     def create_search_result(self, file_path):
         stat = os.stat(file_path)
         return {
@@ -2230,43 +2175,40 @@ class FileSearchService:
             'file_size': stat.st_size,
             'modified_date': datetime.fromtimestamp(stat.st_mtime)
         }
-    
+
     def get_search_results(self, search_id, filter_text="", page=1, page_size=50):
         job = self.get_search_job(search_id)
         results = job.get('results', [])
-        
+
         if filter_text:
             results = [r for r in results if filter_text.lower() in r['file_name'].lower()]
-        
+
         start = (page - 1) * page_size
         end = start + page_size
         paged_results = results[start:end]
-        
+
         return {
             'total_results': len(results),
             'results': paged_results
         }
-    
+
     def save_search_job(self, job):
         query = "INSERT INTO file_search_jobs (id, search_criteria, search_path, status, start_time, user_id) VALUES (?, ?, ?, ?, ?, ?)"
         self.db.execute(query, (job['id'], job['search_criteria'], job['search_path'], job['status'], job['start_time'], job['user_id']))
         self.db.commit()
-    
+
     def update_search_job(self, job):
         query = "UPDATE file_search_jobs SET status = ?, end_time = ?, processed_files = ? WHERE id = ?"
         self.db.execute(query, (job['status'], job.get('end_time'), job['processed_files'], job['id']))
         self.db.commit()
-    
+
     def get_search_job(self, search_id):
         query = "SELECT * FROM file_search_jobs WHERE id = ?"
         row = self.db.execute(query, (search_id,)).fetchone()
         return {'id': row[0], 'search_criteria': row[1], 'status': row[3]} if row else None
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 205
@@ -2461,7 +2403,7 @@ class FileSearchService {
     private async getSearchJob(searchId: string): Promise<FileSearchJob> {
         const query = 'SELECT * FROM file_search_jobs WHERE id = ?';
         const row = await this.database.get(query, [searchId]);
-        
+
         return {
             id: row.id,
             searchCriteria: row.search_criteria,
@@ -2478,10 +2420,8 @@ class FileSearchService {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 88
@@ -2576,10 +2516,7 @@ public enum DbOperationType { Query, Backup, Optimize }
 public enum OperationStatus { Running, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 115
@@ -2591,7 +2528,7 @@ from datetime import datetime
 class DatabaseManagementService:
     def __init__(self, database):
         self.db = database
-    
+
     async def execute_database_operation(self, database_name, operation_type, query="", user_id=""):
         operation = {
             'id': str(uuid.uuid4()),
@@ -2602,16 +2539,16 @@ class DatabaseManagementService:
             'start_time': datetime.now(),
             'user_id': user_id
         }
-        
+
         self.save_operation(operation)
         asyncio.create_task(self.execute_operation_async(operation))
-        
+
         return {'operation_id': operation['id'], 'status': operation['status']}
-    
+
     async def execute_operation_async(self, operation):
         try:
             connection = sqlite3.connect(f"{operation['database_name']}.db")
-            
+
             if operation['operation_type'] == 'query':
                 result = self.execute_query(connection, operation['query'])
                 operation['result'] = str(result)
@@ -2621,7 +2558,7 @@ class DatabaseManagementService:
             elif operation['operation_type'] == 'optimize':
                 self.execute_optimization(connection)
                 operation['result'] = "Database optimization completed"
-            
+
             operation['status'] = 'completed'
         except Exception as e:
             operation['status'] = 'failed'
@@ -2630,43 +2567,43 @@ class DatabaseManagementService:
             operation['end_time'] = datetime.now()
             connection.close()
             self.update_operation(operation)
-    
+
     def execute_query(self, connection, query):
         cursor = connection.cursor()
         cursor.execute(query)
-        
+
         if query.strip().upper().startswith('SELECT'):
             return cursor.fetchall()
         else:
             connection.commit()
             return f"Query executed successfully, {cursor.rowcount} rows affected"
-    
+
     def execute_backup(self, database_name):
         import shutil
         backup_name = f"{database_name}_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.db"
         shutil.copy(f"{database_name}.db", backup_name)
-    
+
     def execute_optimization(self, connection):
         cursor = connection.cursor()
         cursor.execute("VACUUM")
         cursor.execute("REINDEX")
         connection.commit()
-    
+
     def get_database_status(self, database_name):
         try:
             connection = sqlite3.connect(f"{database_name}.db")
             cursor = connection.cursor()
-            
+
             # Get database size
             cursor.execute("SELECT page_count * page_size as size FROM pragma_page_count(), pragma_page_size()")
             size = cursor.fetchone()[0]
-            
+
             # Get table count
             cursor.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table'")
             table_count = cursor.fetchone()[0]
-            
+
             connection.close()
-            
+
             return {
                 'name': database_name,
                 'size': size,
@@ -2679,7 +2616,7 @@ class DatabaseManagementService:
                 'status': 'error',
                 'error_message': str(e)
             }
-    
+
     def get_operation_result(self, operation_id):
         query = "SELECT * FROM database_operations WHERE id = ?"
         row = self.db.execute(query, (operation_id,)).fetchone()
@@ -2687,24 +2624,21 @@ class DatabaseManagementService:
             'id': row[0], 'database_name': row[1], 'operation_type': row[2],
             'status': row[3], 'result': row[4], 'error_message': row[5]
         } if row else None
-    
+
     def save_operation(self, operation):
         query = "INSERT INTO database_operations (id, database_name, operation_type, query, status, start_time, user_id) VALUES (?, ?, ?, ?, ?, ?, ?)"
-        self.db.execute(query, (operation['id'], operation['database_name'], operation['operation_type'], 
+        self.db.execute(query, (operation['id'], operation['database_name'], operation['operation_type'],
                                operation['query'], operation['status'], operation['start_time'], operation['user_id']))
         self.db.commit()
-    
+
     def update_operation(self, operation):
         query = "UPDATE database_operations SET status = ?, result = ?, error_message = ?, end_time = ? WHERE id = ?"
-        self.db.execute(query, (operation['status'], operation.get('result'), operation.get('error_message'), 
+        self.db.execute(query, (operation['status'], operation.get('result'), operation.get('error_message'),
                                operation.get('end_time'), operation['id']))
         self.db.commit()
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 194
@@ -2829,12 +2763,12 @@ class DatabaseManagementService {
     async getDatabaseStatus(databaseName: string): Promise<any> {
         try {
             const db = new sqlite3.Database(`${databaseName}.db`);
-            
+
             const status = await new Promise((resolve, reject) => {
                 db.serialize(() => {
                     db.get("SELECT page_count * page_size as size FROM pragma_page_count(), pragma_page_size()", (err, row: any) => {
                         if (err) reject(err);
-                        
+
                         db.get("SELECT COUNT(*) as table_count FROM sqlite_master WHERE type='table'", (err2, row2: any) => {
                             if (err2) reject(err2);
                             else resolve({
@@ -2863,7 +2797,7 @@ class DatabaseManagementService {
     async getOperationResult(operationId: string): Promise<DatabaseOperation | null> {
         const query = 'SELECT * FROM database_operations WHERE id = ?';
         const row = await this.database.get(query, [operationId]);
-        
+
         if (row) {
             return {
                 id: row.id,
@@ -2905,10 +2839,8 @@ class DatabaseManagementService {
 }
 ```
 
-----
-
 ### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 123
@@ -2969,7 +2901,7 @@ private async Task ExecuteScanAsync(SecurityScan scan)
 private async Task<List<SecurityFinding>> PerformVirusScan(string targetPath)
 {
     var findings = new List<SecurityFinding>();
-    
+
     foreach (var file in Directory.GetFiles(targetPath, "*", SearchOption.AllDirectories))
     {
         if (await IsSuspiciousFile(file))
@@ -2983,14 +2915,14 @@ private async Task<List<SecurityFinding>> PerformVirusScan(string targetPath)
             });
         }
     }
-    
+
     return findings;
 }
 
 private async Task<List<SecurityFinding>> PerformVulnerabilityScan(string targetPath)
 {
     var findings = new List<SecurityFinding>();
-    
+
     // Check for common vulnerabilities
     if (await HasWeakPermissions(targetPath))
     {
@@ -3002,7 +2934,7 @@ private async Task<List<SecurityFinding>> PerformVulnerabilityScan(string target
             Location = targetPath
         });
     }
-    
+
     return findings;
 }
 
@@ -3014,7 +2946,7 @@ private RiskLevel CalculateRiskLevel(List<SecurityFinding> findings)
         return RiskLevel.High;
     if (findings.Any(f => f.Severity == Severity.Medium))
         return RiskLevel.Medium;
-    
+
     return RiskLevel.Low;
 }
 
@@ -3022,7 +2954,7 @@ private RiskLevel CalculateRiskLevel(List<SecurityFinding> findings)
 public async Task<IActionResult> GetScanReport(Guid scanId)
 {
     var scan = await _repository.GetByIdAsync(scanId);
-    
+
     return Ok(new {
         ScanId = scan.Id,
         Status = scan.Status,
@@ -3038,10 +2970,7 @@ public enum RiskLevel { Low, Medium, High, Critical }
 public enum Severity { Low, Medium, High, Critical }
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 172
@@ -3054,11 +2983,11 @@ from datetime import datetime
 class SecurityScanService:
     def __init__(self, database):
         self.db = database
-    
+
     async def start_security_scan(self, scan_type, target_path, user_id):
         if not os.path.exists(target_path):
             raise ValueError("Target path does not exist")
-        
+
         scan = {
             'id': str(uuid.uuid4()),
             'scan_type': scan_type,
@@ -3067,23 +2996,23 @@ class SecurityScanService:
             'start_time': datetime.now(),
             'user_id': user_id
         }
-        
+
         self.save_scan(scan)
         asyncio.create_task(self.execute_scan_async(scan))
-        
+
         return {'scan_id': scan['id'], 'status': scan['status']}
-    
+
     async def execute_scan_async(self, scan):
         try:
             findings = []
-            
+
             if scan['scan_type'] == 'virus_scan':
                 findings.extend(await self.perform_virus_scan(scan['target_path']))
             elif scan['scan_type'] == 'vulnerability_scan':
                 findings.extend(await self.perform_vulnerability_scan(scan['target_path']))
             elif scan['scan_type'] == 'permission_audit':
                 findings.extend(await self.perform_permission_audit(scan['target_path']))
-            
+
             scan['findings'] = findings
             scan['status'] = 'completed'
             scan['risk_level'] = self.calculate_risk_level(findings)
@@ -3093,15 +3022,15 @@ class SecurityScanService:
         finally:
             scan['end_time'] = datetime.now()
             self.update_scan(scan)
-    
+
     async def perform_virus_scan(self, target_path):
         findings = []
         suspicious_extensions = ['.exe', '.scr', '.bat', '.com', '.pif']
-        
+
         for root, dirs, files in os.walk(target_path):
             for file in files:
                 file_path = os.path.join(root, file)
-                
+
                 # Check suspicious extensions
                 if any(file.lower().endswith(ext) for ext in suspicious_extensions):
                     findings.append({
@@ -3110,7 +3039,7 @@ class SecurityScanService:
                         'description': f'Suspicious file detected: {file}',
                         'location': file_path
                     })
-                
+
                 # Check file size (very large files might be suspicious)
                 try:
                     if os.path.getsize(file_path) > 100 * 1024 * 1024:  # 100MB
@@ -3122,17 +3051,17 @@ class SecurityScanService:
                         })
                 except OSError:
                     pass
-        
+
         return findings
-    
+
     async def perform_vulnerability_scan(self, target_path):
         findings = []
-        
+
         # Check file permissions
         try:
             stat_info = os.stat(target_path)
             permissions = oct(stat_info.st_mode)[-3:]
-            
+
             if permissions == '777':
                 findings.append({
                     'type': 'weak_permissions',
@@ -3142,7 +3071,7 @@ class SecurityScanService:
                 })
         except OSError:
             pass
-        
+
         # Check for common vulnerable files
         vulnerable_files = ['.htaccess', 'config.php', 'database.yml']
         for root, dirs, files in os.walk(target_path):
@@ -3154,18 +3083,18 @@ class SecurityScanService:
                         'description': f'Potentially vulnerable configuration file: {file}',
                         'location': os.path.join(root, file)
                     })
-        
+
         return findings
-    
+
     async def perform_permission_audit(self, target_path):
         findings = []
-        
+
         for root, dirs, files in os.walk(target_path):
             for file in files:
                 file_path = os.path.join(root, file)
                 try:
                     stat_info = os.stat(file_path)
-                    
+
                     # Check if file is world-writable
                     if stat_info.st_mode & 0o002:
                         findings.append({
@@ -3176,9 +3105,9 @@ class SecurityScanService:
                         })
                 except OSError:
                     pass
-        
+
         return findings
-    
+
     def calculate_risk_level(self, findings):
         if any(f['severity'] == 'critical' for f in findings):
             return 'critical'
@@ -3188,12 +3117,12 @@ class SecurityScanService:
             return 'medium'
         else:
             return 'low'
-    
+
     def get_scan_report(self, scan_id):
         scan = self.get_scan(scan_id)
         if not scan:
             return None
-        
+
         return {
             'scan_id': scan['id'],
             'status': scan['status'],
@@ -3201,29 +3130,26 @@ class SecurityScanService:
             'findings_count': len(scan.get('findings', [])),
             'findings': scan.get('findings', [])
         }
-    
+
     def save_scan(self, scan):
         query = "INSERT INTO security_scans (id, scan_type, target_path, status, start_time, user_id) VALUES (?, ?, ?, ?, ?, ?)"
-        self.db.execute(query, (scan['id'], scan['scan_type'], scan['target_path'], 
+        self.db.execute(query, (scan['id'], scan['scan_type'], scan['target_path'],
                                scan['status'], scan['start_time'], scan['user_id']))
         self.db.commit()
-    
+
     def update_scan(self, scan):
         query = "UPDATE security_scans SET status = ?, risk_level = ?, end_time = ?, error_message = ? WHERE id = ?"
-        self.db.execute(query, (scan['status'], scan.get('risk_level'), scan.get('end_time'), 
+        self.db.execute(query, (scan['status'], scan.get('risk_level'), scan.get('end_time'),
                                scan.get('error_message'), scan['id']))
         self.db.commit()
-    
+
     def get_scan(self, scan_id):
         query = "SELECT * FROM security_scans WHERE id = ?"
         row = self.db.execute(query, (scan_id,)).fetchone()
         return {'id': row[0], 'scan_type': row[1], 'status': row[3], 'risk_level': row[6]} if row else None
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 
 **Satır Sayısı:** 287
@@ -3341,7 +3267,7 @@ class SecurityScanService {
 
         await this.scanDirectory(targetPath, async (filePath) => {
             const fileName = path.basename(filePath);
-            
+
             // Check suspicious extensions
             if (suspiciousExtensions.some(ext => fileName.toLowerCase().endsWith(ext))) {
                 findings.push({
@@ -3378,7 +3304,7 @@ class SecurityScanService {
         try {
             const stats = await fs.stat(targetPath);
             const mode = (stats.mode & parseInt('777', 8)).toString(8);
-            
+
             if (mode === '777') {
                 findings.push({
                     type: 'weak_permissions',
@@ -3393,10 +3319,10 @@ class SecurityScanService {
 
         // Check for vulnerable files
         const vulnerableFiles = ['.htaccess', 'config.php', 'database.yml'];
-        
+
         await this.scanDirectory(targetPath, async (filePath) => {
             const fileName = path.basename(filePath);
-            
+
             if (vulnerableFiles.includes(fileName)) {
                 findings.push({
                     type: 'vulnerable_config',
@@ -3417,7 +3343,7 @@ class SecurityScanService {
             try {
                 const stats = await fs.stat(filePath);
                 const fileName = path.basename(filePath);
-                
+
                 // Check if file is world-writable (simplified check)
                 if (stats.mode & 0o002) {
                     findings.push({
@@ -3498,7 +3424,7 @@ class SecurityScanService {
     private async getScan(scanId: string): Promise<SecurityScan | null> {
         const query = 'SELECT * FROM security_scans WHERE id = ?';
         const row = await this.database.get(query, [scanId]);
-        
+
         if (row) {
             return {
                 id: row.id,

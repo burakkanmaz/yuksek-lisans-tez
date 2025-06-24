@@ -53,12 +53,12 @@ app = FastAPI()
 async def get_disk_usage(directory_path: str, format: str = "json"):
     if not os.path.isdir(directory_path):
         raise HTTPException(status_code=400, detail="Invalid directory path")
-    
+
     total, used, free = shutil.disk_usage(directory_path)
-    directory_size = sum(os.path.getsize(os.path.join(dirpath, filename)) 
-                     for dirpath, dirnames, filenames in os.walk(directory_path) 
+    directory_size = sum(os.path.getsize(os.path.join(dirpath, filename))
+                     for dirpath, dirnames, filenames in os.walk(directory_path)
                      for filename in filenames)
-    
+
     report = {
         "directory": directory_path,
         "total_space": total,
@@ -66,7 +66,7 @@ async def get_disk_usage(directory_path: str, format: str = "json"):
         "used_space": directory_size,
         "usage_percentage": (directory_size / total) * 100
     }
-    
+
     if format == "json":
         return report
     elif format == "csv":
@@ -91,7 +91,7 @@ const app = express();
 
 app.get('/disk-usage', (req, res) => {
     const { directoryPath, format = 'json' } = req.query;
-    
+
     if (!fs.existsSync(directoryPath as string) || !fs.lstatSync(directoryPath as string).isDirectory()) {
         return res.status(400).json({ error: 'Invalid directory path' });
     }
@@ -123,18 +123,18 @@ app.get('/disk-usage', (req, res) => {
 function calculateDirectorySize(dirPath: string): number {
     let totalSize = 0;
     const files = fs.readdirSync(dirPath);
-    
+
     files.forEach(file => {
         const filePath = path.join(dirPath, file);
         const stat = fs.statSync(filePath);
-        
+
         if (stat.isDirectory()) {
             totalSize += calculateDirectorySize(filePath);
         } else {
             totalSize += stat.size;
         }
     });
-    
+
     return totalSize;
 }
 ```
@@ -198,7 +198,7 @@ async def process_file(file_path: str, operation: str):
             result = await file_processor.convert(file_path)
         else:
             raise HTTPException(status_code=400, detail="Unsupported operation")
-        
+
         return {"processed_file": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Processing failed: {str(e)}")
@@ -217,7 +217,7 @@ app.use(express.json());
 
 app.post('/process-file', async (req, res) => {
     const { filePath, operation } = req.body;
-    
+
     if (!fs.existsSync(filePath)) {
         return res.status(400).json({ error: 'File not found' });
     }
@@ -259,14 +259,14 @@ public IActionResult ViewLogs(string logFileName, string filter = "", int page =
         return NotFound("Log file not found");
 
     var logEntries = System.IO.File.ReadAllLines(logPath);
-    
+
     if (!string.IsNullOrEmpty(filter))
     {
         logEntries = logEntries.Where(line => line.Contains(filter)).ToArray();
     }
-    
+
     var pagedLogs = logEntries.Skip((page - 1) * pageSize).Take(pageSize);
-    
+
     return Ok(new {
         TotalEntries = logEntries.Length,
         Page = page,
@@ -293,14 +293,14 @@ async def view_logs(log_file_name: str, filter: str = "", page: int = 1, page_si
 
     with open(log_path, "r") as f:
         log_entries = f.readlines()
-        
+
     if filter:
         log_entries = [line for line in log_entries if filter in line]
-        
+
     start = (page - 1) * page_size
     end = start + page_size
     paged_logs = log_entries[start:end]
-    
+
     return {
         "total_entries": len(log_entries),
         "page": page,
@@ -357,7 +357,7 @@ public IActionResult BackupDirectory(string directoryPath)
         return BadRequest("Directory not found");
 
     var backupPath = Path.Combine("Backups", $"{Path.GetFileName(directoryPath)}_{DateTime.Now:yyyyMMddHHmmss}.zip");
-    
+
     try
     {
         System.IO.Compression.ZipFile.CreateFromDirectory(directoryPath, backupPath);
@@ -482,12 +482,12 @@ async def test_connection(target_address: str):
     try:
         # The '-c 4' sends 4 packets. Adjust as needed.
         result = subprocess.run(['ping', '-c', '4', target_address], capture_output=True, text=True, timeout=10)
-        
+
         if result.returncode == 0:
             return {"status": "Success", "output": result.stdout}
         else:
             return {"status": "Failed", "error": result.stderr}
-            
+
     except subprocess.TimeoutExpired:
         raise HTTPException(status_code=408, detail="Connection test timed out.")
     except Exception as e:
@@ -525,12 +525,12 @@ app.get('/test-connection', (req, res) => {
 public IActionResult CompressFiles([FromBody] List<string> filePaths, string compressionLevel = "Optimal")
 {
     var zipPath = Path.Combine("Archives", $"archive_{DateTime.Now:yyyyMMddHHmmss}.zip");
-    
+
     try
     {
         using var zipStream = new FileStream(zipPath, FileMode.Create);
         using var archive = new System.IO.Compression.ZipArchive(zipStream, System.IO.Compression.ZipArchiveMode.Create);
-        
+
         var level = (System.IO.Compression.CompressionLevel)Enum.Parse(typeof(System.IO.Compression.CompressionLevel), compressionLevel, true);
 
         foreach (var filePath in filePaths)
@@ -589,13 +589,13 @@ app.use(express.json());
 app.post('/compress-files', (req, res) => {
     const { filePaths, compressionLevel = 9 } = req.body;
     const zipPath = path.join('Archives', `archive_${Date.now()}.zip`);
-    
+
     const output = fs.createWriteStream(zipPath);
     const archive = archiver('zip', { zlib: { level: compressionLevel } });
 
     output.on('close', () => res.download(zipPath));
     archive.on('error', (err) => res.status(500).json({ error: `Compression failed: ${err.message}` }));
-    
+
     archive.pipe(output);
     filePaths.forEach((filePath: string) => {
         if(fs.existsSync(filePath)) {
@@ -632,7 +632,7 @@ public async Task<IActionResult> MonitorProcess(string processName)
         });
         await Task.Delay(5000, cts.Token); // every 5 seconds
     }
-    
+
     // In a real app, you'd probably return this data formatted for a graph
     return Ok(monitoringData);
 }
@@ -655,7 +655,7 @@ async def monitor_process(process_name: str):
         proc = next(p for p in psutil.process_iter(['name']) if p.info['name'] == process_name)
     except StopIteration:
         raise HTTPException(status_code=404, detail="Process not found.")
-        
+
     monitoring_data = []
     for _ in range(12): # Monitor for 1 minute (12 * 5 seconds)
         monitoring_data.append({
@@ -664,7 +664,7 @@ async def monitor_process(process_name: str):
             "memory_info": proc.memory_info()
         })
         await asyncio.sleep(4) # sleep for 4, interval is 1
-        
+
     return monitoring_data
 ```
 
@@ -715,14 +715,14 @@ public IActionResult SearchFiles(string basePath, string searchPattern, bool rec
     {
         var searchOption = recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
         var files = Directory.EnumerateFiles(basePath, searchPattern, searchOption);
-        
+
         var result = files.Select(f => new {
             FileName = Path.GetFileName(f),
             FilePath = f,
             FileSize = new FileInfo(f).Length,
             LastModified = new FileInfo(f).LastWriteTimeUtc
         });
-        
+
         return Ok(result);
     }
     catch(Exception ex)
@@ -746,7 +746,7 @@ app = FastAPI()
 async def search_files(base_path: str, search_pattern: str, recursive: bool = True):
     if not os.path.isdir(base_path):
         raise HTTPException(status_code=400, detail="Base path does not exist.")
-        
+
     results = []
     if recursive:
         for dirpath, _, filenames in os.walk(base_path):
@@ -762,7 +762,7 @@ async def search_files(base_path: str, search_pattern: str, recursive: bool = Tr
     else:
         # Non-recursive implementation
         pass
-        
+
     return results
 ```
 
@@ -824,7 +824,7 @@ public async Task<IActionResult> ManageDatabase(string dbName, string command)
     // WARNING: This is a highly simplified and insecure example.
     // In a real application, never pass raw commands. Use a proper DB driver.
     var connectionString = $"Server=localhost;Database={dbName};User Id=admin;Password=password;";
-    
+
     try
     {
         using var connection = new Npgsql.NpgsqlConnection(connectionString);
@@ -912,10 +912,10 @@ public async Task<IActionResult> RunSecurityScan(string target, string scanType)
     {
         arguments = $"-sS -sV -T4 {target}";
     }
-    
+
     var process = System.Diagnostics.Process.Start("nmap", arguments);
     await process.WaitForExitAsync();
-    
+
     // Process and return scan results from a file, etc.
     return Ok(new { Success = true, Message = "Scan completed."});
 }
@@ -936,7 +936,7 @@ async def run_security_scan(target: str, scan_type: str):
     arguments = ["-T4", "-A", "-v", target]
     if scan_type == "stealth":
         arguments = ["-sS", "-sV", "-T4", target]
-        
+
     try:
         result = subprocess.run(["nmap"] + arguments, capture_output=True, text=True, check=True)
         return {"success": True, "report": result.stdout}

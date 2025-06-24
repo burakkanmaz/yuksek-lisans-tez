@@ -1,7 +1,7 @@
 ### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **Satır Sayısı:** 1
-**🤖 AI:** Grok  
+**🤖 AI:** Grok
 
 ```csharp
 [HttpGet("search-users")]

@@ -45,7 +45,7 @@ import { join } from 'path';
 export const searchFiles = async (req: Request, res: Response) => {
     const fileName: string = req.body.fileName;
     const results: string[] = [];
-    
+
     async function searchDir(dir: string) {
         const entries = await readdir(dir);
         for (const entry of entries) {
@@ -58,7 +58,7 @@ export const searchFiles = async (req: Request, res: Response) => {
             }
         }
     }
-    
+
     await searchDir('/path/to/search');
     res.json({ results });
 };

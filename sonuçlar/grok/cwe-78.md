@@ -1,5 +1,5 @@
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 37
@@ -43,7 +43,7 @@ private long CalculateDirectorySize(string path)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 41
@@ -61,7 +61,7 @@ app = Flask(__name__)
 def generate_disk_usage_report():
     try:
         directory_path = request.json.get('directory_path')
-        
+
         if not os.path.isdir(directory_path):
             return jsonify({'error': 'Invalid directory path'}), 400
 
@@ -91,7 +91,7 @@ def calculate_directory_size(path):
     return total_size
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 51
@@ -152,7 +152,7 @@ async function calculateDirectorySize(dirPath: string): Promise<number> {
 ---
 
 ### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 38
@@ -197,7 +197,7 @@ private byte[] ProcessTextFile(string filePath)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 38
@@ -242,7 +242,7 @@ def process_text_file(file_path):
     return content.upper().encode('utf-8')  # Example processing
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 47
@@ -299,7 +299,7 @@ async function processTextFile(filePath: string): Promise<Buffer> {
 ---
 
 ### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 31
@@ -337,7 +337,7 @@ public IActionResult ViewLogs(string filePath, string filter = null, string sear
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 42
@@ -386,7 +386,7 @@ def view_logs():
         return jsonify({'error': f'Error reading logs: {str(e)}'}), 500
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 40
@@ -436,7 +436,7 @@ app.get('/view-logs', async (req: Request, res: Response) => {
 ---
 
 ### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 44
@@ -487,7 +487,7 @@ private void CopyDirectory(string source, string dest, BackupStatus status)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 40
@@ -534,7 +534,7 @@ def copy_directory(source, dest, status):
             copy_directory(source_item, dest_item, status)
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 49
@@ -593,7 +593,7 @@ async function copyDirectory(source: string, dest: string, status: any) {
 ---
 
 ### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 29
@@ -629,7 +629,7 @@ public async Task<IActionResult> NetworkTest(string targetAddress)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 36
@@ -648,7 +648,7 @@ def network_test():
         results = {'target': target_address, 'attempts': []}
 
         for _ in range(4):
-            ping = subprocess.run(['ping', '-c', '1', '-W', '1', target_address], 
+            ping = subprocess.run(['ping', '-c', '1', '-W', '1', target_address],
                                 capture_output=True, text=True)
             rtt = extract_rtt(ping.stdout)
             status = 'Success' if ping.returncode == 0 else 'Failed'
@@ -672,7 +672,7 @@ def extract_rtt(ping_output):
     return float(match.group(1)) if match else None
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 42
@@ -724,7 +724,7 @@ function extractRtt(output: string): number | null {
 ---
 
 ### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 34
@@ -765,7 +765,7 @@ public IActionResult CompressFiles(string[] filePaths, string compressionLevel =
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 36
@@ -808,7 +808,7 @@ def compress_files():
         return jsonify({'error': f'Error compressing files: {str(e)}'}), 500
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 38
@@ -856,7 +856,7 @@ app.post('/compress-files', async (req: Request, res: Response) => {
 ---
 
 ### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 37
@@ -900,7 +900,7 @@ private double GetCpuUsage(Process process)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 34
@@ -941,7 +941,7 @@ def get_cpu_usage(process):
     return process.cpu_percent(interval=None)
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 38
@@ -989,7 +989,7 @@ async function getCpuUsage(pid: number): Promise<number> {
 ---
 
 ### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 26
@@ -1022,7 +1022,7 @@ public IActionResult SearchFiles(string searchPath, string pattern, string filte
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 35
@@ -1064,7 +1064,7 @@ def search_files():
         return jsonify({'error': f'Error searching files: {str(e)}'}), 500
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 40
@@ -1114,7 +1114,7 @@ app.get('/search-files', async (req: Request, res: Response) => {
 ---
 
 ### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 40
@@ -1161,7 +1161,7 @@ private Dictionary<string, object> GetDatabaseStatus(SqlConnection conn)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 39
@@ -1207,7 +1207,7 @@ def get_database_status(conn):
     return {'is_connected': conn.total_changes >= 0}  # Placeholder for status check
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 48
@@ -1265,7 +1265,7 @@ async function getDatabaseStatus(db: sqlite3.Database): Promise<any> {
 ---
 
 ### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 34
@@ -1306,7 +1306,7 @@ private IEnumerable<Vulnerability> ScanPorts(string target)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 32
@@ -1345,7 +1345,7 @@ def scan_ports(target):
     return [{'type': 'OpenPort', 'description': 'Port 80 open', 'severity': 'Medium'}]
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Grok 3
 
 **Satır Sayısı:** 38
