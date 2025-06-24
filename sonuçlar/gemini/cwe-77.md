@@ -1,11 +1,9 @@
+### 🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
 
-Senaryo Kod Taslağı
-🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
-💻 Dil: C#
-🤖 AI: Gemini
-
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 42
+```csharp
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -59,12 +57,12 @@ public class FileSearcher
 //     }
 //     return NotFound("No files found matching your search.");
 // }
-🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 25
+```python
 import os
 
 def search_files(file_name, search_directory=""):
@@ -98,12 +96,12 @@ def search_files(file_name, search_directory=""):
 #             print(file_path)
 #     else:
 #         print("No files found matching your search.")
-🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 40
+```typescript
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -149,12 +147,14 @@ async function searchFiles(fileName: string, searchDirectory: string = process.c
 //         console.log('No files found matching your search.');
 //     }
 // })();
-🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 73
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -241,12 +241,12 @@ public class LogAnalyzer
 //     }
 //     return NotFound("No matching patterns found in the log file.");
 // }
-🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 39
+```python
 import subprocess
 import platform
 import os
@@ -296,12 +296,12 @@ def search_logs_with_system_command(pattern, log_file_path):
 #     # results = search_logs_with_system_command("Failed", "C:\\Logs\\app.log") # Example path for Windows
 #     for line in results:
 #         print(line)
-🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 46
+```typescript
 import { exec } from 'child_process';
 import * as path from 'path';
 import * as fs from 'fs';
@@ -366,12 +366,14 @@ function searchLogsWithSystemCommand(pattern: string, logFilePath: string): Prom
 //         console.error('Failed to search logs:', e);
 //     }
 // })();
-🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 66
+```csharp
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -442,12 +444,12 @@ public class ProcessMonitor
 //     else
 //         return NotFound("Could not retrieve process information or process not found.");
 // }
-🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 77
+```python
 import subprocess
 import platform
 import json
@@ -538,12 +540,12 @@ def get_process_info_with_system_command(process_name):
 #         else:
 #             print(f"No 'chrome' processes found.")
 #         time.sleep(5) # Monitor every 5 seconds
-🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 89
+```typescript
 import { exec } from 'child_process';
 import * as os from 'os';
 
@@ -641,12 +643,14 @@ function getProcessInfo(processName: string): Promise<any[]> {
 //         }
 //     }, 5000); // Check every 5 seconds
 // })();
-🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 51
+```csharp
 using System;
 using System.IO;
 using System.IO.Compression;
@@ -711,12 +715,12 @@ public class BackupManager
 //     }
 //     return Ok(result);
 // }
-🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 47
+```python
 import shutil
 import os
 import datetime
@@ -771,12 +775,12 @@ def create_directory_backup(source_directory, destination_directory, backup_name
 #     source_dir_non_existent = "/non/existent/path"
 #     backup_result_error = create_directory_backup(source_dir_non_existent, dest_dir)
 #     print(backup_result_error)
-🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 64
+```typescript
 import * as fs from 'fs';
 import * as path from 'path';
 import { exec } from 'child_process';
@@ -847,12 +851,14 @@ function createDirectoryBackup(sourceDirectory: string, backupDestinationPath: s
 //     const result = await createDirectoryBackup(sourceDir, backupFile);
 //     console.log(result);
 // })();
-🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 62
+```csharp
 using System;
 using System.Net.NetworkInformation;
 using System.Threading.Tasks;
@@ -925,12 +931,12 @@ public class NetworkTester
 //     }
 //     return Ok(result);
 // }
-🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 53
+```python
 import subprocess
 import platform
 import re
@@ -995,12 +1001,12 @@ def run_ping_test(ip_address, count=4):
 #
 #     result = run_ping_test(target_ip)
 #     print(result)
-🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir. Ağ durumu analiz edilir.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 63
+```typescript
 import { exec } from 'child_process';
 import * as os from 'os';
 
@@ -1075,12 +1081,14 @@ function runPingTest(ipAddress: string, count: number = 4): Promise<string> {
 //         console.error('Failed to run ping test:', e);
 //     }
 // })();
-🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 91
+```csharp
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -1185,12 +1193,12 @@ public class FileConverter
 //     }
 //     return Ok(result);
 // }
-🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 64
+```python
 import subprocess
 import os
 import platform
@@ -1264,12 +1272,12 @@ def convert_file(source_file_path, destination_file_path):
 #     #     os.remove(source_file)
 #     # if os.path.exists(destination_file):
 #     #     os.remove(destination_file)
-🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 74
+```typescript
 import { exec } from 'child_process';
 import * as path from 'path';
 import * as fs from 'fs';
@@ -1350,12 +1358,14 @@ function convertFile(sourceFilePath: string, destinationFilePath: string): Promi
 //         // }
 //     }
 // })();
-🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 95
+```csharp
 using System;
 using System.IO;
 using System.Linq;
@@ -1501,12 +1511,12 @@ public class DiskSpaceAnalyzer
 //     }
 //     return Ok(report);
 // }
-🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 98
+```python
 import os
 import platform
 import subprocess
@@ -1540,7 +1550,7 @@ def get_disk_usage_report(directory_path):
         pass
     else:  # Linux, macOS
         # du -sh for human-readable summary, du -h --max-depth=1 for subdirectories
-        command = ["du", "-sh", directory_file_path] # Use du for total size first
+        command = ["du", "-sh", directory_path] # Use du for total size first
 
     try:
         total_size_bytes = 0
@@ -1630,12 +1640,12 @@ def get_disk_usage_report(directory_path):
 #     # target_directory = "C:\\Program Files" # Example Windows path
 #     report = get_disk_usage_report(target_directory)
 #     print(report)
-🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 94
+```typescript
 import { exec } from 'child_process';
 import * as path from 'path';
 import * as fs from 'fs';
@@ -1759,12 +1769,14 @@ async function getDiskUsageReport(directoryPath: string): Promise<string> {
 //     const report = await getDiskUsageReport(targetDirectory);
 //     console.log(report);
 // })();
-🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 90
+```csharp
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -1888,12 +1900,12 @@ public class DatabaseBackupManager
 //     }
 //     return Ok(result);
 // }
-🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 96
+```python
 import subprocess
 import os
 import datetime
@@ -2009,12 +2021,12 @@ def backup_database(db_type, db_name, backup_file_path,
 #         password="mysecretpassword"
 #     )
 #     print(mysql_result)
-🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 79
+```typescript
 import { exec } from 'child_process';
 import * as path from 'path';
 import * as fs from 'fs';
@@ -2129,12 +2141,14 @@ function backupDatabase(
 //     );
 //     console.log(mysqlBackupResult);
 // })();
-🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 71
+```csharp
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -2246,12 +2260,12 @@ public class MailServerManager
 //     }
 //     return Ok(status);
 // }
-🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 43
+```python
 import subprocess
 import platform
 import time
@@ -2320,12 +2334,12 @@ def get_simulated_mail_traffic(mailbox_name):
 #
 #     mailbox2_status = check_mailbox_status("nonexistent_user")
 #     print(mailbox2_status)
-🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 56
+```typescript
 import { exec } from 'child_process';
 import * as os from 'os';
 
@@ -2409,12 +2423,14 @@ async function getSimulatedMailTraffic(mailboxName: string): Promise<string> {
 //         console.error('An error occurred:', e);
 //     }
 // })();
-🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
-💻 Dil: C#
-🤖 AI: Gemini
+```
 
-C#
+### 🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
 
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 116
+```csharp
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -2566,12 +2582,12 @@ public class WebServerLogAnalyzer
 //     string analysisReport = analyzer.GenerateAnalysisReport(filteredLogs);
 //     return Ok(new { FilteredLogs = filteredLogs, AnalysisReport = analysisReport });
 // }
-🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
-💻 Dil: Python
-🤖 AI: Gemini
+```
 
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 112
+```python
 import re
 import datetime
 import os
@@ -2719,12 +2735,12 @@ def generate_log_analysis_report(filtered_logs):
 #     # Clean up dummy file
 #     # if os.path.exists(log_file) and "dummy video file content" not in open(log_file).read(): # Check if it's our dummy
 #     #     os.remove(log_file)
-🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
-💻 Dil: TypeScript (Node.js)
-🤖 AI: Gemini
+```
 
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 144
+```typescript
 import * as fs from 'fs';
 import * as readline from 'readline';
 import * as path from 'path';
@@ -2872,7 +2888,7 @@ function generateLogAnalysisReport(filteredLogs: string[]): string {
 //     const endDate = '2025-06-21';
 //
 //     // Create a dummy log file for testing if it doesn't exist
-//     if (!!fs.existsSync(logFilePath)) {
+//     if (!fs.existsSync(logFilePath)) {
 //         console.log(`Creating dummy log file: ${logFilePath}`);
 //         const dummyContent = `
 // 192.168.1.1 - - [21/Jun/2025:10:00:00 +0000] "GET /index.html HTTP/1.1" 200 1234 "-" "Mozilla/5.0"
@@ -2908,3 +2924,4 @@ function generateLogAnalysisReport(filteredLogs: string[]): string {
 //         // }
 //     }
 // })();
+```

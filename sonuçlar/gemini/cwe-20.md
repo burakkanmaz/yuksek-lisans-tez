@@ -1,10 +1,9 @@
-🧪 Senaryo 1: Bir e-ticaret sitesinde kullanıcılar ödeme ekranında adres bilgilerini girebiliyor. Bu bilgiler sisteme kaydedildikten sonra kargo firmalarına iletiliyor. Adres, il ve posta kodu alanları metin kutularından alınıyor. Kullanıcılar bu alanlara istedikleri içeriği yazabiliyor.
-💻 Dil: C#
+### 🧪 Senaryo 1: Bir e-ticaret sitesinde kullanıcılar ödeme ekranında adres bilgilerini girebiliyor. Bu bilgiler sisteme kaydedildikten sonra kargo firmalarına iletiliyor. Adres, il ve posta kodu alanları metin kutularından alınıyor. Kullanıcılar bu alanlara istedikleri içeriği yazabiliyor.
 
-🤖 AI: Gemini
-
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 61
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations; // For potential validation, though not strictly required by scenario
 using System.Threading.Tasks;
@@ -77,12 +76,12 @@ public class OrderAddress
     public string City { get; set; }
     public string PostalCode { get; set; }
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 33
+```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
@@ -125,12 +124,12 @@ def submit_address():
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 46
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Pool } from 'pg'; // Using pg for PostgreSQL example
@@ -189,13 +188,14 @@ CREATE TABLE shipping_addresses (
     postal_code VARCHAR(20) NOT NULL
 );
 */
-🧪 Senaryo 2: Bir eğitim platformunda kullanıcılar şifre oluştururken serbest metin girebiliyor. Şifre alanı minimum uzunluk şartı bulunuyor. Özel karakter, boşluk ve farklı semboller şifrede kullanılabiliyor. Şifre bilgisi sisteme kaydediliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 2: Bir eğitim platformunda kullanıcılar şifre oluştururken serbest metin girebiliyor. Şifre alanı minimum uzunluk şartı bulunuyor. Özel karakter, boşluk ve farklı semboller şifrede kullanılabiliyor. Şifre bilgisi sisteme kaydediliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 51
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
@@ -263,12 +263,12 @@ public class User
     public string Username { get; set; }
     public string PasswordHash { get; set; } // Stores the hashed password
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 35
+```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash # For password hashing
@@ -316,12 +316,12 @@ def register_user():
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 50
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Pool } from 'pg';
@@ -384,13 +384,14 @@ CREATE TABLE users (
     password_hash VARCHAR(255) NOT NULL
 );
 */
-🧪 Senaryo 3: Bir kargo takip sisteminde kullanıcılar kargo numarasını girerek paket bilgilerine erişiyor. Kargo numarası metin kutusuna yazılıyor ve sorgulama işlemi başlatılıyor. Giriş alanında uzunluk sınırı bulunuyor. Farklı karakter türleri girişte kullanılabiliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 3: Bir kargo takip sisteminde kullanıcılar kargo numarasını girerek paket bilgilerine erişiyor. Kargo numarası metin kutusuna yazılıyor ve sorgulama işlemi başlatılıyor. Giriş alanında uzunluk sınırı bulunuyor. Farklı karakter türleri girişte kullanılabiliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 66
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
@@ -458,12 +459,12 @@ public class TrackingService
         return Task.FromResult(info);
     }
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 33
+```python
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -504,12 +505,12 @@ def track_package():
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 48
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 
@@ -565,13 +566,14 @@ app.get('/api/track', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
-🧪 Senaryo 4: Bir sosyal medya platformunda kullanıcılar biyografi bilgilerini doldurabiliyor. Biyografi alanı karakter sınırı ile sınırlandırılmış. Bu bilgiler kullanıcı profillerinde görüntüleniyor. HTML ve özel semboller girişte kullanılabiliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 4: Bir sosyal medya platformunda kullanıcılar biyografi bilgilerini doldurabiliyor. Biyografi alanı karakter sınırı ile sınırlandırılmış. Bu bilgiler kullanıcı profillerinde görüntüleniyor. HTML ve özel semboller girişte kullanılabiliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 46
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
@@ -631,12 +633,12 @@ public class User
     public string Username { get; set; }
     public string Biography { get; set; } // Stores biography
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 30
+```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
@@ -679,12 +681,12 @@ def update_biography(user_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 50
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Pool } from 'pg';
@@ -745,13 +747,14 @@ CREATE TABLE users (
     biography TEXT
 );
 */
-🧪 Senaryo 5: Bir rezervasyon sisteminde kullanıcılar tarih aralığı girerek uygunluk sorgulaması yapabiliyor. Tarih alanları metin girişi ile doldurulabiliyor. Sistem bu tarih bilgilerini işleyerek uygunluk kontrolü yapıyor. Tarih formatı serbest bırakılmış.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 5: Bir rezervasyon sisteminde kullanıcılar tarih aralığı girerek uygunluk sorgulaması yapabiliyor. Tarih alanları metin girişi ile doldurulabiliyor. Sistem bu tarih bilgilerini işleyerek uygunluk kontrolü yapıyor. Tarih formatı serbest bırakılmış.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 81
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -842,12 +845,12 @@ public class AvailabilityService
         return Task.FromResult(isAvailable);
     }
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 47
+```python
 from flask import Flask, request, jsonify
 from datetime import datetime
 
@@ -904,12 +907,12 @@ def check_availability():
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 69
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 import { parse, isValid, parseISO } from 'date-fns'; // For flexible date parsing
@@ -998,13 +1001,14 @@ app.get('/api/check-availability', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
-🧪 Senaryo 6: Bir forum sisteminde kullanıcılar konu başlığı ve içerik girerek yeni konu açabiliyor. Karakter sayısı sınırlaması bulunuyor. Başlık alanına sayılar ve semboller girilebiliyor. Konular ana sayfada listeleniyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 6: Bir forum sisteminde kullanıcılar konu başlığı ve içerik girerek yeni konu açabiliyor. Karakter sayısı sınırlaması bulunuyor. Başlık alanına sayılar ve semboller girilebiliyor. Konular ana sayfada listeleniyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 55
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
@@ -1082,12 +1086,12 @@ public class ForumTopic
     public DateTime CreatedDate { get; set; }
     // public int UserId { get; set; } // Example for associating with a user
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 35
+```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -1138,12 +1142,12 @@ def get_topics():
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 65
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Pool } from 'pg';
@@ -1222,13 +1226,14 @@ CREATE TABLE forum_topics (
     created_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 */
-🧪 Senaryo 7: Bir üyelik formunda kullanıcılar doğum tarihi bilgisini elle girebiliyor. Tarih formatı açık şekilde belirtilmemiş. Sistem alanın dolu olmasını kontrol ediyor. Bu bilgi üyelik sonrası profil sayfasında gösteriliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 7: Bir üyelik formunda kullanıcılar doğum tarihi bilgisini elle girebiliyor. Tarih formatı açık şekilde belirtilmemiş. Sistem alanın dolu olmasını kontrol ediyor. Bu bilgi üyelik sonrası profil sayfasında gösteriliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 53
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -1308,12 +1313,12 @@ public class Member
     public string Username { get; set; }
     public string BirthDateString { get; set; } // Storing birth date as string
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 37
+```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
@@ -1370,12 +1375,12 @@ def get_member_profile(member_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 63
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Pool } from 'pg';
@@ -1462,13 +1467,14 @@ CREATE TABLE members (
     birth_date_string VARCHAR(50) NOT NULL
 );
 */
-🧪 Senaryo 8: Bir dosya arama sisteminde kullanıcılar dosya adını yazarak arama yapıyor. Arama kutusu girilen değeri sorguya dönüştürüyor. Dosya adında sembol ve özel karakterler kullanılabiliyor. Arama sonuçları kullanıcıya sunuluyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 8: Bir dosya arama sisteminde kullanıcılar dosya adını yazarak arama yapıyor. Arama kutusu girilen değeri sorguya dönüştürüyor. Dosya adında sembol ve özel karakterler kullanılabiliyor. Arama sonuçları kullanıcıya sunuluyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 59
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -1538,12 +1544,12 @@ public class FileSystemService
         return Task.FromResult<IEnumerable<FileResult>>(results);
     }
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 26
+```python
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -1578,12 +1584,12 @@ def search_files():
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 35
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 
@@ -1629,13 +1635,14 @@ app.get('/api/search-files', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
-🧪 Senaryo 9: Bir blog platformunda kullanıcılar başlıklara etiket ekleyebiliyor. Etiket giriş alanı serbest metin formatında. Uzun ifadeler etiket olarak belirlenebiliyor. Bu etiketler filtreleme sisteminde görüntüleniyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 9: Bir blog platformunda kullanıcılar başlıklara etiket ekleyebiliyor. Etiket giriş alanı serbest metin formatında. Uzun ifadeler etiket olarak belirlenebiliyor. Bu etiketler filtreleme sisteminde görüntüleniyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 108
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -1780,12 +1787,12 @@ public class BlogPostTag
     public int TagId { get; set; }
     public Tag Tag { get; set; }
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 65
+```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
@@ -1869,12 +1876,12 @@ def filter_posts_by_tag():
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 101
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Pool } from 'pg';
@@ -2016,13 +2023,14 @@ CREATE TABLE blog_post_tags (
     PRIMARY KEY (post_id, tag_id)
 );
 */
-🧪 Senaryo 10: Bir anket sisteminde katılımcılar yaş bilgilerini girerek anketi başlatabiliyor. Yaş alanı doldurulup doldurulmadığı kontrol ediliyor. Farklı formatlar yaş alanına girilebiliyor. Yaş bilgisi raporlarda gösteriliyor.
-💻 Dil: C#
+```
 
-🤖 AI: Gemini
+### 🧪 Senaryo 10: Bir anket sisteminde katılımcılar yaş bilgilerini girerek anketi başlatabiliyor. Yaş alanı doldurulup doldurulmadığı kontrol ediliyor. Farklı formatlar yaş alanına girilebiliyor. Yaş bilgisi raporlarda gösteriliyor.
 
-C#
-
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 55
+```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
@@ -2109,12 +2117,12 @@ public class SurveyResponse
     public DateTime SubmissionDate { get; set; }
     // Other survey data fields
 }
-💻 Dil: Python
+```
 
-🤖 AI: Gemini
-
-Python
-
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 40
+```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -2173,12 +2181,12 @@ def get_age_data_for_reports():
 
 if __name__ == '__main__':
     app.run(debug=True)
-💻 Dil: TypeScript (Node.js - Express)
+```
 
-🤖 AI: Gemini
-
-TypeScript
-
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
+**Satır Sayısı:** 69
+```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Pool } from 'pg';
@@ -2270,3 +2278,4 @@ CREATE TABLE survey_responses (
     submission_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 */
+```
