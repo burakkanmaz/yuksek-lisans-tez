@@ -77,12 +77,10 @@ public class DiskUsageReport
     public DateTime Timestamp { get; set; }
 }
 ```
-💻 Dil: Python
-Satır Sayısı: 57
+💻 Dil: Python🤖 AI: Grok 3
+Satır Sayısı: 40
 ```python
-🤖 AI: Grok 3
 
-python
 
 
 
@@ -138,12 +136,10 @@ def calculate_directory_size(path):
             total_size += os.path.getsize(os.path.join(root, file))
     return total_size
 ```
-💻 Dil: TypeScript (Node.js)
-Satır Sayısı: 86
+💻 Dil: TypeScript (Node.js)🤖 AI: Grok 3
+Satır Sayısı: 64
 ```typescript (node.js)
-🤖 AI: Grok 3
 
-typescript
 
 
 
@@ -229,12 +225,10 @@ function countFiles(dirPath: string): number {
 export default router;
 ```
 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-💻 Dil: C#
-Satır Sayısı: 67
+💻 Dil: C#🤖 AI: Grok 3
+Satır Sayısı: 52
 ```csharp
-🤖 AI: Grok 3
 
-csharp
 
 
 
@@ -300,12 +294,10 @@ public class FileProcessResponse
     public DateTime Timestamp { get; set; }
 }
 ```
-💻 Dil: Python
-Satır Sayısı: 55
+💻 Dil: Python🤖 AI: Grok 3
+Satır Sayısı: 36
 ```python
-🤖 AI: Grok 3
 
-python
 
 
 
@@ -359,12 +351,10 @@ def generate_output_path(file_path, target_format):
     filename = os.path.splitext(os.path.basename(file_path))[0]
     return os.path.join(directory, f"{filename}_processed.{target_format}")
 ```
-💻 Dil: TypeScript (Node.js)
-Satır Sayısı: 70
+💻 Dil: TypeScript (Node.js)🤖 AI: Grok 3
+Satır Sayısı: 49
 ```typescript (node.js)
-🤖 AI: Grok 3
 
-typescript
 
 
 
@@ -434,12 +424,10 @@ function generateOutputPath(filePath: string, targetFormat: string): string {
 export default router;
 ```
 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-💻 Dil: C#
-Satır Sayısı: 80
+💻 Dil: C#🤖 AI: Grok 3
+Satır Sayısı: 61
 ```csharp
-🤖 AI: Grok 3
 
-csharp
 
 
 
@@ -518,12 +506,10 @@ public class LogViewResponse
     public int PageSize { get; set; }
 }
 ```
-💻 Dil: Python
-Satır Sayısı: 58
+💻 Dil: Python🤖 AI: Grok 3
+Satır Sayısı: 39
 ```python
-🤖 AI: Grok 3
 
-python
 
 
 
@@ -580,12 +566,10 @@ def paginate_logs(logs, page, page_size):
     end = start + page_size
     return logs[start:end]
 ```
-💻 Dil: TypeScript (Node.js)
-Satır Sayısı: 76
+💻 Dil: TypeScript (Node.js)🤖 AI: Grok 3
+Satır Sayısı: 54
 ```typescript (node.js)
-🤖 AI: Grok 3
 
-typescript
 
 
 
@@ -661,12 +645,10 @@ function paginateLogs(logs: string[], page: number, pageSize: number): string[] 
 export default router;
 ```
 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-💻 Dil: C#
-Satır Sayısı: 83
+💻 Dil: C#🤖 AI: Grok 3
+Satır Sayısı: 64
 ```csharp
-🤖 AI: Grok 3
 
-csharp
 
 
 
@@ -748,12 +730,10 @@ public class BackupReport
     public DateTime EndTime { get; set; }
 }
 ```
-💻 Dil: Python
-Satır Sayısı: 64
+💻 Dil: Python🤖 AI: Grok 3
+Satır Sayısı: 44
 ```python
-🤖 AI: Grok 3
 
-python
 
 
 
@@ -816,12 +796,10 @@ def send_backup_notification(report):
     # Implementation for notification
     print(f"Backup completed: {report}")
 ```
-💻 Dil: TypeScript (Node.js)
-Satır Sayısı: 92
+💻 Dil: TypeScript (Node.js)🤖 AI: Grok 3
+Satır Sayısı: 65
 ```typescript (node.js)
-🤖 AI: Grok 3
 
-typescript
 
 
 
@@ -913,12 +891,10 @@ async function sendBackupNotification(report: BackupReport): Promise<void> {
 export default router;
 ```
 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları ayrıntılı olarak gösterilir. Ağ performansı analiz edilir.
-💻 Dil: C#
-Satır Sayısı: 60
+💻 Dil: C#🤖 AI: Grok 3
+Satır Sayısı: 45
 ```csharp
-🤖 AI: Grok 3
 
-csharp
 
 
 
