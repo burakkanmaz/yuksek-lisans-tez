@@ -1,6 +1,4 @@
  
-
-
 ----
 
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
@@ -1323,7 +1321,6 @@ async function getDirectorySizeAndCounts(directoryPath: string): Promise<{ size:
     return { size: totalSize, files: filesCount, directories: directoriesCount };
 }
 
-
 app.post('/api/backup/start-backup', async (req: Request, res: Response) => {
     const { directoryToBackup } = req.body;
 
@@ -1575,7 +1572,6 @@ def scan_port(host, port, timeout=2):
         return {"status": "Error", "message": f"Socket error: {str(e)}"}
     except Exception as e:
         return {"status": "Error", "message": f"An unexpected error occurred: {str(e)}"}
-
 
 @app.route('/api/network-test/ping', methods=['GET'])
 def ping_endpoint():
@@ -1945,7 +1941,6 @@ if not os.path.exists(os.path.join(UPLOAD_FOLDER, "example.txt")):
 if not os.path.exists(os.path.join(UPLOAD_FOLDER, "another.log")):
     with open(os.path.join(UPLOAD_FOLDER, "another.log"), "w") as f:
         f.write("This is another file for demonstration purposes.\nLine 2.\nLine 3.")
-
 
 @app.route('/api/file-compressor/compress', methods=['POST'])
 def compress_files():

@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 13
+Satır Sayısı: 13
 ```csharp
 [HttpPost("add-comment")]
 public IActionResult AddComment(string username, string message)
@@ -21,7 +21,7 @@ public IActionResult AddComment(string username, string message)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 8
+Satır Sayısı: 8
 ```python
 @app.route('/add-comment', methods=['POST'])
 def add_comment():
@@ -35,7 +35,7 @@ def add_comment():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```typescript
 app.post('/add-comment', (req, res) => {
     const { username, message } = req.body;
@@ -48,7 +48,7 @@ app.post('/add-comment', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 13
 ```csharp
 [HttpPost("submit-ticket")]
 public IActionResult SubmitTicket(string description)
@@ -67,7 +67,7 @@ public IActionResult SubmitTicket(string description)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```python
 @app.route('/submit-ticket', methods=['POST'])
 def submit_ticket():
@@ -80,7 +80,7 @@ def submit_ticket():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```typescript
 app.post('/submit-ticket', (req, res) => {
     const { description } = req.body;
@@ -93,7 +93,7 @@ app.post('/submit-ticket', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 11
+Satır Sayısı: 12
 ```csharp
 [HttpPost("submit-feedback")]
 public IActionResult SubmitFeedback(string message)
@@ -111,7 +111,7 @@ public IActionResult SubmitFeedback(string message)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 7
 ```python
 @app.route('/submit-feedback', methods=['POST'])
 def submit_feedback():
@@ -124,7 +124,7 @@ def submit_feedback():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```typescript
 app.post('/submit-feedback', (req, res) => {
     const { message } = req.body;
@@ -137,7 +137,7 @@ app.post('/submit-feedback', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 13
 ```csharp
 [HttpPost("post-reply")]
 public IActionResult PostReply(int topicId, string message)
@@ -156,7 +156,7 @@ public IActionResult PostReply(int topicId, string message)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```python
 @app.route('/post-reply', methods=['POST'])
 def post_reply():
@@ -170,7 +170,7 @@ def post_reply():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```typescript
 app.post('/post-reply', (req, res) => {
     const { topicId, message } = req.body;
@@ -183,7 +183,7 @@ app.post('/post-reply', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 13
 ```csharp
 [HttpPost("submit-review")]
 public IActionResult SubmitReview(int hotelId, string comment)
@@ -202,7 +202,7 @@ public IActionResult SubmitReview(int hotelId, string comment)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```python
 @app.route('/submit-review', methods=['POST'])
 def submit_review():
@@ -216,7 +216,7 @@ def submit_review():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```typescript
 app.post('/submit-review', (req, res) => {
     const { hotelId, comment } = req.body;
@@ -229,7 +229,7 @@ app.post('/submit-review', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 14
+Satır Sayısı: 14
 ```csharp
 [HttpPost("submit-product-review")]
 public IActionResult SubmitProductReview(int productId, int rating, string comment)
@@ -249,7 +249,7 @@ public IActionResult SubmitProductReview(int productId, int rating, string comme
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 8
+Satır Sayısı: 9
 ```python
 @app.route('/submit-product-review', methods=['POST'])
 def submit_product_review():
@@ -264,7 +264,7 @@ def submit_product_review():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 5
 ```typescript
 app.post('/submit-product-review', (req, res) => {
     const { productId, rating, comment } = req.body;
@@ -277,7 +277,7 @@ app.post('/submit-product-review', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 14
+Satır Sayısı: 14
 ```csharp
 [HttpPost("post-reaction")]
 public IActionResult PostReaction(int newsId, string name, string message)
@@ -297,7 +297,7 @@ public IActionResult PostReaction(int newsId, string name, string message)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 8
+Satır Sayısı: 9
 ```python
 @app.route('/post-reaction', methods=['POST'])
 def post_reaction():
@@ -312,7 +312,7 @@ def post_reaction():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 5
 ```typescript
 app.post('/post-reaction', (req, res) => {
     const { newsId, name, message } = req.body;
@@ -325,7 +325,7 @@ app.post('/post-reaction', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 13
 ```csharp
 [HttpPost("submit-evaluation")]
 public IActionResult SubmitEvaluation(int eventId, string evaluationText)
@@ -344,7 +344,7 @@ public IActionResult SubmitEvaluation(int eventId, string evaluationText)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```python
 @app.route('/submit-evaluation', methods=['POST'])
 def submit_evaluation():
@@ -358,7 +358,7 @@ def submit_evaluation():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```typescript
 app.post('/submit-evaluation', (req, res) => {
     const { eventId, evaluationText } = req.body;
@@ -371,7 +371,7 @@ app.post('/submit-evaluation', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 13
 ```csharp
 [HttpPost("post-exam-comment")]
 public IActionResult PostExamComment(int examId, string commentText)
@@ -390,7 +390,7 @@ public IActionResult PostExamComment(int examId, string commentText)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```python
 @app.route('/post-exam-comment', methods=['POST'])
 def post_exam_comment():
@@ -404,7 +404,7 @@ def post_exam_comment():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```typescript
 app.post('/post-exam-comment', (req, res) => {
     const { examId, commentText } = req.body;
@@ -417,7 +417,7 @@ app.post('/post-exam-comment', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 13
+Satır Sayısı: 13
 ```csharp
 [HttpPost("share-experience")]
 public IActionResult ShareExperience(string restaurantName, string experienceText)
@@ -436,7 +436,7 @@ public IActionResult ShareExperience(string restaurantName, string experienceTex
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```python
 @app.route('/share-experience', methods=['POST'])
 def share_experience():
@@ -450,7 +450,7 @@ def share_experience():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```typescript
 app.post('/share-experience', (req, res) => {
     const { restaurantName, experienceText } = req.body;

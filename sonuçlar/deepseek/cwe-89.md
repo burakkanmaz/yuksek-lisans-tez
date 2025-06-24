@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```csharp
 [HttpGet("search-users")]
 public IActionResult SearchUsers(string username)
@@ -16,7 +16,7 @@ public IActionResult SearchUsers(string username)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/search-users', methods=['GET'])
 def search_users():
@@ -27,7 +27,7 @@ def search_users():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/search-users', (req, res) => {
     const username = req.query.username as string;
@@ -40,7 +40,7 @@ app.get('/search-users', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 7
 ```csharp
 [HttpGet("track-order")]
 public IActionResult TrackOrder(string orderNumber)
@@ -53,7 +53,7 @@ public IActionResult TrackOrder(string orderNumber)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/track-order', methods=['GET'])
 def track_order():
@@ -64,7 +64,7 @@ def track_order():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/track-order', (req, res) => {
     const orderNumber = req.query.orderNumber as string;
@@ -77,7 +77,7 @@ app.get('/track-order', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```csharp
 [HttpGet("get-grades")]
 public IActionResult GetGrades(string studentId)
@@ -91,7 +91,7 @@ public IActionResult GetGrades(string studentId)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/get-grades', methods=['GET'])
 def get_grades():
@@ -102,7 +102,7 @@ def get_grades():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/get-grades', (req, res) => {
     const studentId = req.query.studentId as string;
@@ -115,7 +115,7 @@ app.get('/get-grades', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 7
 ```csharp
 [HttpGet("get-ticket")]
 public IActionResult GetTicket(string ticketNumber)
@@ -128,7 +128,7 @@ public IActionResult GetTicket(string ticketNumber)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/get-ticket', methods=['GET'])
 def get_ticket():
@@ -139,7 +139,7 @@ def get_ticket():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/get-ticket', (req, res) => {
     const ticketNumber = req.query.ticketNumber as string;
@@ -152,7 +152,7 @@ app.get('/get-ticket', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```csharp
 [HttpGet("search-books")]
 public IActionResult SearchBooks(string title)
@@ -166,7 +166,7 @@ public IActionResult SearchBooks(string title)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/search-books', methods=['GET'])
 def search_books():
@@ -177,7 +177,7 @@ def search_books():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/search-books', (req, res) => {
     const title = req.query.title as string;
@@ -190,7 +190,7 @@ app.get('/search-books', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 8
+Satır Sayısı: 9
 ```csharp
 [HttpGet("filter-reservations")]
 public IActionResult FilterReservations(string email)
@@ -205,7 +205,7 @@ public IActionResult FilterReservations(string email)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/filter-reservations', methods=['GET'])
 def filter_reservations():
@@ -216,7 +216,7 @@ def filter_reservations():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```typescript
 app.get('/filter-reservations', (req, res) => {
     const email = req.query.email as string;
@@ -231,7 +231,7 @@ app.get('/filter-reservations', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```csharp
 [HttpGet("search-customers")]
 public IActionResult SearchCustomers(string lastName)
@@ -245,7 +245,7 @@ public IActionResult SearchCustomers(string lastName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/search-customers', methods=['GET'])
 def search_customers():
@@ -256,7 +256,7 @@ def search_customers():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/search-customers', (req, res) => {
     const lastName = req.query.lastName as string;
@@ -269,7 +269,7 @@ app.get('/search-customers', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 7
 ```csharp
 [HttpGet("get-booking")]
 public IActionResult GetBooking(string ticketNumber)
@@ -282,7 +282,7 @@ public IActionResult GetBooking(string ticketNumber)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/get-booking', methods=['GET'])
 def get_booking():
@@ -293,7 +293,7 @@ def get_booking():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/get-booking', (req, res) => {
     const ticketNumber = req.query.ticketNumber as string;
@@ -306,7 +306,7 @@ app.get('/get-booking', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 6
+Satır Sayısı: 7
 ```csharp
 [HttpGet("get-video")]
 public IActionResult GetVideo(string contentId)
@@ -319,7 +319,7 @@ public IActionResult GetVideo(string contentId)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/get-video', methods=['GET'])
 def get_video():
@@ -330,7 +330,7 @@ def get_video():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/get-video', (req, res) => {
     const contentId = req.query.contentId as string;
@@ -343,7 +343,7 @@ app.get('/get-video', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 8
 ```csharp
 [HttpGet("get-exam-results")]
 public IActionResult GetExamResults(string examCode)
@@ -357,7 +357,7 @@ public IActionResult GetExamResults(string examCode)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```python
 @app.route('/get-exam-results', methods=['GET'])
 def get_exam_results():
@@ -368,7 +368,7 @@ def get_exam_results():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```typescript
 app.get('/get-exam-results', (req, res) => {
     const examCode = req.query.examCode as string;

@@ -1,15 +1,7 @@
 
-
-
-
-
-
-
-
-
 ### 🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
 **💻 Dil:** `C#`  
-Satır Sayısı: 16
+Satır Sayısı: 1
 ```** `c#`
 **🤖 AI:** Grok
 
@@ -32,14 +24,6 @@ public IActionResult AddComment([FromBody] CommentDto commentDto)
 Satır Sayısı: 13
 ```python
 
-
-
-
-
-
-
-
-
 from flask import Flask, request, jsonify
 from models import db, Comment
 
@@ -58,14 +42,6 @@ def add_comment():
 💻 Dil: TypeScript (Node.js)🤖 AI: Grok
 Satır Sayısı: 12
 ```typescript (node.js)
-
-
-
-
-
-
-
-
 
 import { Request, Response } from 'express';
 import { Comment } from '../models/comment';
@@ -86,12 +62,6 @@ export const addComment = async (req: Request, res: Response) => {
 Satır Sayısı: 13
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("submit-ticket")]
 public IActionResult SubmitTicket([FromBody] TicketDto ticketDto)
 {
@@ -109,14 +79,6 @@ public IActionResult SubmitTicket([FromBody] TicketDto ticketDto)
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 13
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, Ticket
@@ -137,14 +99,6 @@ def submit_ticket():
 Satır Sayısı: 12
 ```typescript (node.js)
 
-
-
-
-
-
-
-
-
 import { Request, Response } from 'express';
 import { Ticket } from '../models/ticket';
 
@@ -164,12 +118,6 @@ export const submitTicket = async (req: Request, res: Response) => {
 Satır Sayısı: 13
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("add-feedback")]
 public IActionResult AddFeedback([FromBody] FeedbackDto feedbackDto)
 {
@@ -187,14 +135,6 @@ public IActionResult AddFeedback([FromBody] FeedbackDto feedbackDto)
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 13
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, Feedback
@@ -215,14 +155,6 @@ def add_feedback():
 Satır Sayısı: 12
 ```typescript (node.js)
 
-
-
-
-
-
-
-
-
 import { Request, Response } from 'express';
 import { Feedback } from '../models/feedback';
 
@@ -242,12 +174,6 @@ export const addFeedback = async (req: Request, res: Response) => {
 Satır Sayısı: 14
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("add-reply")]
 public IActionResult AddReply([FromBody] ReplyDto replyDto)
 {
@@ -266,14 +192,6 @@ public IActionResult AddReply([FromBody] ReplyDto replyDto)
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 14
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, Reply
@@ -295,14 +213,6 @@ def add_reply():
 Satır Sayısı: 13
 ```typescript (node.js)
 
-
-
-
-
-
-
-
-
 import { Request, Response } from 'express';
 import { Reply } from '../models/reply';
 
@@ -323,12 +233,6 @@ export const addReply = async (req: Request, res: Response) => {
 Satır Sayısı: 14
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("add-review")]
 public IActionResult AddReview([FromBody] ReviewDto reviewDto)
 {
@@ -347,14 +251,6 @@ public IActionResult AddReview([FromBody] ReviewDto reviewDto)
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 14
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, Review
@@ -376,14 +272,6 @@ def add_review():
 Satır Sayısı: 13
 ```typescript (node.js)
 
-
-
-
-
-
-
-
-
 import { Request, Response } from 'express';
 import { Review } from '../models/review';
 
@@ -404,12 +292,6 @@ export const addReview = async (req: Request, res: Response) => {
 Satır Sayısı: 15
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("add-product-review")]
 public IActionResult AddProductReview([FromBody] ProductReviewDto reviewDto)
 {
@@ -429,14 +311,6 @@ public IActionResult AddProductReview([FromBody] ProductReviewDto reviewDto)
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 15
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, ProductReview
@@ -459,14 +333,6 @@ def add_product_review():
 Satır Sayısı: 14
 ```typescript (node.js)
 
-
-
-
-
-
-
-
-
 import { Request, Response } from 'express';
 import { ProductReview } from '../models/productReview';
 
@@ -488,12 +354,6 @@ export const addProductReview = async (req: Request, res: Response) => {
 Satır Sayısı: 14
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("add-news-comment")]
 public IActionResult AddNewsComment([FromBody] NewsCommentDto commentDto)
 {
@@ -512,14 +372,6 @@ public IActionResult AddNewsComment([FromBody] NewsCommentDto commentDto)
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 14
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, NewsComment
@@ -541,14 +393,6 @@ def add_news_comment():
 Satır Sayısı: 13
 ```typescript (node.js)
 
-
-
-
-
-
-
-
-
 import { Request, Response } from 'express';
 import { NewsComment } from '../models/newsComment';
 
@@ -569,12 +413,6 @@ export const addNewsComment = async (req: Request, res: Response) => {
 Satır Sayısı: 14
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("add-evaluation")]
 public IActionResult AddEvaluation([FromBody] EvaluationDto evaluationDto)
 {
@@ -593,14 +431,6 @@ public IActionResult AddEvaluation([FromBody] EvaluationDto evaluationDto)
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 14
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, Evaluation
@@ -622,14 +452,6 @@ def add_evaluation():
 Satır Sayısı: 13
 ```typescript (node.js)
 
-
-
-
-
-
-
-
-
 import { Request, Response } from 'express';
 import { Evaluation } from '../models/evaluation';
 
@@ -650,12 +472,6 @@ export const addEvaluation = async (req: Request, res: Response) => {
 Satır Sayısı: 14
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("add-exam-comment")]
 public IActionResult AddExamComment([FromBody] ExamCommentDto commentDto)
 {
@@ -674,14 +490,6 @@ public IActionResult AddExamComment([FromBody] ExamCommentDto commentDto)
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 14
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, ExamComment
@@ -703,14 +511,6 @@ def add_exam_comment():
 Satır Sayısı: 13
 ```typescript (node.js)
 
-
-
-
-
-
-
-
-
 import { Request, Response } from 'express';
 import { ExamComment } from '../models/examComment';
 
@@ -731,12 +531,6 @@ export const addExamComment = async (req: Request, res: Response) => {
 Satır Sayısı: 14
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("add-restaurant-review")]
 public IActionResult AddRestaurantReview([FromBody] RestaurantReviewDto reviewDto)
 {
@@ -755,14 +549,6 @@ public IActionResult AddRestaurantReview([FromBody] RestaurantReviewDto reviewDt
 💻 Dil: Python🤖 AI: Grok
 Satır Sayısı: 14
 ```python
-
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 from models import db, RestaurantReview
@@ -783,14 +569,6 @@ def add_restaurant_review():
 💻 Dil: TypeScript (Node.js)🤖 AI: Grok
 Satır Sayısı: 13
 ```typescript (node.js)
-
-
-
-
-
-
-
-
 
 import { Request, Response } from 'express';
 import { RestaurantReview } from '../models/restaurantReview';

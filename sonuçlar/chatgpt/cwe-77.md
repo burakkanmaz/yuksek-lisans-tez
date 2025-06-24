@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 6
 ```csharp
 [HttpGet("search-file")]
 public IActionResult SearchFile(string filename)
@@ -14,7 +14,7 @@ public IActionResult SearchFile(string filename)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 9
+Satır Sayısı: 8
 ```python
 import os
 
@@ -29,7 +29,7 @@ def search_file(filename: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 23
+Satır Sayısı: 20
 ```ts
 import fs from 'fs';
 import path from 'path';
@@ -62,7 +62,7 @@ function searchFile(filename: string): string[] {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```csharp
 [HttpGet("search-log")]
 public IActionResult SearchLog(string pattern)
@@ -75,7 +75,7 @@ public IActionResult SearchLog(string pattern)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 3
+Satır Sayısı: 3
 ```python
 def search_log(pattern: str):
     with open("/var/log/system.log", "r") as file:
@@ -84,7 +84,7 @@ def search_log(pattern: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```ts
 import fs from 'fs';
 
@@ -100,7 +100,7 @@ function searchLog(pattern: string): string[] {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 6
 ```csharp
 [HttpGet("check-process")]
 public IActionResult CheckProcess(string processName)
@@ -112,7 +112,7 @@ public IActionResult CheckProcess(string processName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 4
+Satır Sayısı: 3
 ```python
 import psutil
 
@@ -122,7 +122,7 @@ def check_process(name: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```ts
 import { execSync } from 'child_process';
 
@@ -138,7 +138,7 @@ function checkProcess(name: string): string[] {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```csharp
 [HttpPost("backup")]
 public IActionResult BackupDirectory(string path)
@@ -151,7 +151,7 @@ public IActionResult BackupDirectory(string path)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 6
 ```python
 import shutil
 from datetime import datetime
@@ -164,7 +164,7 @@ def backup_directory(path: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 8
+Satır Sayısı: 7
 ```ts
 import { execSync } from 'child_process';
 
@@ -182,7 +182,7 @@ function backupDirectory(path: string): string {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```csharp
 [HttpGet("ping")]
 public IActionResult Ping(string ip)
@@ -195,7 +195,7 @@ public IActionResult Ping(string ip)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 5
+Satır Sayısı: 4
 ```python
 import subprocess
 
@@ -206,7 +206,7 @@ def ping(ip: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 10
+Satır Sayısı: 9
 ```ts
 import { execSync } from 'child_process';
 
@@ -226,7 +226,7 @@ function ping(ip: string): string {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 6
 ```csharp
 [HttpPost("convert")]
 public IActionResult ConvertFile(string source, string target)
@@ -238,7 +238,7 @@ public IActionResult ConvertFile(string source, string target)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 5
+Satır Sayısı: 4
 ```python
 import shutil
 
@@ -249,7 +249,7 @@ def convert_file(source: str, target: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```ts
 import fs from 'fs';
 
@@ -265,7 +265,7 @@ function convertFile(source: string, target: string): string {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```csharp
 [HttpGet("analyze-disk")]
 public IActionResult AnalyzeDisk(string dir)
@@ -278,7 +278,7 @@ public IActionResult AnalyzeDisk(string dir)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 9
+Satır Sayısı: 8
 ```python
 import os
 
@@ -293,7 +293,7 @@ def analyze_disk(path: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 22
+Satır Sayısı: 19
 ```ts
 import fs from 'fs';
 import path from 'path';
@@ -325,7 +325,7 @@ function getDirectorySize(dir: string): number {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```csharp
 [HttpPost("db-backup")]
 public IActionResult BackupDatabase(string dbName)
@@ -338,7 +338,7 @@ public IActionResult BackupDatabase(string dbName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 5
 ```python
 import subprocess
 
@@ -350,7 +350,7 @@ def backup_database(name: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 6
 ```ts
 import { execSync } from 'child_process';
 
@@ -367,7 +367,7 @@ function backupDatabase(name: string): string {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 6
 ```csharp
 [HttpGet("check-mailbox")]
 public IActionResult CheckMailbox(string mailbox)
@@ -379,7 +379,7 @@ public IActionResult CheckMailbox(string mailbox)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 3
+Satır Sayısı: 3
 ```python
 def check_mailbox(mailbox: str):
     with open(f"/mail/{mailbox}/status.txt", "r") as file:
@@ -388,7 +388,7 @@ def check_mailbox(mailbox: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 5
+Satır Sayısı: 4
 ```ts
 import fs from 'fs';
 
@@ -403,7 +403,7 @@ function checkMailbox(mailbox: string): string {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 11
+Satır Sayısı: 11
 ```csharp
 [HttpPost("filter-logs")]
 public IActionResult FilterLogs(DateTime start, DateTime end)
@@ -420,7 +420,7 @@ public IActionResult FilterLogs(DateTime start, DateTime end)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 8
+Satır Sayısı: 7
 ```python
 from datetime import datetime
 
@@ -434,7 +434,7 @@ def filter_logs(start: str, end: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 9
+Satır Sayısı: 8
 ```ts
 import fs from 'fs';
 

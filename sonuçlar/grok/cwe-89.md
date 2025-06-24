@@ -1,13 +1,7 @@
 
-
-
-
-
-
-
 ### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
 **💻 Dil:** `C#`  
-Satır Sayısı: 12
+Satır Sayısı: 1
 ```** `c#`
 **🤖 AI:** Grok  
 
@@ -26,14 +20,6 @@ public async Task<IActionResult> SearchUsers(string username)
 Satır Sayısı: 5
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/search-users', methods=['GET'])
 def search_users():
     username = request.args.get('username')
@@ -43,14 +29,6 @@ def search_users():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 13
 ```typescript
-
-
-
-
-
-
-
-
 
 const SearchUsers: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -73,12 +51,6 @@ const SearchUsers: React.FC = () => {
 Satır Sayısı: 9
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("track-order")]
 public async Task<IActionResult> TrackOrder(string orderNumber)
 {
@@ -93,14 +65,6 @@ public async Task<IActionResult> TrackOrder(string orderNumber)
 Satır Sayısı: 7
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/track-order', methods=['GET'])
 def track_order():
     order_number = request.args.get('order_number')
@@ -112,14 +76,6 @@ def track_order():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const TrackOrder: React.FC = () => {
   const [orderNumber, setOrderNumber] = useState('');
@@ -139,12 +95,6 @@ const TrackOrder: React.FC = () => {
 Satır Sayısı: 9
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("get-grades")]
 public async Task<IActionResult> GetGrades(string studentNumber)
 {
@@ -159,14 +109,6 @@ public async Task<IActionResult> GetGrades(string studentNumber)
 Satır Sayısı: 5
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/get-grades', methods=['GET'])
 def get_grades():
     student_number = request.args.get('student_number')
@@ -176,14 +118,6 @@ def get_grades():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const GetGrades: React.FC = () => {
   const [studentNumber, setStudentNumber] = useState('');
@@ -203,12 +137,6 @@ const GetGrades: React.FC = () => {
 Satır Sayısı: 9
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("track-ticket")]
 public async Task<IActionResult> TrackTicket(string ticketNumber)
 {
@@ -223,14 +151,6 @@ public async Task<IActionResult> TrackTicket(string ticketNumber)
 Satır Sayısı: 7
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/track-ticket', methods=['GET'])
 def track_ticket():
     ticket_number = request.args.get('ticket_number')
@@ -242,14 +162,6 @@ def track_ticket():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const TrackTicket: React.FC = () => {
   const [ticketNumber, setTicketNumber] = useState('');
@@ -269,12 +181,6 @@ const TrackTicket: React.FC = () => {
 Satır Sayısı: 9
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("search-books")]
 public async Task<IActionResult> SearchBooks(string title)
 {
@@ -289,14 +195,6 @@ public async Task<IActionResult> SearchBooks(string title)
 Satır Sayısı: 5
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/search-books', methods=['GET'])
 def search_books():
     title = request.args.get('title')
@@ -306,14 +204,6 @@ def search_books():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const SearchBooks: React.FC = () => {
   const [title, setTitle] = useState('');
@@ -333,12 +223,6 @@ const SearchBooks: React.FC = () => {
 Satır Sayısı: 10
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("search-reservations")]
 public async Task<IActionResult> SearchReservations(string email)
 {
@@ -354,14 +238,6 @@ public async Task<IActionResult> SearchReservations(string email)
 Satır Sayısı: 5
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/search-reservations', methods=['GET'])
 def search_reservations():
     email = request.args.get('email')
@@ -371,14 +247,6 @@ def search_reservations():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const SearchReservations: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -398,12 +266,6 @@ const SearchReservations: React.FC = () => {
 Satır Sayısı: 9
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("search-guests")]
 public async Task<IActionResult> SearchGuests(string lastName)
 {
@@ -418,14 +280,6 @@ public async Task<IActionResult> SearchGuests(string lastName)
 Satır Sayısı: 5
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/search-guests', methods=['GET'])
 def search_guests():
     last_name = request.args.get('last_name')
@@ -435,14 +289,6 @@ def search_guests():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const SearchGuests: React.FC = () => {
   const [lastName, setLastName] = useState('');
@@ -462,12 +308,6 @@ const SearchGuests: React.FC = () => {
 Satır Sayısı: 9
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("check-ticket")]
 public async Task<IActionResult> CheckTicket(string ticketNumber)
 {
@@ -482,14 +322,6 @@ public async Task<IActionResult> CheckTicket(string ticketNumber)
 Satır Sayısı: 7
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/check-ticket', methods=['GET'])
 def check_ticket():
     ticket_number = request.args.get('ticket_number')
@@ -501,14 +333,6 @@ def check_ticket():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const CheckTicket: React.FC = () => {
   const [ticketNumber, setTicketNumber] = useState('');
@@ -528,12 +352,6 @@ const CheckTicket: React.FC = () => {
 Satır Sayısı: 9
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("search-videos")]
 public async Task<IActionResult> SearchVideos(string contentId)
 {
@@ -548,14 +366,6 @@ public async Task<IActionResult> SearchVideos(string contentId)
 Satır Sayısı: 7
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/search-videos', methods=['GET'])
 def search_videos():
     content_id = request.args.get('content_id')
@@ -567,14 +377,6 @@ def search_videos():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const SearchVideos: React.FC = () => {
   const [contentId, setContentId] = useState('');
@@ -594,12 +396,6 @@ const SearchVideos: React.FC = () => {
 Satır Sayısı: 9
 ```csharp
 
-
-
-
-
-
-
 [HttpGet("exam-results")]
 public async Task<IActionResult> GetExamResults(string examCode)
 {
@@ -614,14 +410,6 @@ public async Task<IActionResult> GetExamResults(string examCode)
 Satır Sayısı: 5
 ```python
 
-
-
-
-
-
-
-
-
 @app.route('/exam-results', methods=['GET'])
 def exam_results():
     exam_code = request.args.get('exam_code')
@@ -631,14 +419,6 @@ def exam_results():
 💻 Dil: TypeScript🤖 AI: Grok
 Satır Sayısı: 10
 ```typescript
-
-
-
-
-
-
-
-
 
 const ExamResults: React.FC = () => {
   const [examCode, setExamCode] = useState('');

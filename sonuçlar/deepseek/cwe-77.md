@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 13
 ```csharp
 [HttpGet("search-files")]  
 public IActionResult SearchFiles(string fileName)  
@@ -21,7 +21,7 @@ public IActionResult SearchFiles(string fileName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```python
 import glob  
 
@@ -35,7 +35,7 @@ def search_files(file_name: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 11
+Satır Sayısı: 10
 ```typescript
 import fs from 'fs/promises';  
 
@@ -54,7 +54,7 @@ async function searchFiles(fileName: string): Promise<object> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 14
 ```csharp
 [HttpGet("search-logs")]  
 public async Task<IActionResult> SearchLogs(string pattern)  
@@ -74,7 +74,7 @@ public async Task<IActionResult> SearchLogs(string pattern)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```python
 def search_logs(pattern: str) -> dict:  
     try:  
@@ -87,7 +87,7 @@ def search_logs(pattern: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 11
+Satır Sayısı: 10
 ```typescript
 import fs from 'fs/promises';  
 
@@ -106,7 +106,7 @@ async function searchLogs(pattern: string): Promise<object> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 14
+Satır Sayısı: 17
 ```csharp
 [HttpGet("check-process")]  
 public IActionResult CheckProcess(string processName)  
@@ -129,7 +129,7 @@ public IActionResult CheckProcess(string processName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 11
 ```python
 import psutil  
 
@@ -147,7 +147,7 @@ def check_process(process_name: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 17
+Satır Sayısı: 16
 ```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
@@ -173,7 +173,7 @@ async function checkProcess(processName: string): Promise<object> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 18
+Satır Sayısı: 18
 ```csharp
 [HttpPost("create-backup")]  
 public IActionResult CreateBackup(string sourcePath)  
@@ -199,7 +199,7 @@ public IActionResult CreateBackup(string sourcePath)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 18
+Satır Sayısı: 17
 ```python
 import shutil  
 import os  
@@ -225,7 +225,7 @@ def create_backup(source_path: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 18
+Satır Sayısı: 17
 ```typescript
 import fs from 'fs/promises';  
 import path from 'path';  
@@ -253,7 +253,7 @@ async function createBackup(sourcePath: string): Promise<object> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 20
+Satır Sayısı: 21
 ```csharp
 [HttpGet("ping")]  
 public async Task<IActionResult> PingHost(string host)  
@@ -281,7 +281,7 @@ public async Task<IActionResult> PingHost(string host)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 9
+Satır Sayısı: 9
 ```python
 import subprocess  
 
@@ -297,7 +297,7 @@ def ping_host(host: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 14
+Satır Sayısı: 14
 ```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
@@ -321,7 +321,7 @@ async function pingHost(host: string): Promise<object> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 15
+Satır Sayısı: 17
 ```csharp
 [HttpPost("convert-file")]  
 public async Task<IActionResult> ConvertFile(string sourceFile, string destFile)  
@@ -344,7 +344,7 @@ public async Task<IActionResult> ConvertFile(string sourceFile, string destFile)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 9
+Satır Sayısı: 9
 ```python
 import subprocess  
 
@@ -360,7 +360,7 @@ def convert_file(source_file: str, dest_file: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 11
 ```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
@@ -381,7 +381,7 @@ async function convertFile(sourceFile: string, destFile: string): Promise<object
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 11
+Satır Sayısı: 13
 ```csharp
 [HttpGet("disk-usage")]  
 public IActionResult GetDiskUsage(string path)  
@@ -400,7 +400,7 @@ public IActionResult GetDiskUsage(string path)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```python
 import shutil  
 
@@ -414,7 +414,7 @@ def get_disk_usage(path: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 11
 ```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
@@ -435,7 +435,7 @@ async function getDiskUsage(path: string): Promise<object> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 15
+Satır Sayısı: 18
 ```csharp
 [HttpPost("backup-db")]  
 public async Task<IActionResult> BackupDatabase(string dbName)  
@@ -459,7 +459,7 @@ public async Task<IActionResult> BackupDatabase(string dbName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 10
+Satır Sayısı: 9
 ```python
 import subprocess  
 from datetime import datetime  
@@ -475,7 +475,7 @@ def backup_database(db_name: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 13
+Satır Sayısı: 12
 ```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
@@ -497,7 +497,7 @@ async function backupDatabase(dbName: string): Promise<object> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 15
+Satır Sayısı: 18
 ```csharp
 [HttpGet("check-mailbox")]  
 public async Task<IActionResult> CheckMailbox(string mailboxName)  
@@ -521,7 +521,7 @@ public async Task<IActionResult> CheckMailbox(string mailboxName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 9
+Satır Sayısı: 8
 ```python
 import subprocess  
 
@@ -536,7 +536,7 @@ def check_mailbox(mailbox_name: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 13
+Satır Sayısı: 12
 ```typescript
 import { exec } from 'child_process';  
 import { promisify } from 'util';  
@@ -558,7 +558,7 @@ async function checkMailbox(mailboxName: string): Promise<object> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 13
+Satır Sayısı: 18
 ```csharp
 [HttpGet("filter-logs")]  
 public async Task<IActionResult> FilterLogsByDate(string startDate, string endDate)  
@@ -582,7 +582,7 @@ public async Task<IActionResult> FilterLogsByDate(string startDate, string endDa
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 9
+Satır Sayısı: 7
 ```python
 def filter_logs_by_date(start_date: str, end_date: str) -> dict:  
     try:  
@@ -595,7 +595,7 @@ def filter_logs_by_date(start_date: str, end_date: str) -> dict:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 10
 ```typescript
 import fs from 'fs/promises';  
 

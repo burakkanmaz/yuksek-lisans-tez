@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 10
+Satır Sayısı: 9
 ```csharp
 [HttpPost("disk-usage")]
 public IActionResult GetDiskUsage([FromBody] string directoryPath)
@@ -18,7 +18,7 @@ public IActionResult GetDiskUsage([FromBody] string directoryPath)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 19
+Satır Sayısı: 15
 ```python
 from flask import Flask, request, jsonify
 import os
@@ -43,7 +43,7 @@ def disk_usage():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 31
+Satır Sayısı: 27
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -84,7 +84,7 @@ app.post('/disk-usage', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 10
+Satır Sayısı: 9
 ```csharp
 [HttpPost("process-file")]
 public IActionResult ProcessFile([FromBody] string filePath)
@@ -100,7 +100,7 @@ public IActionResult ProcessFile([FromBody] string filePath)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 15
+Satır Sayısı: 12
 ```python
 from flask import Flask, request, jsonify
 import os
@@ -121,7 +121,7 @@ def process_file():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 16
+Satır Sayısı: 13
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -147,7 +147,7 @@ app.post('/process-file', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```csharp
 [HttpGet("read-log")]
 public IActionResult ReadLog(string fileName, int page = 1, int pageSize = 20)
@@ -160,7 +160,7 @@ public IActionResult ReadLog(string fileName, int page = 1, int pageSize = 20)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 15
+Satır Sayısı: 12
 ```python
 from flask import Flask, request, jsonify
 
@@ -181,7 +181,7 @@ def read_log():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 14
+Satır Sayısı: 11
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -205,7 +205,7 @@ app.get('/read-log', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 10
+Satır Sayısı: 9
 ```csharp
 [HttpPost("backup-directory")]
 public IActionResult BackupDirectory([FromBody] string directoryPath)
@@ -221,7 +221,7 @@ public IActionResult BackupDirectory([FromBody] string directoryPath)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 21
+Satır Sayısı: 17
 ```python
 from flask import Flask, request, jsonify
 import os
@@ -248,7 +248,7 @@ def backup_directory():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 27
+Satır Sayısı: 21
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -285,7 +285,7 @@ app.post('/backup-directory', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```csharp
 [HttpPost("ping")]
 public IActionResult Ping([FromBody] string host)
@@ -298,7 +298,7 @@ public IActionResult Ping([FromBody] string host)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 11
+Satır Sayısı: 8
 ```python
 from flask import Flask, request, jsonify
 import subprocess
@@ -315,7 +315,7 @@ def ping():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 13
+Satır Sayısı: 10
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -338,7 +338,7 @@ app.post('/ping', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 14
+Satır Sayısı: 14
 ```csharp
 [HttpPost("compress-files")]
 public IActionResult CompressFiles([FromBody] List<string> filePaths)
@@ -358,7 +358,7 @@ public IActionResult CompressFiles([FromBody] List<string> filePaths)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 17
+Satır Sayısı: 14
 ```python
 from flask import Flask, request, jsonify
 import zipfile
@@ -381,7 +381,7 @@ def compress_files():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 27
+Satır Sayısı: 22
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -418,7 +418,7 @@ app.post('/compress-files', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 7
+Satır Sayısı: 7
 ```csharp
 [HttpPost("monitor-process")]
 public IActionResult MonitorProcess([FromBody] string processName)
@@ -431,7 +431,7 @@ public IActionResult MonitorProcess([FromBody] string processName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 18
+Satır Sayısı: 15
 ```python
 from flask import Flask, request, jsonify
 import psutil
@@ -455,7 +455,7 @@ def monitor_process():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 13
+Satır Sayısı: 10
 ```typescript
 import express from 'express';
 import psList from 'ps-list';
@@ -478,7 +478,7 @@ app.post('/monitor-process', async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 6
 ```csharp
 [HttpPost("search-files")]
 public IActionResult SearchFiles([FromBody] string searchPattern)
@@ -490,7 +490,7 @@ public IActionResult SearchFiles([FromBody] string searchPattern)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 15
+Satır Sayısı: 12
 ```python
 from flask import Flask, request, jsonify
 import os
@@ -511,7 +511,7 @@ def search_files():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 26
+Satır Sayısı: 22
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -547,7 +547,7 @@ app.post('/search-files', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 6
+Satır Sayısı: 6
 ```csharp
 [HttpPost("manage-database")]
 public IActionResult ManageDatabase([FromBody] string dbName)
@@ -559,7 +559,7 @@ public IActionResult ManageDatabase([FromBody] string dbName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 9
+Satır Sayısı: 6
 ```python
 from flask import Flask, request, jsonify
 
@@ -574,7 +574,7 @@ def manage_database():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 10
+Satır Sayısı: 7
 ```typescript
 import express from 'express';
 
@@ -594,7 +594,7 @@ app.post('/manage-database', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 5
+Satır Sayısı: 5
 ```csharp
 [HttpPost("security-scan")]
 public IActionResult SecurityScan([FromBody] string scanParams)
@@ -605,7 +605,7 @@ public IActionResult SecurityScan([FromBody] string scanParams)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 9
+Satır Sayısı: 6
 ```python
 from flask import Flask, request, jsonify
 
@@ -620,7 +620,7 @@ def security_scan():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-**Satır Sayısı:** 10
+Satır Sayısı: 7
 ```typescript
 import express from 'express';
 

@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 27
+Satır Sayısı: 26
 ```csharp
 [HttpGet("disk-usage")]
 public IActionResult GetDiskUsageReport(string directoryPath, string format = "json")
@@ -38,7 +38,7 @@ private long CalculateDirectorySize(string path)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 29
+Satır Sayısı: 32
 ```python
 from fastapi import FastAPI, HTTPException
 import os
@@ -81,7 +81,7 @@ async def get_disk_usage(directory_path: str, format: str = "json"):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 42
+Satır Sayısı: 44
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -143,7 +143,7 @@ function calculateDirectorySize(dirPath: string): number {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 27
+Satır Sayısı: 29
 ```csharp
 [HttpPost("process-file")]
 public async Task<IActionResult> ProcessFile(string filePath, string operation)
@@ -180,7 +180,7 @@ public async Task<IActionResult> ProcessFile(string filePath, string operation)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 20
+Satır Sayısı: 17
 ```python
 from fastapi import FastAPI, HTTPException
 import file_processor
@@ -206,7 +206,7 @@ async def process_file(file_path: str, operation: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 29
+Satır Sayısı: 30
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -249,7 +249,7 @@ app.post('/process-file', async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 21
+Satır Sayısı: 19
 ```csharp
 [HttpGet("view-logs")]
 public IActionResult ViewLogs(string logFileName, string filter = "", int page = 1, int pageSize = 50)
@@ -278,7 +278,7 @@ public IActionResult ViewLogs(string logFileName, string filter = "", int page =
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 20
+Satır Sayısı: 21
 ```python
 from fastapi import FastAPI, HTTPException
 import os
@@ -311,7 +311,7 @@ async def view_logs(log_file_name: str, filter: str = "", page: int = 1, page_si
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 23
+Satır Sayısı: 22
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -348,7 +348,7 @@ app.get('/view-logs', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 21
+Satır Sayısı: 17
 ```csharp
 [HttpPost("backup-directory")]
 public IActionResult BackupDirectory(string directoryPath)
@@ -373,7 +373,7 @@ public IActionResult BackupDirectory(string directoryPath)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 16
+Satır Sayısı: 16
 ```python
 from fastapi import FastAPI, HTTPException
 import os
@@ -398,7 +398,7 @@ async def backup_directory(directory_path: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 19
+Satır Sayısı: 24
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -436,7 +436,7 @@ app.post('/backup-directory', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 24
+Satır Sayısı: 27
 ```csharp
 [HttpGet("test-connection")]
 public async Task<IActionResult> TestConnection(string targetAddress)
@@ -470,7 +470,7 @@ public async Task<IActionResult> TestConnection(string targetAddress)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 15
+Satır Sayısı: 16
 ```python
 from fastapi import FastAPI, HTTPException
 import subprocess
@@ -496,7 +496,7 @@ async def test_connection(target_address: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 16
+Satır Sayısı: 12
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -519,7 +519,7 @@ app.get('/test-connection', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 22
+Satır Sayısı: 23
 ```csharp
 [HttpPost("compress-files")]
 public IActionResult CompressFiles([FromBody] List<string> filePaths, string compressionLevel = "Optimal")
@@ -551,7 +551,7 @@ public IActionResult CompressFiles([FromBody] List<string> filePaths, string com
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 17
+Satır Sayısı: 17
 ```python
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
@@ -576,7 +576,7 @@ async def compress_files(file_paths: list[str], compression_level: int = zipfile
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 22
+Satır Sayısı: 21
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -610,7 +610,7 @@ app.post('/compress-files', (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 23
+Satır Sayısı: 21
 ```csharp
 [HttpGet("monitor-process")]
 public async Task<IActionResult> MonitorProcess(string processName)
@@ -640,7 +640,7 @@ public async Task<IActionResult> MonitorProcess(string processName)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 20
+Satır Sayısı: 20
 ```python
 from fastapi import FastAPI, HTTPException
 import psutil
@@ -670,7 +670,7 @@ async def monitor_process(process_name: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 19
+Satır Sayısı: 22
 ```typescript
 import express from 'express';
 import pidusage from 'pidusage';
@@ -703,7 +703,7 @@ app.get('/monitor-process', async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 20
+Satır Sayısı: 22
 ```csharp
 [HttpGet("search-files")]
 public IActionResult SearchFiles(string basePath, string searchPattern, bool recursive = true)
@@ -734,7 +734,7 @@ public IActionResult SearchFiles(string basePath, string searchPattern, bool rec
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 21
+Satır Sayısı: 24
 ```python
 from fastapi import FastAPI, HTTPException
 import os
@@ -768,7 +768,7 @@ async def search_files(base_path: str, search_pattern: str, recursive: bool = Tr
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 28
+Satır Sayısı: 35
 ```typescript
 import express from 'express';
 import fs from 'fs/promises';
@@ -816,7 +816,7 @@ app.get('/search-files', async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 17
+Satır Sayısı: 19
 ```csharp
 [HttpPost("manage-database")]
 public async Task<IActionResult> ManageDatabase(string dbName, string command)
@@ -842,7 +842,7 @@ public async Task<IActionResult> ManageDatabase(string dbName, string command)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 16
+Satır Sayısı: 18
 ```python
 from fastapi import FastAPI, HTTPException
 import psycopg2
@@ -868,7 +868,7 @@ async def manage_database(db_name: str, command: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 17
+Satır Sayısı: 23
 ```typescript
 import express from 'express';
 import { Client } from 'pg';
@@ -901,7 +901,7 @@ app.post('/manage-database', async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 15
+Satır Sayısı: 14
 ```csharp
 [HttpPost("run-security-scan")]
 public async Task<IActionResult> RunSecurityScan(string target, string scanType)
@@ -923,7 +923,7 @@ public async Task<IActionResult> RunSecurityScan(string target, string scanType)
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 15
+Satır Sayısı: 14
 ```python
 from fastapi import FastAPI, HTTPException
 import subprocess
@@ -946,7 +946,7 @@ async def run_security_scan(target: str, scan_type: str):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 18
+Satır Sayısı: 18
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';

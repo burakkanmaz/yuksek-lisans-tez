@@ -1,11 +1,10 @@
 
-
 ### 🧪 Senaryo 1: Bir e-ticaret sitesinde kullanıcılar ödeme ekranında adres bilgilerini girebiliyor. Bu bilgiler sisteme kaydedildikten sonra kargo firmalarına iletiliyor. Adres, il ve posta kodu alanları metin kutularından alınıyor. Kullanıcılar bu alanlara istedikleri içeriği yazabiliyor.
 **💻 Dil:** `C#`  
 Satır Sayısı: 34
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 27
+Satır Sayısı: 2
 
 ```csharp
 [HttpPost("save-address")]
@@ -43,7 +42,7 @@ public class AddressDto
 Satır Sayısı: 29
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 22
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -76,7 +75,7 @@ def save_address():
 Satır Sayısı: 36
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 29
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -117,7 +116,7 @@ export const saveAddress = async (req: Request, res: Response) => {
 Satır Sayısı: 31
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 24
+Satır Sayısı: 2
 
 ```csharp
 [HttpPost("set-password")]
@@ -152,7 +151,7 @@ public class PasswordDto
 Satır Sayısı: 27
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 20
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -183,7 +182,7 @@ def set_password():
 Satır Sayısı: 34
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 27
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -222,7 +221,7 @@ export const setPassword = async (req: Request, res: Response) => {
 Satır Sayısı: 25
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 18
+Satır Sayısı: 2
 
 ```csharp
 [HttpGet("track-shipment/{trackingNumber}")]
@@ -251,7 +250,7 @@ public IActionResult TrackShipment(string trackingNumber)
 Satır Sayısı: 22
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 15
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -277,7 +276,7 @@ def track_shipment(tracking_number):
 Satır Sayısı: 27
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 20
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -309,7 +308,7 @@ export const trackShipment = async (req: Request, res: Response) => {
 Satır Sayısı: 31
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 24
+Satır Sayısı: 2
 
 ```csharp
 [HttpPost("update-bio")]
@@ -344,7 +343,7 @@ public class BioDto
 Satır Sayısı: 26
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 19
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -374,7 +373,7 @@ def update_bio():
 Satır Sayısı: 33
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 26
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -412,7 +411,7 @@ export const updateBio = async (req: Request, res: Response) => {
 Satır Sayısı: 32
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 25
+Satır Sayısı: 2
 
 ```csharp
 [HttpPost("check-availability")]
@@ -448,7 +447,7 @@ public class DateRangeDto
 Satır Sayısı: 31
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 24
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -483,7 +482,7 @@ def check_availability():
 Satır Sayısı: 40
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 33
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -528,7 +527,7 @@ export const checkAvailability = async (req: Request, res: Response) => {
 Satır Sayısı: 35
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 28
+Satır Sayısı: 2
 
 ```csharp
 [HttpPost("create-topic")]
@@ -567,7 +566,7 @@ public class TopicDto
 Satır Sayısı: 30
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 23
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -601,7 +600,7 @@ def create_topic():
 Satır Sayısı: 35
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 28
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -641,7 +640,7 @@ export const createTopic = async (req: Request, res: Response) => {
 Satır Sayısı: 31
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 24
+Satır Sayısı: 2
 
 ```csharp
 [HttpPost("update-birthdate")]
@@ -676,7 +675,7 @@ public class BirthdateDto
 Satır Sayısı: 26
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 19
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -706,7 +705,7 @@ def update_birthdate():
 Satır Sayısı: 33
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 26
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -744,7 +743,7 @@ export const updateBirthdate = async (req: Request, res: Response) => {
 Satır Sayısı: 21
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 14
+Satır Sayısı: 2
 
 ```csharp
 [HttpGet("search-file/{fileName}")]
@@ -769,7 +768,7 @@ public IActionResult SearchFile(string fileName)
 Satır Sayısı: 19
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 12
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -792,7 +791,7 @@ def search_file(file_name):
 Satır Sayısı: 25
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 18
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -822,7 +821,7 @@ export const searchFile = async (req: Request, res: Response) => {
 Satır Sayısı: 32
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 25
+Satır Sayısı: 2
 
 ```csharp
 [HttpPost("add-tags")]
@@ -858,7 +857,7 @@ public class TagsDto
 Satır Sayısı: 26
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 19
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -888,7 +887,7 @@ def add_tags():
 Satır Sayısı: 34
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 27
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';
@@ -927,7 +926,7 @@ export const addTags = async (req: Request, res: Response) => {
 Satır Sayısı: 32
 ```** `c#`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 25
+Satır Sayısı: 2
 
 ```csharp
 [HttpPost("start-survey")]
@@ -963,7 +962,7 @@ public class AgeDto
 Satır Sayısı: 28
 ```** `python`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 21
+Satır Sayısı: 2
 
 ```python
 from flask import Flask, request, jsonify
@@ -995,7 +994,7 @@ def start_survey():
 Satır Sayısı: 29
 ```** `typescript`
 **🤖 AI:** Grok 3  
-**Satır Sayısı:** 25
+Satır Sayısı: 2
 
 ```typescript
 import { Request, Response } from 'express';

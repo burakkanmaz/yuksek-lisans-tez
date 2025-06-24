@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 61
+Satır Sayısı: 59
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations; // For potential validation, though not strictly required by scenario
@@ -80,7 +80,7 @@ public class OrderAddress
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 33
+Satır Sayısı: 31
 ```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -128,7 +128,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 46
+Satır Sayısı: 47
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -194,7 +194,7 @@ CREATE TABLE shipping_addresses (
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 51
+Satır Sayısı: 55
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -267,7 +267,7 @@ public class User
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 35
+Satır Sayısı: 35
 ```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -320,7 +320,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 50
+Satır Sayısı: 50
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -390,7 +390,7 @@ CREATE TABLE users (
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 66
+Satır Sayısı: 57
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -463,7 +463,7 @@ public class TrackingService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 33
+Satır Sayısı: 31
 ```python
 from flask import Flask, request, jsonify
 
@@ -509,7 +509,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 48
+Satır Sayısı: 44
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -572,7 +572,7 @@ app.listen(port, () => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 46
+Satır Sayısı: 49
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -637,7 +637,7 @@ public class User
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 30
+Satır Sayısı: 30
 ```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -685,7 +685,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 50
+Satır Sayısı: 48
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -753,7 +753,7 @@ CREATE TABLE users (
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 81
+Satır Sayısı: 79
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -849,7 +849,7 @@ public class AvailabilityService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 47
+Satır Sayısı: 46
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -911,7 +911,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 69
+Satır Sayısı: 71
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -1007,7 +1007,7 @@ app.listen(port, () => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 55
+Satır Sayısı: 65
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -1090,7 +1090,7 @@ public class ForumTopic
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 35
+Satır Sayısı: 38
 ```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -1146,7 +1146,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 65
+Satır Sayısı: 65
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -1232,7 +1232,7 @@ CREATE TABLE forum_topics (
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 53
+Satır Sayısı: 66
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -1317,7 +1317,7 @@ public class Member
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 37
+Satır Sayısı: 43
 ```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -1379,7 +1379,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 63
+Satır Sayısı: 70
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -1473,7 +1473,7 @@ CREATE TABLE members (
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 59
+Satır Sayısı: 59
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -1548,7 +1548,7 @@ public class FileSystemService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 26
+Satır Sayısı: 26
 ```python
 from flask import Flask, request, jsonify
 
@@ -1588,7 +1588,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 35
+Satır Sayısı: 35
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -1641,7 +1641,7 @@ app.listen(port, () => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 108
+Satır Sayısı: 120
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -1791,7 +1791,7 @@ public class BlogPostTag
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 65
+Satır Sayısı: 64
 ```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -1880,7 +1880,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 101
+Satır Sayısı: 115
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -1999,7 +1999,6 @@ app.get('/api/posts/filter-by-tag', async (req, res) => {
     }
 });
 
-
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
@@ -2029,7 +2028,7 @@ CREATE TABLE blog_post_tags (
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 55
+Satır Sayısı: 72
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -2121,7 +2120,7 @@ public class SurveyResponse
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 40
+Satır Sayısı: 42
 ```python
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -2185,7 +2184,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-**Satır Sayısı:** 69
+Satır Sayısı: 73
 ```typescript
 import express from 'express';
 import bodyParser from 'body-parser';

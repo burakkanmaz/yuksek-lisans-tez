@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 24
+Satır Sayısı: 25
 ```csharp
 public class TemplateService
 {
@@ -35,7 +35,7 @@ public class TemplateService
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 16
+Satır Sayısı: 13
 ```python
 import logging
 
@@ -56,7 +56,7 @@ class TemplateProcessor:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 19
+Satır Sayısı: 18
 ```typescript
 class TemplateService {
     private logger: Console;
@@ -84,7 +84,7 @@ class TemplateService {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 23
+Satır Sayısı: 25
 ```csharp
 public class FormulaCalculator
 {
@@ -118,7 +118,7 @@ public class FormulaCalculator
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 26
+Satır Sayısı: 27
 ```python
 import ast
 import operator
@@ -154,7 +154,7 @@ class FormulaEngine:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 22
+Satır Sayısı: 22
 ```typescript
 class FormulaCalculator {
     private variables: Record<string, number> = {};
@@ -187,7 +187,7 @@ class FormulaCalculator {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 21
+Satır Sayısı: 20
 ```csharp
 public class HtmlSanitizerService
 {
@@ -217,7 +217,7 @@ public class HtmlSanitizerService
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 22
+Satır Sayısı: 16
 ```python
 from bs4 import BeautifulSoup
 import re
@@ -244,7 +244,7 @@ class HtmlProcessor:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 29
+Satır Sayısı: 25
 ```typescript
 class HtmlSanitizer {
     private allowedTags: Set<string> = new Set(['p', 'span', 'br', 'strong']);
@@ -282,7 +282,7 @@ class HtmlSanitizer {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 16
+Satır Sayısı: 17
 ```csharp
 public class ConfigManager
 {
@@ -308,7 +308,7 @@ public class ConfigManager
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 15
+Satır Sayısı: 12
 ```python
 import json
 
@@ -329,7 +329,7 @@ class ConfigHandler:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 16
+Satır Sayısı: 15
 ```typescript
 import * as fs from 'fs';
 
@@ -356,7 +356,7 @@ class ConfigManager {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 13
 ```csharp
 public class MacroRunner
 {
@@ -375,7 +375,7 @@ public class MacroRunner
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 10
+Satır Sayısı: 8
 ```python
 class MacroInterpreter:
     def run_macro(self, macro_script):
@@ -389,7 +389,7 @@ class MacroInterpreter:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 11
+Satır Sayısı: 9
 ```typescript
 class MacroRunner {
     run(macroScript: string): void {
@@ -407,7 +407,7 @@ class MacroRunner {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 15
+Satır Sayısı: 16
 ```csharp
 public class DataTransformer
 {
@@ -429,7 +429,7 @@ public class DataTransformer
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 11
+Satır Sayısı: 8
 ```python
 class DataTransformer:
     def transform(self, data: dict, rule: str) -> dict:
@@ -443,7 +443,7 @@ class DataTransformer:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 14
+Satır Sayısı: 12
 ```typescript
 class DataTransformer {
     transform(data: Record<string, any>, rule: string): Record<string, any> {
@@ -463,7 +463,7 @@ class DataTransformer {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 13
+Satır Sayısı: 11
 ```csharp
 public class TestRunner
 {
@@ -481,7 +481,7 @@ public class TestRunner
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 10
+Satır Sayısı: 7
 ```python
 class TestExecutor:
     def execute_test(self, script):
@@ -494,7 +494,7 @@ class TestExecutor:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 14
+Satır Sayısı: 14
 ```typescript
 interface TestResult {
     status: 'Passed' | 'Failed';
@@ -517,7 +517,7 @@ class TestRunner {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 10
+Satır Sayısı: 9
 ```csharp
 public class CalculationEngine
 {
@@ -532,7 +532,7 @@ public class CalculationEngine
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 9
+Satır Sayısı: 8
 ```python
 class CalculationEngine:
     def evaluate(self, expression):
@@ -546,7 +546,7 @@ class CalculationEngine:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 10
+Satır Sayısı: 10
 ```typescript
 class CalculationEngine {
     evaluate(expression: string): any {
@@ -564,7 +564,7 @@ class CalculationEngine {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 11
 ```csharp
 public class ContentGenerator
 {
@@ -581,7 +581,7 @@ public class ContentGenerator
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 9
+Satır Sayısı: 7
 ```python
 class ContentGenerator:
     def generate(self, template, model):
@@ -594,7 +594,7 @@ class ContentGenerator:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 12
+Satır Sayısı: 10
 ```typescript
 class ContentGenerator {
     generate(template: string, model: Record<string, any>): string {
@@ -612,7 +612,7 @@ class ContentGenerator {
 
 **💻 Dil:** `C#`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 20
+Satır Sayısı: 23
 ```csharp
 public class WorkflowEngine
 {
@@ -643,7 +643,7 @@ public class WorkflowEngine
 
 **💻 Dil:** `Python`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 16
+Satır Sayısı: 14
 ```python
 class WorkflowEngine:
     def execute(self, workflow, context):
@@ -665,7 +665,7 @@ class WorkflowEngine:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek
-**Satır Sayısı:** 20
+Satır Sayısı: 21
 ```typescript
 interface WorkflowStep {
     condition?: string;

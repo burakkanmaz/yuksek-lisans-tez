@@ -212,7 +212,6 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-
 @app.route('/backup', methods=['POST'])
 def backup():
     directory = request.json['directory']

@@ -1,15 +1,7 @@
 
-
-
-
-
-
-
-
-
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
 **💻 Dil:** `C#`  
-Satır Sayısı: 65
+Satır Sayısı: 1
 ```** `c#`
 **🤖 AI:** Grok 3
 
@@ -81,14 +73,6 @@ public class DiskUsageReport
 Satır Sayısı: 40
 ```python
 
-
-
-
-
-
-
-
-
 from flask import Flask, request, send_file
 import os
 import json
@@ -139,14 +123,6 @@ def calculate_directory_size(path):
 💻 Dil: TypeScript (Node.js)🤖 AI: Grok 3
 Satır Sayısı: 64
 ```typescript (node.js)
-
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
@@ -229,12 +205,6 @@ export default router;
 Satır Sayısı: 52
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("process-file")]
 public IActionResult ProcessFile([FromBody] FileProcessRequest request)
 {
@@ -298,14 +268,6 @@ public class FileProcessResponse
 Satır Sayısı: 36
 ```python
 
-
-
-
-
-
-
-
-
 from flask import Flask, request, jsonify
 import os
 import base64
@@ -354,14 +316,6 @@ def generate_output_path(file_path, target_format):
 💻 Dil: TypeScript (Node.js)🤖 AI: Grok 3
 Satır Sayısı: 49
 ```typescript (node.js)
-
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
@@ -427,12 +381,6 @@ export default router;
 💻 Dil: C#🤖 AI: Grok 3
 Satır Sayısı: 61
 ```csharp
-
-
-
-
-
-
 
 [HttpPost("view-logs")]
 public IActionResult ViewLogs([FromBody] LogViewRequest request)
@@ -510,14 +458,6 @@ public class LogViewResponse
 Satır Sayısı: 39
 ```python
 
-
-
-
-
-
-
-
-
 from flask import Flask, request, jsonify
 import os
 
@@ -569,14 +509,6 @@ def paginate_logs(logs, page, page_size):
 💻 Dil: TypeScript (Node.js)🤖 AI: Grok 3
 Satır Sayısı: 54
 ```typescript (node.js)
-
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
@@ -648,12 +580,6 @@ export default router;
 💻 Dil: C#🤖 AI: Grok 3
 Satır Sayısı: 64
 ```csharp
-
-
-
-
-
-
 
 [HttpPost("backup")]
 public IActionResult PerformBackup([FromBody] BackupRequest request)
@@ -734,14 +660,6 @@ public class BackupReport
 Satır Sayısı: 44
 ```python
 
-
-
-
-
-
-
-
-
 from flask import Flask, request, jsonify
 import os.path
 import shutil
@@ -799,14 +717,6 @@ def send_backup_notification(report):
 💻 Dil: TypeScript (Node.js)🤖 AI: Grok 3
 Satır Sayısı: 65
 ```typescript (node.js)
-
-
-
-
-
-
-
-
 
 import * as { Router, Request, Response } from 'express';
 import * as fs from 'fs';
@@ -895,12 +805,6 @@ export default router;
 Satır Sayısı: 45
 ```csharp
 
-
-
-
-
-
-
 [HttpPost("network-test")]
 public IActionResult PerformNetworkTest([FromBody] NetworkTestRequest request)
 {
@@ -954,18 +858,11 @@ public class NetworkTestResult
 }
 ```
 ** 💻 Dil:** 💻 Python
-Satır Sayısı: 46
+Satır Sayısı: 30
 ```** 💻 python
 🤖 AI: 🤖 Grok 3
 
 python
-
-
-
-
-
-
-
 
 from flask import Flask, request, jsonify
 import ping3
@@ -1004,18 +901,11 @@ def execute_network_test(target_address):
     }
 ```
 ** 💻 Dil:** ** 💻 TypeScript (Node.js)
-Satır Sayısı: 58
+Satır Sayısı: 40
 ```** ** 💻 typescript (node.js)
 🤖 AI: 🤖 Grok-3
 
 typescript
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as ping from 'ping';
@@ -1067,16 +957,11 @@ export default router;
 ```
 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek bir arşiv oluşturur. Sıkıştırma compression. seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
 ** 💻 Dil:** ** 💻 C#
-Satır Sayısı: 174
+Satır Sayısı: 122
 ```** ** 💻 c#
 ** 🤖 AI:** ** 🤖 AI:** Grok 3
 
 csharp
-
-
-
-
-
 
 [HttpPost("file-compress")]
 public IActionResult CompressFiles([FromBody] FileCompressionRequest request)
@@ -1134,13 +1019,6 @@ public class FileCompressionRequest
 
 python
 
-
-
-
-
-
-
-
 from flask import Flask, request, send_file, jsonify
 import os
 from zipfile import ZipFile, ZIP_DEFLATED, ZIP_LZMA
@@ -1180,13 +1058,6 @@ def create_archive(files, archive_path, compression_level):
 ** 🤖 AI:** Grok 3
 
 typescript
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
@@ -1251,11 +1122,6 @@ export default router;
 
 csharp
 
-
-
-
-
-
 [HttpPost("monitor-process")]
 public IActionResult MonitorProcess([FromBody] ProcessMonitorRequest request)
 {
@@ -1316,13 +1182,6 @@ public class ProcessMetricsResponse
 
 python
 
-
-
-
-
-
-
-
 from flask import Flask, request, jsonify
 import psutil
 import datetime
@@ -1361,13 +1220,6 @@ def collect_process_metrics(process_name):
 ** 🤖 AI:** ** 🤖 AI: Grok 3
 
 typescript
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as ps from 'ps-node';
@@ -1437,11 +1289,6 @@ export default router;
 
 csharp
 
-
-
-
-
-
 [HttpPost("file-search")]
 public IActionResult SearchFiles([FromBody] FileSearchRequest request)
 {
@@ -1504,13 +1351,6 @@ public class FileSearchResult
 
 python
 
-
-
-
-
-
-
-
 from flask import Flask, request, jsonify
 import os
 from datetime import datetime
@@ -1556,13 +1396,6 @@ def filter_files(files, min_size):
 ** 💻 ** Dil:** ** 💻 TypeScript (Node.js)**   ** 🤖 AI:** ** 🤖 AI: Grok 3`
 
 typescript
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
@@ -1632,11 +1465,6 @@ export default router;
 
 csharp
 
-
-
-
-
-
 [HttpPost("db-execute")]
 public IActionResult ExecuteDatabaseOperation([FromBody] DatabaseOperationRequest request)
 {
@@ -1699,13 +1527,6 @@ public class DatabaseOperationResult
 
 python
 
-
-
-
-
-
-
-
 from flask import Flask, request, jsonify
 import sqlite3
 from datetime import datetime
@@ -1746,13 +1567,6 @@ def execute_operation(database_name, query):
 ** 💻 ** Dil:** ** 💻 TypeScript (Node.js)**   ** 🤖 AI:** ** 🤖 AI: Grok 3`
 
 typescript
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as sqlite3 from 'sqlite3';
@@ -1815,11 +1629,6 @@ export default router;
 ** 🤖 AI:** ** 🤖 AI:** Grok 3
 
 csharp
-
-
-
-
-
 
 [HttpPost("security-scan")]
 public IActionResult PerformSecurityScan([FromBody] SecurityScanRequest request)
@@ -1889,13 +1698,6 @@ public class SecurityScanResult
 
 python
 
-
-
-
-
-
-
-
 from flask import Flask, request, jsonify
 import os
 import stat
@@ -1941,13 +1743,6 @@ def execute_security_scan(target_path, scan_options):
 ** 💻 ** Dil:** ** 💻 TypeScript (Node.js)**   ** 🤖 AI:** ** 🤖 AI: Grok 3`
 
 typescript
-
-
-
-
-
-
-
 
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
