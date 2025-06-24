@@ -1,8 +1,9 @@
- ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
+### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 32
+```c#
 [HttpPost("disk-usage")]
 public async Task<IActionResult> AnalyzeDiskUsage([FromBody] DiskAnalysisRequest request)
 {
@@ -37,12 +38,9 @@ public async Task<IActionResult> DownloadReport(int id, string format)
 }
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 40
 ```python
 import os
 import json
@@ -86,12 +84,9 @@ class DiskAnalyzer:
             return f"Path,Size,Files\n{report['path']},{report['total_size']},{report['file_count']}"
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 75
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -170,13 +165,10 @@ class DiskAnalyzer {
 }
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 53
+```c#
 [HttpPost("process-file")]
 public async Task<IActionResult> ProcessFile([FromBody] FileProcessRequest request)
 {
@@ -232,12 +224,9 @@ public async Task<IActionResult> DownloadResult(int resultId)
 }
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 55
 ```python
 import os
 from abc import ABC, abstractmethod
@@ -296,12 +285,9 @@ class FileProcessingService:
         self.db.commit()
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 89
 ```typescript
 interface ProcessResult {
     id: string;
@@ -394,13 +380,10 @@ class FileProcessingService {
 }
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 65
+```c#
 [HttpGet("logs/{fileName}")]
 public async Task<IActionResult> GetLogs(string fileName, 
     [FromQuery] string search = "", [FromQuery] string level = "", 
@@ -468,12 +451,9 @@ public class LogEntry
 }
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 69
 ```python
 import os
 import re
@@ -546,12 +526,9 @@ class LogViewer:
         return sorted(files, key=lambda x: x["modified"], reverse=True)
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 127
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -682,11 +659,10 @@ class LogViewer {
 }
 ```
 
-### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 59
+```c#
 [HttpPost("backup")]
 public async Task<IActionResult> StartBackup([FromBody] BackupRequest request)
 {
@@ -748,12 +724,9 @@ public async Task<IActionResult> GetBackupStatus(Guid backupId)
 public enum BackupStatus { Queued, InProgress, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 66
 ```python
 import zipfile
 import os
@@ -823,12 +796,9 @@ class BackupService:
         return {'status': row[2], 'progress': 100 if row[2] == 'completed' else 50}
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 107
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -939,13 +909,10 @@ class BackupService {
 }
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 72
+```c#
 [HttpPost("network-test")]
 public async Task<IActionResult> RunNetworkTest([FromBody] NetworkTestRequest request)
 {
@@ -1020,12 +987,9 @@ public enum NetworkTestType { Ping, SpeedTest }
 public enum TestStatus { Running, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 90
 ```python
 import subprocess
 import time
@@ -1119,12 +1083,9 @@ class NetworkTestService:
         return json.loads(row[6]) if row else None
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 168
 ```typescript
 import * as net from 'net';
 import axios from 'axios';
@@ -1296,13 +1257,10 @@ class NetworkTestService {
 }
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 86
+```c#
 [HttpPost("compress")]
 public async Task<IActionResult> CompressFiles([FromBody] CompressionRequest request)
 {
@@ -1391,12 +1349,9 @@ public async Task<IActionResult> DownloadArchive(Guid jobId)
 public enum CompressionStatus { Queued, Processing, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 96
 ```python
 import zipfile
 import os
@@ -1496,12 +1451,9 @@ class CompressionService:
         } if row else None
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 127
 ```typescript
 import * as fs from 'fs/promises';
 import * as archiver from 'archiver';
@@ -1632,11 +1584,10 @@ class CompressionService {
 }
 ```
 
-### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 75
+```c#
 [HttpPost("monitor-process")]
 public async Task<IActionResult> StartMonitoring([FromBody] MonitorRequest request)
 {
@@ -1714,12 +1665,9 @@ public async Task<IActionResult> GetMonitoringData(Guid sessionId)
 public enum MonitoringStatus { Active, Stopped, ProcessTerminated }
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 90
 ```python
 import psutil
 import asyncio
@@ -1813,12 +1761,9 @@ class ProcessMonitoringService:
         return [{'timestamp': row[1], 'cpu_usage': row[2], 'memory_usage': row[3], 'thread_count': row[4]} for row in rows]
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 194
 ```typescript
 import { spawn } from 'child_process';
 import { v4 as uuidv4 } from 'uuid';
@@ -2016,13 +1961,10 @@ class ProcessMonitoringService {
 }
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 95
+```c#
 [HttpPost("file-search")]
 public async Task<IActionResult> SearchFiles([FromBody] FileSearchRequest request)
 {
@@ -2120,12 +2062,9 @@ public async Task<IActionResult> GetSearchResults(Guid searchId, [FromQuery] str
 public enum SearchStatus { Running, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 107
 ```python
 import os
 import asyncio
@@ -2236,12 +2175,9 @@ class FileSearchService:
         return {'id': row[0], 'search_criteria': row[1], 'status': row[3]} if row else None
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 205
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -2450,13 +2386,10 @@ class FileSearchService {
 }
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 88
+```c#
 [HttpPost("db-operation")]
 public async Task<IActionResult> ExecuteDatabaseOperation([FromBody] DbOperationRequest request)
 {
@@ -2547,12 +2480,9 @@ public enum DbOperationType { Query, Backup, Optimize }
 public enum OperationStatus { Running, Completed, Failed }
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 115
 ```python
 import sqlite3
 import asyncio
@@ -2671,12 +2601,9 @@ class DatabaseManagementService:
         self.db.commit()
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 194
 ```typescript
 import * as sqlite3 from 'sqlite3';
 import { v4 as uuidv4 } from 'uuid';
@@ -2874,13 +2801,10 @@ class DatabaseManagementService {
 }
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 123
+```c#
 [HttpPost("security-scan")]
 public async Task<IActionResult> StartSecurityScan([FromBody] SecurityScanRequest request)
 {
@@ -3006,12 +2930,9 @@ public enum RiskLevel { Low, Medium, High, Critical }
 public enum Severity { Low, Medium, High, Critical }
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 172
 ```python
 import os
 import hashlib
@@ -3187,12 +3108,9 @@ class SecurityScanService:
         return {'id': row[0], 'scan_type': row[1], 'status': row[3], 'risk_level': row[6]} if row else None
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 287
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -3482,3 +3400,4 @@ class SecurityScanService {
     }
 }
 ```
+

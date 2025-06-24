@@ -1,12 +1,9 @@
-# E-Ticaret ve Web Güvenliği Senaryoları - Kod Örnekleri
-
----
-
 ### 🧪 Senaryo 1: Bir e-ticaret sitesinde kullanıcılar ödeme ekranında adres bilgilerini girebiliyor. Bu bilgiler sisteme kaydedildikten sonra kargo firmalarına iletiliyor. Adres, il ve posta kodu alanları metin kutularından alınıyor. Kullanıcılar bu alanlara istedikleri içeriği yazabiliyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 24
+```c#
 [HttpPost("save-address")]
 public async Task<IActionResult> SaveAddress(AddressRequest request)
 {
@@ -33,9 +30,9 @@ private string ValidatePostalCode(string postalCode)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 28
 ```python
 from flask import request, jsonify
 from html import escape
@@ -67,9 +64,9 @@ def validate_postal_code(postal_code):
     raise ValueError("Invalid postal code format")
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 31
 ```typescript
 import { Request, Response } from 'express';
 import { escape } from 'html-escaper';
@@ -103,14 +100,12 @@ const validatePostalCode = (postalCode: string | undefined): string | null => {
     throw new Error('Invalid postal code format');
 };
 ```
-
----
-
 ### 🧪 Senaryo 2: Bir eğitim platformunda kullanıcılar şifre oluştururken serbest metin girebiliyor. Şifre alanı minimum uzunluk şartı bulunuyor. Özel karakter, boşluk ve farklı semboller şifrede kullanılabiliyor. Şifre bilgisi sisteme kaydediliyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 15
+```c#
 [HttpPost("create-password")]
 public async Task<IActionResult> CreatePassword(PasswordRequest request)
 {
@@ -128,9 +123,9 @@ public async Task<IActionResult> CreatePassword(PasswordRequest request)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 24
 ```python
 from flask import request, jsonify
 import bcrypt
@@ -158,9 +153,9 @@ def create_password():
     return jsonify({'message': 'Password created successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 19
 ```typescript
 import bcrypt from 'bcrypt';
 
@@ -182,14 +177,12 @@ export const createPassword = async (req: Request, res: Response) => {
     res.json({ message: 'Password created successfully' });
 };
 ```
-
----
-
 ### 🧪 Senaryo 3: Bir kargo takip sisteminde kullanıcılar kargo numarasını girerek paket bilgilerine erişiyor. Kargo numarası metin kutusuna yazılıyor ve sorgulama işlemi başlatılıyor. Giriş alanında uzunluk sınırı bulunuyor. Farklı karakter türleri girişte kullanılabiliyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 19
+```c#
 [HttpGet("track-package/{trackingNumber}")]
 public async Task<IActionResult> TrackPackage(string trackingNumber)
 {
@@ -211,9 +204,9 @@ public async Task<IActionResult> TrackPackage(string trackingNumber)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 22
 ```python
 from flask import request, jsonify
 import re
@@ -239,9 +232,9 @@ def track_package(tracking_number):
     })
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 21
 ```typescript
 export const trackPackage = async (req: Request, res: Response) => {
     let trackingNumber = req.params.trackingNumber?.trim().toUpperCase();
@@ -265,14 +258,12 @@ export const trackPackage = async (req: Request, res: Response) => {
     });
 };
 ```
-
----
-
 ### 🧪 Senaryo 4: Bir sosyal medya platformunda kullanıcılar biyografi bilgilerini doldurabiliyor. Biyografi alanı karakter sınırı ile sınırlandırılmış. Bu bilgiler kullanıcı profillerinde görüntüleniyor. HTML ve özel semboller girişte kullanılabiliyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 16
+```c#
 [HttpPost("update-biography")]
 public async Task<IActionResult> UpdateBiography(BiographyRequest request)
 {
@@ -291,9 +282,9 @@ public async Task<IActionResult> UpdateBiography(BiographyRequest request)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 26
 ```python
 from flask import request, jsonify
 from html import escape
@@ -323,9 +314,9 @@ def update_biography():
     return jsonify({'message': 'Biography updated successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 19
 ```typescript
 import { escape } from 'html-escaper';
 
@@ -347,14 +338,12 @@ export const updateBiography = async (req: Request, res: Response) => {
     res.json({ message: 'Biography updated successfully' });
 };
 ```
-
----
-
 ### 🧪 Senaryo 5: Bir rezervasyon sisteminde kullanıcılar tarih aralığı girerek uygunluk sorgulaması yapabiliyor. Tarih alanları metin girişi ile doldurulabiliyor. Sistem bu tarih bilgilerini işleyerek uygunluk kontrolü yapıyor. Tarih formatı serbest bırakılmış.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 17
+```c#
 [HttpPost("check-availability")]
 public async Task<IActionResult> CheckAvailability(AvailabilityRequest request)
 {
@@ -374,9 +363,9 @@ public async Task<IActionResult> CheckAvailability(AvailabilityRequest request)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 23
 ```python
 from flask import request, jsonify
 from datetime import datetime
@@ -403,9 +392,9 @@ def check_availability():
     return jsonify({'available': conflicting_count == 0})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 22
 ```typescript
 export const checkAvailability = async (req: Request, res: Response) => {
     const { startDate, endDate, resourceId } = req.body;
@@ -430,14 +419,12 @@ export const checkAvailability = async (req: Request, res: Response) => {
     res.json({ available: conflictingCount === 0 });
 };
 ```
-
----
-
 ### 🧪 Senaryo 6: Bir forum sisteminde kullanıcılar konu başlığı ve içerik girerek yeni konu açabiliyor. Karakter sayısı sınırlaması bulunuyor. Başlık alanına sayılar ve semboller girilebiliyor. Konular ana sayfada listeleniyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 23
+```c#
 [HttpPost("create-topic")]
 public async Task<IActionResult> CreateTopic(TopicRequest request)
 {
@@ -463,9 +450,9 @@ public async Task<IActionResult> CreateTopic(TopicRequest request)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 25
 ```python
 from flask import request, jsonify
 from html import escape
@@ -494,9 +481,9 @@ def create_topic():
     return jsonify({'topic_id': str(result.inserted_id)})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 26
 ```typescript
 import { escape } from 'html-escaper';
 
@@ -525,14 +512,12 @@ export const createTopic = async (req: Request, res: Response) => {
     res.json({ topicId: topic._id });
 };
 ```
-
----
-
 ### 🧪 Senaryo 7: Bir üyelik formunda kullanıcılar doğum tarihi bilgisini elle girebiliyor. Tarih formatı açık şekilde belirtilmemiş. Sistem alanın dolu olmasını kontrol ediyor. Bu bilgi üyelik sonrası profil sayfasında gösteriliyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 25
+```c#
 [HttpPost("register")]
 public async Task<IActionResult> Register(RegistrationRequest request)
 {
@@ -560,9 +545,9 @@ public async Task<IActionResult> Register(RegistrationRequest request)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 30
 ```python
 from flask import request, jsonify
 from datetime import datetime, timedelta
@@ -596,9 +581,9 @@ def register():
     return jsonify({'user_id': str(result.inserted_id)})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 28
 ```typescript
 export const register = async (req: Request, res: Response) => {
     const { birthDate, email } = req.body;
@@ -629,14 +614,12 @@ export const register = async (req: Request, res: Response) => {
     res.json({ userId: user._id });
 };
 ```
-
----
-
 ### 🧪 Senaryo 8: Bir dosya arama sisteminde kullanıcılar dosya adını yazarak arama yapıyor. Arama kutusu girilen değeri sorguya dönüştürüyor. Dosya adında sembol ve özel karakterler kullanılabiliyor. Arama sonuçları kullanıcıya sunuluyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 18
+```c#
 [HttpGet("search-files")]
 public async Task<IActionResult> SearchFiles([FromQuery] string query)
 {
@@ -657,9 +640,9 @@ public async Task<IActionResult> SearchFiles([FromQuery] string query)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 28
 ```python
 from flask import request, jsonify
 import re
@@ -691,9 +674,9 @@ def search_files():
     return jsonify(result)
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 18
 ```typescript
 export const searchFiles = async (req: Request, res: Response) => {
     const query = (req.query.query as string)?.trim();
@@ -714,14 +697,12 @@ export const searchFiles = async (req: Request, res: Response) => {
     res.json(files);
 };
 ```
-
----
-
 ### 🧪 Senaryo 9: Bir blog platformunda kullanıcılar başlıklara etiket ekleyebiliyor. Etiket giriş alanı serbest metin formatında. Uzun ifadeler etiket olarak belirlenebiliyor. Bu etiketler filtreleme sisteminde görüntüleniyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 31
+```c#
 [HttpPost("add-tags")]
 public async Task<IActionResult> AddTags(TagRequest request)
 {
@@ -755,9 +736,9 @@ public async Task<IActionResult> AddTags(TagRequest request)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 38
 ```python
 from flask import request, jsonify
 from html import escape
@@ -799,9 +780,9 @@ def add_tags():
     return jsonify({'message': 'Tags added successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 35
 ```typescript
 import { escape } from 'html-escaper';
 
@@ -839,14 +820,12 @@ export const addTags = async (req: Request, res: Response) => {
     res.json({ message: 'Tags added successfully' });
 };
 ```
-
----
-
 ### 🧪 Senaryo 10: Bir anket sisteminde katılımcılar yaş bilgilerini girerek anketi başlatabiliyor. Yaş alanı doldurulup doldurulmadığı kontrol ediliyor. Farklı formatlar yaş alanına girilebiliyor. Yaş bilgisi raporlarda gösteriliyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 25
+```c#
 [HttpPost("start-survey")]
 public async Task<IActionResult> StartSurvey(SurveyRequest request)
 {
@@ -874,9 +853,9 @@ public async Task<IActionResult> StartSurvey(SurveyRequest request)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 27
 ```python
 from flask import request, jsonify
 
@@ -907,9 +886,9 @@ def start_survey():
     return jsonify({'response_id': str(result.inserted_id)})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`  
+**💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 26
 ```typescript
 export const startSurvey = async (req: Request, res: Response) => {
     const { age, surveyId } = req.body;
@@ -939,4 +918,3 @@ export const startSurvey = async (req: Request, res: Response) => {
 };
 ```
 
----

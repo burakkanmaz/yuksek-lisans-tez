@@ -1,8 +1,9 @@
- ### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
+### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 48
+```c#
 [HttpPost("create-template")]
 public IActionResult CreateTemplate([FromBody] TemplateRequest request)
 {
@@ -53,12 +54,9 @@ public IActionResult ExecuteTemplate([FromBody] ExecuteTemplateRequest request)
 }
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 59
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -121,12 +119,9 @@ def execute_template():
     return jsonify({'output': output})
 ```
 
-----
-
-### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 61
 ```typescript
 interface Template {
   id: string;
@@ -191,13 +186,10 @@ class TemplateEngine {
 }
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 62
+```c#
 [HttpPost("create-formula")]
 public IActionResult CreateFormula([FromBody] FormulaRequest request)
 {
@@ -262,79 +254,9 @@ public class FormulaEvaluator
 }
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
-```python
-import re
-import math
-from datetime import datetime
-
-class FormulaEngine:
-    def __init__(self):
-        self.formulas = {}
-        self.safe_functions = {
-            'sin': math.sin, 'cos': math.cos, 'tan': math.tan,
-            'sqrt': math.sqrt, 'log': math.log, 'abs': abs,
-            'min': min, 'max': max, 'sum': sum
-        }
-    
-    def validate_formula(self, expression):
-        # Basic validation for safe expressions
-        allowed_chars = r'[a-zA-Z0-9+\-*/().,<>=! ]'
-        return bool(re.match(f'^{allowed_chars}+$', expression))
-    
-    def evaluate_formula(self, expression, variables):
-        if not self.validate_formula(expression):
-            raise ValueError("Invalid formula syntax")
-        
-        # Replace variables in expression
-        for var, value in variables.items():
-            expression = expression.replace(var, str(value))
-        
-        # Create safe evaluation environment
-        safe_dict = {"__builtins__": {}}
-        safe_dict.update(self.safe_functions)
-        
-        try:
-            result = eval(expression, safe_dict)
-            return float(result)
-        except Exception as e:
-            raise ValueError(f"Formula evaluation error: {str(e)}")
-
-@app.route('/create-formula', methods=['POST'])
-def create_formula():
-    data = request.json
-    formula_engine = FormulaEngine()
-    
-    try:
-        if not formula_engine.validate_formula(data['expression']):
-            return jsonify({'error': 'Invalid formula syntax'}), 400
-        
-        formula_id = len(formula_engine.formulas) + 1
-        formula_engine.formulas[formula_id] = {
-            'id': formula_id,
-            'name': data['name'],
-            'expression': data['expression'],
-            'description': data.get('description', ''),
-            'created_by': data['user_id'],
-            'created_date': datetime.utcnow().isoformat()
-        }
-        
-        return jsonify({'formula_id': formula_id})
-    
-    except Exception as e:
-        return jsonify({'error': str(e)}), 400
-
-----
-
-### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `TypeScript`  
-**🤖 AI:** Claude
-
+**Satır Sayısı:** 160
 ```typescript
 interface Calculation {
   id: string;
@@ -498,13 +420,10 @@ class CalculationEngine {
 }
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 120
+```c#
 [HttpPost("create-content-template")]
 public IActionResult CreateContentTemplate([FromBody] ContentTemplateRequest request)
 {
@@ -627,12 +546,9 @@ public class ContentGenerator
 }
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 174
 ```python
 import re
 import json
@@ -810,12 +726,9 @@ def generate_content():
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 207
 ```typescript
 interface ContentTemplate {
   id: string;
@@ -1026,13 +939,10 @@ class ContentGenerator {
 }
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 176
+```c#
 [HttpPost("create-workflow")]
 public IActionResult CreateWorkflow([FromBody] WorkflowRequest request)
 {
@@ -1211,12 +1121,9 @@ public class WorkflowEngine
 }
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 255
 ```python
 import json
 from datetime import datetime
@@ -1475,12 +1382,9 @@ def execute_workflow(workflow_id):
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 342
 ```typescript
 interface Workflow {
   id: string;
@@ -1826,28 +1730,9 @@ class WorkflowEngine {
 }
 ```
 
-@app.route('/calculate', methods=['POST'])
-def calculate():
-    data = request.json
-    formula_engine = FormulaEngine()
-    
-    formula = formula_engine.formulas.get(data['formula_id'])
-    if not formula:
-        return jsonify({'error': 'Formula not found'}), 404
-    
-    try:
-        result = formula_engine.evaluate_formula(formula['expression'], data['variables'])
-        return jsonify({'result': result, 'formula': formula['expression']})
-    except Exception as e:
-        return jsonify({'error': str(e)}), 400
-```
-
-----
-
-### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 98
 ```typescript
 interface Formula {
   id: string;
@@ -1949,13 +1834,10 @@ class FormulaEngine {
 }
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 64
+```c#
 [HttpPost("create-page")]
 public IActionResult CreatePage([FromBody] PageRequest request)
 {
@@ -2022,12 +1904,9 @@ public IActionResult UpdatePage(int pageId, [FromBody] PageUpdateRequest request
 }
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 82
 ```python
 from flask import Flask, request, jsonify, render_template_string
 import bleach
@@ -2113,12 +1992,9 @@ def render_page(page_id):
     return html_content
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 84
 ```typescript
 interface WebPage {
   id: string;
@@ -2206,13 +2082,10 @@ class PageBuilder {
 }
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 80
+```c#
 [HttpPost("save-config")]
 public IActionResult SaveConfiguration([FromBody] ConfigRequest request)
 {
@@ -2295,12 +2168,9 @@ public class ConfigManager
 }
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 89
 ```python
 import json
 import os
@@ -2393,12 +2263,9 @@ def apply_configuration(config_id):
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 97
 ```typescript
 interface Configuration {
   id: string;
@@ -2499,13 +2366,10 @@ class ConfigManager {
 }
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 105
+```c#
 [HttpPost("create-macro")]
 public IActionResult CreateMacro([FromBody] MacroRequest request)
 {
@@ -2613,12 +2477,9 @@ public class MacroExecutor
 }
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 110
 ```python
 import re
 from datetime import datetime
@@ -2732,12 +2593,9 @@ def execute_macro(macro_id):
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 134
 ```typescript
 interface Macro {
   id: string;
@@ -2875,13 +2733,10 @@ class MacroExecutor {
 }
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 97
+```c#
 [HttpPost("create-transform-rule")]
 public IActionResult CreateTransformRule([FromBody] TransformRuleRequest request)
 {
@@ -2981,12 +2836,9 @@ public class DataTransformer
 }
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 159
 ```python
 import json
 import re
@@ -3149,12 +3001,9 @@ def transform_data():
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 183
 ```typescript
 interface TransformRule {
   id: string;
@@ -3341,13 +3190,10 @@ class DataTransformer {
 }
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 127
+```c#
 [HttpPost("create-test-scenario")]
 public IActionResult CreateTestScenario([FromBody] TestScenarioRequest request)
 {
@@ -3477,12 +3323,9 @@ public class TestExecutor
 }
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 172
 ```python
 import json
 import time
@@ -3658,12 +3501,9 @@ def execute_test(scenario_id):
         return jsonify({'error': str(e)}), 400
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 199
 ```typescript
 interface TestScenario {
   id: string;
@@ -3866,13 +3706,10 @@ class TestExecutor {
 }
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 114
+```c#
 [HttpPost("create-calculation")]
 public IActionResult CreateCalculation([FromBody] CalculationRequest request)
 {
@@ -3989,153 +3826,3 @@ public class CalculationEngine
 }
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-**💻 Dil:** `Python`  
-**🤖 AI:** Claude
-
-```python
-import math
-import re
-from datetime import datetime
-
-class CalculationEngine:
-    def __init__(self):
-        self.calculations = {}
-        self.functions = {
-            'SUM': lambda args: sum(args),
-            'AVG': lambda args: sum(args) / len(args) if args else 0,
-            'MAX': lambda args: max(args) if args else 0,
-            'MIN': lambda args: min(args) if args else 0,
-            'SQRT': lambda args: math.sqrt(args[0]) if args else 0,
-            'POW': lambda args: math.pow(args[0], args[1]) if len(args) >= 2 else 0,
-            'SIN': lambda args: math.sin(args[0]) if args else 0,
-            'COS': lambda args: math.cos(args[0]) if args else 0,
-            'TAN': lambda args: math.tan(args[0]) if args else 0,
-            'LOG': lambda args: math.log(args[0]) if args and args[0] > 0 else 0,
-            'ABS': lambda args: abs(args[0]) if args else 0
-        }
-        
-        self.constants = {
-            'PI': math.pi,
-            'E': math.e
-        }
-    
-    def validate_formula(self, formula):
-        # Basic validation for safe formula
-        allowed_chars = r'[a-zA-Z0-9+\-*/().,<>=! ]'
-        if not re.match(f'^{allowed_chars}+$', formula):
-            return False, "Invalid characters in formula"
-        
-        # Check for balanced parentheses
-        if formula.count('(') != formula.count(')'):
-            return False, "Unbalanced parentheses"
-        
-        return True, "Valid"
-    
-    def create_calculation(self, name, formula, description, variables, user_id):
-        is_valid, message = self.validate_formula(formula)
-        if not is_valid:
-            raise ValueError(message)
-        
-        calc_id = len(self.calculations) + 1
-        calculation = {
-            'id': calc_id,
-            'name': name,
-            'formula': formula,
-            'description': description,
-            'variables': variables,
-            'created_by': user_id,
-            'created_date': datetime.utcnow().isoformat()
-        }
-        
-        self.calculations[calc_id] = calculation
-        return calc_id
-    
-    def execute_calculation(self, calc_id, input_values):
-        calculation = self.calculations.get(calc_id)
-        if not calculation:
-            raise ValueError("Calculation not found")
-        
-        try:
-            result = self.calculate(calculation['formula'], input_values)
-            return {
-                'result': result,
-                'formula': calculation['formula'],
-                'input_values': input_values
-            }
-        except Exception as e:
-            raise ValueError(f"Calculation error: {str(e)}")
-    
-    def calculate(self, formula, variables):
-        processed_formula = self.process_formula(formula, variables)
-        
-        # Create safe evaluation environment
-        safe_dict = {
-            "__builtins__": {},
-            "abs": abs, "round": round, "min": min, "max": max,
-            "sum": sum, "pow": pow
-        }
-        safe_dict.update(self.constants)
-        
-        try:
-            result = eval(processed_formula, safe_dict)
-            return float(result)
-        except Exception as e:
-            raise ValueError(f"Formula evaluation error: {str(e)}")
-    
-    def process_formula(self, formula, variables):
-        processed = formula
-        
-        # Replace variables with their values
-        for var_name, var_value in variables.items():
-            processed = processed.replace(var_name, str(var_value))
-        
-        # Replace constants
-        for const_name, const_value in self.constants.items():
-            processed = processed.replace(const_name, str(const_value))
-        
-        # Replace functions
-        for func_name, func_impl in self.functions.items():
-            processed = self.replace_functions(processed, func_name, func_impl)
-        
-        return processed
-    
-    def replace_functions(self, formula, func_name, func_impl):
-        pattern = f"{func_name}\\(([^)]+)\\)"
-        
-        def replace_match(match):
-            args_str = match.group(1)
-            args = [float(arg.strip()) for arg in args_str.split(',')]
-            return str(func_impl(args))
-        
-        return re.sub(pattern, replace_match, formula)
-
-@app.route('/create-calculation', methods=['POST'])
-def create_calculation():
-    data = request.json
-    engine = CalculationEngine()
-    
-    try:
-        calc_id = engine.create_calculation(
-            data['name'],
-            data['formula'],
-            data['description'],
-            data['variables'],
-            data['user_id']
-        )
-        return jsonify({'calculation_id': calc_id})
-    except Exception as e:
-        return jsonify({'error': str(e)}), 400
-
-@app.route('/execute-calculation/<int:calc_id>', methods=['POST'])
-def execute_calculation(calc_id):
-    data = request.json
-    engine = CalculationEngine()
-    
-    try:
-        result = engine.execute_calculation(calc_id, data['input_values'])
-        return jsonify(result)
-    except Exception as e:
-        return jsonify({'error': str(e)}), 400

@@ -1,8 +1,9 @@
- ### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
-**💻 Dil:** `C#`  
-**🤖 AI:** Claude
+### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
 
-```csharp
+**💻 Dil:** `C#`
+**🤖 AI:** Claude
+**Satır Sayısı:** 9
+```c#
 [HttpGet("search-users")]
 public IActionResult SearchUsers(string username)
 {
@@ -14,9 +15,9 @@ public IActionResult SearchUsers(string username)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 11
 ```python
 @app.route('/search-users')
 def search_users():
@@ -31,9 +32,9 @@ def search_users():
     } for u in users])
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 9
 ```typescript
 const searchUsers = async (username: string) => {
   const users = await User.findAll({
@@ -46,13 +47,10 @@ const searchUsers = async (username: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 2: Bir e-ticaret platformunda kullanıcılar sipariş numaralarını girerek kargo durumlarını sorgulayabiliyor. Sipariş numarası giriş kutusuna yazıldıktan sonra veritabanı üzerinden arama yapılıyor. Sonuçlar kullanıcının geçmiş siparişleriyle birlikte gösteriliyor. Sipariş numarası girilerek bilgiye ulaşılabiliyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 15
+```c#
 [HttpGet("track-order/{orderNumber}")]
 public IActionResult TrackOrder(string orderNumber)
 {
@@ -70,9 +68,9 @@ public IActionResult TrackOrder(string orderNumber)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 14
 ```python
 @app.route('/track-order/<order_number>')
 def track_order(order_number):
@@ -90,9 +88,9 @@ def track_order(order_number):
     })
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 14
 ```typescript
 const trackOrder = async (orderNumber: string) => {
   const order = await Order.findOne({
@@ -110,13 +108,10 @@ const trackOrder = async (orderNumber: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 3: Bir üniversite portalında öğrenciler öğrenci numaralarını girerek notlarını görebiliyor. Notlar öğrenciye özel olarak filtrelenip veritabanından çekiliyor. Öğrenci numarası giriş alanı serbest metin kutusundan alınıyor. Notlar sayfa üzerinde tablo halinde görüntüleniyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 16
+```c#
 [HttpGet("student-grades/{studentNumber}")]
 public IActionResult GetStudentGrades(string studentNumber)
 {
@@ -135,9 +130,9 @@ public IActionResult GetStudentGrades(string studentNumber)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 12
 ```python
 @app.route('/student-grades/<student_number>')
 def get_student_grades(student_number):
@@ -153,9 +148,9 @@ def get_student_grades(student_number):
     } for g in grades])
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 14
 ```typescript
 const getStudentGrades = async (studentNumber: string) => {
   const grades = await Grade.findAll({
@@ -173,13 +168,10 @@ const getStudentGrades = async (studentNumber: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 4: Bir destek sistemi uygulamasında kullanıcılar açtıkları destek taleplerini takip edebiliyor. Destek talep numarası girilerek geçmiş kayıtlara ulaşılabiliyor. Bu bilgiye göre sistem veritabanından ilgili kayıtları çekip sunuyor. Detaylar sayfada genişletilebilir yapıda gösteriliyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 17
+```c#
 [HttpGet("support-ticket/{ticketNumber}")]
 public IActionResult GetSupportTicket(string ticketNumber)
 {
@@ -199,9 +191,9 @@ public IActionResult GetSupportTicket(string ticketNumber)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 17
 ```python
 @app.route('/support-ticket/<ticket_number>')
 def get_support_ticket(ticket_number):
@@ -222,9 +214,9 @@ def get_support_ticket(ticket_number):
     })
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 19
 ```typescript
 const getSupportTicket = async (ticketNumber: string) => {
   const ticket = await SupportTicket.findOne({
@@ -247,13 +239,10 @@ const getSupportTicket = async (ticketNumber: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 5: Bir kütüphane uygulamasında kullanıcılar kitap adıyla arama yapabiliyor. Arama çubuğuna kitap ismi yazılarak sonuçlar listeleniyor. Sistem girilen değeri kullanarak kitap başlığına göre veri filtreliyor. Sonuçlar kart yapısında sunuluyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 16
+```c#
 [HttpGet("search-books")]
 public IActionResult SearchBooks(string title)
 {
@@ -272,9 +261,9 @@ public IActionResult SearchBooks(string title)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 14
 ```python
 @app.route('/search-books')
 def search_books():
@@ -292,9 +281,9 @@ def search_books():
     } for b in books])
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 10
 ```typescript
 const searchBooks = async (title: string) => {
   const books = await Book.findAll({
@@ -308,13 +297,10 @@ const searchBooks = async (title: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 6: Bir restoran rezervasyon sisteminde yöneticiler müşteri e-posta adresine göre rezervasyonları listeleyebiliyor. Yönetici panelindeki filtreleme bölümünde e-posta adresi girilerek sorgu yapılabiliyor. Bu alan format sınırlaması olmadan çalışıyor. Sonuçlar zaman sıralı şekilde gösteriliyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 17
+```c#
 [HttpGet("reservations-by-email")]
 public IActionResult GetReservationsByEmail(string email)
 {
@@ -334,9 +320,9 @@ public IActionResult GetReservationsByEmail(string email)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 14
 ```python
 @app.route('/reservations-by-email')
 def get_reservations_by_email():
@@ -354,9 +340,9 @@ def get_reservations_by_email():
     } for r in reservations])
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 9
 ```typescript
 const getReservationsByEmail = async (email: string) => {
   const reservations = await Reservation.findAll({
@@ -369,13 +355,10 @@ const getReservationsByEmail = async (email: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 7: Bir otel yönetim sisteminde personel müşteri soyadına göre kayıt araması yapabiliyor. Soyad bilgisi giriş alanından alınıp sorgu oluşturuluyor. Veritabanından eşleşen müşteri kayıtları tablo halinde listeleniyor. Her kayıt satırı müşteri detayına yönlendirme içeriyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 17
+```c#
 [HttpGet("search-guests-by-surname")]
 public IActionResult SearchGuestsBySurname(string surname)
 {
@@ -395,9 +378,9 @@ public IActionResult SearchGuestsBySurname(string surname)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 15
 ```python
 @app.route('/search-guests-by-surname')
 def search_guests_by_surname():
@@ -416,9 +399,9 @@ def search_guests_by_surname():
     } for g in guests])
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 10
 ```typescript
 const searchGuestsBySurname = async (surname: string) => {
   const guests = await Guest.findAll({
@@ -432,13 +415,10 @@ const searchGuestsBySurname = async (surname: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 8: Bir etkinlik kayıt sisteminde kullanıcılar bilet numarasını girerek rezervasyon bilgilerine ulaşabiliyor. Bu numara genellikle QR koddan okunarak form alanına aktarılıyor. Sistem bu numaraya göre veritabanından ilgili bilgileri çekiyor. Sayfada kullanıcıya özel detaylar gösteriliyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 18
+```c#
 [HttpGet("ticket-info/{ticketNumber}")]
 public IActionResult GetTicketInfo(string ticketNumber)
 {
@@ -459,9 +439,9 @@ public IActionResult GetTicketInfo(string ticketNumber)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 16
 ```python
 @app.route('/ticket-info/<ticket_number>')
 def get_ticket_info(ticket_number):
@@ -481,9 +461,9 @@ def get_ticket_info(ticket_number):
     })
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 19
 ```typescript
 const getTicketInfo = async (ticketNumber: string) => {
   const ticket = await Ticket.findOne({
@@ -506,13 +486,10 @@ const getTicketInfo = async (ticketNumber: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 9: Bir video paylaşım platformunda yöneticiler içerik ID'sine göre videoları yönetim panelinde arayabiliyor. ID değeri giriş kutusuna yazılıyor ve eşleşen içerik listeleniyor. Arama işlemi basit form üzerinden gerçekleşiyor. Liste video başlığı ve yükleyen kullanıcıyı gösteriyor.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 18
+```c#
 [HttpGet("video/{videoId}")]
 public IActionResult GetVideoById(string videoId)
 {
@@ -533,9 +510,9 @@ public IActionResult GetVideoById(string videoId)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 17
 ```python
 @app.route('/video/<video_id>')
 def get_video_by_id(video_id):
@@ -556,9 +533,9 @@ def get_video_by_id(video_id):
     })
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 18
 ```typescript
 const getVideoById = async (videoId: string) => {
   const video = await Video.findOne({
@@ -580,13 +557,10 @@ const getVideoById = async (videoId: string) => {
 };
 ```
 
-----
-
-### 🧪 Senaryo 10: Bir online sınav sisteminde eğitmenler sınav koduna göre sınav sonuçlarını görüntüleyebiliyor. Kod formdan alınıp ilgili sınav kaydını getirmek üzere sorguda kullanılıyor. Sonuçlar başarı durumlarına göre renkli etiketlerle gösteriliyor. Listeleme sayfası filtrelenebilir yapıya sahip.
-**💻 Dil:** `C#`  
+**💻 Dil:** `C#`
 **🤖 AI:** Claude
-
-```csharp
+**Satır Sayısı:** 17
+```c#
 [HttpGet("exam-results/{examCode}")]
 public IActionResult GetExamResults(string examCode)
 {
@@ -606,9 +580,9 @@ public IActionResult GetExamResults(string examCode)
 }
 ```
 
-**💻 Dil:** `Python`  
+**💻 Dil:** `Python`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 13
 ```python
 @app.route('/exam-results/<exam_code>')
 def get_exam_results(exam_code):
@@ -625,9 +599,9 @@ def get_exam_results(exam_code):
     } for r in results])
 ```
 
-**💻 Dil:** `TypeScript`  
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
-
+**Satır Sayısı:** 15
 ```typescript
 const getExamResults = async (examCode: string) => {
   const results = await ExamResult.findAll({
@@ -645,3 +619,4 @@ const getExamResults = async (examCode: string) => {
   }));
 };
 ```
+
