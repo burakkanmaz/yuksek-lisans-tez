@@ -2,6 +2,7 @@
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 9
 ```csharp
 [HttpGet("search-users")]
 public IActionResult SearchUsers(string username)
@@ -17,6 +18,7 @@ public IActionResult SearchUsers(string username)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 11
 ```python
 @app.route('/search-users')
 def search_users():
@@ -34,6 +36,7 @@ def search_users():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 9
 ```typescript
 const searchUsers = async (username: string) => {
   const users = await User.findAll({
@@ -52,6 +55,7 @@ const searchUsers = async (username: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 15
 ```csharp
 [HttpGet("track-order/{orderNumber}")]
 public IActionResult TrackOrder(string orderNumber)
@@ -73,6 +77,7 @@ public IActionResult TrackOrder(string orderNumber)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 14
 ```python
 @app.route('/track-order/<order_number>')
 def track_order(order_number):
@@ -93,6 +98,7 @@ def track_order(order_number):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 14
 ```typescript
 const trackOrder = async (orderNumber: string) => {
   const order = await Order.findOne({
@@ -116,6 +122,7 @@ const trackOrder = async (orderNumber: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 16
 ```csharp
 [HttpGet("student-grades/{studentNumber}")]
 public IActionResult GetStudentGrades(string studentNumber)
@@ -138,6 +145,7 @@ public IActionResult GetStudentGrades(string studentNumber)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 12
 ```python
 @app.route('/student-grades/<student_number>')
 def get_student_grades(student_number):
@@ -156,6 +164,7 @@ def get_student_grades(student_number):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 14
 ```typescript
 const getStudentGrades = async (studentNumber: string) => {
   const grades = await Grade.findAll({
@@ -179,6 +188,7 @@ const getStudentGrades = async (studentNumber: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 17
 ```csharp
 [HttpGet("support-ticket/{ticketNumber}")]
 public IActionResult GetSupportTicket(string ticketNumber)
@@ -202,6 +212,7 @@ public IActionResult GetSupportTicket(string ticketNumber)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 17
 ```python
 @app.route('/support-ticket/<ticket_number>')
 def get_support_ticket(ticket_number):
@@ -225,6 +236,7 @@ def get_support_ticket(ticket_number):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 19
 ```typescript
 const getSupportTicket = async (ticketNumber: string) => {
   const ticket = await SupportTicket.findOne({
@@ -253,6 +265,7 @@ const getSupportTicket = async (ticketNumber: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 16
 ```csharp
 [HttpGet("search-books")]
 public IActionResult SearchBooks(string title)
@@ -275,6 +288,7 @@ public IActionResult SearchBooks(string title)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 14
 ```python
 @app.route('/search-books')
 def search_books():
@@ -295,6 +309,7 @@ def search_books():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 10
 ```typescript
 const searchBooks = async (title: string) => {
   const books = await Book.findAll({
@@ -314,6 +329,7 @@ const searchBooks = async (title: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 17
 ```csharp
 [HttpGet("reservations-by-email")]
 public IActionResult GetReservationsByEmail(string email)
@@ -337,6 +353,7 @@ public IActionResult GetReservationsByEmail(string email)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 14
 ```python
 @app.route('/reservations-by-email')
 def get_reservations_by_email():
@@ -357,6 +374,7 @@ def get_reservations_by_email():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 9
 ```typescript
 const getReservationsByEmail = async (email: string) => {
   const reservations = await Reservation.findAll({
@@ -375,6 +393,7 @@ const getReservationsByEmail = async (email: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 17
 ```csharp
 [HttpGet("search-guests-by-surname")]
 public IActionResult SearchGuestsBySurname(string surname)
@@ -398,6 +417,7 @@ public IActionResult SearchGuestsBySurname(string surname)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 15
 ```python
 @app.route('/search-guests-by-surname')
 def search_guests_by_surname():
@@ -419,6 +439,7 @@ def search_guests_by_surname():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 10
 ```typescript
 const searchGuestsBySurname = async (surname: string) => {
   const guests = await Guest.findAll({
@@ -438,6 +459,7 @@ const searchGuestsBySurname = async (surname: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 18
 ```csharp
 [HttpGet("ticket-info/{ticketNumber}")]
 public IActionResult GetTicketInfo(string ticketNumber)
@@ -462,6 +484,7 @@ public IActionResult GetTicketInfo(string ticketNumber)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 16
 ```python
 @app.route('/ticket-info/<ticket_number>')
 def get_ticket_info(ticket_number):
@@ -484,6 +507,7 @@ def get_ticket_info(ticket_number):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 19
 ```typescript
 const getTicketInfo = async (ticketNumber: string) => {
   const ticket = await Ticket.findOne({
@@ -512,6 +536,7 @@ const getTicketInfo = async (ticketNumber: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 18
 ```csharp
 [HttpGet("video/{videoId}")]
 public IActionResult GetVideoById(string videoId)
@@ -536,6 +561,7 @@ public IActionResult GetVideoById(string videoId)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 17
 ```python
 @app.route('/video/<video_id>')
 def get_video_by_id(video_id):
@@ -559,6 +585,7 @@ def get_video_by_id(video_id):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 18
 ```typescript
 const getVideoById = async (videoId: string) => {
   const video = await Video.findOne({
@@ -586,6 +613,7 @@ const getVideoById = async (videoId: string) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 17
 ```csharp
 [HttpGet("exam-results/{examCode}")]
 public IActionResult GetExamResults(string examCode)
@@ -609,6 +637,7 @@ public IActionResult GetExamResults(string examCode)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 13
 ```python
 @app.route('/exam-results/<exam_code>')
 def get_exam_results(exam_code):
@@ -628,6 +657,7 @@ def get_exam_results(exam_code):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 15
 ```typescript
 const getExamResults = async (examCode: string) => {
   const results = await ExamResult.findAll({

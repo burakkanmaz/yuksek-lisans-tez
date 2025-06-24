@@ -2,6 +2,7 @@
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 37
 ```csharp
 [HttpPost("disk-usage-report")]
 public IActionResult GenerateDiskUsageReport(string directoryPath)
@@ -47,6 +48,7 @@ private long CalculateDirectorySize(string path)
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 41
 ```python
 from flask import Flask, request, jsonify
 import os
@@ -96,6 +98,7 @@ def calculate_directory_size(path):
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 51
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -156,6 +159,7 @@ async function calculateDirectorySize(dirPath: string): Promise<number> {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 38
 ```csharp
 [HttpPost("process-file")]
 public IActionResult ProcessFile(string filePath, string outputFormat)
@@ -202,6 +206,7 @@ private byte[] ProcessTextFile(string filePath)
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 38
 ```python
 from flask import Flask, request, send_file
 import os
@@ -248,6 +253,7 @@ def process_text_file(file_path):
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 47
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -304,6 +310,7 @@ async function processTextFile(filePath: string): Promise<Buffer> {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 31
 ```csharp
 [HttpGet("view-logs")]
 public IActionResult ViewLogs(string filePath, string filter = null, string search = null, int page = 1, int pageSize = 50)
@@ -343,6 +350,7 @@ public IActionResult ViewLogs(string filePath, string filter = null, string sear
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 42
 ```python
 from flask import Flask, request, jsonify
 import os
@@ -393,6 +401,7 @@ def view_logs():
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 40
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -442,6 +451,7 @@ app.get('/view-logs', async (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 44
 ```csharp
 [HttpPost("backup-directory")]
 public async Task<IActionResult> BackupDirectory(string sourcePath, string backupPath)
@@ -494,6 +504,7 @@ private void CopyDirectory(string source, string dest, BackupStatus status)
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 40
 ```python
 from flask import Flask, request, jsonify
 import os
@@ -542,6 +553,7 @@ def copy_directory(source, dest, status):
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 49
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -600,6 +612,7 @@ async function copyDirectory(source: string, dest: string, status: any) {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 29
 ```csharp
 [HttpPost("network-test")]
 public async Task<IActionResult> NetworkTest(string targetAddress)
@@ -637,6 +650,7 @@ public async Task<IActionResult> NetworkTest(string targetAddress)
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 36
 ```python
 from flask import Flask, request, jsonify
 import subprocess
@@ -681,6 +695,7 @@ def extract_rtt(ping_output):
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 42
 ```typescript
 import express from 'express';
 import { exec } from 'child_process';
@@ -732,6 +747,7 @@ function extractRtt(output: string): number | null {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 34
 ```csharp
 [HttpPost("compress-files")]
 public IActionResult CompressFiles(string[] filePaths, string compressionLevel = "Normal")
@@ -774,6 +790,7 @@ public IActionResult CompressFiles(string[] filePaths, string compressionLevel =
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 36
 ```python
 from flask import Flask, request, send_file
 import zipfile
@@ -818,6 +835,7 @@ def compress_files():
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 38
 ```typescript
 import express from 'express';
 import archiver from 'archiver';
@@ -865,6 +883,7 @@ app.post('/compress-files', async (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 37
 ```csharp
 [HttpGet("monitor-process")]
 public IActionResult MonitorProcess(string processName)
@@ -910,6 +929,7 @@ private double GetCpuUsage(Process process)
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 34
 ```python
 from flask import Flask, request, jsonify
 import psutil
@@ -952,6 +972,7 @@ def get_cpu_usage(process):
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 38
 ```typescript
 import express from 'express';
 import ps from 'process-stats';
@@ -999,6 +1020,7 @@ async function getCpuUsage(pid: number): Promise<number> {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 26
 ```csharp
 [HttpGet("search-files")]
 public IActionResult SearchFiles(string searchPath, string pattern, string filter = null)
@@ -1033,6 +1055,7 @@ public IActionResult SearchFiles(string searchPath, string pattern, string filte
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 35
 ```python
 from flask import Flask, request, jsonify
 import os
@@ -1076,6 +1099,7 @@ def search_files():
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 40
 ```typescript
 import express from 'express';
 import fs from 'fs';
@@ -1125,6 +1149,7 @@ app.get('/search-files', async (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 40
 ```csharp
 [HttpPost("execute-db-operation")]
 public IActionResult ExecuteDbOperation(string dbName, string operation, string query)
@@ -1173,6 +1198,7 @@ private Dictionary<string, object> GetDatabaseStatus(SqlConnection conn)
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 39
 ```python
 from flask import Flask, request, jsonify
 import sqlite3
@@ -1220,6 +1246,7 @@ def get_database_status(conn):
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 48
 ```typescript
 import express from 'express';
 import sqlite3 from 'sqlite3';
@@ -1277,6 +1304,7 @@ async function getDatabaseStatus(db: sqlite3.Database): Promise<any> {
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 34
 ```csharp
 [HttpPost("security-scan")]
 public IActionResult SecurityScan(SecurityScanParams scanParams)
@@ -1319,6 +1347,7 @@ private IEnumerable<Vulnerability> ScanPorts(string target)
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 32
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -1359,6 +1388,7 @@ def scan_ports(target):
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
 
+**Satır Sayısı:** 38
 ```typescript
 import express from 'express';
 import { Request, Response } from 'express';

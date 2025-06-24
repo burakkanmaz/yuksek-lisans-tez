@@ -2,6 +2,7 @@
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 21
 ```csharp
 
 public class TemplateProcessor
@@ -29,6 +30,7 @@ public class TemplateProcessor
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 13
 ```python
 
 class TemplateProcessor:
@@ -48,6 +50,7 @@ class TemplateProcessor:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 19
 ```typescript
 
 class TemplateProcessor {
@@ -73,6 +76,7 @@ class TemplateProcessor {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 21
 ```csharp
 
 using System.Data;
@@ -100,6 +104,7 @@ public class FormulaEngine
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 11
 ```python
 
 import math
@@ -117,6 +122,7 @@ class FormulaEngine:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 12
 ```typescript
 
 class FormulaEngine {
@@ -135,6 +141,7 @@ class FormulaEngine {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 14
 ```csharp
 
 using Microsoft.AspNetCore.Mvc;
@@ -155,6 +162,7 @@ public class WebPageController : Controller
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 13
 ```python
 
 from flask import Flask, request, render_template_string
@@ -174,6 +182,7 @@ if __name__ == '__main__':
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 19
 ```typescript
 
 // Node.js example using Express
@@ -199,6 +208,7 @@ app.listen(PORT, () => {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 33
 ```csharp
 
 using Microsoft.Extensions.Configuration;
@@ -238,6 +248,7 @@ public class ConfigurationManager
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 30
 ```python
 
 import json
@@ -274,6 +285,7 @@ class ConfigurationManager:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 44
 ```typescript
 
 import fs from 'fs';
@@ -324,6 +336,7 @@ class ConfigurationManager {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 48
 ```csharp
 
 using System.Reflection;
@@ -378,6 +391,7 @@ public class MacroExecutor
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 15
 ```python
 
 class MacroExecutor:
@@ -399,6 +413,7 @@ class MacroExecutor:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 20
 ```typescript
 
 class MacroExecutor {
@@ -425,6 +440,7 @@ class MacroExecutor {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 33
 ```csharp
 
 using System.Collections.Generic;
@@ -464,6 +480,7 @@ public class DataConverter
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 18
 ```python
 
 from typing import Callable, Dict, List
@@ -488,6 +505,7 @@ class DataConverter:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 22
 ```typescript
 
 type TransformationRule = (input: string) => string;
@@ -516,6 +534,7 @@ class DataConverter {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 52
 ```csharp
 
 using System;
@@ -574,6 +593,7 @@ public class TestRunner
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 50
 ```python
 
 from typing import Callable, Dict, List
@@ -630,6 +650,7 @@ class TestRunner:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 50
 ```typescript
 
 interface TestResult {
@@ -686,6 +707,7 @@ class TestRunner {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 34
 ```csharp
 
 using System.Data;
@@ -726,6 +748,7 @@ public class CalculationEngine
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 19
 ```python
 
 import math
@@ -751,6 +774,7 @@ class CalculationEngine:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 24
 ```typescript
 
 class CalculationEngine {
@@ -781,6 +805,7 @@ class CalculationEngine {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 33
 ```csharp
 
 using System.Collections.Generic;
@@ -820,6 +845,7 @@ public class ContentTemplateProcessor
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 21
 ```python
 
 import re
@@ -847,6 +873,7 @@ class ContentTemplateProcessor:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 24
 ```typescript
 
 class ContentTemplateProcessor {
@@ -877,6 +904,7 @@ class ContentTemplateProcessor {
 💻 Dil: C#
 🤖 AI: Gemini
 
+**Satır Sayısı:** 60
 ```csharp
 
 using System;
@@ -943,6 +971,7 @@ public class WorkflowEngine
 💻 Dil: Python
 🤖 AI: Gemini
 
+**Satır Sayısı:** 51
 ```python
 
 from typing import Callable, Dict, List, Any
@@ -1000,6 +1029,7 @@ class WorkflowEngine:
 💻 Dil: TypeScript
 🤖 AI: Gemini
 
+**Satır Sayısı:** 53
 ```typescript
 
 interface WorkflowResult {

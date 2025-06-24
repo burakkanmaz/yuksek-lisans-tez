@@ -2,6 +2,7 @@
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 32
 ```csharp
 [HttpPost("disk-usage")]
 public async Task<IActionResult> AnalyzeDiskUsage([FromBody] DiskAnalysisRequest request)
@@ -43,6 +44,7 @@ public async Task<IActionResult> DownloadReport(int id, string format)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 40
 ```python
 import os
 import json
@@ -92,6 +94,7 @@ class DiskAnalyzer:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 75
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -176,6 +179,7 @@ class DiskAnalyzer {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 53
 ```csharp
 [HttpPost("process-file")]
 public async Task<IActionResult> ProcessFile([FromBody] FileProcessRequest request)
@@ -238,6 +242,7 @@ public async Task<IActionResult> DownloadResult(int resultId)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 55
 ```python
 import os
 from abc import ABC, abstractmethod
@@ -302,6 +307,7 @@ class FileProcessingService:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 89
 ```typescript
 interface ProcessResult {
     id: string;
@@ -400,6 +406,7 @@ class FileProcessingService {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 65
 ```csharp
 [HttpGet("logs/{fileName}")]
 public async Task<IActionResult> GetLogs(string fileName, 
@@ -474,6 +481,7 @@ public class LogEntry
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 69
 ```python
 import os
 import re
@@ -552,6 +560,7 @@ class LogViewer:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 127
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -688,6 +697,7 @@ class LogViewer {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 59
 ```csharp
 [HttpPost("backup")]
 public async Task<IActionResult> StartBackup([FromBody] BackupRequest request)
@@ -756,6 +766,7 @@ public enum BackupStatus { Queued, InProgress, Completed, Failed }
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 66
 ```python
 import zipfile
 import os
@@ -831,6 +842,7 @@ class BackupService:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 107
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -947,6 +959,7 @@ class BackupService {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 72
 ```csharp
 [HttpPost("network-test")]
 public async Task<IActionResult> RunNetworkTest([FromBody] NetworkTestRequest request)
@@ -1028,6 +1041,7 @@ public enum TestStatus { Running, Completed, Failed }
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 90
 ```python
 import subprocess
 import time
@@ -1127,6 +1141,7 @@ class NetworkTestService:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 168
 ```typescript
 import * as net from 'net';
 import axios from 'axios';
@@ -1304,6 +1319,7 @@ class NetworkTestService {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 86
 ```csharp
 [HttpPost("compress")]
 public async Task<IActionResult> CompressFiles([FromBody] CompressionRequest request)
@@ -1399,6 +1415,7 @@ public enum CompressionStatus { Queued, Processing, Completed, Failed }
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 96
 ```python
 import zipfile
 import os
@@ -1504,6 +1521,7 @@ class CompressionService:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 127
 ```typescript
 import * as fs from 'fs/promises';
 import * as archiver from 'archiver';
@@ -1640,6 +1658,7 @@ class CompressionService {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 75
 ```csharp
 [HttpPost("monitor-process")]
 public async Task<IActionResult> StartMonitoring([FromBody] MonitorRequest request)
@@ -1724,6 +1743,7 @@ public enum MonitoringStatus { Active, Stopped, ProcessTerminated }
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 90
 ```python
 import psutil
 import asyncio
@@ -1823,6 +1843,7 @@ class ProcessMonitoringService:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 194
 ```typescript
 import { spawn } from 'child_process';
 import { v4 as uuidv4 } from 'uuid';
@@ -2026,6 +2047,7 @@ class ProcessMonitoringService {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 95
 ```csharp
 [HttpPost("file-search")]
 public async Task<IActionResult> SearchFiles([FromBody] FileSearchRequest request)
@@ -2130,6 +2152,7 @@ public enum SearchStatus { Running, Completed, Failed }
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 107
 ```python
 import os
 import asyncio
@@ -2246,6 +2269,7 @@ class FileSearchService:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 205
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -2460,6 +2484,7 @@ class FileSearchService {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 88
 ```csharp
 [HttpPost("db-operation")]
 public async Task<IActionResult> ExecuteDatabaseOperation([FromBody] DbOperationRequest request)
@@ -2557,6 +2582,7 @@ public enum OperationStatus { Running, Completed, Failed }
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 115
 ```python
 import sqlite3
 import asyncio
@@ -2681,6 +2707,7 @@ class DatabaseManagementService:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 194
 ```typescript
 import * as sqlite3 from 'sqlite3';
 import { v4 as uuidv4 } from 'uuid';
@@ -2884,6 +2911,7 @@ class DatabaseManagementService {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 123
 ```csharp
 [HttpPost("security-scan")]
 public async Task<IActionResult> StartSecurityScan([FromBody] SecurityScanRequest request)
@@ -3016,6 +3044,7 @@ public enum Severity { Low, Medium, High, Critical }
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 172
 ```python
 import os
 import hashlib
@@ -3197,6 +3226,7 @@ class SecurityScanService:
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 287
 ```typescript
 import * as fs from 'fs/promises';
 import * as path from 'path';

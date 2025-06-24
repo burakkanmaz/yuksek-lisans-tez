@@ -5,6 +5,7 @@
 **💻 Dil:** `C#`  
 **🤖 AI:** Gemini
 
+**Satır Sayısı:** 245
 ```csharp
 using System;
 using System.IO;
@@ -256,6 +257,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 187
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -450,6 +452,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 115
 ```csharp
 
 using System;
@@ -571,6 +574,7 @@ return NotFound\(</span>"Processed file not found: {fileName}");
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 101
 ```python
 
 import os
@@ -678,6 +682,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 131
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -816,6 +821,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 108
 ```csharp
 
 using System;
@@ -930,6 +936,7 @@ public class LogViewerController : ControllerBase
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 80
 ```python
 
 import os
@@ -1016,6 +1023,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 98
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -1121,6 +1129,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 80
 ```csharp
 
 using System;
@@ -1207,6 +1216,7 @@ public class BackupController : ControllerBase
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 70
 ```python
 
 import os
@@ -1283,6 +1293,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 120
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -1410,6 +1421,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 108
 ```csharp
 
 using System;
@@ -1524,6 +1536,7 @@ public class NetworkTestController : ControllerBase
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 125
 ```python
 
 import os
@@ -1655,6 +1668,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 151
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -1813,6 +1827,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 111
 ```csharp
 
 using System;
@@ -1930,6 +1945,7 @@ return NotFound\(</span>"Archive file not found: {fileName}");
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 94
 ```python
 
 import os
@@ -2030,6 +2046,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 143
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -2180,6 +2197,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 155
 ```csharp
 
 using System;
@@ -2341,6 +2359,7 @@ return Ok\(</span>"Stopped monitoring process '{processName}'.");
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 121
 ```python
 
 import psutil
@@ -2468,6 +2487,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 236
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -2711,6 +2731,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 131
 ```csharp
 
 using System;
@@ -2848,6 +2869,7 @@ if \(\!string\.IsNullOrWhiteSpace\(fileExtensionFilter\) &&
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 126
 ```python
 
 import os
@@ -2980,6 +3002,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 190
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -3177,6 +3200,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 163
 ```csharp
 
 using Microsoft.AspNetCore.Mvc;
@@ -3346,6 +3370,7 @@ return Conflict\(</span>"Database '{newDatabaseName}' already exists.");
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 119
 ```python
 
 import sqlite3
@@ -3471,6 +3496,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 142
 ```typescript
 
 import express, { Request, Response } from 'express';
@@ -3620,6 +3646,7 @@ app.listen(PORT, () => {
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 255
 ```csharp
 
 using Microsoft.AspNetCore.Mvc;
@@ -3881,6 +3908,7 @@ return Forbid\(</span>"Access denied to one or more directories within '{_scanTa
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 180
 ```python
 
 import os
@@ -4067,6 +4095,7 @@ if __name__ == '__main__':
 
 🤖 AI: Gemini
 
+**Satır Sayısı:** 268
 ```typescript
 
 import express, { Request, Response } from 'express';

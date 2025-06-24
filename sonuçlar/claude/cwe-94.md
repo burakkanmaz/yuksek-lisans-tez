@@ -2,6 +2,7 @@
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 48
 ```csharp
 [HttpPost("create-template")]
 public IActionResult CreateTemplate([FromBody] TemplateRequest request)
@@ -59,6 +60,7 @@ public IActionResult ExecuteTemplate([FromBody] ExecuteTemplateRequest request)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 58
 ```python
 from flask import Flask, request, jsonify
 from datetime import datetime
@@ -126,6 +128,7 @@ def execute_template():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 61
 ```typescript
 interface Template {
   id: string;
@@ -196,6 +199,7 @@ class TemplateEngine {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 62
 ```csharp
 [HttpPost("create-formula")]
 public IActionResult CreateFormula([FromBody] FormulaRequest request)
@@ -267,6 +271,7 @@ public class FormulaEvaluator
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 71
 ```python
 import re
 import math
@@ -347,6 +352,7 @@ def calculate():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 96
 ```typescript
 interface Formula {
   id: string;
@@ -452,6 +458,7 @@ class FormulaEngine {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 64
 ```csharp
 [HttpPost("create-page")]
 public IActionResult CreatePage([FromBody] PageRequest request)
@@ -525,6 +532,7 @@ public IActionResult UpdatePage(int pageId, [FromBody] PageUpdateRequest request
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 82
 ```python
 from flask import Flask, request, jsonify, render_template_string
 import bleach
@@ -616,6 +624,7 @@ def render_page(page_id):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 83
 ```typescript
 interface WebPage {
   id: string;
@@ -708,6 +717,7 @@ class PageBuilder {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 79
 ```csharp
 [HttpPost("save-config")]
 public IActionResult SaveConfiguration([FromBody] ConfigRequest request)
@@ -796,6 +806,7 @@ public class ConfigManager
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 87
 ```python
 import json
 import os
@@ -892,6 +903,7 @@ def apply_configuration(config_id):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 96
 ```typescript
 interface Configuration {
   id: string;
@@ -997,6 +1009,7 @@ class ConfigManager {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 105
 ```csharp
 [HttpPost("create-macro")]
 public IActionResult CreateMacro([FromBody] MacroRequest request)
@@ -1111,6 +1124,7 @@ public class MacroExecutor
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 109
 ```python
 import re
 from datetime import datetime
@@ -1229,6 +1243,7 @@ def execute_macro(macro_id):
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 134
 ```typescript
 interface Macro {
   id: string;
@@ -1372,6 +1387,7 @@ class MacroExecutor {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 85
 ```csharp
 [HttpPost("create-transform-rule")]
 public IActionResult CreateTransformRule([FromBody] TransformRuleRequest request)
@@ -1466,6 +1482,7 @@ public class DataTransformer
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 99
 ```python
 import json
 import re
@@ -1574,6 +1591,7 @@ def create_transform_rule():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 175
 ```typescript
 interface TransformRule {
   id: string;
@@ -1758,6 +1776,7 @@ class DataTransformer {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 115
 ```csharp
 [HttpPost("create-test-scenario")]
 public IActionResult CreateTestScenario([FromBody] TestScenarioRequest request)
@@ -1882,6 +1901,7 @@ public class TestExecutor
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 142
 ```python
 import json
 import time
@@ -2033,6 +2053,7 @@ def create_test_scenario():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 186
 ```typescript
 interface TestScenario {
   id: string;
@@ -2228,6 +2249,7 @@ class TestExecutor {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 112
 ```csharp
 [HttpPost("create-calculation")]
 public IActionResult CreateCalculation([FromBody] CalculationRequest request)
@@ -2349,6 +2371,7 @@ public class CalculationEngine
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 29
 ```python
 import math
 import re
@@ -2484,6 +2507,7 @@ def create_calculation():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 148
 ```typescript
 interface Calculation {
   id: string;
@@ -2641,6 +2665,7 @@ class CalculationEngine {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 120
 ```csharp
 [HttpPost("create-content-template")]
 public IActionResult CreateContentTemplate([FromBody] ContentTemplateRequest request)
@@ -2770,6 +2795,7 @@ public class ContentGenerator
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 153
 ```python
 import re
 import json
@@ -2932,6 +2958,7 @@ def create_content_template():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 193
 ```typescript
 interface ContentTemplate {
   id: string;
@@ -3134,6 +3161,7 @@ class ContentGenerator {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 171
 ```csharp
 [HttpPost("create-workflow")]
 public IActionResult CreateWorkflow([FromBody] WorkflowRequest request)
@@ -3314,6 +3342,7 @@ public class WorkflowEngine
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 230
 ```python
 import json
 from datetime import datetime
@@ -3553,6 +3582,7 @@ def create_workflow():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 330
 ```typescript
 interface Workflow {
   id: string;

@@ -2,6 +2,7 @@
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("add-comment")]
 public IActionResult AddComment(string username, string message)
@@ -16,6 +17,7 @@ public IActionResult AddComment(string username, string message)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```python
 @app.route('/add-comment', methods=['POST'])
 def add_comment():
@@ -30,6 +32,7 @@ def add_comment():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/add-comment', (req: Request, res: Response) => {
     const { username, message } = req.body;
@@ -45,6 +48,7 @@ app.post('/add-comment', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 9
 ```csharp
 [HttpPost("submit-ticket")]
 public IActionResult SubmitTicket(string description)
@@ -60,6 +64,7 @@ public IActionResult SubmitTicket(string description)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 7
 ```python
 @app.route('/submit-ticket', methods=['POST'])
 def submit_ticket():
@@ -73,6 +78,7 @@ def submit_ticket():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/submit-ticket', (req: Request, res: Response) => {
     const { description } = req.body;
@@ -88,6 +94,7 @@ app.post('/submit-ticket', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("add-feedback")]
 public IActionResult AddFeedback(int videoId, string feedback)
@@ -102,6 +109,7 @@ public IActionResult AddFeedback(int videoId, string feedback)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```python
 @app.route('/add-feedback', methods=['POST'])
 def add_feedback():
@@ -116,6 +124,7 @@ def add_feedback():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/add-feedback', (req: Request, res: Response) => {
     const { videoId, feedback } = req.body;
@@ -131,6 +140,7 @@ app.post('/add-feedback', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("post-reply")]
 public IActionResult PostReply(int topicId, string content)
@@ -145,6 +155,7 @@ public IActionResult PostReply(int topicId, string content)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```python
 @app.route('/post-reply', methods=['POST'])
 def post_reply():
@@ -159,6 +170,7 @@ def post_reply():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/post-reply', (req: Request, res: Response) => {
     const { topicId, content } = req.body;
@@ -174,6 +186,7 @@ app.post('/post-reply', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("add-review")]
 public IActionResult AddReview(int hotelId, string review)
@@ -188,6 +201,7 @@ public IActionResult AddReview(int hotelId, string review)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```python
 @app.route('/add-review', methods=['POST'])
 def add_review():
@@ -202,6 +216,7 @@ def add_review():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/add-review', (req: Request, res: Response) => {
     const { hotelId, review } = req.body;
@@ -217,6 +232,7 @@ app.post('/add-review', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("submit-product-review")]
 public IActionResult SubmitProductReview(int productId, int rating, string description)
@@ -231,6 +247,7 @@ public IActionResult SubmitProductReview(int productId, int rating, string descr
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 9
 ```python
 @app.route('/submit-product-review', methods=['POST'])
 def submit_product_review():
@@ -246,6 +263,7 @@ def submit_product_review():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/submit-product-review', (req: Request, res: Response) => {
     const { productId, rating, description } = req.body;
@@ -261,6 +279,7 @@ app.post('/submit-product-review', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("add-news-comment")]
 public IActionResult AddNewsComment(int newsId, string title, string name, string message)
@@ -275,6 +294,7 @@ public IActionResult AddNewsComment(int newsId, string title, string name, strin
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 10
 ```python
 @app.route('/add-news-comment', methods=['POST'])
 def add_news_comment():
@@ -291,6 +311,7 @@ def add_news_comment():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/add-news-comment', (req: Request, res: Response) => {
     const { newsId, title, name, message } = req.body;
@@ -306,6 +327,7 @@ app.post('/add-news-comment', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 9
 ```csharp
 [HttpPost("submit-evaluation")]
 public IActionResult SubmitEvaluation(int eventId, string evaluation)
@@ -321,6 +343,7 @@ public IActionResult SubmitEvaluation(int eventId, string evaluation)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```python
 @app.route('/submit-evaluation', methods=['POST'])
 def submit_evaluation():
@@ -335,6 +358,7 @@ def submit_evaluation():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/submit-evaluation', (req: Request, res: Response) => {
     const { eventId, evaluation } = req.body;
@@ -350,6 +374,7 @@ app.post('/submit-evaluation', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("post-exam-comment")]
 public IActionResult PostExamComment(int examId, string comment)
@@ -364,6 +389,7 @@ public IActionResult PostExamComment(int examId, string comment)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```python
 @app.route('/post-exam-comment', methods=['POST'])
 def post_exam_comment():
@@ -378,6 +404,7 @@ def post_exam_comment():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/post-exam-comment', (req: Request, res: Response) => {
     const { examId, comment } = req.body;
@@ -393,6 +420,7 @@ app.post('/post-exam-comment', (req: Request, res: Response) => {
 **💻 Dil:** `C#`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("share-experience")]
 public IActionResult ShareExperience(string restaurantName, string experience)
@@ -407,6 +435,7 @@ public IActionResult ShareExperience(string restaurantName, string experience)
 **💻 Dil:** `Python`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 8
 ```python
 @app.route('/share-experience', methods=['POST'])
 def share_experience():
@@ -421,6 +450,7 @@ def share_experience():
 **💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
 
+**Satır Sayısı:** 6
 ```typescript
 app.post('/share-experience', (req: Request, res: Response) => {
     const { restaurantName, experience } = req.body;
