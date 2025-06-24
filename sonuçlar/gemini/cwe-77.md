@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 49
+**Satır Sayısı:** 49
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -61,7 +61,7 @@ public class FileSearcher
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 29
+**Satır Sayısı:** 29
 ```python
 import os
 
@@ -100,7 +100,7 @@ def search_files(file_name, search_directory=""):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 39
+**Satır Sayısı:** 39
 ```typescript
 import * as fs from 'fs';
 import * as path from 'path';
@@ -153,7 +153,7 @@ async function searchFiles(fileName: string, searchDirectory: string = process.c
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 78
+**Satır Sayısı:** 78
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -245,7 +245,7 @@ public class LogAnalyzer
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 43
+**Satır Sayısı:** 43
 ```python
 import subprocess
 import platform
@@ -300,7 +300,7 @@ def search_logs_with_system_command(pattern, log_file_path):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 60
+**Satır Sayısı:** 60
 ```typescript
 import { exec } from 'child_process';
 import * as path from 'path';
@@ -372,7 +372,7 @@ function searchLogsWithSystemCommand(pattern: string, logFilePath: string): Prom
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 66
+**Satır Sayısı:** 66
 ```csharp
 using System;
 using System.Diagnostics;
@@ -448,7 +448,7 @@ public class ProcessMonitor
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 84
+**Satır Sayısı:** 84
 ```python
 import subprocess
 import platform
@@ -544,7 +544,7 @@ def get_process_info_with_system_command(process_name):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 92
+**Satır Sayısı:** 92
 ```typescript
 import { exec } from 'child_process';
 import * as os from 'os';
@@ -649,7 +649,7 @@ function getProcessInfo(processName: string): Promise<any[]> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 60
+**Satır Sayısı:** 60
 ```csharp
 using System;
 using System.IO;
@@ -719,7 +719,7 @@ public class BackupManager
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 48
+**Satır Sayısı:** 48
 ```python
 import shutil
 import os
@@ -779,7 +779,7 @@ def create_directory_backup(source_directory, destination_directory, backup_name
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 64
+**Satır Sayısı:** 64
 ```typescript
 import * as fs from 'fs';
 import * as path from 'path';
@@ -857,7 +857,7 @@ function createDirectoryBackup(sourceDirectory: string, backupDestinationPath: s
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 65
+**Satır Sayısı:** 65
 ```csharp
 using System;
 using System.Net.NetworkInformation;
@@ -935,7 +935,7 @@ public class NetworkTester
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 55
+**Satır Sayısı:** 55
 ```python
 import subprocess
 import platform
@@ -1005,7 +1005,7 @@ def run_ping_test(ip_address, count=4):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 69
+**Satır Sayısı:** 69
 ```typescript
 import { exec } from 'child_process';
 import * as os from 'os';
@@ -1087,7 +1087,7 @@ function runPingTest(ipAddress: string, count: number = 4): Promise<string> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 92
+**Satır Sayısı:** 92
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1197,7 +1197,7 @@ public class FileConverter
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 63
+**Satır Sayısı:** 63
 ```python
 import subprocess
 import os
@@ -1276,7 +1276,7 @@ def convert_file(source_file_path, destination_file_path):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 72
+**Satır Sayısı:** 72
 ```typescript
 import { exec } from 'child_process';
 import * as path from 'path';
@@ -1364,7 +1364,7 @@ function convertFile(sourceFilePath: string, destinationFilePath: string): Promi
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 132
+**Satır Sayısı:** 132
 ```csharp
 using System;
 using System.IO;
@@ -1515,7 +1515,7 @@ public class DiskSpaceAnalyzer
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 110
+**Satır Sayısı:** 110
 ```python
 import os
 import platform
@@ -1643,7 +1643,7 @@ def get_disk_usage_report(directory_path):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 111
+**Satır Sayısı:** 111
 ```typescript
 import { exec } from 'child_process';
 import * as path from 'path';
@@ -1773,7 +1773,7 @@ async function getDiskUsageReport(directoryPath: string): Promise<string> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 111
+**Satır Sayısı:** 111
 ```csharp
 using System;
 using System.Diagnostics;
@@ -1902,7 +1902,7 @@ public class DatabaseBackupManager
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 105
+**Satır Sayısı:** 105
 ```python
 import subprocess
 import os
@@ -2023,7 +2023,7 @@ def backup_database(db_type, db_name, backup_file_path,
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 107
+**Satır Sayısı:** 107
 ```typescript
 import { exec } from 'child_process';
 import * as path from 'path';
@@ -2145,7 +2145,7 @@ function backupDatabase(
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 102
+**Satır Sayısı:** 102
 ```csharp
 using System;
 using System.Diagnostics;
@@ -2262,7 +2262,7 @@ public class MailServerManager
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 60
+**Satır Sayısı:** 60
 ```python
 import subprocess
 import platform
@@ -2336,7 +2336,7 @@ def get_simulated_mail_traffic(mailbox_name):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 76
+**Satır Sayısı:** 76
 ```typescript
 import { exec } from 'child_process';
 import * as os from 'os';
@@ -2427,7 +2427,7 @@ async function getSimulatedMailTraffic(mailboxName: string): Promise<string> {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 136
+**Satır Sayısı:** 136
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -2584,7 +2584,7 @@ public class WebServerLogAnalyzer
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 131
+**Satır Sayısı:** 131
 ```python
 import re
 import datetime
@@ -2737,7 +2737,7 @@ def generate_log_analysis_report(filtered_logs):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 163
+**Satır Sayısı:** 163
 ```typescript
 import * as fs from 'fs';
 import * as readline from 'readline';

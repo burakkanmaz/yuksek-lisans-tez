@@ -1,4 +1,4 @@
- # Kurgu 77 - Senaryo Kodları
+# Kurgu 77 - Senaryo Kodları
 
 ----
 

@@ -43,8 +43,6 @@ private long CalculateDirectorySize(string path)
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -92,8 +90,6 @@ def calculate_directory_size(path):
             total_size += os.path.getsize(os.path.join(dirpath, filename))
     return total_size
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -201,8 +197,6 @@ private byte[] ProcessTextFile(string filePath)
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -247,8 +241,6 @@ def process_text_file(file_path):
         content = file.read()
     return content.upper().encode('utf-8')  # Example processing
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -345,8 +337,6 @@ public IActionResult ViewLogs(string filePath, string filter = null, string sear
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -395,8 +385,6 @@ def view_logs():
     except Exception as e:
         return jsonify({'error': f'Error reading logs: {str(e)}'}), 500
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -499,8 +487,6 @@ private void CopyDirectory(string source, string dest, BackupStatus status)
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -547,8 +533,6 @@ def copy_directory(source, dest, status):
             os.makedirs(dest_item, exist_ok=True)
             copy_directory(source_item, dest_item, status)
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -645,8 +629,6 @@ public async Task<IActionResult> NetworkTest(string targetAddress)
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -689,8 +671,6 @@ def extract_rtt(ping_output):
     match = re.search(r'time=(\d+\.?\d*)', ping_output)
     return float(match.group(1)) if match else None
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -785,8 +765,6 @@ public IActionResult CompressFiles(string[] filePaths, string compressionLevel =
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -829,8 +807,6 @@ def compress_files():
     except Exception as e:
         return jsonify({'error': f'Error compressing files: {str(e)}'}), 500
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -924,8 +900,6 @@ private double GetCpuUsage(Process process)
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -966,8 +940,6 @@ def get_cpu_usage(process):
     time.sleep(0.1)
     return process.cpu_percent(interval=None)
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -1050,8 +1022,6 @@ public IActionResult SearchFiles(string searchPath, string pattern, string filte
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -1093,8 +1063,6 @@ def search_files():
     except Exception as e:
         return jsonify({'error': f'Error searching files: {str(e)}'}), 500
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -1193,8 +1161,6 @@ private Dictionary<string, object> GetDatabaseStatus(SqlConnection conn)
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -1240,8 +1206,6 @@ def execute_db_operation():
 def get_database_status(conn):
     return {'is_connected': conn.total_changes >= 0}  # Placeholder for status check
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3
@@ -1342,8 +1306,6 @@ private IEnumerable<Vulnerability> ScanPorts(string target)
 }
 ```
 
----
-
 **💻 Dil:** `Python`  
 **🤖 AI:** Grok 3
 
@@ -1382,8 +1344,6 @@ def scan_ports(target):
     # Placeholder for port scanning
     return [{'type': 'OpenPort', 'description': 'Port 80 open', 'severity': 'Medium'}]
 ```
-
----
 
 **💻 Dil:** `TypeScript (Node.js)`  
 **🤖 AI:** Grok 3

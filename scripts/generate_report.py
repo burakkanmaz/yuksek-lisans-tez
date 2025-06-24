@@ -14,130 +14,138 @@ def extract_code_stats(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Senaryo pattern'ini bul
+    # Senaryo başlıklarını bul
     scenario_pattern = r'### 🧪 Senaryo (\d+):'
-    scenarios = re.split(scenario_pattern, content)
+    scenario_matches = re.findall(scenario_pattern, content)
     
-    for i in range(1, len(scenarios), 2):
-        scenario_num = int(scenarios[i])
-        scenario_content = scenarios[i + 1]
+    # Her senaryo için ayrı ayrı işle
+    scenarios = re.split(r'### 🧪 Senaryo \d+:', content)[1:]  # İlk boş kısmı atla
+    
+    for i, scenario_content in enumerate(scenarios):
+        if i >= len(scenario_matches):
+            break
+            
+        scenario_num = int(scenario_matches[i])
         
-        # Her senaryo için dil ve satır sayısını bul
-        # Sadece "**Satır Sayısı:** X" formatını yakala (standardize edilmiş)
-        language_pattern = r'\*\*💻 Dil:\*\* `([^`]+)`.*?\*\*Satır Sayısı:\*\*\s*(\d+)'
-        matches = re.findall(language_pattern, scenario_content, re.DOTALL)
+        # Ana regex - çalışan versiyonu koru
+        lang_blocks = re.findall(r'\*\*💻 Dil:\*\* `([^`]+)`[\s\S]*?(?:\*\*Satır Sayısı:\*\*|Satır Sayısı:)\s*(\d+)', scenario_content)
         
-        scenario_stats = {}
-        for lang, lines in matches:
+        # Satır Sayısı eksik olanlar için alternatif - sadece gerçekten eksik olanları yakala
+        if not lang_blocks:
+            # Dil etiketleri var ama Satır Sayısı yok - kod satırlarını say
+            dil_pattern = r'\*\*💻 Dil:\*\* `([^`]+)`[\s\S]*?```[a-zA-Z]*\n((?:[^\n`]*\n)*?)```'
+            code_matches = re.findall(dil_pattern, scenario_content, re.DOTALL)
+            
+            for lang, code_block in code_matches:
+                # Kod satırlarını say (boş satırları hariç tut)
+                lines = [line.strip() for line in code_block.split('\n') if line.strip()]
+                line_count = len(lines)
+                if line_count > 0:
+                    lang_blocks.append((lang, str(line_count)))
+        
+        # Senaryo dict'ini oluştur
+        if scenario_num not in stats:
+            stats[scenario_num] = {}
+        
+        for lang, count_str in lang_blocks:
+            # Parantez içindeki kısımları temizle ve normalize et
+            lang = lang.strip()
+            
+            # Parantezli formatları düzelt: "TypeScript (Node.js)" -> "TypeScript"
+            if '(' in lang:
+                lang = lang.split('(')[0].strip()
+            
+            # Asterikslerle bozulan formatları düzelt: "TypeScript**" -> "TypeScript"
+            lang = lang.rstrip('*').strip()
+            
+            # Emoji ve diğer karakterleri temizle
+            if '🤖' in lang:
+                lang = lang.split('🤖')[0].strip()
+            
             # Node.js ve React.js'i TypeScript olarak say
-            if lang.lower() in ['node.js', 'react.js', 'node js', 'react js']:
+            if lang.lower() in ['node.js', 'react.js', 'node js', 'react js', 'reactjs']:
                 lang = 'TypeScript'
             
             # Dil adını normalize et
             lang = lang.strip()
-            if lang == 'TypeScript':
-                lang = 'TypeScript'
-            elif lang == 'Python':
-                lang = 'Python'
-            elif lang == 'C#':
-                lang = 'C#'
-            
-            scenario_stats[lang] = int(lines)
-        
-        if scenario_stats:
-            stats[scenario_num] = scenario_stats
+            if lang in ['C#', 'Python', 'TypeScript']:
+                count = int(count_str) if count_str.isdigit() else 0
+                
+                # Aynı senaryo için aynı dilde birden fazla kod varsa en yükseğini al
+                if lang in stats[scenario_num]:
+                    stats[scenario_num][lang] = max(stats[scenario_num][lang], count)
+                else:
+                    stats[scenario_num][lang] = count
     
     return stats
 
-def get_all_scenarios():
-    """Tüm senaryo numaralarını bulur"""
-    scenarios_dir = Path('senaryolar')
-    scenarios = set()
+def generate_csv_report():
+    """Ana CSV raporu oluşturur."""
+    sonuclar_dir = Path('sonuçlar')
+    ai_dirs = ['chatgpt', 'claude', 'deepseek', 'gemini', 'grok']
     
-    for file_path in scenarios_dir.glob('kurgu-*.md'):
-        # Dosya adından CWE numarasını çıkar
-        cwe_num = file_path.stem.split('-')[1]
-        
-        # Dosyayı oku ve senaryo sayısını bul
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        scenario_matches = re.findall(r'## ✏️ Senaryo (\d+)', content)
-        for scenario in scenario_matches:
-            scenarios.add(int(scenario))
+    # Tüm CWE'leri bul
+    all_cwes = set()
+    for ai_dir in ai_dirs:
+        ai_path = sonuclar_dir / ai_dir
+        if ai_path.exists():
+            for md_file in ai_path.glob('cwe-*.md'):
+                cwe = md_file.stem.replace('cwe-', '')
+                all_cwes.add(cwe)
     
-    return sorted(scenarios)
-
-def main():
-    results_dir = Path('sonuçlar')
-    output_file = 'report.csv'
-    
-    # Tüm AI klasörlerini bul
-    ai_folders = [folder.name for folder in results_dir.iterdir() if folder.is_dir()]
-    ai_folders.sort()
-    
-    # Tüm CWE dosyalarını bul
-    cwe_files = []
-    for ai_folder in ai_folders:
-        ai_path = results_dir / ai_folder
-        for file_path in ai_path.glob('cwe-*.md'):
-            cwe_num = file_path.stem.split('-')[1]
-            if cwe_num not in [f.split('-')[1] for f in cwe_files]:
-                cwe_files.append(file_path.stem)
-    
-    cwe_files.sort()
-    
-    # Tüm senaryoları bul
-    all_scenarios = get_all_scenarios()
+    all_cwes = sorted(all_cwes, key=int)
     
     # CSV başlıklarını oluştur
     headers = ['YZ_Adi', 'CWE']
-    for scenario in all_scenarios:
-        headers.extend([
-            f'Senaryo_{scenario}_CSharp',
-            f'Senaryo_{scenario}_Python', 
-            f'Senaryo_{scenario}_TypeScript'
-        ])
+    for i in range(1, 11):  # 10 senaryo
+        headers.extend([f'Senaryo_{i}_CSharp', f'Senaryo_{i}_Python', f'Senaryo_{i}_TypeScript'])
     
-    # CSV dosyasını oluştur
-    rows = []
+    # Raporu oluştur
+    report_data = []
     
-    for ai_folder in ai_folders:
-        ai_path = results_dir / ai_folder
-        
-        for cwe_file in cwe_files:
-            file_path = ai_path / f'{cwe_file}.md'
+    for ai_name in ai_dirs:
+        ai_path = sonuclar_dir / ai_name
+        if not ai_path.exists():
+            continue
             
-            if not file_path.exists():
+        for cwe in all_cwes:
+            md_file = ai_path / f'cwe-{cwe}.md'
+            if not md_file.exists():
                 continue
-            
-            # Dosyadan istatistikleri çıkar
-            stats = extract_code_stats(file_path)
-            
-            # Satır oluştur
-            row = [ai_folder, cwe_file]
-            
-            for scenario in all_scenarios:
-                # Her senaryo için 3 dil sütunu
-                scenario_stats = stats.get(scenario, {})
                 
-                row.append(scenario_stats.get('C#', 0))
-                row.append(scenario_stats.get('Python', 0))
-                row.append(scenario_stats.get('TypeScript', 0))
+            row = [ai_name, f'cwe-{cwe}']
             
-            rows.append(row)
+            try:
+                stats = extract_code_stats(md_file)
+                
+                # Her senaryo için değerleri ekle
+                for scenario_num in range(1, 11):
+                    if scenario_num in stats:
+                        scenario_stats = stats[scenario_num]
+                        row.extend([
+                            str(scenario_stats.get('C#', 0)),
+                            str(scenario_stats.get('Python', 0)),
+                            str(scenario_stats.get('TypeScript', 0))
+                        ])
+                    else:
+                        row.extend(['0', '0', '0'])
+                        
+            except Exception as e:
+                print(f"Error processing {md_file}: {e}")
+                # Hata durumunda 0'larla doldur
+                for _ in range(30):  # 10 senaryo * 3 dil
+                    row.append('0')
+            
+            report_data.append(row)
     
-    # CSV'yi yaz
-    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+    # CSV'ye yaz
+    with open('report.csv', 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(headers)
-        writer.writerows(rows)
+        writer.writerows(report_data)
     
-    print(f"Rapor oluşturuldu: {output_file}")
-    print(f"Toplam {len(rows)} satır işlendi")
-    print(f"AI klasörleri: {', '.join(ai_folders)}")
-    print(f"CWE dosyaları: {len(cwe_files)} adet")
-    print(f"Senaryolar: {len(all_scenarios)} adet")
+    print(f"Rapor oluşturuldu: report.csv")
+    print(f"Toplam {len(report_data)} satır işlendi")
 
 if __name__ == "__main__":
-    main() 
+    generate_csv_report() 

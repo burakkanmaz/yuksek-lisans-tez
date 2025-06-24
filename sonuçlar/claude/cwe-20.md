@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 21
+**Satır Sayısı:** 21
 ```csharp
 [HttpPost("save-address")]
 public async Task<IActionResult> SaveAddress(AddressRequest request)
@@ -32,7 +32,7 @@ private string ValidatePostalCode(string postalCode)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 23
+**Satır Sayısı:** 23
 ```python
 from flask import request, jsonify
 from html import escape
@@ -66,7 +66,7 @@ def validate_postal_code(postal_code):
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 25
+**Satır Sayısı:** 25
 ```typescript
 import { Request, Response } from 'express';
 import { escape } from 'html-escaper';
@@ -104,7 +104,7 @@ const validatePostalCode = (postalCode: string | undefined): string | null => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 12
+**Satır Sayısı:** 12
 ```csharp
 [HttpPost("create-password")]
 public async Task<IActionResult> CreatePassword(PasswordRequest request)
@@ -125,7 +125,7 @@ public async Task<IActionResult> CreatePassword(PasswordRequest request)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 19
+**Satır Sayısı:** 19
 ```python
 from flask import request, jsonify
 import bcrypt
@@ -155,7 +155,7 @@ def create_password():
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 14
+**Satır Sayısı:** 14
 ```typescript
 import bcrypt from 'bcrypt';
 
@@ -181,7 +181,7 @@ export const createPassword = async (req: Request, res: Response) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 14
+**Satır Sayısı:** 14
 ```csharp
 [HttpGet("track-package/{trackingNumber}")]
 public async Task<IActionResult> TrackPackage(string trackingNumber)
@@ -206,7 +206,7 @@ public async Task<IActionResult> TrackPackage(string trackingNumber)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 16
+**Satır Sayısı:** 16
 ```python
 from flask import request, jsonify
 import re
@@ -234,7 +234,7 @@ def track_package(tracking_number):
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 16
+**Satır Sayısı:** 16
 ```typescript
 export const trackPackage = async (req: Request, res: Response) => {
     let trackingNumber = req.params.trackingNumber?.trim().toUpperCase();
@@ -262,7 +262,7 @@ export const trackPackage = async (req: Request, res: Response) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 13
+**Satır Sayısı:** 13
 ```csharp
 [HttpPost("update-biography")]
 public async Task<IActionResult> UpdateBiography(BiographyRequest request)
@@ -284,7 +284,7 @@ public async Task<IActionResult> UpdateBiography(BiographyRequest request)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 21
+**Satır Sayısı:** 21
 ```python
 from flask import request, jsonify
 from html import escape
@@ -316,7 +316,7 @@ def update_biography():
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 14
+**Satır Sayısı:** 14
 ```typescript
 import { escape } from 'html-escaper';
 
@@ -342,7 +342,7 @@ export const updateBiography = async (req: Request, res: Response) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 14
+**Satır Sayısı:** 14
 ```csharp
 [HttpPost("check-availability")]
 public async Task<IActionResult> CheckAvailability(AvailabilityRequest request)
@@ -365,7 +365,7 @@ public async Task<IActionResult> CheckAvailability(AvailabilityRequest request)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 18
+**Satır Sayısı:** 18
 ```python
 from flask import request, jsonify
 from datetime import datetime
@@ -394,7 +394,7 @@ def check_availability():
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 17
+**Satır Sayısı:** 17
 ```typescript
 export const checkAvailability = async (req: Request, res: Response) => {
     const { startDate, endDate, resourceId } = req.body;
@@ -423,7 +423,7 @@ export const checkAvailability = async (req: Request, res: Response) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 19
+**Satır Sayısı:** 19
 ```csharp
 [HttpPost("create-topic")]
 public async Task<IActionResult> CreateTopic(TopicRequest request)
@@ -452,7 +452,7 @@ public async Task<IActionResult> CreateTopic(TopicRequest request)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 20
+**Satır Sayısı:** 20
 ```python
 from flask import request, jsonify
 from html import escape
@@ -483,7 +483,7 @@ def create_topic():
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 20
+**Satır Sayısı:** 20
 ```typescript
 import { escape } from 'html-escaper';
 
@@ -516,7 +516,7 @@ export const createTopic = async (req: Request, res: Response) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 20
+**Satır Sayısı:** 20
 ```csharp
 [HttpPost("register")]
 public async Task<IActionResult> Register(RegistrationRequest request)
@@ -547,7 +547,7 @@ public async Task<IActionResult> Register(RegistrationRequest request)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 24
+**Satır Sayısı:** 24
 ```python
 from flask import request, jsonify
 from datetime import datetime, timedelta
@@ -583,7 +583,7 @@ def register():
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 21
+**Satır Sayısı:** 21
 ```typescript
 export const register = async (req: Request, res: Response) => {
     const { birthDate, email } = req.body;
@@ -618,7 +618,7 @@ export const register = async (req: Request, res: Response) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 15
+**Satır Sayısı:** 15
 ```csharp
 [HttpGet("search-files")]
 public async Task<IActionResult> SearchFiles([FromQuery] string query)
@@ -642,7 +642,7 @@ public async Task<IActionResult> SearchFiles([FromQuery] string query)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 22
+**Satır Sayısı:** 22
 ```python
 from flask import request, jsonify
 import re
@@ -676,7 +676,7 @@ def search_files():
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 14
+**Satır Sayısı:** 14
 ```typescript
 export const searchFiles = async (req: Request, res: Response) => {
     const query = (req.query.query as string)?.trim();
@@ -701,7 +701,7 @@ export const searchFiles = async (req: Request, res: Response) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 24
+**Satır Sayısı:** 24
 ```csharp
 [HttpPost("add-tags")]
 public async Task<IActionResult> AddTags(TagRequest request)
@@ -738,7 +738,7 @@ public async Task<IActionResult> AddTags(TagRequest request)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 30
+**Satır Sayısı:** 30
 ```python
 from flask import request, jsonify
 from html import escape
@@ -782,7 +782,7 @@ def add_tags():
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 28
+**Satır Sayısı:** 28
 ```typescript
 import { escape } from 'html-escaper';
 
@@ -824,7 +824,7 @@ export const addTags = async (req: Request, res: Response) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
-Satır Sayısı: 20
+**Satır Sayısı:** 20
 ```csharp
 [HttpPost("start-survey")]
 public async Task<IActionResult> StartSurvey(SurveyRequest request)
@@ -855,7 +855,7 @@ public async Task<IActionResult> StartSurvey(SurveyRequest request)
 
 **💻 Dil:** `Python`
 **🤖 AI:** Claude
-Satır Sayısı: 21
+**Satır Sayısı:** 21
 ```python
 from flask import request, jsonify
 
@@ -888,7 +888,7 @@ def start_survey():
 
 **💻 Dil:** `TypeScript (Node.js)`
 **🤖 AI:** Claude
-Satır Sayısı: 20
+**Satır Sayısı:** 20
 ```typescript
 export const startSurvey = async (req: Request, res: Response) => {
     const { age, surveyId } = req.body;

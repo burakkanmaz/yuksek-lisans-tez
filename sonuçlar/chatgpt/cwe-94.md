@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 26
+**Satır Sayısı:** 26
 ```csharp
 [HttpPost("compile-template")]
 public IActionResult CompileTemplate([FromBody] TemplateInput input)
@@ -37,7 +37,7 @@ public class TemplateInput
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```python
 @app.route("/compile-template", methods=["POST"])
 def compile_template():
@@ -51,7 +51,7 @@ def compile_template():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```typescript
 app.post("/compile-template", (req, res) => {
     const content = req.body.content;
@@ -72,7 +72,7 @@ app.post("/compile-template", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 17
+**Satır Sayısı:** 17
 ```csharp
 [HttpPost("evaluate-formula")]
 public IActionResult EvaluateFormula([FromBody] FormulaInput input)
@@ -96,7 +96,7 @@ public class FormulaInput
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```python
 @app.route("/evaluate-formula", methods=["POST"])
 def evaluate_formula():
@@ -110,7 +110,7 @@ def evaluate_formula():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```typescript
 app.post("/evaluate-formula", (req, res) => {
     try {
@@ -128,7 +128,7 @@ app.post("/evaluate-formula", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 18
+**Satır Sayısı:** 18
 ```csharp
 [HttpPost("render-html")]
 public IActionResult RenderHtml([FromBody] HtmlContentInput input)
@@ -155,7 +155,7 @@ public class HtmlContentInput
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```python
 @app.route("/render-html", methods=["POST"])
 def render_html():
@@ -171,7 +171,7 @@ def render_html():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```typescript
 app.post("/render-html", (req, res) => {
     let html = req.body.html;
@@ -189,7 +189,7 @@ app.post("/render-html", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 11
+**Satır Sayısı:** 11
 ```csharp
 [HttpPost("save-config")]
 public IActionResult SaveConfiguration([FromBody] ConfigInput input)
@@ -207,7 +207,7 @@ public class ConfigInput
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 6
+**Satır Sayısı:** 6
 ```python
 @app.route("/save-config", methods=["POST"])
 def save_config():
@@ -219,7 +219,7 @@ def save_config():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```typescript
 app.post("/save-config", (req, res) => {
     const config = req.body.jsonConfig;
@@ -237,7 +237,7 @@ app.post("/save-config", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 13
+**Satır Sayısı:** 13
 ```csharp
 [HttpPost("run-script")]
 public IActionResult RunScript([FromBody] ScriptInput input)
@@ -256,7 +256,7 @@ public IActionResult RunScript([FromBody] ScriptInput input)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```python
 @app.route("/run-script", methods=["POST"])
 def run_script():
@@ -270,7 +270,7 @@ def run_script():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```typescript
 app.post("/run-script", (req, res) => {
     try {
@@ -288,7 +288,7 @@ app.post("/run-script", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 14
+**Satır Sayısı:** 14
 ```csharp
 [HttpPost("deserialize")]
 public IActionResult Deserialize([FromBody] DataInput input)
@@ -308,7 +308,7 @@ public IActionResult Deserialize([FromBody] DataInput input)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```python
 @app.route("/deserialize", methods=["POST"])
 def deserialize():
@@ -322,7 +322,7 @@ def deserialize():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```typescript
 app.post("/deserialize", (req, res) => {
     try {
@@ -341,7 +341,7 @@ app.post("/deserialize", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 14
+**Satır Sayısı:** 14
 ```csharp
 [HttpPost("create-class")]
 public IActionResult CreateClass([FromBody] ClassDefinition def)
@@ -361,7 +361,7 @@ public IActionResult CreateClass([FromBody] ClassDefinition def)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 5
+**Satır Sayısı:** 5
 ```python
 @app.route("/create-class", methods=["POST"])
 def create_class():
@@ -372,7 +372,7 @@ def create_class():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```typescript
 app.post("/create-class", (req, res) => {
     try {
@@ -391,7 +391,7 @@ app.post("/create-class", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 14
+**Satır Sayısı:** 14
 ```csharp
 [HttpPost("remote-exec")]
 public IActionResult RemoteExecute([FromBody] CodeExecutionRequest req)
@@ -411,7 +411,7 @@ public IActionResult RemoteExecute([FromBody] CodeExecutionRequest req)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 5
+**Satır Sayısı:** 5
 ```python
 @app.route("/remote-exec", methods=["POST"])
 def remote_exec():
@@ -422,7 +422,7 @@ def remote_exec():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```typescript
 app.post("/remote-exec", (req, res) => {
     try {
@@ -441,7 +441,7 @@ app.post("/remote-exec", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```csharp
 [HttpGet("products")]
 public IActionResult GetProducts(string category)
@@ -455,7 +455,7 @@ public IActionResult GetProducts(string category)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 6
+**Satır Sayısı:** 6
 ```python
 @app.route("/products")
 def get_products():
@@ -467,7 +467,7 @@ def get_products():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```typescript
 app.get("/products", (req, res) => {
     const query = `SELECT * FROM products WHERE category = '${req.body.category}'`;
@@ -484,7 +484,7 @@ app.get("/products", (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```csharp
 [HttpPost("run-command")]
 public IActionResult RunCommand(string command)
@@ -498,7 +498,7 @@ public IActionResult RunCommand(string command)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 6
+**Satır Sayısı:** 6
 ```python
 @app.route("/run-command", methods=["POST"])
 def run_command():
@@ -510,7 +510,7 @@ def run_command():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```typescript
 app.post("/run-command", (req, res) => {
     const { command } = req.body;

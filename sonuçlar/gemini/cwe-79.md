@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 23
+**Satır Sayısı:** 23
 ```csharp
 public class Comment
 {
@@ -34,7 +34,7 @@ public class BlogService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 28
+**Satır Sayısı:** 28
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 85
+**Satır Sayısı:** 85
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -180,7 +180,7 @@ export default CommentForm;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 34
+**Satır Sayısı:** 34
 ```csharp
 public class SupportTicket
 {
@@ -224,7 +224,7 @@ public class SupportService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 45
+**Satır Sayısı:** 45
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -283,7 +283,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 103
+**Satır Sayısı:** 103
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -408,7 +408,7 @@ export default SupportTicketForm;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 33
+**Satır Sayısı:** 33
 ```csharp
 public class Feedback
 {
@@ -451,7 +451,7 @@ public class EducationService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 43
+**Satır Sayısı:** 43
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -508,7 +508,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 128
+**Satır Sayısı:** 128
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -662,7 +662,7 @@ export default VideoFeedback;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 52
+**Satır Sayısı:** 52
 ```csharp
 public class ForumPost
 {
@@ -806,7 +806,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 154
+**Satır Sayısı:** 154
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -991,7 +991,7 @@ export default TopicPosts;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 34
+**Satır Sayısı:** 34
 ```csharp
 public class HotelReview
 {
@@ -1035,7 +1035,7 @@ public class HotelReservationService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 48
+**Satır Sayısı:** 48
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -1097,7 +1097,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 151
+**Satır Sayısı:** 151
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -1274,7 +1274,7 @@ export default HotelReviews;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 44
+**Satır Sayısı:** 44
 ```csharp
 public class ProductReview
 {
@@ -1329,7 +1329,7 @@ public class ShoppingService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 63
+**Satır Sayısı:** 63
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -1407,7 +1407,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 158
+**Satır Sayısı:** 158
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -1592,7 +1592,7 @@ export default ProductReviews;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 34
+**Satır Sayısı:** 34
 ```csharp
 public class NewsComment
 {
@@ -1636,7 +1636,7 @@ public class NewsService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 46
+**Satır Sayısı:** 46
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -1696,7 +1696,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 156
+**Satır Sayısı:** 156
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -1878,7 +1878,7 @@ export default NewsComments;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 33
+**Satır Sayısı:** 33
 ```csharp
 public class EventEvaluation
 {
@@ -1921,7 +1921,7 @@ public class EventPlanningService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 43
+**Satır Sayısı:** 43
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -1978,7 +1978,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 133
+**Satır Sayısı:** 133
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -2137,7 +2137,7 @@ export default EventEvaluations;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 33
+**Satır Sayısı:** 33
 ```csharp
 public class ExamComment
 {
@@ -2180,7 +2180,7 @@ public class OnlineEducationService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 43
+**Satır Sayısı:** 43
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -2237,7 +2237,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 128
+**Satır Sayısı:** 128
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';
@@ -2391,7 +2391,7 @@ export default ExamComments;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 43
+**Satır Sayısı:** 43
 ```csharp
 public class RestaurantReview
 {
@@ -2445,7 +2445,7 @@ public class RestaurantReviewService
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 60
+**Satır Sayısı:** 60
 ```python
 from datetime import datetime
 from flask import Flask, request, jsonify
@@ -2520,7 +2520,7 @@ if __name__ == '__main__':
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 157
+**Satır Sayısı:** 157
 ```typescript
 // Node.js (Express with Mongoose for MongoDB)
 import express from 'express';

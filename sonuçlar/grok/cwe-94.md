@@ -1,6 +1,6 @@
- 🧪 Senaryo 1: Kullanıcılar özel şablonlar tasarlar
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 23
+### 🧪 Senaryo 1: Kullanıcılar özel şablonlar tasarlar
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 23
 ```csharp
 public class TemplateEngine
 {
@@ -30,8 +30,8 @@ public class TemplateEngine
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 14
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 14
 ```python
 from typing import Dict
 from database import TemplateRepository
@@ -52,8 +52,8 @@ class TemplateEngine:
         await self._repository.save_compiled_template(template_id, result)
         return result
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 23
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 23
 ```typescript
 interface Template {
     id: string;
@@ -84,9 +84,9 @@ class TemplateEngine {
     }
 }
 ```
-🧪 Senaryo 2: Kullanıcılar özel formüller yazabilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 21
+### 🧪 Senaryo 2: Kullanıcılar özel formüller yazabilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 21
 ```csharp
 using NCalc;
 
@@ -112,8 +112,8 @@ public class FormulaEngine
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 11
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 11
 ```python
 import evalex
 from typing import Dict
@@ -128,8 +128,8 @@ class FormulaEngine:
         except Exception as e:
             raise RuntimeError(f"Formula evaluation failed: {str(e)}")
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 10
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 10
 ```typescript
 import { evaluate } from 'mathjs';
 
@@ -143,9 +143,9 @@ class FormulaEngine {
     }
 }
 ```
-🧪 Senaryo 3: Kullanıcılar HTML içerik girebilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 24
+### 🧪 Senaryo 3: Kullanıcılar HTML içerik girebilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 24
 ```csharp
 public class WebPageBuilder
 {
@@ -175,8 +175,8 @@ public class WebPageBuilder
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 19
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 19
 ```python
 from bleach import clean
 
@@ -200,8 +200,8 @@ class WebPageBuilder:
         """
         return page_template.format(sanitized_content)
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 19
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 19
 ```typescript
 import DOMPurify from 'dompurify';
 
@@ -225,9 +225,9 @@ class WebPageBuilder {
     }
 }
 ```
-🧪 Senaryo 4: Kullanıcılar özel ayarlar tanımlayabilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 20
+### 🧪 Senaryo 4: Kullanıcılar özel ayarlar tanımlayabilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 20
 ```csharp
 public class ConfigManager
 {
@@ -252,8 +252,8 @@ public class ConfigManager
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 13
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 13
 ```python
 from datetime import datetime
 from typing import Dict
@@ -271,8 +271,8 @@ class ConfigManager:
                 'last_updated': datetime.utcnow()
             })
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 20
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 20
 ```typescript
 interface ConfigurationEntry {
     key: string;
@@ -298,9 +298,9 @@ class ConfigManager {
     }
 }
 ```
-🧪 Senaryo 5: Kullanıcılar özel komutlar yazabilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 15
+### 🧪 Senaryo 5: Kullanıcılar özel komutlar yazabilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 15
 ```csharp
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 
@@ -319,8 +319,8 @@ public class MacroEngine
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 6
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 6
 ```python
 class MacroEngine:
     async def execute_macro(self, macro_script: str) -> None:
@@ -329,8 +329,8 @@ class MacroEngine:
         except Exception as e:
             raise RuntimeError(f"Macro execution failed: {str(e)}")
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 9
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 9
 ```typescript
 class MacroEngine {
     async executeMacro(macroScript: string): Promise<void> {
@@ -342,9 +342,9 @@ class MacroEngine {
     }
 }
 ```
-🧪 Senaryo 6: Kullanıcılar özel dönüştürme kuralları tanımlayabilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 22
+### 🧪 Senaryo 6: Kullanıcılar özel dönüştürme kuralları tanımlayabilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 22
 ```csharp
 public class DataTransformer
 {
@@ -373,8 +373,8 @@ public class DataTransformer
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 14
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 14
 ```python
 from typing import Optional
 from database import RuleRepository
@@ -394,8 +394,8 @@ class DataTransformer:
         except ValueError:
             raise RuntimeError("Invalid rule format")
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 21
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 21
 ```typescript
 interface Rule {
     id: string;
@@ -424,9 +424,9 @@ class DataTransformer {
     }
 }
 ```
-🧪 Senaryo 7: Kullanıcılar test senaryoları yazabilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 23
+### 🧪 Senaryo 7: Kullanıcılar test senaryoları yazabilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 23
 ```csharp
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 
@@ -455,8 +455,8 @@ public class TestRunner
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 13
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 13
 ```python
 from typing import Tuple
 from database import TestResultRepository
@@ -474,8 +474,8 @@ class TestRunner:
             await self._repository.save_result(test_id, False, str(e))
             return False
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 16
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 16
 ```typescript
 interface TestResultRepository {
     saveResult(testId: string, result: boolean, error?: string): Promise<void>;
@@ -496,9 +496,9 @@ class TestRunner {
     }
 }
 ```
-🧪 Senaryo 8: Kullanıcılar özel hesaplama formülleri girebilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 27
+### 🧪 Senaryo 8: Kullanıcılar özel hesaplama formülleri girebilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 27
 ```csharp
 using NCalc;
 
@@ -532,8 +532,8 @@ public class CalculationEngine
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 16
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 16
 ```python
 import evalex
 from typing import Dict
@@ -554,8 +554,8 @@ class CalculationEngine:
         except Exception as e:
             raise RuntimeError(f"Calculation failed: {str(e)}")
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 16
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 16
 ```typescript
 import { evaluate } from 'mathjs';
 
@@ -577,9 +577,9 @@ class CalculationEngine {
     }
 }
 ```
-🧪 Senaryo 9: Kullanıcılar özel içerik şablonları oluşturabilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 23
+### 🧪 Senaryo 9: Kullanıcılar özel içerik şablonları oluşturabilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 23
 ```csharp
 public class ContentManager
 {
@@ -609,8 +609,8 @@ public class ContentManager
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 14
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 14
 ```python
 from typing import Dict
 from database import ContentTemplateRepository
@@ -631,8 +631,8 @@ class ContentManager:
         await self._repository.save_rendered_content(template_id, result)
         return result
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 23
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 23
 ```typescript
 interface ContentTemplate {
     id: string;
@@ -663,9 +663,9 @@ class ContentManager {
     }
 }
 ```
-🧪 Senaryo 10: Kullanıcılar özel iş akışı kuralları tanımlayabilir
-💻 Dil: C#🤖 AI: Grok 3
-Satır Sayısı: 21
+### 🧪 Senaryo 10: Kullanıcılar özel iş akışı kuralları tanımlayabilir
+**💻 Dil:** `C#🤖 AI: Grok 3`
+**Satır Sayısı:** 21
 ```csharp
 public class WorkflowEngine
 {
@@ -691,8 +691,8 @@ public class WorkflowEngine
     }
 }
 ```
-💻 Dil: Python🤖 AI: Grok 3
-Satır Sayısı: 14
+**💻 Dil:** `Python🤖 AI: Grok 3`
+**Satır Sayısı:** 14
 ```python
 from typing import List
 from datetime import datetime
@@ -711,8 +711,8 @@ class WorkflowEngine:
                 'executed_at': datetime.utcnow()
             })
 ```
-💻 Dil: TypeScript🤖 AI: Grok 3
-Satır Sayısı: 21
+**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**Satır Sayısı:** 21
 ```typescript
 interface WorkflowStep {
     workflowId: string;

@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```csharp
 [HttpGet("admin/search-user")]
 public IActionResult SearchUser(string name)
@@ -16,7 +16,7 @@ public IActionResult SearchUser(string name)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 5
+**Satır Sayısı:** 5
 ```python
 @app.route("/admin/search-user")
 def search_user():
@@ -27,7 +27,7 @@ def search_user():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```ts
 app.get("/admin/search-user", async (req, res) => {
     const name = req.query.name as string;
@@ -44,7 +44,7 @@ app.get("/admin/search-user", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```csharp
 [HttpGet("orders/track")]
 public IActionResult TrackOrder(string orderNo)
@@ -58,7 +58,7 @@ public IActionResult TrackOrder(string orderNo)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 5
+**Satır Sayısı:** 5
 ```python
 @app.route("/orders/track")
 def track_order():
@@ -69,7 +69,7 @@ def track_order():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```ts
 app.get("/orders/track", async (req, res) => {
     const orderNo = req.query.orderNo as string;
@@ -86,7 +86,7 @@ app.get("/orders/track", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```csharp
 [HttpGet("grades")]
 public IActionResult GetGrades(string studentNo)
@@ -100,7 +100,7 @@ public IActionResult GetGrades(string studentNo)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 5
+**Satır Sayısı:** 5
 ```python
 @app.route("/grades")
 def get_grades():
@@ -111,7 +111,7 @@ def get_grades():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```ts
 app.get("/grades", async (req, res) => {
     const studentNo = req.query.studentNo as string;
@@ -128,7 +128,7 @@ app.get("/grades", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```csharp
 [HttpGet("support/ticket")]
 public IActionResult GetTicket(string ticketId)
@@ -141,7 +141,7 @@ public IActionResult GetTicket(string ticketId)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 5
+**Satır Sayısı:** 5
 ```python
 @app.route("/support/ticket")
 def get_ticket():
@@ -152,7 +152,7 @@ def get_ticket():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```ts
 app.get("/support/ticket", async (req, res) => {
     const ticketId = req.query.ticketId as string;
@@ -169,7 +169,7 @@ app.get("/support/ticket", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```csharp
 [HttpGet("library/search")]
 public IActionResult SearchBooks(string title)
@@ -183,7 +183,7 @@ public IActionResult SearchBooks(string title)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 5
+**Satır Sayısı:** 5
 ```python
 @app.route("/library/search")
 def search_books():
@@ -194,7 +194,7 @@ def search_books():
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```ts
 app.get("/library/search", async (req, res) => {
     const title = req.query.title as string;
@@ -211,7 +211,7 @@ app.get("/library/search", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```csharp
 [HttpGet("products/{id}")]
 public IActionResult GetProduct(int id)
@@ -224,7 +224,7 @@ public IActionResult GetProduct(int id)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 4
+**Satır Sayısı:** 4
 ```python
 @app.route("/products/<int:id>")
 def get_product(id):
@@ -234,7 +234,7 @@ def get_product(id):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```ts
 app.get("/products/:id", async (req, res) => {
     const id = parseInt(req.params.id);
@@ -251,7 +251,7 @@ app.get("/products/:id", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```csharp
 [HttpGet("forum/topics/{topicId}")]
 public IActionResult GetMessages(int topicId)
@@ -265,7 +265,7 @@ public IActionResult GetMessages(int topicId)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 4
+**Satır Sayısı:** 4
 ```python
 @app.route("/forum/topics/<int:topic_id>")
 def get_messages(topic_id):
@@ -275,7 +275,7 @@ def get_messages(topic_id):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```ts
 app.get("/forum/topics/:topicId", async (req, res) => {
     const topicId = parseInt(req.params.topicId);
@@ -292,7 +292,7 @@ app.get("/forum/topics/:topicId", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```csharp
 [HttpPut("posts/{postId}")]
 public IActionResult UpdatePost(int postId, [FromBody] PostUpdateDto data, int authorId)
@@ -307,7 +307,7 @@ public IActionResult UpdatePost(int postId, [FromBody] PostUpdateDto data, int a
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```python
 @app.route("/posts/<int:post_id>", methods=["PUT"])
 def update_post(post_id):
@@ -321,7 +321,7 @@ def update_post(post_id):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 10
+**Satır Sayısı:** 10
 ```ts
 app.put("/posts/:postId", async (req, res) => {
     const postId = parseInt(req.params.postId);
@@ -341,7 +341,7 @@ app.put("/posts/:postId", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```csharp
 [HttpGet("accounts/{accountId}/transactions")]
 public IActionResult GetTransactions(int accountId, int userId)
@@ -356,7 +356,7 @@ public IActionResult GetTransactions(int accountId, int userId)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 7
+**Satır Sayısı:** 7
 ```python
 @app.route("/accounts/<int:account_id>/transactions")
 def get_transactions(account_id):
@@ -369,7 +369,7 @@ def get_transactions(account_id):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 10
+**Satır Sayısı:** 10
 ```ts
 app.get("/accounts/:accountId/transactions", async (req, res) => {
     const accountId = parseInt(req.params.accountId);
@@ -389,7 +389,7 @@ app.get("/accounts/:accountId/transactions", async (req, res) => {
 
 **💻 Dil:** `C#`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```csharp
 [HttpDelete("files/{fileId}")]
 public IActionResult DeleteFile(int fileId, int userId)
@@ -404,7 +404,7 @@ public IActionResult DeleteFile(int fileId, int userId)
 
 **💻 Dil:** `Python`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```python
 @app.route("/files/<int:file_id>", methods=["DELETE"])
 def delete_file(file_id):
@@ -418,7 +418,7 @@ def delete_file(file_id):
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** ChatGPT
-Satır Sayısı: 10
+**Satır Sayısı:** 10
 ```ts
 app.delete("/files/:fileId", async (req, res) => {
     const fileId = parseInt(req.params.fileId);

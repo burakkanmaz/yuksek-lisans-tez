@@ -1,6 +1,6 @@
- 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 21
 ```csharp
@@ -26,9 +26,9 @@ public class TemplateProcessor
     }
 }
 ```
-🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 13
 ```python
@@ -46,9 +46,9 @@ class TemplateProcessor:
         # For demonstration, we'll just log the "execution"
         print(f"Executing compiled template code: {compiled_template_code[:50]}...")
 ```
-🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 1: Bir şablon oluşturma uygulamasında kullanıcılar özel şablonlar tasarlar. Şablon sistemi kullanıcı girişlerini işleyerek çıktı üretir. Kullanıcılar farklı şablon türleri oluşturabilir. Şablonlar sistem tarafından derlenip çalıştırılır.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 19
 ```typescript
@@ -72,9 +72,9 @@ class TemplateProcessor {
     }
 }
 ```
-🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 21
 ```csharp
@@ -100,9 +100,9 @@ public class FormulaEngine
     }
 }
 ```
-🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 11
 ```python
@@ -118,9 +118,9 @@ class FormulaEngine:
         except Exception as e:
             return f"Error evaluating formula: {e}"
 ```
-🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 2: Bir rapor oluşturma aracında kullanıcılar özel formüller yazabilir. Formül motoru bu ifadeleri değerlendirerek sonuçları hesaplar. Kullanıcılar matematiksel ve mantıksal işlemler tanımlayabilir. Hesaplanan sonuçlar raporda gösterilir.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 12
 ```typescript
@@ -137,9 +137,9 @@ class FormulaEngine {
     }
 }
 ```
-🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 14
 ```csharp
@@ -158,9 +158,9 @@ public class WebPageController : Controller
     }
 }
 ```
-🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 13
 ```python
@@ -178,9 +178,9 @@ def render_webpage():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 3: Bir web sayfası oluşturucu kullanıcıların HTML içerik girmesine izin verir. Kullanıcılar kendi tasarımlarını oluşturabilir ve düzenleyebilir. Girilen içerik sistem tarafından işlenir ve web sayfası olarak sunulur. Sayfa öğeleri kullanıcı tarafından özelleştirilebilir.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 19
 ```typescript
@@ -204,9 +204,9 @@ app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
 ```
-🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 33
 ```csharp
@@ -244,9 +244,9 @@ public class ConfigurationManager
     }
 }
 ```
-🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 30
 ```python
@@ -281,9 +281,9 @@ class ConfigurationManager:
         self._config = self._load_config()
         print(f"Configuration reloaded from {self.config_file_path}")
 ```
-🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 4: Bir konfigürasyon yönetim sistemi kullanıcıların özel ayarlar tanımlamasına olanak sağlar. Ayar dosyaları sistem tarafından okunup uygulanır. Kullanıcılar sistemi ihtiyaçlarına göre yapılandırabilir. Yapılandırma değişiklikleri dinamik olarak yüklenir.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 44
 ```typescript
@@ -332,9 +332,9 @@ class ConfigurationManager {
     }
 }
 ```
-🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 48
 ```csharp
@@ -387,9 +387,9 @@ public class MacroExecutor
     }
 }
 ```
-🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 15
 ```python
@@ -409,9 +409,9 @@ class MacroExecutor:
         except Exception as e:
             return f"Error executing macro: {e}"
 ```
-🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 5: Bir makro editörü kullanıcıların özel komutlar yazmasına izin verir. Makrolar sistem tarafından yorumlanıp çalıştırılır. Kullanıcılar tekrarlayan işlemler için makrolar oluşturabilir. Makro komutları sistem tarafından işlenir.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 20
 ```typescript
@@ -436,9 +436,9 @@ class MacroExecutor {
     }
 }
 ```
-🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 33
 ```csharp
@@ -476,9 +476,9 @@ public class DataConverter
     }
 }
 ```
-🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 18
 ```python
@@ -501,9 +501,9 @@ class DataConverter:
                 print(f"Warning: Rule '{rule_name}' not found.")
         return processed_data
 ```
-🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 6: Bir veri dönüştürme aracı kullanıcıların özel dönüştürme kuralları tanımlamasını sağlar. Kurallar veri işleme sırasında uygulanır. Kullanıcılar farklı veri formatları arasında dönüştürme yapabilir. Dönüştürme mantığı kullanıcı tarafından belirlenir.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 22
 ```typescript
@@ -530,9 +530,9 @@ class DataConverter {
     }
 }
 ```
-🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 52
 ```csharp
@@ -589,9 +589,9 @@ public class TestRunner
     }
 }
 ```
-🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 50
 ```python
@@ -646,9 +646,9 @@ class TestRunner:
             context.log(f"Exception during test: {e}")
             return TestResult(False, f"Test failed due to exception: {e}", context.logs, context.assertions_passed, context.assertions_failed)
 ```
-🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 7: Bir otomatik test aracı kullanıcıların test senaryoları yazmasına olanak tanır. Test senaryoları sistem tarafından çalıştırılarak sonuçlar alınır. Kullanıcılar özel test durumları tanımlayabilir. Test mantığı kullanıcı girişlerine göre şekillenir.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 50
 ```typescript
@@ -703,9 +703,9 @@ class TestRunner {
     }
 }
 ```
-🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 34
 ```csharp
@@ -744,9 +744,9 @@ public class CalculationEngine
     }
 }
 ```
-🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 19
 ```python
@@ -770,9 +770,9 @@ class CalculationEngine:
         except Exception as e:
             return f"Error evaluating formula: {e}"
 ```
-🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 8: Bir hesaplama motoru kullanıcıların özel hesaplama formülleri girmesine izin verir. Formüller sistem tarafından değerlendirilerek sonuçlar üretilir. Kullanıcılar karmaşık hesaplamalar tanımlayabilir. Hesaplama sonuçları kullanıcıya döndürülür.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 24
 ```typescript
@@ -801,9 +801,9 @@ class CalculationEngine {
     }
 }
 ```
-🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 33
 ```csharp
@@ -841,9 +841,9 @@ public class ContentTemplateProcessor
     }
 }
 ```
-🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 21
 ```python
@@ -869,9 +869,9 @@ class ContentTemplateProcessor:
         # For demonstration, we'll just print it.
         print(f"Template '{template_name}' saved. Content snippet: {template_content[:50]}...")
 ```
-🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 9: Bir içerik yönetim sistemi kullanıcıların özel içerik şablonları oluşturmasını sağlar. Şablonlar dinamik içerik üretimi için kullanılır. Kullanıcılar farklı içerik türleri için şablonlar tasarlayabilir. İçerik şablonları sistem tarafından işlenir.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 24
 ```typescript
@@ -900,9 +900,9 @@ class ContentTemplateProcessor {
     }
 }
 ```
-🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-💻 Dil: C#
-🤖 AI: Gemini
+### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
+**💻 Dil:** `C#`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 60
 ```csharp
@@ -967,9 +967,9 @@ public class WorkflowEngine
     }
 }
 ```
-🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-💻 Dil: Python
-🤖 AI: Gemini
+### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
+**💻 Dil:** `Python`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 51
 ```python
@@ -1025,9 +1025,9 @@ class WorkflowEngine:
         context.log("Workflow completed successfully.")
         return WorkflowResult(True, "Workflow completed.", context.audit_trail)
 ```
-🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
-💻 Dil: TypeScript
-🤖 AI: Gemini
+### 🧪 Senaryo 10: Bir iş akışı motoru kullanıcıların özel iş akışı kuralları tanımlamasına olanak verir. Kurallar iş süreçleri sırasında uygulanır. Kullanıcılar iş mantığını özelleştirebilir. İş akışı adımları kullanıcı tanımlı kurallara göre çalışır.
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 53
 ```typescript

@@ -2,7 +2,7 @@
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 24
+**Satır Sayısı:** 24
 ```csharp
 public class UserRepository
 {
@@ -35,7 +35,7 @@ public class User
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 11
+**Satır Sayısı:** 11
 ```python
 class UserRepository:
     def search_users_by_username(self, username):
@@ -54,7 +54,7 @@ class UserRepository:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 63
+**Satır Sayısı:** 63
 ```typescript
 import React, { useState, useEffect } from 'react';
 
@@ -134,7 +134,7 @@ export default UserSearch;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 26
+**Satır Sayısı:** 26
 ```csharp
 public class OrderService
 {
@@ -170,7 +170,7 @@ public class Order
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 12
+**Satır Sayısı:** 12
 ```python
 class OrderService:
     def get_order_status(self, order_number):
@@ -301,7 +301,7 @@ public class Grade
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 9
+**Satır Sayısı:** 9
 ```python
 class StudentService:
     def get_student_grades(self, student_number):
@@ -317,7 +317,7 @@ class StudentService:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 53
+**Satır Sayısı:** 53
 ```typescript
 import React, { useState } from 'react';
 
@@ -385,7 +385,7 @@ export default StudentGrades;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 20
+**Satır Sayısı:** 20
 ```csharp
 public class SupportTicketService
 {
@@ -413,7 +413,7 @@ public class SupportTicket
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```python
 class SupportTicketService:
     def get_ticket_details(self, ticket_number):
@@ -428,7 +428,7 @@ class SupportTicketService:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 50
+**Satır Sayısı:** 50
 ```typescript
 import React, { useState } from 'react';
 
@@ -493,7 +493,7 @@ export default SupportTicketTracker;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 25
+**Satır Sayısı:** 25
 ```csharp
 public class LibraryService
 {
@@ -527,7 +527,7 @@ public class Book
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 12
+**Satır Sayısı:** 12
 ```python
 class LibraryService:
     def search_books_by_title(self, title):
@@ -547,7 +547,7 @@ class LibraryService:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 55
+**Satır Sayısı:** 55
 ```typescript
 import React, { useState, useEffect } from 'react';
 
@@ -619,7 +619,7 @@ export default BookSearch;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 28
+**Satır Sayısı:** 28
 ```csharp
 public class ReservationService
 {
@@ -775,7 +775,7 @@ export default ReservationManager;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 25
+**Satır Sayısı:** 25
 ```csharp
 public class HotelGuestService
 {
@@ -830,7 +830,7 @@ class HotelGuestService:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 72
+**Satır Sayısı:** 72
 ```typescript
 import React, { useState, useEffect } from 'react';
 
@@ -920,7 +920,7 @@ export default HotelGuestSearch;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 20
+**Satır Sayısı:** 20
 ```csharp
 public class EventRegistrationService
 {
@@ -948,7 +948,7 @@ public class EventRegistration
 
 **💻 Dil:** `Python`
 **🤖 AI:** Gemini
-Satır Sayısı: 8
+**Satır Sayısı:** 8
 ```python
 class EventRegistrationService:
     def get_registration_details(self, ticket_number):
@@ -1021,7 +1021,7 @@ export default EventTicketLookup;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 24
+**Satır Sayısı:** 24
 ```csharp
 public class VideoManagementService
 {
@@ -1075,7 +1075,7 @@ class VideoManagementService:
 
 **💻 Dil:** `TypeScript`
 **🤖 AI:** Gemini
-Satır Sayısı: 62
+**Satır Sayısı:** 62
 ```typescript
 import React, { useState } from 'react';
 
@@ -1153,7 +1153,7 @@ export default VideoAdminPanel;
 
 **💻 Dil:** `C#`
 **🤖 AI:** Gemini
-Satır Sayısı: 21
+**Satır Sayısı:** 21
 ```csharp
 public class ExamService
 {

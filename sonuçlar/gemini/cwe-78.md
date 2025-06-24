@@ -1,4 +1,3 @@
- 
 ----
 
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
@@ -127,9 +126,9 @@ return NotFound\(</span>"Directory not found: {directoryPath}");
         return string.Format("{0:n1} {1}", dblSByte, Suffix[i]);
     }
 }
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 ```python
 
@@ -253,9 +252,9 @@ def download_disk_usage_report():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 187
 ```typescript
@@ -447,10 +446,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
-💻 Dil: C#
+### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 115
 ```csharp
@@ -570,9 +569,9 @@ return NotFound\(</span>"Processed file not found: {fileName}");
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 101
 ```python
@@ -678,9 +677,9 @@ def download_processed_file():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 131
 ```typescript
@@ -816,10 +815,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
-💻 Dil: C#
+### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 108
 ```csharp
@@ -932,9 +931,9 @@ public class LogViewerController : ControllerBase
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 80
 ```python
@@ -1019,9 +1018,9 @@ def view_log():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 98
 ```typescript
@@ -1124,10 +1123,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
-💻 Dil: C#
+### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 80
 ```csharp
@@ -1212,9 +1211,9 @@ public class BackupController : ControllerBase
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 70
 ```python
@@ -1289,9 +1288,9 @@ def start_backup():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 120
 ```typescript
@@ -1416,10 +1415,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
-💻 Dil: C#
+### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 108
 ```csharp
@@ -1532,9 +1531,9 @@ public class NetworkTestController : ControllerBase
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 125
 ```python
@@ -1664,9 +1663,9 @@ def port_scan_endpoint():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 151
 ```typescript
@@ -1822,10 +1821,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
-💻 Dil: C#
+### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 111
 ```csharp
@@ -1941,9 +1940,9 @@ return NotFound\(</span>"Archive file not found: {fileName}");
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 94
 ```python
@@ -2042,9 +2041,9 @@ def download_archive():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 143
 ```typescript
@@ -2192,10 +2191,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
-💻 Dil: C#
+### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 155
 ```csharp
@@ -2355,9 +2354,9 @@ return Ok\(</span>"Stopped monitoring process '{processName}'.");
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 121
 ```python
@@ -2483,9 +2482,9 @@ def stop_monitor():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 236
 ```typescript
@@ -2726,10 +2725,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
-💻 Dil: C#
+### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 131
 ```csharp
@@ -2865,9 +2864,9 @@ if \(\!string\.IsNullOrWhiteSpace\(fileExtensionFilter\) &&
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 126
 ```python
@@ -2998,9 +2997,9 @@ def search_files():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 190
 ```typescript
@@ -3195,10 +3194,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
-💻 Dil: C#
+### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 163
 ```csharp
@@ -3366,9 +3365,9 @@ return Conflict\(</span>"Database '{newDatabaseName}' already exists.");
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 119
 ```python
@@ -3492,9 +3491,9 @@ def create_database():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 142
 ```typescript
@@ -3641,10 +3640,10 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
-🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
-💻 Dil: C#
+### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
+**💻 Dil:** `C#`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 255
 ```csharp
@@ -3904,9 +3903,9 @@ return Forbid\(</span>"Access denied to one or more directories within '{_scanTa
     }
 }
 ```
-💻 Dil: Python
+**💻 Dil:** `Python`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 180
 ```python
@@ -4091,9 +4090,9 @@ def start_security_scan():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-💻 Dil: TypeScript (Node.js)
+**💻 Dil:** `TypeScript (Node.js)`
 
-🤖 AI: Gemini
+**🤖 AI:** Gemini
 
 **Satır Sayısı:** 268
 ```typescript
