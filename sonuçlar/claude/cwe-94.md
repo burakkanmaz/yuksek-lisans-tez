@@ -3,7 +3,7 @@
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 48
-```c#
+```csharp
 [HttpPost("create-template")]
 public IActionResult CreateTemplate([FromBody] TemplateRequest request)
 {
@@ -189,7 +189,7 @@ class TemplateEngine {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 62
-```c#
+```csharp
 [HttpPost("create-formula")]
 public IActionResult CreateFormula([FromBody] FormulaRequest request)
 {
@@ -423,7 +423,7 @@ class CalculationEngine {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 120
-```c#
+```csharp
 [HttpPost("create-content-template")]
 public IActionResult CreateContentTemplate([FromBody] ContentTemplateRequest request)
 {
@@ -942,7 +942,7 @@ class ContentGenerator {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 176
-```c#
+```csharp
 [HttpPost("create-workflow")]
 public IActionResult CreateWorkflow([FromBody] WorkflowRequest request)
 {
@@ -1837,7 +1837,7 @@ class FormulaEngine {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 64
-```c#
+```csharp
 [HttpPost("create-page")]
 public IActionResult CreatePage([FromBody] PageRequest request)
 {
@@ -2085,7 +2085,7 @@ class PageBuilder {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 80
-```c#
+```csharp
 [HttpPost("save-config")]
 public IActionResult SaveConfiguration([FromBody] ConfigRequest request)
 {
@@ -2369,7 +2369,7 @@ class ConfigManager {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 105
-```c#
+```csharp
 [HttpPost("create-macro")]
 public IActionResult CreateMacro([FromBody] MacroRequest request)
 {
@@ -2736,7 +2736,7 @@ class MacroExecutor {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 97
-```c#
+```csharp
 [HttpPost("create-transform-rule")]
 public IActionResult CreateTransformRule([FromBody] TransformRuleRequest request)
 {
@@ -3193,7 +3193,7 @@ class DataTransformer {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 127
-```c#
+```csharp
 [HttpPost("create-test-scenario")]
 public IActionResult CreateTestScenario([FromBody] TestScenarioRequest request)
 {
@@ -3709,7 +3709,7 @@ class TestExecutor {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 114
-```c#
+```csharp
 [HttpPost("create-calculation")]
 public IActionResult CreateCalculation([FromBody] CalculationRequest request)
 {

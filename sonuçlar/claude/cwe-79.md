@@ -3,7 +3,7 @@
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 8
-```c#
+```csharp
 [HttpPost("add-comment")]
 public IActionResult AddComment(string username, string message)
 {
@@ -43,7 +43,7 @@ app.post('/add-comment', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 9
-```c#
+```csharp
 [HttpPost("submit-ticket")]
 public IActionResult SubmitTicket(string description)
 {
@@ -83,7 +83,7 @@ app.post('/submit-ticket', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 8
-```c#
+```csharp
 [HttpPost("add-feedback")]
 public IActionResult AddFeedback(int videoId, string feedback)
 {
@@ -123,7 +123,7 @@ app.post('/add-feedback', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 8
-```c#
+```csharp
 [HttpPost("post-reply")]
 public IActionResult PostReply(int topicId, string content)
 {
@@ -163,7 +163,7 @@ app.post('/post-reply', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 8
-```c#
+```csharp
 [HttpPost("add-review")]
 public IActionResult AddReview(int hotelId, string review)
 {
@@ -203,7 +203,7 @@ app.post('/add-review', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 8
-```c#
+```csharp
 [HttpPost("submit-product-review")]
 public IActionResult SubmitProductReview(int productId, int rating, string description)
 {
@@ -244,7 +244,7 @@ app.post('/submit-product-review', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 8
-```c#
+```csharp
 [HttpPost("add-news-comment")]
 public IActionResult AddNewsComment(int newsId, string title, string name, string message)
 {
@@ -286,7 +286,7 @@ app.post('/add-news-comment', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 9
-```c#
+```csharp
 [HttpPost("submit-evaluation")]
 public IActionResult SubmitEvaluation(int eventId, string evaluation)
 {
@@ -327,7 +327,7 @@ app.post('/submit-evaluation', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 8
-```c#
+```csharp
 [HttpPost("post-exam-comment")]
 public IActionResult PostExamComment(int examId, string comment)
 {
@@ -367,7 +367,7 @@ app.post('/post-exam-comment', (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 8
-```c#
+```csharp
 [HttpPost("share-experience")]
 public IActionResult ShareExperience(string restaurantName, string experience)
 {

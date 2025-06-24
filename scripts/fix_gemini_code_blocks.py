@@ -77,7 +77,7 @@ def fix_code_blocks_in_content(content):
         else:
             # Also fix existing code blocks with wrong language names
             if line.strip().startswith('```'):
-                if line.strip() == '```c#':
+                if line.strip() == '```csharp':
                     fixed_lines.append('```csharp')
                     code_blocks_fixed += 1
                 elif line.strip() == '```typescript (node.js)':

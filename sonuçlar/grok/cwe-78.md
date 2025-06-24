@@ -2,7 +2,7 @@
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
 **💻 Dil:** `C#`  
 Satır Sayısı: 1
-```** `c#`
+
 **🤖 AI:** Grok 3
 
 ```csharp

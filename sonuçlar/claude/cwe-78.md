@@ -3,7 +3,7 @@
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 32
-```c#
+```csharp
 [HttpPost("disk-usage")]
 public async Task<IActionResult> AnalyzeDiskUsage([FromBody] DiskAnalysisRequest request)
 {
@@ -168,7 +168,7 @@ class DiskAnalyzer {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 53
-```c#
+```csharp
 [HttpPost("process-file")]
 public async Task<IActionResult> ProcessFile([FromBody] FileProcessRequest request)
 {
@@ -383,7 +383,7 @@ class FileProcessingService {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 65
-```c#
+```csharp
 [HttpGet("logs/{fileName}")]
 public async Task<IActionResult> GetLogs(string fileName, 
     [FromQuery] string search = "", [FromQuery] string level = "", 
@@ -662,7 +662,7 @@ class LogViewer {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 59
-```c#
+```csharp
 [HttpPost("backup")]
 public async Task<IActionResult> StartBackup([FromBody] BackupRequest request)
 {
@@ -912,7 +912,7 @@ class BackupService {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 72
-```c#
+```csharp
 [HttpPost("network-test")]
 public async Task<IActionResult> RunNetworkTest([FromBody] NetworkTestRequest request)
 {
@@ -1260,7 +1260,7 @@ class NetworkTestService {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 86
-```c#
+```csharp
 [HttpPost("compress")]
 public async Task<IActionResult> CompressFiles([FromBody] CompressionRequest request)
 {
@@ -1587,7 +1587,7 @@ class CompressionService {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 75
-```c#
+```csharp
 [HttpPost("monitor-process")]
 public async Task<IActionResult> StartMonitoring([FromBody] MonitorRequest request)
 {
@@ -1964,7 +1964,7 @@ class ProcessMonitoringService {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 95
-```c#
+```csharp
 [HttpPost("file-search")]
 public async Task<IActionResult> SearchFiles([FromBody] FileSearchRequest request)
 {
@@ -2389,7 +2389,7 @@ class FileSearchService {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 88
-```c#
+```csharp
 [HttpPost("db-operation")]
 public async Task<IActionResult> ExecuteDatabaseOperation([FromBody] DbOperationRequest request)
 {
@@ -2804,7 +2804,7 @@ class DatabaseManagementService {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 123
-```c#
+```csharp
 [HttpPost("security-scan")]
 public async Task<IActionResult> StartSecurityScan([FromBody] SecurityScanRequest request)
 {

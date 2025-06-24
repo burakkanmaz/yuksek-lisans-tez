@@ -7,8 +7,8 @@ def standardize_language_tags_in_content(content):
     
     # Replace problematic language tags
     replacements = {
-        '```c#': '```csharp',
-        '```C#': '```csharp',
+        '```csharp': '```csharp',
+        '```csharp': '```csharp',
         '```typescript (node.js)': '```typescript',
         '```TypeScript (Node.js)': '```typescript',
         '```TypeScript': '```typescript',

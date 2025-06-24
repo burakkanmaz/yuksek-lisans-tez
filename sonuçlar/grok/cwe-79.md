@@ -2,7 +2,7 @@
 ### 🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
 **💻 Dil:** `C#`  
 Satır Sayısı: 1
-```** `c#`
+
 **🤖 AI:** Grok
 
 ```csharp

@@ -3,7 +3,7 @@
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 21
-```c#
+```csharp
 [HttpPost("save-address")]
 public async Task<IActionResult> SaveAddress(AddressRequest request)
 {
@@ -105,7 +105,7 @@ const validatePostalCode = (postalCode: string | undefined): string | null => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 12
-```c#
+```csharp
 [HttpPost("create-password")]
 public async Task<IActionResult> CreatePassword(PasswordRequest request)
 {
@@ -182,7 +182,7 @@ export const createPassword = async (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 14
-```c#
+```csharp
 [HttpGet("track-package/{trackingNumber}")]
 public async Task<IActionResult> TrackPackage(string trackingNumber)
 {
@@ -263,7 +263,7 @@ export const trackPackage = async (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 13
-```c#
+```csharp
 [HttpPost("update-biography")]
 public async Task<IActionResult> UpdateBiography(BiographyRequest request)
 {
@@ -343,7 +343,7 @@ export const updateBiography = async (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 14
-```c#
+```csharp
 [HttpPost("check-availability")]
 public async Task<IActionResult> CheckAvailability(AvailabilityRequest request)
 {
@@ -424,7 +424,7 @@ export const checkAvailability = async (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 19
-```c#
+```csharp
 [HttpPost("create-topic")]
 public async Task<IActionResult> CreateTopic(TopicRequest request)
 {
@@ -517,7 +517,7 @@ export const createTopic = async (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 20
-```c#
+```csharp
 [HttpPost("register")]
 public async Task<IActionResult> Register(RegistrationRequest request)
 {
@@ -619,7 +619,7 @@ export const register = async (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 15
-```c#
+```csharp
 [HttpGet("search-files")]
 public async Task<IActionResult> SearchFiles([FromQuery] string query)
 {
@@ -702,7 +702,7 @@ export const searchFiles = async (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 24
-```c#
+```csharp
 [HttpPost("add-tags")]
 public async Task<IActionResult> AddTags(TagRequest request)
 {
@@ -825,7 +825,7 @@ export const addTags = async (req: Request, res: Response) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 Satır Sayısı: 20
-```c#
+```csharp
 [HttpPost("start-survey")]
 public async Task<IActionResult> StartSurvey(SurveyRequest request)
 {

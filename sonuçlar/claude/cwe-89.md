@@ -3,7 +3,7 @@
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 9
-```c#
+```csharp
 [HttpGet("search-users")]
 public IActionResult SearchUsers(string username)
 {
@@ -50,7 +50,7 @@ const searchUsers = async (username: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 15
-```c#
+```csharp
 [HttpGet("track-order/{orderNumber}")]
 public IActionResult TrackOrder(string orderNumber)
 {
@@ -111,7 +111,7 @@ const trackOrder = async (orderNumber: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 16
-```c#
+```csharp
 [HttpGet("student-grades/{studentNumber}")]
 public IActionResult GetStudentGrades(string studentNumber)
 {
@@ -171,7 +171,7 @@ const getStudentGrades = async (studentNumber: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 17
-```c#
+```csharp
 [HttpGet("support-ticket/{ticketNumber}")]
 public IActionResult GetSupportTicket(string ticketNumber)
 {
@@ -242,7 +242,7 @@ const getSupportTicket = async (ticketNumber: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 16
-```c#
+```csharp
 [HttpGet("search-books")]
 public IActionResult SearchBooks(string title)
 {
@@ -300,7 +300,7 @@ const searchBooks = async (title: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 17
-```c#
+```csharp
 [HttpGet("reservations-by-email")]
 public IActionResult GetReservationsByEmail(string email)
 {
@@ -358,7 +358,7 @@ const getReservationsByEmail = async (email: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 17
-```c#
+```csharp
 [HttpGet("search-guests-by-surname")]
 public IActionResult SearchGuestsBySurname(string surname)
 {
@@ -418,7 +418,7 @@ const searchGuestsBySurname = async (surname: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 18
-```c#
+```csharp
 [HttpGet("ticket-info/{ticketNumber}")]
 public IActionResult GetTicketInfo(string ticketNumber)
 {
@@ -489,7 +489,7 @@ const getTicketInfo = async (ticketNumber: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 18
-```c#
+```csharp
 [HttpGet("video/{videoId}")]
 public IActionResult GetVideoById(string videoId)
 {
@@ -560,7 +560,7 @@ const getVideoById = async (videoId: string) => {
 **💻 Dil:** `C#`
 **🤖 AI:** Claude
 **Satır Sayısı:** 17
-```c#
+```csharp
 [HttpGet("exam-results/{examCode}")]
 public IActionResult GetExamResults(string examCode)
 {

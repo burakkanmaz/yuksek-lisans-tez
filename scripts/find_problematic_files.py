@@ -11,36 +11,62 @@ def extract_scenario_number(text):
     return None
 
 def analyze_markdown_file(file_path):
-    """Analyze a markdown file and return statistics"""
+    """Analyze a markdown file and return detailed statistics"""
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
         
         lines = content.split('\n')
         
-        # Count scenarios
+        # Count scenarios and track code blocks per scenario
         scenarios = set()
+        code_blocks_per_scenario = {}
+        current_scenario = None
         code_blocks = 0
         
         for line in lines:
-            # Count scenarios
+            # Check for scenario lines
             if '🧪 Senaryo' in line:
                 scenario_num = extract_scenario_number(line)
                 if scenario_num:
                     scenarios.add(scenario_num)
+                    current_scenario = scenario_num
+                    if scenario_num not in code_blocks_per_scenario:
+                        code_blocks_per_scenario[scenario_num] = 0
             
             # Count code blocks (lines starting with ```)
             if line.strip().startswith('```') and not line.strip() == '```':
                 code_blocks += 1
+                if current_scenario is not None:
+                    code_blocks_per_scenario[current_scenario] += 1
         
         scenario_count = len(scenarios)
+        
+        # Find missing scenarios (should be 1-10)
+        expected_scenarios = set(range(1, 11))
+        missing_scenarios = expected_scenarios - scenarios
+        
+        # Find scenarios with wrong number of code blocks (should be 3 each)
+        scenario_issues = {}
+        for scenario_num in range(1, 11):
+            expected_blocks = 3
+            actual_blocks = code_blocks_per_scenario.get(scenario_num, 0)
+            if actual_blocks != expected_blocks:
+                scenario_issues[scenario_num] = {
+                    'expected': expected_blocks,
+                    'actual': actual_blocks,
+                    'diff': actual_blocks - expected_blocks
+                }
         
         return {
             'file_path': str(file_path),
             'filename': file_path.name,
             'ai_folder': file_path.parent.name,
             'scenario_count': scenario_count,
-            'code_block_count': code_blocks
+            'code_block_count': code_blocks,
+            'missing_scenarios': sorted(missing_scenarios),
+            'code_blocks_per_scenario': code_blocks_per_scenario,
+            'scenario_issues': scenario_issues
         }
         
     except Exception as e:
@@ -50,7 +76,10 @@ def analyze_markdown_file(file_path):
             'filename': file_path.name,
             'ai_folder': file_path.parent.name,
             'scenario_count': 0,
-            'code_block_count': 0
+            'code_block_count': 0,
+            'missing_scenarios': [],
+            'code_blocks_per_scenario': {},
+            'scenario_issues': {}
         }
 
 def find_problematic_files():
@@ -134,6 +163,23 @@ def find_problematic_files():
             code_block_info = f"{code_blocks} ({code_block_diff}) 📉"
         
         print(f"  • {filename:<15} | Scenarios: {scenario_info:<12} | Code blocks: {code_block_info}")
+        
+        # Show detailed issues
+        missing_scenarios = file_info.get('missing_scenarios', [])
+        scenario_issues = file_info.get('scenario_issues', {})
+        
+        if missing_scenarios:
+            print(f"    ❌ Eksik senaryolar: {', '.join(map(str, missing_scenarios))}")
+        
+        if scenario_issues:
+            issues_details = []
+            for scenario_num, issue in scenario_issues.items():
+                if issue['diff'] > 0:
+                    issues_details.append(f"S{scenario_num}(+{issue['diff']})")
+                elif issue['diff'] < 0:
+                    issues_details.append(f"S{scenario_num}({issue['diff']})")
+            if issues_details:
+                print(f"    🔧 Kod bloğu sorunları: {', '.join(issues_details)}")
     
     print()
     print("=" * 80)
