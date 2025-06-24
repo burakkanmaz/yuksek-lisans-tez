@@ -7,6 +7,8 @@
 
 ### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
 **💻 Dil:** `C#`  
+Satır Sayısı: 12
+```** `c#`
 **🤖 AI:** Grok  
 
 ```csharp
@@ -19,8 +21,10 @@ public async Task<IActionResult> SearchUsers(string username)
         .ToListAsync();
     return Ok(users);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 16
+```python
 🤖 AI: Grok
 
 python
@@ -37,8 +41,10 @@ def search_users():
     username = request.args.get('username')
     users = User.query.filter(User.username.ilike(f'%{username}%')).all()
     return jsonify([{'id': u.id, 'username': u.username, 'email': u.email} for u in users])
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 26
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -65,9 +71,11 @@ const SearchUsers: React.FC = () => {
 
   return <input onChange={e => setUsername(e.target.value)} />;
 };
+```
 🧪 Senaryo 2: Bir e-ticaret platformunda kullanıcılar sipariş numaralarını girerek kargo durumlarını sorgulayabiliyor. Sipariş numarası giriş kutusuna yazıldıktan sonra veritabanı üzerinden arama yapılıyor. Sonuçlar kullanıcının geçmiş siparişleriyle birlikte gösteriliyor. Sipariş numarası girilerek bilgiye ulaşılabiliyor.
 💻 Dil: C#
-
+Satır Sayısı: 18
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -86,8 +94,10 @@ public async Task<IActionResult> TrackOrder(string orderNumber)
         .FirstOrDefaultAsync();
     return Ok(order);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 18
+```python
 🤖 AI: Grok
 
 python
@@ -106,8 +116,10 @@ def track_order():
     if order:
         return jsonify({'order_number': order.order_number, 'status': order.status, 'shipment_date': order.shipment_date})
     return jsonify({}), 404
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -131,9 +143,11 @@ const TrackOrder: React.FC = () => {
 
   return <input onChange={e => setOrderNumber(e.target.value)} />;
 };
+```
 🧪 Senaryo 3: Bir üniversite portalında öğrenciler öğrenci numaralarını girerek notlarını görebiliyor. Notlar öğrenciye özel olarak filtrelenip veritabanından çekiliyor. Öğrenci numarası giriş alanı serbest metin kutusundan alınıyor. Notlar sayfa üzerinde tablo halinde görüntüleniyor.
 💻 Dil: C#
-
+Satır Sayısı: 18
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -152,8 +166,10 @@ public async Task<IActionResult> GetGrades(string studentNumber)
         .ToListAsync();
     return Ok(grades);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 16
+```python
 🤖 AI: Grok
 
 python
@@ -170,8 +186,10 @@ def get_grades():
     student_number = request.args.get('student_number')
     grades = Grade.query.filter_by(student_number=student_number).all()
     return jsonify([{'course_name': g.course_name, 'grade': g.grade, 'semester': g.semester} for g in grades])
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -195,9 +213,11 @@ const GetGrades: React.FC = () => {
 
   return <input onChange={e => setStudentNumber(e.target.value)} />;
 };
+```
 🧪 Senaryo 4: Bir destek sistemi uygulamasında kullanıcılar açtıkları destek taleplerini takip edebiliyor. Destek talep numarası girilerek geçmiş kayıtlara ulaşılabiliyor. Bu bilgiye göre sistem veritabanından ilgili kayıtları çekip sunuyor. Detaylar sayfada genişletilebilir yapıda gösteriliyor.
 💻 Dil: C#
-
+Satır Sayısı: 18
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -216,8 +236,10 @@ public async Task<IActionResult> TrackTicket(string ticketNumber)
         .FirstOrDefaultAsync();
     return Ok(ticket);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 18
+```python
 🤖 AI: Grok
 
 python
@@ -236,8 +258,10 @@ def track_ticket():
     if ticket:
         return jsonify({'ticket_number': ticket.ticket_number, 'status': ticket.status, 'created_at': ticket.created_at, 'details': ticket.details})
     return jsonify({}), 404
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -261,9 +285,11 @@ const TrackTicket: React.FC = () => {
 
   return <input onChange={e => setTicketNumber(e.target.value)} />;
 };
+```
 🧪 Senaryo 5: Bir kütüphane uygulamasında kullanıcılar kitap adıyla arama yapabiliyor. Arama çubuğuna kitap ismi yazılarak sonuçlar listeleniyor. Sistem girilen değeri kullanarak kitap başlığına göre veri filtreliyor. Sonuçlar kart yapısında sunuluyor.
 💻 Dil: C#
-
+Satır Sayısı: 18
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -282,8 +308,10 @@ public async Task<IActionResult> SearchBooks(string title)
         .ToListAsync();
     return Ok(books);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 16
+```python
 🤖 AI: Grok
 
 python
@@ -300,8 +328,10 @@ def search_books():
     title = request.args.get('title')
     books = Book.query.filter(Book.title.ilike(f'%{title}%')).all()
     return jsonify([{'id': b.id, 'title': b.title, 'author': b.author} for b in books])
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -325,9 +355,11 @@ const SearchBooks: React.FC = () => {
 
   return <input onChange={e => setTitle(e.target.value)} />;
 };
+```
 🧪 Senaryo 6: Bir restoran rezervasyon sisteminde yöneticiler müşteri e-posta adresine göre rezervasyonları listeleyebiliyor. Yönetici panelindeki filtreleme bölümünde e-posta adresi girilerek sorgu yapılabiliyor. Bu alan format sınırlaması olmadan çalışıyor. Sonuçlar zaman sıralı şekilde gösteriliyor.
 💻 Dil: C#
-
+Satır Sayısı: 19
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -347,8 +379,10 @@ public async Task<IActionResult> SearchReservations(string email)
         .ToListAsync();
     return Ok(reservations);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 16
+```python
 🤖 AI: Grok
 
 python
@@ -365,8 +399,10 @@ def search_reservations():
     email = request.args.get('email')
     reservations = Reservation.query.filter(Reservation.customer_email.ilike(f'%{email}%')).order_by(Reservation.reservation_date).all()
     return jsonify([{'id': r.id, 'customer_email': r.customer_email, 'reservation_date': r.reservation_date} for r in reservations])
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -390,9 +426,11 @@ const SearchReservations: React.FC = () => {
 
   return <input onChange={e => setEmail(e.target.value)} />;
 };
+```
 🧪 Senaryo 7: Bir otel yönetim sisteminde personel müşteri soyadına göre kayıt araması yapabiliyor. Soyad bilgisi giriş alanından alınıp sorgu oluşturuluyor. Veritabanından eşleşen müşteri kayıtları tablo halinde listeleniyor. Her kayıt satırı müşteri detayına yönlendirme içeriyor.
 💻 Dil: C#
-
+Satır Sayısı: 18
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -411,8 +449,10 @@ public async Task<IActionResult> SearchGuests(string lastName)
         .ToListAsync();
     return Ok(guests);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 16
+```python
 🤖 AI: Grok
 
 python
@@ -429,8 +469,10 @@ def search_guests():
     last_name = request.args.get('last_name')
     guests = Guest.query.filter(Guest.last_name.ilike(f'%{last_name}%')).all()
     return jsonify([{'id': g.id, 'first_name': g.first_name, 'last_name': g.last_name, 'room_number': g.room_number} for g in guests])
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -454,9 +496,11 @@ const SearchGuests: React.FC = () => {
 
   return <input onChange={e => setLastName(e.target.value)} />;
 };
+```
 🧪 Senaryo 8: Bir etkinlik kayıt sisteminde kullanıcılar bilet numarasını girerek rezervasyon bilgilerine ulaşabiliyor. Bu numara genellikle QR koddan okunarak form alanına aktarılıyor. Sistem bu numaraya göre veritabanından ilgili bilgileri çekiyor. Sayfada kullanıcıya özel detaylar gösteriliyor.
 💻 Dil: C#
-
+Satır Sayısı: 18
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -475,8 +519,10 @@ public async Task<IActionResult> CheckTicket(string ticketNumber)
         .FirstOrDefaultAsync();
     return Ok(ticket);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 18
+```python
 🤖 AI: Grok
 
 python
@@ -495,8 +541,10 @@ def check_ticket():
     if ticket:
         return jsonify({'ticket_number': ticket.ticket_number, 'event_name': ticket.event_name, 'event_date': ticket.event_date})
     return jsonify({}), 404
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -520,9 +568,11 @@ const CheckTicket: React.FC = () => {
 
   return <input onChange={e => setTicketNumber(e.target.value)} />;
 };
+```
 🧪 Senaryo 9: Bir video paylaşım platformunda yöneticiler içerik ID'sine göre videoları yönetim panelinde arayabiliyor. ID değeri giriş kutusuna yazılıyor ve eşleşen içerik listeleniyor. Arama işlemi basit form üzerinden gerçekleşiyor. Liste video başlığı ve yükleyen kullanıcıyı gösteriyor.
 💻 Dil: C#
-
+Satır Sayısı: 18
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -541,8 +591,10 @@ public async Task<IActionResult> SearchVideos(string contentId)
         .FirstOrDefaultAsync();
     return Ok(video);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 18
+```python
 🤖 AI: Grok
 
 python
@@ -561,8 +613,10 @@ def search_videos():
     if video:
         return jsonify({'content_id': video.content_id, 'title': video.title, 'uploader': video.uploader})
     return jsonify({}), 404
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -586,9 +640,11 @@ const SearchVideos: React.FC = () => {
 
   return <input onChange={e => setContentId(e.target.value)} />;
 };
+```
 🧪 Senaryo 10: Bir online sınav sisteminde eğitmenler sınav koduna göre sınav sonuçlarını görüntüleyebiliyor. Kod formdan alınıp ilgili sınav kaydını getirmek üzere sorguda kullanılıyor. Sonuçlar başarı durumlarına göre renkli etiketlerle gösteriliyor. Listeleme sayfası filtrelenebilir yapıya sahip.
 💻 Dil: C#
-
+Satır Sayısı: 18
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -607,8 +663,10 @@ public async Task<IActionResult> GetExamResults(string examCode)
         .ToListAsync();
     return Ok(results);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 16
+```python
 🤖 AI: Grok
 
 python
@@ -625,8 +683,10 @@ def exam_results():
     exam_code = request.args.get('exam_code')
     results = ExamResult.query.filter_by(exam_code=exam_code).all()
     return jsonify([{'student_id': r.student_id, 'score': r.score, 'pass_status': r.pass_status} for r in results])
+```
 💻 Dil: TypeScript
-
+Satır Sayısı: 23
+```typescript
 🤖 AI: Grok
 
 typescript
@@ -650,3 +710,4 @@ const ExamResults: React.FC = () => {
 
   return <input onChange={e => setExamCode(e.target.value)} />;
 };
+```

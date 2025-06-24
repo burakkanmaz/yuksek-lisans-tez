@@ -9,6 +9,8 @@
 
 ### 🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
 **💻 Dil:** `C#`  
+Satır Sayısı: 16
+```** `c#`
 **🤖 AI:** Grok
 
 ```csharp
@@ -25,8 +27,10 @@ public IActionResult AddComment([FromBody] CommentDto commentDto)
     _context.SaveChanges();
     return Ok(comment);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 25
+```python
 🤖 AI: Grok
 
 python
@@ -52,8 +56,10 @@ def add_comment():
     db.session.add(comment)
     db.session.commit()
     return jsonify(comment.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 24
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -78,9 +84,11 @@ export const addComment = async (req: Request, res: Response) => {
     await comment.save();
     res.status(200).json(comment);
 };
+```
 🧪 Senaryo 2: Bir müşteri destek sisteminde kullanıcılar sorun açıklama formları doldurabiliyor. Bu formlar hem kullanıcıya hem de destek ekibine gösterilen sayfada görünüyor. Mesaj alanı çok satırlı metin kutusundan alınıyor ve HTML şablonuna ekleniyor. Mesajlar kullanıcının yardım talebi geçmişinde listeleniyor.
 💻 Dil: C#
-
+Satır Sayısı: 22
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -103,8 +111,10 @@ public IActionResult SubmitTicket([FromBody] TicketDto ticketDto)
     _context.SaveChanges();
     return Ok(ticket);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 25
+```python
 🤖 AI: Grok
 
 python
@@ -130,8 +140,10 @@ def submit_ticket():
     db.session.add(ticket)
     db.session.commit()
     return jsonify(ticket.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 24
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -156,9 +168,11 @@ export const submitTicket = async (req: Request, res: Response) => {
     await ticket.save();
     res.status(200).json(ticket);
 };
+```
 🧪 Senaryo 3: Bir eğitim portalında öğrenciler ders videolarının altında geri bildirim paylaşabiliyor. Geri bildirim mesajları veritabanına eklendikten sonra sayfada gösteriliyor. Mesajlar işlenmeden doğrudan kullanıcılara sunuluyor. Diğer öğrenciler de bu mesajları görebiliyor.
 💻 Dil: C#
-
+Satır Sayısı: 22
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -181,8 +195,10 @@ public IActionResult AddFeedback([FromBody] FeedbackDto feedbackDto)
     _context.SaveChanges();
     return Ok(feedback);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 25
+```python
 🤖 AI: Grok
 
 python
@@ -208,8 +224,10 @@ def add_feedback():
     db.session.add(feedback)
     db.session.commit()
     return jsonify(feedback.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 24
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -234,9 +252,11 @@ export const addFeedback = async (req: Request, res: Response) => {
     await feedback.save();
     res.status(200).json(feedback);
 };
+```
 🧪 Senaryo 4: Bir forum sitesinde kullanıcılar konulara cevaplar yazabiliyor. Cevaplar her kullanıcının profil bilgileriyle birlikte listeleniyor. Gönderilen içerik HTML template'e yerleştirilerek gösteriliyor. Editör veya işaretleme dili kullanılmadan sade metin desteği sağlanıyor.
 💻 Dil: C#
-
+Satır Sayısı: 23
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -260,8 +280,10 @@ public IActionResult AddReply([FromBody] ReplyDto replyDto)
     _context.SaveChanges();
     return Ok(reply);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 26
+```python
 🤖 AI: Grok
 
 python
@@ -288,8 +310,10 @@ def add_reply():
     db.session.add(reply)
     db.session.commit()
     return jsonify(reply.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 25
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -315,9 +339,11 @@ export const addReply = async (req: Request, res: Response) => {
     await reply.save();
     res.status(200).json(reply);
 };
+```
 🧪 Senaryo 5: Bir otel rezervasyon sitesinde müşteriler konakladıkları oteller hakkında görüşlerini paylaşabiliyor. Otel sayfasında tüm yorumlar toplu şekilde listeleniyor. Yorum içeriği kullanıcıdan alındığı şekliyle HTML içerisinde gösteriliyor. Aynı içerik yönetici panelinde de görüntülenebiliyor.
 💻 Dil: C#
-
+Satır Sayısı: 23
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -341,8 +367,10 @@ public IActionResult AddReview([FromBody] ReviewDto reviewDto)
     _context.SaveChanges();
     return Ok(review);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 26
+```python
 🤖 AI: Grok
 
 python
@@ -369,8 +397,10 @@ def add_review():
     db.session.add(review)
     db.session.commit()
     return jsonify(review.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 25
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -396,9 +426,11 @@ export const addReview = async (req: Request, res: Response) => {
     await review.save();
     res.status(200).json(review);
 };
+```
 🧪 Senaryo 6: Bir alışveriş sitesinde kullanıcılar ürünlere puan ve açıklama yazabiliyor. Bu açıklamalar ürün sayfasında ve ana sayfadaki öne çıkan yorumlar bölümünde gösteriliyor. Yorumlar HTML template'e veri olarak aktarılıyor. Kullanıcı girişi üzerinde biçimlendirme işlemi yapılmıyor.
 💻 Dil: C#
-
+Satır Sayısı: 24
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -423,8 +455,10 @@ public IActionResult AddProductReview([FromBody] ProductReviewDto reviewDto)
     _context.SaveChanges();
     return Ok(review);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 27
+```python
 🤖 AI: Grok
 
 python
@@ -452,8 +486,10 @@ def add_product_review():
     db.session.add(review)
     db.session.commit()
     return jsonify(review.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 26
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -480,9 +516,11 @@ export const addProductReview = async (req: Request, res: Response) => {
     await review.save();
     res.status(200).json(review);
 };
+```
 🧪 Senaryo 7: Bir haber uygulamasında okuyucular haberlere tepki bırakabiliyor ve açıklama yazabiliyor. Açıklamalar yorum başlığı, ad ve mesaj içeriyor. Tüm bilgiler formdan alınıp haberin altına ekleniyor. Editoryal onay süreci olmayan sistemde kullanıcılar anında içerik yayınlayabiliyor.
 💻 Dil: C#
-
+Satır Sayısı: 23
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -506,8 +544,10 @@ public IActionResult AddNewsComment([FromBody] NewsCommentDto commentDto)
     _context.SaveChanges();
     return Ok(comment);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 26
+```python
 🤖 AI: Grok
 
 python
@@ -534,8 +574,10 @@ def add_news_comment():
     db.session.add(comment)
     db.session.commit()
     return jsonify(comment.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 25
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -561,9 +603,11 @@ export const addNewsComment = async (req: Request, res: Response) => {
     await comment.save();
     res.status(200).json(comment);
 };
+```
 🧪 Senaryo 8: Bir etkinlik planlama sitesinde katılımcılar etkinlik sonrası değerlendirme formu doldurabiliyor. Kullanıcının yazdığı açıklama etkinlik detay sayfasında görüntüleniyor. Değerlendirme alanı geniş metin kutusu olarak tasarlanmış ve serbest şekilde doldurulabiliyor. Yorumun tamamı HTML içinde gösteriliyor.
 💻 Dil: C#
-
+Satır Sayısı: 23
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -587,8 +631,10 @@ public IActionResult AddEvaluation([FromBody] EvaluationDto evaluationDto)
     _context.SaveChanges();
     return Ok(evaluation);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 26
+```python
 🤖 AI: Grok
 
 python
@@ -615,8 +661,10 @@ def add_evaluation():
     db.session.add(evaluation)
     db.session.commit()
     return jsonify(evaluation.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 25
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -642,9 +690,11 @@ export const addEvaluation = async (req: Request, res: Response) => {
     await evaluation.save();
     res.status(200).json(evaluation);
 };
+```
 🧪 Senaryo 9: Bir çevrimiçi eğitim sisteminde öğrenciler sınav sonrasında yorum paylaşabiliyor. Yorumlar hem eğitmenin panelinde hem de sınıf arkadaşlarının ekranında listeleniyor. Yorumun metni HTML'e gömülüyor. Ek işleme veya filtreleme uygulanmıyor.
 💻 Dil: C#
-
+Satır Sayısı: 23
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -668,8 +718,10 @@ public IActionResult AddExamComment([FromBody] ExamCommentDto commentDto)
     _context.SaveChanges();
     return Ok(comment);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 26
+```python
 🤖 AI: Grok
 
 python
@@ -696,8 +748,10 @@ def add_exam_comment():
     db.session.add(comment)
     db.session.commit()
     return jsonify(comment.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 25
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -723,9 +777,11 @@ export const addExamComment = async (req: Request, res: Response) => {
     await comment.save();
     res.status(200).json(comment);
 };
+```
 🧪 Senaryo 10: Bir restoran değerlendirme platformunda kullanıcılar deneyimlerini paylaşabiliyor. Kullanıcılar restoran adını ve görüşlerini yazarak gönderiyor. Görüşler hem mobil uygulamada hem web arayüzünde HTML formatında gösteriliyor. Mesajlar kullanıcı girişiyle oluşturuluyor.
 💻 Dil: C#
-
+Satır Sayısı: 23
+```csharp
 🤖 AI: Grok
 
 csharp
@@ -749,8 +805,10 @@ public IActionResult AddRestaurantReview([FromBody] RestaurantReviewDto reviewDt
     _context.SaveChanges();
     return Ok(review);
 }
+```
 💻 Dil: Python
-
+Satır Sayısı: 26
+```python
 🤖 AI: Grok
 
 python
@@ -777,8 +835,10 @@ def add_restaurant_review():
     db.session.add(review)
     db.session.commit()
     return jsonify(review.to_dict()), 200
+```
 💻 Dil: TypeScript (Node.js)
-
+Satır Sayısı: 25
+```typescript (node.js)
 🤖 AI: Grok
 
 typescript
@@ -804,3 +864,4 @@ export const addRestaurantReview = async (req: Request, res: Response) => {
     await review.save();
     res.status(200).json(review);
 };
+```
