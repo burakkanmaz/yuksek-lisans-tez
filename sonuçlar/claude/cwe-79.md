@@ -1,8 +1,7 @@
 ### 🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
-
-**💻 Dil:** `C#`
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```csharp
 [HttpPost("add-comment")]
 public IActionResult AddComment(string username, string message)
@@ -14,9 +13,9 @@ public IActionResult AddComment(string username, string message)
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```python
 @app.route('/add-comment', methods=['POST'])
 def add_comment():
@@ -28,9 +27,9 @@ def add_comment():
     return redirect('/post')
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/add-comment', (req: Request, res: Response) => {
     const { username, message } = req.body;
@@ -40,9 +39,12 @@ app.post('/add-comment', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 2: Bir müşteri destek sisteminde kullanıcılar sorun açıklama formları doldurabiliyor. Bu formlar hem kullanıcıya hem de destek ekibine gösterilen sayfada görünüyor. Mesaj alanı çok satırlı metin kutusundan alınıyor ve HTML şablonuna ekleniyor. Mesajlar kullanıcının yardım talebi geçmişinde listeleniyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 9
+
 ```csharp
 [HttpPost("submit-ticket")]
 public IActionResult SubmitTicket(string description)
@@ -55,9 +57,9 @@ public IActionResult SubmitTicket(string description)
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 7
+
 ```python
 @app.route('/submit-ticket', methods=['POST'])
 def submit_ticket():
@@ -68,9 +70,9 @@ def submit_ticket():
     return render_template('ticket_view.html', description=description)
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/submit-ticket', (req: Request, res: Response) => {
     const { description } = req.body;
@@ -80,9 +82,12 @@ app.post('/submit-ticket', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 3: Bir eğitim portalında öğrenciler ders videolarının altında geri bildirim paylaşabiliyor. Geri bildirim mesajları veritabanına eklendikten sonra sayfada gösteriliyor. Mesajlar işlenmeden doğrudan kullanıcılara sunuluyor. Diğer öğrenciler de bu mesajları görebiliyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```csharp
 [HttpPost("add-feedback")]
 public IActionResult AddFeedback(int videoId, string feedback)
@@ -94,9 +99,9 @@ public IActionResult AddFeedback(int videoId, string feedback)
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```python
 @app.route('/add-feedback', methods=['POST'])
 def add_feedback():
@@ -108,9 +113,9 @@ def add_feedback():
     return jsonify({'feedback': feedback})
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/add-feedback', (req: Request, res: Response) => {
     const { videoId, feedback } = req.body;
@@ -120,9 +125,12 @@ app.post('/add-feedback', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 4: Bir forum sitesinde kullanıcılar konulara cevaplar yazabiliyor. Cevaplar her kullanıcının profil bilgileriyle birlikte listeleniyor. Gönderilen içerik HTML template'e yerleştirilerek gösteriliyor. Editör veya işaretleme dili kullanılmadan sade metin desteği sağlanıyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```csharp
 [HttpPost("post-reply")]
 public IActionResult PostReply(int topicId, string content)
@@ -134,9 +142,9 @@ public IActionResult PostReply(int topicId, string content)
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```python
 @app.route('/post-reply', methods=['POST'])
 def post_reply():
@@ -148,9 +156,9 @@ def post_reply():
     return redirect(f'/topic/{topic_id}')
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/post-reply', (req: Request, res: Response) => {
     const { topicId, content } = req.body;
@@ -160,9 +168,12 @@ app.post('/post-reply', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 5: Bir otel rezervasyon sitesinde müşteriler konakladıkları oteller hakkında görüşlerini paylaşabiliyor. Otel sayfasında tüm yorumlar toplu şekilde listeleniyor. Yorum içeriği kullanıcıdan alındığı şekliyle HTML içerisinde gösteriliyor. Aynı içerik yönetici panelinde de görüntülenebiliyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```csharp
 [HttpPost("add-review")]
 public IActionResult AddReview(int hotelId, string review)
@@ -174,9 +185,9 @@ public IActionResult AddReview(int hotelId, string review)
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```python
 @app.route('/add-review', methods=['POST'])
 def add_review():
@@ -188,9 +199,9 @@ def add_review():
     return redirect(f'/hotel/{hotel_id}')
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/add-review', (req: Request, res: Response) => {
     const { hotelId, review } = req.body;
@@ -200,9 +211,12 @@ app.post('/add-review', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 6: Bir alışveriş sitesinde kullanıcılar ürünlere puan ve açıklama yazabiliyor. Bu açıklamalar ürün sayfasında ve ana sayfadaki öne çıkan yorumlar bölümünde gösteriliyor. Yorumlar HTML template'e veri olarak aktarılıyor. Kullanıcı girişi üzerinde biçimlendirme işlemi yapılmıyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```csharp
 [HttpPost("submit-product-review")]
 public IActionResult SubmitProductReview(int productId, int rating, string description)
@@ -214,9 +228,9 @@ public IActionResult SubmitProductReview(int productId, int rating, string descr
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 9
+
 ```python
 @app.route('/submit-product-review', methods=['POST'])
 def submit_product_review():
@@ -229,9 +243,9 @@ def submit_product_review():
     return jsonify({'description': description})
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/submit-product-review', (req: Request, res: Response) => {
     const { productId, rating, description } = req.body;
@@ -241,9 +255,12 @@ app.post('/submit-product-review', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 7: Bir haber uygulamasında okuyucular haberlere tepki bırakabiliyor ve açıklama yazabiliyor. Açıklamalar yorum başlığı, ad ve mesaj içeriyor. Tüm bilgiler formdan alınıp haberin altına ekleniyor. Editoryal onay süreci olmayan sistemde kullanıcılar anında içerik yayınlayabiliyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```csharp
 [HttpPost("add-news-comment")]
 public IActionResult AddNewsComment(int newsId, string title, string name, string message)
@@ -255,9 +272,9 @@ public IActionResult AddNewsComment(int newsId, string title, string name, strin
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 10
+
 ```python
 @app.route('/add-news-comment', methods=['POST'])
 def add_news_comment():
@@ -271,9 +288,9 @@ def add_news_comment():
     return redirect(f'/news/{news_id}')
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/add-news-comment', (req: Request, res: Response) => {
     const { newsId, title, name, message } = req.body;
@@ -283,9 +300,12 @@ app.post('/add-news-comment', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 8: Bir etkinlik planlama sitesinde katılımcılar etkinlik sonrası değerlendirme formu doldurabiliyor. Kullanıcının yazdığı açıklama etkinlik detay sayfasında görüntüleniyor. Değerlendirme alanı geniş metin kutusu olarak tasarlanmış ve serbest şekilde doldurulabiliyor. Yorumun tamamı HTML içinde gösteriliyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 9
+
 ```csharp
 [HttpPost("submit-evaluation")]
 public IActionResult SubmitEvaluation(int eventId, string evaluation)
@@ -298,9 +318,9 @@ public IActionResult SubmitEvaluation(int eventId, string evaluation)
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```python
 @app.route('/submit-evaluation', methods=['POST'])
 def submit_evaluation():
@@ -312,9 +332,9 @@ def submit_evaluation():
     return render_template('event_detail.html', evaluation=evaluation)
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/submit-evaluation', (req: Request, res: Response) => {
     const { eventId, evaluation } = req.body;
@@ -324,9 +344,12 @@ app.post('/submit-evaluation', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 9: Bir çevrimiçi eğitim sisteminde öğrenciler sınav sonrasında yorum paylaşabiliyor. Yorumlar hem eğitmenin panelinde hem de sınıf arkadaşlarının ekranında listeleniyor. Yorumun metni HTML'e gömülüyor. Ek işleme veya filtreleme uygulanmıyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```csharp
 [HttpPost("post-exam-comment")]
 public IActionResult PostExamComment(int examId, string comment)
@@ -338,9 +361,9 @@ public IActionResult PostExamComment(int examId, string comment)
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```python
 @app.route('/post-exam-comment', methods=['POST'])
 def post_exam_comment():
@@ -352,9 +375,9 @@ def post_exam_comment():
     return jsonify({'comment': comment})
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/post-exam-comment', (req: Request, res: Response) => {
     const { examId, comment } = req.body;
@@ -364,9 +387,12 @@ app.post('/post-exam-comment', (req: Request, res: Response) => {
 });
 ```
 
-**💻 Dil:** `C#`
+----
+
+### 🧪 Senaryo 10: Bir restoran değerlendirme platformunda kullanıcılar deneyimlerini paylaşabiliyor. Kullanıcılar restoran adını ve görüşlerini yazarak gönderiyor. Görüşler hem mobil uygulamada hem web arayüzünde HTML formatında gösteriliyor. Mesajlar kullanıcı girişiyle oluşturuluyor.
+**💻 Dil:** `C#`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```csharp
 [HttpPost("share-experience")]
 public IActionResult ShareExperience(string restaurantName, string experience)
@@ -378,9 +404,9 @@ public IActionResult ShareExperience(string restaurantName, string experience)
 }
 ```
 
-**💻 Dil:** `Python`
+**💻 Dil:** `Python`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 8
+
 ```python
 @app.route('/share-experience', methods=['POST'])
 def share_experience():
@@ -392,9 +418,9 @@ def share_experience():
     return redirect('/restaurants')
 ```
 
-**💻 Dil:** `TypeScript`
+**💻 Dil:** `TypeScript`  
 **🤖 AI:** Claude
-**Satır Sayısı:** 6
+
 ```typescript
 app.post('/share-experience', (req: Request, res: Response) => {
     const { restaurantName, experience } = req.body;
