@@ -4,8 +4,8 @@
 
 
 
-Kopyala
-# Senaryo Kodları
+
+
 
 ### 🧪 Senaryo 1: Bir blog platformunda kullanıcılar yazılara yorum bırakabiliyor. Her yorum metin kutusuna yazıldıktan sonra veritabanına kaydediliyor ve yorum bölümünde görüntüleniyor. Yorum formunda kullanıcı adı ve mesaj alanı bulunuyor. Kayıt işlemi olmadan da yorum yapılabiliyor.
 **💻 Dil:** `C#`  
@@ -35,9 +35,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, Comment
 
@@ -62,9 +62,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { Comment } from '../models/comment';
 
@@ -89,7 +89,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("submit-ticket")]
 public IActionResult SubmitTicket([FromBody] TicketDto ticketDto)
 {
@@ -113,9 +113,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, Ticket
 
@@ -140,9 +140,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { Ticket } from '../models/ticket';
 
@@ -167,7 +167,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("add-feedback")]
 public IActionResult AddFeedback([FromBody] FeedbackDto feedbackDto)
 {
@@ -191,9 +191,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, Feedback
 
@@ -218,9 +218,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { Feedback } from '../models/feedback';
 
@@ -245,7 +245,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("add-reply")]
 public IActionResult AddReply([FromBody] ReplyDto replyDto)
 {
@@ -270,9 +270,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, Reply
 
@@ -298,9 +298,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { Reply } from '../models/reply';
 
@@ -326,7 +326,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("add-review")]
 public IActionResult AddReview([FromBody] ReviewDto reviewDto)
 {
@@ -351,9 +351,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, Review
 
@@ -379,9 +379,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { Review } from '../models/review';
 
@@ -407,7 +407,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("add-product-review")]
 public IActionResult AddProductReview([FromBody] ProductReviewDto reviewDto)
 {
@@ -433,9 +433,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, ProductReview
 
@@ -462,9 +462,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { ProductReview } from '../models/productReview';
 
@@ -491,7 +491,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("add-news-comment")]
 public IActionResult AddNewsComment([FromBody] NewsCommentDto commentDto)
 {
@@ -516,9 +516,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, NewsComment
 
@@ -544,9 +544,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { NewsComment } from '../models/newsComment';
 
@@ -572,7 +572,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("add-evaluation")]
 public IActionResult AddEvaluation([FromBody] EvaluationDto evaluationDto)
 {
@@ -597,9 +597,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, Evaluation
 
@@ -625,9 +625,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { Evaluation } from '../models/evaluation';
 
@@ -653,7 +653,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("add-exam-comment")]
 public IActionResult AddExamComment([FromBody] ExamCommentDto commentDto)
 {
@@ -678,9 +678,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, ExamComment
 
@@ -706,9 +706,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { ExamComment } from '../models/examComment';
 
@@ -734,7 +734,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("add-restaurant-review")]
 public IActionResult AddRestaurantReview([FromBody] RestaurantReviewDto reviewDto)
 {
@@ -759,9 +759,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 from models import db, RestaurantReview
 
@@ -787,9 +787,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Request, Response } from 'express';
 import { RestaurantReview } from '../models/restaurantReview';
 

@@ -27,5 +27,5 @@ Bir mail sistemi kullanıcıların büyük ekler göndermesine izin veriyor. E-p
 Bir raporlama sistemi büyük veri setleri üzerinde analiz yapıyor. Kullanıcılar geniş tarih aralıklarında raporlar oluşturabilir. Sistem milyonlarca kayıt üzerinde hesaplama yapar. Oluşturulan raporlar kullanıcılara sunulur.
 
 ## ✏️ Senaryo 10
-Bir backup sistemi kullanıcı verilerini düzenli olarak yedekliyor. Farklı boyutlardaki dosyalar yedekleme sürecine dahil edilir. Sistem tüm kullanıcı verilerini kopyalar ve arşivler. Yedekleme işlemi otomatik olarak çalışır.
+Bir backup sistemi kullanıcı verilerini düzenli olarak yedekliyor. Farklı boyutlardaki dosyalar yedekleme sürecine dahil edilir. Sistem tüm kullanıcı verilerini r ve arşivler. Yedekleme işlemi otomatik olarak çalışır.
 

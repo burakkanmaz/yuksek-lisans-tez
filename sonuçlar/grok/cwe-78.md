@@ -4,8 +4,8 @@
 
 
 
-Kopyala
-# Senaryo Kodları
+
+
 
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
 **💻 Dil:** `C#`  
@@ -84,9 +84,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, send_file
 import os
 import json
@@ -143,9 +143,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -232,7 +232,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("process-file")]
 public IActionResult ProcessFile([FromBody] FileProcessRequest request)
 {
@@ -301,9 +301,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 import os
 import base64
@@ -358,9 +358,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -431,7 +431,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("view-logs")]
 public IActionResult ViewLogs([FromBody] LogViewRequest request)
 {
@@ -513,9 +513,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 import os
 
@@ -573,9 +573,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
 
@@ -652,7 +652,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("backup")]
 public IActionResult PerformBackup([FromBody] BackupRequest request)
 {
@@ -737,9 +737,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 import os.path
 import shutil
@@ -803,9 +803,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import * as { Router, Request, Response } from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -898,7 +898,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("network-test")]
 public IActionResult PerformNetworkTest([FromBody] NetworkTestRequest request)
 {
@@ -960,9 +960,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 import ping3
 from time import time
@@ -1008,9 +1008,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as ping from 'ping';
 
@@ -1069,7 +1069,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("file-compress")]
 public IActionResult CompressFiles([FromBody] FileCompressionRequest request)
 {
@@ -1130,9 +1130,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, send_file, jsonify
 import os
 from zipfile import ZipFile, ZIP_DEFLATED, ZIP_LZMA
@@ -1177,9 +1177,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -1246,7 +1246,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("monitor-process")]
 public IActionResult MonitorProcess([FromBody] ProcessMonitorRequest request)
 {
@@ -1311,9 +1311,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 import psutil
 import datetime
@@ -1357,9 +1357,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as ps from 'ps-node';
 
@@ -1432,7 +1432,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("file-search")]
 public IActionResult SearchFiles([FromBody] FileSearchRequest request)
 {
@@ -1499,9 +1499,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 import os
 from datetime import datetime
@@ -1552,9 +1552,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -1627,7 +1627,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("db-execute")]
 public IActionResult ExecuteDatabaseOperation([FromBody] DatabaseOperationRequest request)
 {
@@ -1694,9 +1694,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 import sqlite3
 from datetime import datetime
@@ -1742,9 +1742,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
@@ -1811,7 +1811,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpPost("security-scan")]
 public IActionResult PerformSecurityScan([FromBody] SecurityScanRequest request)
 {
@@ -1884,9 +1884,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 from flask import Flask, request, jsonify
 import os
 import stat
@@ -1937,9 +1937,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 import { Router, Request, Response } from 'express';
 import * as fs from 'fs';
 import * as path from 'path';

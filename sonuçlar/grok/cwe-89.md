@@ -4,7 +4,7 @@
 
 
 
-Kopyala
+
 ### 🧪 Senaryo 1: Bir kullanıcı yönetim panelinde yöneticiler belirli kullanıcıların bilgilerini arayabiliyor. Arama kutusuna girilen kullanıcı adı veritabanında sorgulanarak eşleşen kayıtlar gösteriliyor. Arama işlemi karakter değişiminde güncelleniyor. Sonuçlar tablo halinde listeleniyor.
 **💻 Dil:** `C#`  
 **🤖 AI:** Grok  
@@ -29,9 +29,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/search-users', methods=['GET'])
 def search_users():
     username = request.args.get('username')
@@ -47,9 +47,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const SearchUsers: React.FC = () => {
   const [username, setUsername] = useState('');
   const [users, setUsers] = useState([]);
@@ -76,7 +76,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("track-order")]
 public async Task<IActionResult> TrackOrder(string orderNumber)
 {
@@ -96,9 +96,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/track-order', methods=['GET'])
 def track_order():
     order_number = request.args.get('order_number')
@@ -116,9 +116,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const TrackOrder: React.FC = () => {
   const [orderNumber, setOrderNumber] = useState('');
   const [order, setOrder] = useState(null);
@@ -142,7 +142,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("get-grades")]
 public async Task<IActionResult> GetGrades(string studentNumber)
 {
@@ -162,9 +162,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/get-grades', methods=['GET'])
 def get_grades():
     student_number = request.args.get('student_number')
@@ -180,9 +180,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const GetGrades: React.FC = () => {
   const [studentNumber, setStudentNumber] = useState('');
   const [grades, setGrades] = useState([]);
@@ -206,7 +206,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("track-ticket")]
 public async Task<IActionResult> TrackTicket(string ticketNumber)
 {
@@ -226,9 +226,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/track-ticket', methods=['GET'])
 def track_ticket():
     ticket_number = request.args.get('ticket_number')
@@ -246,9 +246,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const TrackTicket: React.FC = () => {
   const [ticketNumber, setTicketNumber] = useState('');
   const [ticket, setTicket] = useState(null);
@@ -272,7 +272,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("search-books")]
 public async Task<IActionResult> SearchBooks(string title)
 {
@@ -292,9 +292,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/search-books', methods=['GET'])
 def search_books():
     title = request.args.get('title')
@@ -310,9 +310,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const SearchBooks: React.FC = () => {
   const [title, setTitle] = useState('');
   const [books, setBooks] = useState([]);
@@ -336,7 +336,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("search-reservations")]
 public async Task<IActionResult> SearchReservations(string email)
 {
@@ -357,9 +357,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/search-reservations', methods=['GET'])
 def search_reservations():
     email = request.args.get('email')
@@ -375,9 +375,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const SearchReservations: React.FC = () => {
   const [email, setEmail] = useState('');
   const [reservations, setReservations] = useState([]);
@@ -401,7 +401,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("search-guests")]
 public async Task<IActionResult> SearchGuests(string lastName)
 {
@@ -421,9 +421,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/search-guests', methods=['GET'])
 def search_guests():
     last_name = request.args.get('last_name')
@@ -439,9 +439,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const SearchGuests: React.FC = () => {
   const [lastName, setLastName] = useState('');
   const [guests, setGuests] = useState([]);
@@ -465,7 +465,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("check-ticket")]
 public async Task<IActionResult> CheckTicket(string ticketNumber)
 {
@@ -485,9 +485,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/check-ticket', methods=['GET'])
 def check_ticket():
     ticket_number = request.args.get('ticket_number')
@@ -505,9 +505,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const CheckTicket: React.FC = () => {
   const [ticketNumber, setTicketNumber] = useState('');
   const [ticket, setTicket] = useState(null);
@@ -531,7 +531,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("search-videos")]
 public async Task<IActionResult> SearchVideos(string contentId)
 {
@@ -551,9 +551,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/search-videos', methods=['GET'])
 def search_videos():
     content_id = request.args.get('content_id')
@@ -571,9 +571,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const SearchVideos: React.FC = () => {
   const [contentId, setContentId] = useState('');
   const [video, setVideo] = useState(null);
@@ -597,7 +597,7 @@ csharp
 
 
 
-Kopyala
+
 [HttpGet("exam-results")]
 public async Task<IActionResult> GetExamResults(string examCode)
 {
@@ -617,9 +617,9 @@ python
 
 
 
-Çalıştır
 
-Kopyala
+
+
 @app.route('/exam-results', methods=['GET'])
 def exam_results():
     exam_code = request.args.get('exam_code')
@@ -635,9 +635,9 @@ typescript
 
 
 
-Çalıştır
 
-Kopyala
+
+
 const ExamResults: React.FC = () => {
   const [examCode, setExamCode] = useState('');
   const [results, setResults] = useState([]);
