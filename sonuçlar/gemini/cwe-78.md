@@ -130,7 +130,7 @@ return NotFound\(</span>"Directory not found: {directoryPath}");
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import os
 import json
@@ -251,11 +251,12 @@ def download_disk_usage_report():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import path from 'path';
@@ -443,12 +444,13 @@ app.get('/api/disk-usage/download-report', async (req: Request, res: Response) =
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using System;
 using System.IO;
@@ -564,11 +566,12 @@ return NotFound\(</span>"Processed file not found: {fileName}");
         };
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import os
 import json
@@ -670,11 +673,12 @@ def download_processed_file():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import path from 'path';
@@ -806,12 +810,13 @@ app.get('/api/file-processor/download-processed-file', async (req: Request, res:
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using System;
 using System.IO;
@@ -920,11 +925,12 @@ public class LogViewerController : ControllerBase
         }
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import os
 from flask import Flask, request, jsonify
@@ -1005,11 +1011,12 @@ def view_log():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import path from 'path';
@@ -1108,12 +1115,13 @@ app.get('/api/log-viewer/view', async (req: Request, res: Response) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using System;
 using System.IO;
@@ -1194,11 +1202,12 @@ public class BackupController : ControllerBase
         }
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import os
 import shutil
@@ -1269,11 +1278,12 @@ def start_backup():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import path from 'path';
@@ -1394,12 +1404,13 @@ app.post('/api/backup/start-backup', async (req: Request, res: Response) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using System;
 using System.Net.NetworkInformation;
@@ -1508,11 +1519,12 @@ public class NetworkTestController : ControllerBase
         }
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import os
 import platform
@@ -1638,11 +1650,12 @@ def port_scan_endpoint():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import { exec } from 'child_process';
@@ -1794,12 +1807,13 @@ app.get('/api/network-test/port-scan', async (req: Request, res: Response) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using System;
 using System.IO;
@@ -1911,11 +1925,12 @@ return NotFound\(</span>"Archive file not found: {fileName}");
         }
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import os
 import zipfile
@@ -2010,11 +2025,12 @@ def download_archive():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import path from 'path';
@@ -2158,12 +2174,13 @@ app.get('/api/file-compressor/download-archive', async (req: Request, res: Respo
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using System;
 using System.Diagnostics;
@@ -2319,11 +2336,12 @@ return Ok\(</span>"Stopped monitoring process '{processName}'.");
         }
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import psutil
 import time
@@ -2445,11 +2463,12 @@ def stop_monitor():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import { exec } from 'child_process';
@@ -2686,12 +2705,13 @@ app.delete('/api/system-monitor/stop-monitor', (req: Request, res: Response) => 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using System;
 using System.IO;
@@ -2823,11 +2843,12 @@ if \(\!string\.IsNullOrWhiteSpace\(fileExtensionFilter\) &&
         }
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import os
 from flask import Flask, request, jsonify
@@ -2954,11 +2975,12 @@ def search_files():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import path from 'path';
@@ -3149,12 +3171,13 @@ app.get('/api/file-search/search', async (req: Request, res: Response) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -3318,11 +3341,12 @@ return Conflict\(</span>"Database '{newDatabaseName}' already exists.");
         }
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import sqlite3
 from flask import Flask, request, jsonify
@@ -3442,11 +3466,12 @@ def create_database():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import sqlite3 from 'sqlite3'; // Using sqlite3 for simplicity in Node.js
@@ -3589,12 +3614,13 @@ app.post('/api/database-manager/create-database', async (req: Request, res: Resp
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+```
 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
 💻 Dil: C#
 
 🤖 AI: Gemini
 
-C#
+```csharp
 
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -3850,11 +3876,12 @@ return Forbid\(</span>"Access denied to one or more directories within '{_scanTa
         };
     }
 }
+```
 💻 Dil: Python
 
 🤖 AI: Gemini
 
-Python
+```python
 
 import os
 import json
@@ -4035,11 +4062,12 @@ def start_security_scan():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
 💻 Dil: TypeScript (Node.js)
 
 🤖 AI: Gemini
 
-TypeScript
+```typescript
 
 import express, { Request, Response } from 'express';
 import path from 'path';
@@ -4308,4 +4336,5 @@ app.post('/api/security-scanner/start-scan', async (req: Request, res: Response)
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
+```
 });
