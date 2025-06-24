@@ -244,9 +244,9 @@ app.get('/track-package', async (req: Request, res: Response) => {
 });
 ```
 
-## 🧪 Senaryo 4: Biyografi Güncelleme
-💻 **Dil:** C#
-🤖 **AI:** DeepSeek Chat
+### 🧪 Senaryo 4: Biyografi Güncelleme
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 20
 ```csharp
@@ -272,9 +272,8 @@ public IActionResult UpdateBio(int userId, string bio)
 }
 ```
 
-## 🧪 Senaryo 4: Biyografi Güncelleme
-💻 **Dil:** Python
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 20
 ```python
@@ -300,9 +299,8 @@ def update_bio():
     return jsonify({'success': True, 'message': 'Bio updated successfully'})
 ```
 
-## 🧪 Senaryo 4: Biyografi Güncelleme
-💻 **Dil:** TypeScript (Node.js)
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `TypeScript (Node.js)`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 30
 ```typescript
@@ -338,9 +336,9 @@ app.post('/update-bio', async (req: Request, res: Response) => {
 });
 ```
 
-## 🧪 Senaryo 5: Tarih Aralığı Sorgulama
-💻 **Dil:** C#
-🤖 **AI:** DeepSeek Chat
+### 🧪 Senaryo 5: Tarih Aralığı Sorgulama
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 15
 ```csharp
@@ -361,9 +359,8 @@ public IActionResult CheckAvailability(string startDate, string endDate)
 }
 ```
 
-## 🧪 Senaryo 5: Tarih Aralığı Sorgulama
-💻 **Dil:** Python
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 24
 ```python
@@ -393,9 +390,8 @@ def check_availability():
     return jsonify({'success': True, 'slots': slots})
 ```
 
-## 🧪 Senaryo 5: Tarih Aralığı Sorgulama
-💻 **Dil:** TypeScript (Node.js)
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `TypeScript (Node.js)`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 34
 ```typescript
@@ -435,9 +431,9 @@ app.get('/check-availability', async (req: Request, res: Response) => {
 });
 ```
 
-## 🧪 Senaryo 6: Forum Konusu Oluşturma
-💻 **Dil:** C#
-🤖 **AI:** DeepSeek Chat
+### 🧪 Senaryo 6: Forum Konusu Oluşturma
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 21
 ```csharp
@@ -464,9 +460,8 @@ public IActionResult CreateTopic(string title, string content)
 }
 ```
 
-## 🧪 Senaryo 6: Forum Konusu Oluşturma
-💻 **Dil:** Python
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 22
 ```python
@@ -494,9 +489,8 @@ def create_topic():
     return jsonify({'success': True, 'message': 'Topic created successfully'})
 ```
 
-## 🧪 Senaryo 6: Forum Konusu Oluşturma
-💻 **Dil:** TypeScript (Node.js)
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `TypeScript (Node.js)`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 25
 ```typescript
@@ -527,9 +521,9 @@ app.post('/create-topic', async (req: Request, res: Response) => {
 });
 ```
 
-## 🧪 Senaryo 7: Doğum Tarihi Girişi
-💻 **Dil:** C#
-🤖 **AI:** DeepSeek Chat
+### 🧪 Senaryo 7: Doğum Tarihi Girişi
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 19
 ```csharp
@@ -554,9 +548,8 @@ public IActionResult SaveBirthdate(string birthdate)
 }
 ```
 
-## 🧪 Senaryo 7: Doğum Tarihi Girişi
-💻 **Dil:** Python
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 24
 ```python
@@ -586,9 +579,8 @@ def save_birthdate():
     return jsonify({'success': True, 'message': 'Birthdate saved successfully'})
 ```
 
-## 🧪 Senaryo 7: Doğum Tarihi Girişi
-💻 **Dil:** TypeScript (Node.js)
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `TypeScript (Node.js)`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 34
 ```typescript
@@ -628,9 +620,9 @@ app.post('/save-birthdate', async (req: Request, res: Response) => {
 });
 ```
 
-## 🧪 Senaryo 8: Dosya Arama
-💻 **Dil:** C#
-🤖 **AI:** DeepSeek Chat
+### 🧪 Senaryo 8: Dosya Arama
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 14
 ```csharp
@@ -650,9 +642,8 @@ public IActionResult SearchFiles(string fileName)
 }
 ```
 
-## 🧪 Senaryo 8: Dosya Arama
-💻 **Dil:** Python
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 16
 ```python
@@ -674,9 +665,8 @@ def search_files():
     return jsonify({'success': True, 'files': files})
 ```
 
-## 🧪 Senaryo 8: Dosya Arama
-💻 **Dil:** TypeScript (Node.js)
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `TypeScript (Node.js)`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 27
 ```typescript
@@ -709,9 +699,9 @@ app.get('/search-files', async (req: Request, res: Response) => {
 });
 ```
 
-## 🧪 Senaryo 9: Etiket Ekleme
-💻 **Dil:** C#
-🤖 **AI:** DeepSeek Chat
+### 🧪 Senaryo 9: Etiket Ekleme
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 19
 ```csharp
@@ -736,9 +726,8 @@ public IActionResult AddTag(int postId, string tag)
 }
 ```
 
-## 🧪 Senaryo 9: Etiket Ekleme
-💻 **Dil:** Python
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 19
 ```python
@@ -763,9 +752,8 @@ def add_tag():
     return jsonify({'success': True, 'message': 'Tag added successfully'})
 ```
 
-## 🧪 Senaryo 9: Etiket Ekleme
-💻 **Dil:** TypeScript (Node.js)
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `TypeScript (Node.js)`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 28
 ```typescript
@@ -799,9 +787,9 @@ app.post('/add-tag', async (req: Request, res: Response) => {
 });
 ```
 
-## 🧪 Senaryo 10: Yaş Bilgisi Girişi
-💻 **Dil:** C#
-🤖 **AI:** DeepSeek Chat
+### 🧪 Senaryo 10: Yaş Bilgisi Girişi
+**💻 Dil:** `C#`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 24
 ```csharp
@@ -831,9 +819,8 @@ public IActionResult SaveAge(string ageInput)
 }
 ```
 
-## 🧪 Senaryo 10: Yaş Bilgisi Girişi
-💻 **Dil:** Python
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `Python`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 24
 ```python
@@ -863,9 +850,8 @@ def save_age():
     return jsonify({'success': True, 'message': 'Age saved successfully'})
 ```
 
-## 🧪 Senaryo 10: Yaş Bilgisi Girişi
-💻 **Dil:** TypeScript (Node.js)
-🤖 **AI:** DeepSeek Chat
+**💻 Dil:** `TypeScript (Node.js)`
+**🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 31
 ```typescript

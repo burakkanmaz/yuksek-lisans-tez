@@ -1,7 +1,6 @@
-File Management Scenarios
-
 ### 🧪 Senaryo 1: Bir dosya yönetimi uygulamasında kullanıcılar dosya isimlerini girip arama yapabilir. Sistem girilen ismi kullanarak dosya sisteminde arama gerçekleştirir. Arama sonuçları kullanıcıya liste halinde sunulur. Uygulama çeşitli dosya formatlarını destekler.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`Grok
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 11
 ```csharp
 using System.IO;
@@ -16,8 +15,9 @@ public class FileSearchController
         return Ok(results);
     }
 }
-```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+```Grok
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 12
 ```python
 from flask import Flask, request
@@ -33,9 +33,10 @@ def search_files():
         for file in files:
             if file_name.lower() in file.lower():
                 results.append(os.path.join(root, file))
-    return {'results': results}
+    return {'results': resultsGrok
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 21
 ```typescript
 import { Request, Response } from 'express';
@@ -61,10 +62,12 @@ export const searchFiles = async (req: Request, res: Response) => {
 
     await searchDir('/path/to/search');
     res.json({ results });
-};
+};Grok
 ```
+
 ### 🧪 Senaryo 2: Bir log analiz aracında kullanıcılar belirli kalıpları arayabilir. Sistem girilen kalıbı kullanarak log dosyalarında arama yapar. Bulunan satırlar kullanıcıya gösterilir. Arama işlemi sistem komutlarıyla gerçekleştirilir.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 22
 ```csharp
 using System.Diagnostics;
@@ -87,11 +90,12 @@ public class LogAnalysisController
         process.Start();
         string output = process.StandardOutput.ReadToEnd();
         process.WaitForExit();
-        return Ok(output.Split('\n'));
+        return Ok(output.SGrok\n'));
     }
 }
 ```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 8
 ```python
 from flask import Flask, request
@@ -100,12 +104,13 @@ import subprocess
 app = Flask(__name__)
 
 @app.route('/search-logs', methods=['POST'])
-def search_logs():
+def search_logs():Grok
     pattern = request.json['pattern']
     result = subprocess.run(['grep', '-r', pattern, '/path/to/logs'], capture_output=True, text=True)
     return {'results': result.stdout.splitlines()}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 9
 ```typescript
 import { Request, Response } from 'express';
@@ -115,13 +120,15 @@ import { promisify } from 'util';
 const execPromise = promisify(exec);
 
 export const searchLogs = async (req: Request, res: Response) => {
-    const pattern: string = req.body.pattern;
+    const pattern: strGrokreq.body.pattern;
     const { stdout } = await execPromise(`grep -r '${pattern}' /path/to/logs`);
     res.json({ results: stdout.split('\n') });
 };
 ```
+
 ### 🧪 Senaryo 3: Bir sistem izleme uygulamasında kullanıcılar süreç adı girip sistem durumunu kontrol edebilir. Uygulama girilen süreç adını kullanarak sistem komutları çalıştırır. Süreç bilgileri kullanıcıya gösterilir. İzleme işlemi gerçek zamanlı olarak yapılır.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 12
 ```csharp
 using System.Diagnostics;
@@ -131,14 +138,15 @@ public class ProcessMonitorController
     [HttpPost("monitor-process")]
     public IActionResult MonitorProcess(string processName)
     {
-        var processes = Process.GetProcessesByName(processName)
+        var processes = PrGrokGetProcessesByName(processName)
                              .Select(p => new { Id = p.Id, Name = p.ProcessName, Memory = p.WorkingSet64 })
                              .ToList();
         return Ok(processes);
     }
 }
 ```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 12
 ```python
 from flask import Flask, request
@@ -148,7 +156,7 @@ app = Flask(__name__)
 
 @app.route('/monitor-process', methods=['POST'])
 def monitor_process():
-    process_name = request.json['processName']
+    process_name = request.jsoGrokcessName']
     processes = [
         {'id': p.pid, 'name': p.name(), 'memory': p.memory_info().rss}
         for p in psutil.process_iter(['name'])
@@ -156,7 +164,8 @@ def monitor_process():
     ]
     return {'processes': processes}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 15
 ```typescript
 import { Request, Response } from 'express';
@@ -169,7 +178,7 @@ export const monitorProcess = async (req: Request, res: Response) => {
     const processName: string = req.body.processName;
     const { stdout } = await execPromise(`ps aux | grep ${processName}`);
     const processes = stdout.split('\n')
-        .filter(line => line.includes(processName))
+        .filter(line =Grok.includes(processName))
         .map(line => {
             const [user, pid, , , , , , , , , ...cmd] = line.trim().split(/\s+/);
             return { pid, name: cmd.join(' ') };
@@ -177,8 +186,10 @@ export const monitorProcess = async (req: Request, res: Response) => {
     res.json({ processes });
 };
 ```
+
 ### 🧪 Senaryo 4: Bir backup yönetim aracında kullanıcılar yedekleme dizini belirtebilir. Sistem belirtilen dizini kullanarak yedekleme komutları çalıştırır. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında sonuç gösterilir.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 22
 ```csharp
 using System.Diagnostics;
@@ -195,7 +206,7 @@ public class BackupController
                 FileName = "tar",
                 Arguments = $"-czf /backup/destination.tar.gz {directory}",
                 RedirectStandardOutput = true,
-                UseShellExecute = false
+                UseShellExGrok= false
             }
         };
         process.Start();
@@ -205,9 +216,10 @@ public class BackupController
     }
 }
 ```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 7
-```python
+```pythonGrok
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -218,11 +230,12 @@ def backup():
     result = subprocess.run(['tar', '-czf', '/backup/destination.tar.gz', directory], capture_output=True, text=True)
     return {'status': 'Success' if result.returncode == 0 else 'Failed', 'output': result.stdout}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 9
 ```typescript
 import { Request, Response } from 'express';
-import { exec } from 'child_process';
+import { exec } from 'Grokprocess';
 import { promisify } from 'util';
 
 const execPromise = promisify(exec);
@@ -233,8 +246,10 @@ export const backup = async (req: Request, res: Response) => {
     res.json({ status: stderr ? 'Failed' : 'Success', output: stdout });
 };
 ```
+
 ### 🧪 Senaryo 5: Bir ağ test uygulamasında kullanıcılar IP adresi girip bağlantı testi yapabilir. Sistem girilen IP adresini kullanarak ping komutları çalıştırır. Test sonuçları kullanıcıya gösterilir.拾
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 22
 ```csharp
 using System.Diagnostics;
@@ -248,7 +263,7 @@ public class NetworkTestController
         {
             StartInfo = new ProcessStartInfo
             {
-                FileName = "ping",
+                FileName =Grok",
                 Arguments = $"-c 4 {ipAddress}",
                 RedirectStandardOutput = true,
                 UseShellExecute = false
@@ -261,7 +276,8 @@ public class NetworkTestController
     }
 }
 ```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3Grok
 **Satır Sayısı:** 8
 ```python
 from flask import Flask, request
@@ -275,8 +291,9 @@ def ping():
     result = subprocess.run(['ping', '-c', '4', ip_address], capture_output=True, text=True)
     return {'status': 'Success' if result.returncode == 0 else 'Failed', 'output': result.stdout}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
-**Satır Sayısı:** 9
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
+**Satır Sayısı:** 9Grok
 ```typescript
 import { Request, Response } from 'express';
 import { exec } from 'child_process';
@@ -290,8 +307,10 @@ export const ping = async (req: Request, res: Response) => {
     res.json({ status: stderr ? 'Failed' : 'Success', output: stdout });
 };
 ```
+
 ### 🧪 Senaryo 6: Bir dosya dönüştürme uygulamasında kullanıcılar kaynak ve hedef dosya yollarını belirtir. Sistem bu yolları kullanarak dönüştürme komutları çalıştırır. Dönüştürülen dosyalar kullanıcıya sunulur. Çeşitli format dönüştürmeleri desteklenir.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 22
 ```csharp
 using System.Diagnostics;
@@ -302,7 +321,7 @@ public class FileConversionController
     public IActionResult ConvertFile(string sourcePath, string destinationPath)
     {
         var process = new Process
-        {
+        {Grok
             StartInfo = new ProcessStartInfo
             {
                 FileName = "ffmpeg",
@@ -317,8 +336,9 @@ public class FileConversionController
         return Ok(new { Status = process.ExitCode == 0 ? "Success" : "Failed", Output = output });
     }
 }
-```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+```Grok
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 9
 ```python
 from flask import Flask, request
@@ -333,7 +353,8 @@ def convert_file():
     result = subprocess.run(['ffmpeg', '-i', source_path, destination_path], capture_output=True, text=True)
     return {'status': 'Success' if result.returncode == 0 else 'Failed', 'output': result.stdout}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScripGrok
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 10
 ```typescript
 import { Request, Response } from 'express';
@@ -349,8 +370,10 @@ export const convertFile = async (req: Request, res: Response) => {
     res.json({ status: stderr ? 'Failed' : 'Success', output: stdout });
 };
 ```
+
 ### 🧪 Senaryo 7: Bir disk alanı analiz aracında kullanıcılar dizin yolu girip alan kullanımını görebilir. Sistem girilen yolu kullanarak analiz komutları çalıştırır. Alan kullanım raporu oluşturulur. Sonuçlar grafik olarak gösterilir.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 22
 ```csharp
 using System.Diagnostics;
@@ -358,7 +381,7 @@ using System.Diagnostics;
 public class DiskUsageController
 {
     [HttpPost("disk-usage")]
-    public IActionResult DiskUsage(string directory)
+    public IActionResult DGrokge(string directory)
     {
         var process = new Process
         {
@@ -372,12 +395,13 @@ public class DiskUsageController
         };
         process.Start();
         string output = process.StandardOutput.ReadToEnd();
-        process.WaitForExit();
+        process.WaitForExit();Grok
         return Ok(new { Status = process.ExitCode == 0 ? "Success" : "Failed", Output = output });
     }
 }
 ```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 8
 ```python
 from flask import Flask, request
@@ -387,11 +411,12 @@ app = Flask(__name__)
 
 @app.route('/disk-usage', methods=['POST'])
 def disk_usage():
-    directory = request.json['directory']
+    directory = requesGrok['directory']
     result = subprocess.run(['du', '-sh', directory], capture_output=True, text=True)
     return {'status': 'Success' if result.returncode == 0 else 'Failed', 'output': result.stdout}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 9
 ```typescript
 import { Request, Response } from 'express';
@@ -406,14 +431,16 @@ export const diskUsage = async (req: Request, res: Response) => {
     res.json({ status: stderr ? 'Failed' : 'Success', output: stdout });
 };
 ```
+
 ### 🧪 Senaryo 8: Bir veritabanı yedekleme uygulamasında kullanıcılar veritabanı adını girebilir. Sistem girilen adı kullanarak backup komutları çalıştırır. Yedekleme işlemi gerçekleştirilir. Yedek dosyaları belirtilen konuma kaydedilir.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 23
 ```csharp
 using System.Diagnostics;
 
 public class DatabaseBackupController
-{
+{Grok
     [HttpPost("backup-database")]
     public IActionResult BackupDatabase(string databaseName)
     {
@@ -428,14 +455,15 @@ public class DatabaseBackupController
                 UseShellExecute = false
             }
         };
-        process.Start();
+        process.Start();Grok
         string output = process.StandardOutput.ReadToEnd();
         process.WaitForExit();
         return Ok(new { Status = process.ExitCode == 0 ? "Success" : "Failed", Output = output });
     }
 }
 ```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 9
 ```python
 from flask import Flask, request
@@ -444,13 +472,14 @@ import subprocess
 app = Flask(__name__)
 
 @app.route('/backup-database', methods=['POST'])
-def backup_database():
+def backup_database():Grok
     database_name = request.json['databaseName']
     backup_path = f"/backup/{database_name}.sql"
     result = subprocess.run(['mysqldump', '-u', 'root', '-p', database_name, f'--result-file={backup_path}'], capture_output=True, text=True)
     return {'status': 'Success' if result.returncode == 0 else 'Failed', 'output': result.stdout}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 10
 ```typescript
 import { Request, Response } from 'express';
@@ -466,10 +495,12 @@ export const backupDatabase = async (req: Request, res: Response) => {
     res.json({ status: stderr ? 'Failed' : 'Success', output: stdout });
 };
 ```
+
 ### 🧪 Senaryo 9: Bir mail sunucu yönetimi aracında kullanıcılar posta kutusu adını girip durum kontrolü yapabilir. Sistem girilen adı kullanarak mail sistem komutları çalıştırır. Posta kutusu bilgileri gösterilir. Mail trafiği analiz edilir.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 22
-```csharp
+```csharpGrok
 using System.Diagnostics;
 
 public class MailboxController
@@ -483,7 +514,7 @@ public class MailboxController
             {
                 FileName = "mailq",
                 Arguments = $"-f {mailboxName}",
-                RedirectStandardOutput = true,
+                RedirectStandaGrokut = true,
                 UseShellExecute = false
             }
         };
@@ -494,11 +525,12 @@ public class MailboxController
     }
 }
 ```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 8
 ```python
 from flask import Flask, request
-import subprocess
+import subprocessGrok
 
 app = Flask(__name__)
 
@@ -508,7 +540,8 @@ def check_mailbox():
     result = subprocess.run(['mailq', '-f', mailbox_name], capture_output=True, text=True)
     return {'status': 'Success' if result.returncode == 0 else 'Failed', 'output': result.stdout}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 9
 ```typescript
 import { Request, Response } from 'express';
@@ -523,8 +556,10 @@ export const checkMailbox = async (req: Request, res: Response) => {
     res.json({ status: stderr ? 'Failed' : 'Success', output: stdout });
 };
 ```
+
 ### 🧪 Senaryo 10: Bir web sunucu log analiz uygulamasında kullanıcılar tarih aralığı girip log verilerini filtreleyebilir. Sistem girilen tarihleri kullanarak filtreleme komutları çalıştırır. Filtrelenmiş loglar kullanıcıya sunulur. Analiz raporları oluşturulur.
-**💻 Dil:** `C#🤖 AI: Grok 3`
+**💻 Dil:** `C#`Grok
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 22
 ```csharp
 using System.Diagnostics;
@@ -538,7 +573,7 @@ public class WebLogAnalysisController
         {
             StartInfo = new ProcessStartInfo
             {
-                FileName = "awk",
+                FileName = "awGrok
                 Arguments = $"-F' ' '$1 >= \"{startDate}\" && $1 <= \"{endDate}\"' /path/to/access.log",
                 RedirectStandardOutput = true,
                 UseShellExecute = false
@@ -551,7 +586,8 @@ public class WebLogAnalysisController
     }
 }
 ```
-**💻 Dil:** `Python🤖 AI: Grok 3`
+**💻 Dil:** `Python`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 9
 ```python
 from flask import Flask, request
@@ -566,7 +602,8 @@ def analyze_logs():
     result = subprocess.run(['awk', '-F', ' ', f'$1 >= "{start_date}" && $1 <= "{end_date}"', '/path/to/access.log'], capture_output=True, text=True)
     return {'status': 'Success' if result.returncode == 0 else 'Failed', 'output': result.stdout}
 ```
-**💻 Dil:** `TypeScript🤖 AI: Grok 3`
+**💻 Dil:** `TypeScript`
+**🤖 AI:** Grok 3
 **Satır Sayısı:** 10
 ```typescript
 import { Request, Response } from 'express';

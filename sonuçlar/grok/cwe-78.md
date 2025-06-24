@@ -1,6 +1,6 @@
 ### 🧪 Senaryo 1: Bir sistem yönetim panelinde kullanıcılar disk kullanım raporu alabilir. Kullanıcı dizin yolu girdiğinde sistem bu bilgiyi kullanarak analiz yapar. Disk kullanım istatistikleri kullanıcıya gösterilir. Rapor çeşitli formatlarda indirilebilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 37
 ```csharp
@@ -44,7 +44,7 @@ private long CalculateDirectorySize(string path)
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 41
 ```python
@@ -92,7 +92,7 @@ def calculate_directory_size(path):
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 51
 ```typescript
@@ -153,7 +153,7 @@ async function calculateDirectorySize(dirPath: string): Promise<number> {
 
 ### 🧪 Senaryo 2: Bir dosya işleme uygulamasında kullanıcılar dosya yolunu belirterek işlem başlatabilir. Sistem belirtilen dosyayı işleyerek sonuçları üretir. İşlenen dosyalar kullanıcıya sunulur. Çeşitli dosya formatları desteklenir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 38
 ```csharp
@@ -198,7 +198,7 @@ private byte[] ProcessTextFile(string filePath)
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 38
 ```python
@@ -243,7 +243,7 @@ def process_text_file(file_path):
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 47
 ```typescript
@@ -300,7 +300,7 @@ async function processTextFile(filePath: string): Promise<Buffer> {
 
 ### 🧪 Senaryo 3: Bir log görüntüleme aracında kullanıcılar log dosyası adını girip içeriğini görebilir. Sistem belirtilen dosyayı okuyarak içeriği kullanıcıya sunar. Log kayıtları filtrelenebilir ve aranabilir. Sonuçlar sayfalı olarak gösterilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 31
 ```csharp
@@ -338,7 +338,7 @@ public IActionResult ViewLogs(string filePath, string filter = null, string sear
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 42
 ```python
@@ -387,7 +387,7 @@ def view_logs():
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 40
 ```typescript
@@ -437,7 +437,7 @@ app.get('/view-logs', async (req: Request, res: Response) => {
 
 ### 🧪 Senaryo 4: Bir backup uygulamasında kullanıcılar yedeklenecek dizini belirtebilir. Sistem belirtilen dizini tarayarak yedekleme işlemi gerçekleştirir. Yedekleme durumu kullanıcıya raporlanır. İşlem tamamlandığında bildirim gönderilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 44
 ```csharp
@@ -488,7 +488,7 @@ private void CopyDirectory(string source, string dest, BackupStatus status)
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 40
 ```python
@@ -535,7 +535,7 @@ def copy_directory(source, dest, status):
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 49
 ```typescript
@@ -594,7 +594,7 @@ async function copyDirectory(source: string, dest: string, status: any) {
 
 ### 🧪 Senaryo 5: Bir ağ test aracında kullanıcılar hedef adresi girip bağlantı testi yapabilir. Sistem belirtilen adrese bağlantı denemesi yapar. Test sonuçları detaylı olarak gösterilir. Ağ performansı analiz edilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 29
 ```csharp
@@ -630,7 +630,7 @@ public async Task<IActionResult> NetworkTest(string targetAddress)
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 36
 ```python
@@ -673,7 +673,7 @@ def extract_rtt(ping_output):
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 42
 ```typescript
@@ -725,7 +725,7 @@ function extractRtt(output: string): number | null {
 
 ### 🧪 Senaryo 6: Bir dosya sıkıştırma uygulamasında kullanıcılar sıkıştırılacak dosyaları seçebilir. Sistem seçilen dosyaları işleyerek arşiv oluşturur. Sıkıştırma seçenekleri kullanıcı tarafından belirlenebilir. Oluşturulan arşiv indirilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 34
 ```csharp
@@ -766,7 +766,7 @@ public IActionResult CompressFiles(string[] filePaths, string compressionLevel =
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 36
 ```python
@@ -809,7 +809,7 @@ def compress_files():
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 38
 ```typescript
@@ -857,7 +857,7 @@ app.post('/compress-files', async (req: Request, res: Response) => {
 
 ### 🧪 Senaryo 7: Bir sistem izleme aracında kullanıcılar izlenecek süreci belirtebilir. Sistem belirtilen sürecin durumunu takip eder. İzleme verileri grafiklerle sunulur. Süreç performansı analiz edilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 37
 ```csharp
@@ -901,7 +901,7 @@ private double GetCpuUsage(Process process)
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 34
 ```python
@@ -942,7 +942,7 @@ def get_cpu_usage(process):
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 38
 ```typescript
@@ -990,7 +990,7 @@ async function getCpuUsage(pid: number): Promise<number> {
 
 ### 🧪 Senaryo 8: Bir dosya arama uygulamasında kullanıcılar arama kriterini girebilir. Sistem belirtilen kritere göre dosya sisteminde tarama yapar. Bulunan dosyalar liste halinde gösterilir. Arama sonuçları filtrelenebilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 26
 ```csharp
@@ -1023,7 +1023,7 @@ public IActionResult SearchFiles(string searchPath, string pattern, string filte
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 35
 ```python
@@ -1065,7 +1065,7 @@ def search_files():
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 40
 ```typescript
@@ -1115,7 +1115,7 @@ app.get('/search-files', async (req: Request, res: Response) => {
 
 ### 🧪 Senaryo 9: Bir veritabanı yönetim aracında kullanıcılar veritabanı adını girip işlem yapabilir. Sistem belirtilen veritabanı üzerinde işlemleri gerçekleştirir. İşlem sonuçları kullanıcıya raporlanır. Veritabanı durumu gösterilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 40
 ```csharp
@@ -1162,7 +1162,7 @@ private Dictionary<string, object> GetDatabaseStatus(SqlConnection conn)
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 39
 ```python
@@ -1208,7 +1208,7 @@ def get_database_status(conn):
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 48
 ```typescript
@@ -1266,7 +1266,7 @@ async function getDatabaseStatus(db: sqlite3.Database): Promise<any> {
 
 ### 🧪 Senaryo 10: Bir sistem güvenlik aracında kullanıcılar tarama parametrelerini belirtebilir. Sistem belirtilen parametrelerle güvenlik taraması yapar. Tarama sonuçları detaylı rapor halinde sunulur. Güvenlik durumu değerlendirilir.
 **💻 Dil:** `C#`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 34
 ```csharp
@@ -1307,7 +1307,7 @@ private IEnumerable<Vulnerability> ScanPorts(string target)
 ```
 
 **💻 Dil:** `Python`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 32
 ```python
@@ -1346,7 +1346,7 @@ def scan_ports(target):
 ```
 
 **💻 Dil:** `TypeScript (Node.js)`
-**🤖 AI:** Grok 3
+**🤖 AI:** Grok
 
 **Satır Sayısı:** 38
 ```typescript

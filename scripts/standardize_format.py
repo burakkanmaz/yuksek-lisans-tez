@@ -279,49 +279,6 @@ def standardize_line_count_format(content):
     
     return content
 
-def standardize_all_files():
-    """
-    Tüm AI klasörlerindeki dosyaları standardize et
-    """
-    base_dir = "sonuçlar"
-    ai_folders = ["chatgpt", "deepseek", "grok"]  # Claude ve Gemini çıkarıldı
-    
-    for ai_folder in ai_folders:
-        folder_path = os.path.join(base_dir, ai_folder)
-        
-        if not os.path.exists(folder_path):
-            print(f"❌ {folder_path} klasörü bulunamadı!")
-            continue
-        
-        print(f"📁 {ai_folder} klasörü işleniyor...")
-        
-        for filename in os.listdir(folder_path):
-            if filename.endswith('.md'):
-                filepath = os.path.join(folder_path, filename)
-                
-                try:
-                    with open(filepath, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                    
-                    original_content = content
-                    
-                    # Satır sayısı formatını standardize et
-                    content = standardize_line_count_format(content)
-                    
-                    # Genel temizlik
-                    content = clean_markdown_content(content)
-                    
-                    # Değişiklik varsa kaydet
-                    if content != original_content:
-                        with open(filepath, 'w', encoding='utf-8') as f:
-                            f.write(content)
-                        print(f"✅ Güncellendi: {filepath}")
-                    else:
-                        print(f"ℹ️  Değişiklik yok: {filepath}")
-                        
-                except Exception as e:
-                    print(f"❌ Hata ({filepath}): {str(e)}")
-
 def fix_gemini_duplicate_scenarios(content):
     """
     Gemini dosyalarındaki tekrarlanan senaryo başlıklarını birleştir
@@ -419,6 +376,209 @@ def standardize_gemini_files():
             except Exception as e:
                 print(f"❌ Hata ({filepath}): {str(e)}")
 
+def fix_chatgpt_missing_languages(content):
+    """
+    ChatGPT dosyalarındaki eksik dil kodlarını tespit et ve uyar
+    """
+    lines = content.split('\n')
+    scenarios = {}
+    current_scenario = None
+    
+    for line in lines:
+        scenario_match = re.match(r'### 🧪 Senaryo (\d+):', line)
+        if scenario_match:
+            current_scenario = int(scenario_match.group(1))
+            if current_scenario not in scenarios:
+                scenarios[current_scenario] = set()
+        
+        lang_match = re.match(r'\*\*💻 Dil:\*\* `([^`]+)`', line)
+        if lang_match and current_scenario:
+            lang = lang_match.group(1).strip()
+            if lang in ['C#', 'Python', 'TypeScript']:
+                scenarios[current_scenario].add(lang)
+    
+    return content  # ChatGPT için özel düzeltme gerekmiyor, sadece tespit
+
+def fix_deepseek_format_issues(content):
+    """
+    DeepSeek dosyalarındaki format problemlerini düzelt
+    """
+    # DeepSeek'te bazen senaryo başlıkları ## ile başlıyor, ### yapmalı
+    content = re.sub(r'^## 🧪 Senaryo', '### 🧪 Senaryo', content, flags=re.MULTILINE)
+    
+    # Dil etiketlerini standardize et
+    content = re.sub(r'💻 \*\*Dil:\*\* ([^\n]+)', r'**💻 Dil:** `\1`', content)
+    content = re.sub(r'🤖 \*\*AI:\*\* ([^\n]+)', r'**🤖 AI:** \1', content)
+    
+    # Tekrarlanan senaryo başlıklarını birleştir
+    lines = content.split('\n')
+    result_lines = []
+    current_scenario = None
+    current_scenario_lines = []
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        
+        # Senaryo başlığı kontrolü (hem uzun hem kısa format)
+        scenario_match = re.match(r'### 🧪 Senaryo (\d+):', line)
+        if scenario_match:
+            scenario_num = scenario_match.group(1)
+            
+            # Eğer bu senaryo daha önce görüldüyse, sadece dil kısmını al
+            if current_scenario == scenario_num:
+                # Senaryo başlığını atla, dil satırını bul
+                i += 1
+                while i < len(lines) and not lines[i].strip().startswith('**💻 Dil:**'):
+                    i += 1
+                # Dil satırından başlayarak bir sonraki senaryoya kadar ekle
+                while i < len(lines):
+                    next_line = lines[i]
+                    # Bir sonraki senaryo başlığı gelirse dur
+                    if re.match(r'### 🧪 Senaryo \d+:', next_line):
+                        break
+                    current_scenario_lines.append(next_line)
+                    i += 1
+                i -= 1  # Bir geri git çünkü döngü sonunda i++ olacak
+            else:
+                # Yeni senaryo, öncekini kaydet
+                if current_scenario is not None:
+                    result_lines.extend(current_scenario_lines)
+                    result_lines.append('')  # Senaryolar arası boşluk
+                    current_scenario_lines = []
+                
+                current_scenario = scenario_num
+                current_scenario_lines = [line]
+        else:
+            current_scenario_lines.append(line)
+        
+        i += 1
+    
+    # Son senaryoyu ekle
+    if current_scenario_lines:
+        result_lines.extend(current_scenario_lines)
+    
+    return '\n'.join(result_lines)
+
+def fix_grok_format_issues(content):
+    """
+    Grok dosyalarındaki format problemlerini düzelt
+    """
+    # Dosya başındaki gereksiz "md" yazısını kaldır
+    if content.startswith('md\n'):
+        content = content[3:]
+    
+    lines = content.split('\n')
+    result_lines = []
+    current_scenario = None
+    current_scenario_lines = []
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        
+        # Senaryo başlığı kontrolü
+        scenario_match = re.match(r'### 🧪 Senaryo (\d+):', line)
+        if scenario_match:
+            scenario_num = scenario_match.group(1)
+            
+            # Eğer bu senaryo daha önce görüldüyse, sadece dil kısmını al
+            if current_scenario == scenario_num:
+                # Senaryo başlığını atla, dil satırını bul
+                i += 1
+                while i < len(lines) and not lines[i].strip().startswith('**💻 Dil:**'):
+                    i += 1
+                # Dil satırından başlayarak bir sonraki senaryoya kadar ekle
+                while i < len(lines):
+                    next_line = lines[i]
+                    # Bir sonraki senaryo başlığı gelirse dur
+                    if re.match(r'### 🧪 Senaryo \d+:', next_line):
+                        break
+                    current_scenario_lines.append(next_line)
+                    i += 1
+                i -= 1  # Bir geri git çünkü döngü sonunda i++ olacak
+            else:
+                # Yeni senaryo, öncekini kaydet
+                if current_scenario is not None:
+                    result_lines.extend(current_scenario_lines)
+                    result_lines.append('')  # Senaryolar arası boşluk
+                    current_scenario_lines = []
+                
+                current_scenario = scenario_num
+                current_scenario_lines = [line]
+        else:
+            # Bozuk dil etiketlerini düzelt
+            if '**💻 Dil:** `' in line and '🤖 AI:' in line:
+                # Python🤖 AI: Grok formatını düzelt
+                match = re.match(r'\*\*💻 Dil:\*\* `([^🤖]+)🤖 AI: ([^`]+)`', line)
+                if match:
+                    lang = match.group(1).strip()
+                    ai = match.group(2).strip()
+                    current_scenario_lines.append(f'**💻 Dil:** `{lang}`')
+                    current_scenario_lines.append(f'**🤖 AI:** {ai}')
+                    i += 1
+                    continue
+            
+            current_scenario_lines.append(line)
+        
+        i += 1
+    
+    # Son senaryoyu ekle
+    if current_scenario_lines:
+        result_lines.extend(current_scenario_lines)
+    
+    return '\n'.join(result_lines)
+
+def standardize_other_ai_files():
+    """
+    ChatGPT, DeepSeek ve Grok klasörlerindeki dosyaları özel olarak standardize et
+    """
+    base_dir = "sonuçlar"
+    ai_configs = {
+        "chatgpt": fix_chatgpt_missing_languages,
+        "deepseek": fix_deepseek_format_issues,
+        "grok": fix_grok_format_issues
+    }
+    
+    for ai_folder, fix_function in ai_configs.items():
+        folder_path = os.path.join(base_dir, ai_folder)
+        
+        if not os.path.exists(folder_path):
+            print(f"❌ {folder_path} klasörü bulunamadı!")
+            continue
+        
+        print(f"📁 {ai_folder} klasörü özel işlem uygulanıyor...")
+        
+        for filename in os.listdir(folder_path):
+            if filename.endswith('.md'):
+                filepath = os.path.join(folder_path, filename)
+                
+                try:
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    
+                    original_content = content
+                    
+                    # AI'ya özel düzeltmeleri uygula
+                    content = fix_function(content)
+                    
+                    # Satır sayısı formatını standardize et
+                    content = standardize_line_count_format(content)
+                    
+                    # Genel temizlik
+                    content = clean_markdown_content(content)
+                    
+                    # Değişiklik varsa kaydet
+                    if content != original_content:
+                        with open(filepath, 'w', encoding='utf-8') as f:
+                            f.write(content)
+                        print(f"✅ Düzeltildi: {filepath}")
+                    else:
+                        print(f"ℹ️  Değişiklik yok: {filepath}")
+                        
+                except Exception as e:
+                    print(f"❌ Hata ({filepath}): {str(e)}")
+
 if __name__ == "__main__":
     print("🔧 Markdown dosyaları standardize ediliyor...")
     
@@ -428,7 +588,7 @@ if __name__ == "__main__":
     # Gemini'yi özel olarak işle
     standardize_gemini_files()
     
-    # Sonra diğer tüm dosyaları işle
-    standardize_all_files()
+    # ChatGPT, DeepSeek ve Grok'u özel olarak işle
+    standardize_other_ai_files()
     
     print("✅ Standardizasyon tamamlandı!") 
