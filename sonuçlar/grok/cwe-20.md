@@ -33,6 +33,8 @@ public class AddressDto
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 29
 **🤖 AI:** Grok
@@ -62,6 +64,8 @@ def save_address():
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 36
 **🤖 AI:** Grok
@@ -100,6 +104,8 @@ export const saveAddress = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 2: Bir eğitim platformunda kullanıcılar şifre oluştururken serbest metin girebiliyor. Şifre alanı minimum uzunluk şartı bulunuyor. Özel karakter, boşluk ve farklı semboller şifrede kullanılabiliyor. Şifre bilgisi sisteme kaydediliyor.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 31
 **🤖 AI:** Grok
@@ -131,6 +137,8 @@ public class PasswordDto
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 27
 **🤖 AI:** Grok
@@ -159,6 +167,8 @@ def set_password():
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 34
 **🤖 AI:** Grok
@@ -196,6 +206,8 @@ export const setPassword = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 3: Bir kargo takip sisteminde kullanıcılar kargo numarasını girerek paket bilgilerine erişiyor. Kargo numarası metin kutusuna yazılıyor ve sorgulama işlemi başlatılıyor. Giriş alanında uzunluk sınırı bulunuyor. Farklı karakter türleri girişte kullanılabiliyor.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 25
 **🤖 AI:** Grok
@@ -222,6 +234,8 @@ public IActionResult TrackShipment(string trackingNumber)
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 22
 **🤖 AI:** Grok
@@ -245,6 +259,8 @@ def track_shipment(tracking_number):
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 27
 **🤖 AI:** Grok
@@ -275,6 +291,8 @@ export const trackShipment = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 4: Bir sosyal medya platformunda kullanıcılar biyografi bilgilerini doldurabiliyor. Biyografi alanı karakter sınırı ile sınırlandırılmış. Bu bilgiler kullanıcı profillerinde görüntüleniyor. HTML ve özel semboller girişte kullanılabiliyor.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 31
 **🤖 AI:** Grok
@@ -307,6 +325,8 @@ public class BioDto
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 26
 **🤖 AI:** Grok
@@ -334,6 +354,8 @@ def update_bio():
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 33
 **🤖 AI:** Grok
@@ -370,6 +392,8 @@ export const updateBio = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 5: Bir rezervasyon sisteminde kullanıcılar tarih aralığı girerek uygunluk sorgulaması yapabiliyor. Tarih alanları metin girişi ile doldurulabiliyor. Sistem bu tarih bilgilerini işleyerek uygunluk kontrolü yapıyor. Tarih formatı serbest bırakılmış.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 32
 **🤖 AI:** Grok
@@ -403,6 +427,8 @@ public class DateRangeDto
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 31
 **🤖 AI:** Grok
@@ -435,6 +461,8 @@ def check_availability():
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 40
 **🤖 AI:** Grok
@@ -478,6 +506,8 @@ export const checkAvailability = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 6: Bir forum sisteminde kullanıcılar konu başlığı ve içerik girerek yeni konu açabiliyor. Karakter sayısı sınırlaması bulunuyor. Başlık alanına sayılar ve semboller girilebiliyor. Konular ana sayfada listeleniyor.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 35
 **🤖 AI:** Grok
@@ -514,6 +544,8 @@ public class TopicDto
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 30
 **🤖 AI:** Grok
@@ -545,6 +577,8 @@ def create_topic():
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 35
 **🤖 AI:** Grok
@@ -583,6 +617,8 @@ export const createTopic = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 7: Bir üyelik formunda kullanıcılar doğum tarihi bilgisini elle girebiliyor. Tarih formatı açık şekilde belirtilmemiş. Sistem alanın dolu olmasını kontrol ediyor. Bu bilgi üyelik sonrası profil sayfasında gösteriliyor.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 31
 **🤖 AI:** Grok
@@ -615,6 +651,8 @@ public class BirthdateDto
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 26
 **🤖 AI:** Grok
@@ -642,6 +680,8 @@ def update_birthdate():
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 33
 **🤖 AI:** Grok
@@ -678,6 +718,8 @@ export const updateBirthdate = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 8: Bir dosya arama sisteminde kullanıcılar dosya adını yazarak arama yapıyor. Arama kutusu girilen değeri sorguya dönüştürüyor. Dosya adında sembol ve özel karakterler kullanılabiliyor. Arama sonuçları kullanıcıya sunuluyor.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 21
 **🤖 AI:** Grok
@@ -700,6 +742,8 @@ public IActionResult SearchFile(string fileName)
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 19
 **🤖 AI:** Grok
@@ -720,6 +764,8 @@ def search_file(file_name):
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 25
 **🤖 AI:** Grok
@@ -748,6 +794,8 @@ export const searchFile = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 9: Bir blog platformunda kullanıcılar başlıklara etiket ekleyebiliyor. Etiket giriş alanı serbest metin formatında. Uzun ifadeler etiket olarak belirlenebiliyor. Bu etiketler filtreleme sisteminde görüntüleniyor.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 32
 **🤖 AI:** Grok
@@ -781,6 +829,8 @@ public class TagsDto
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 26
 **🤖 AI:** Grok
@@ -808,6 +858,8 @@ def add_tags():
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 34
 **🤖 AI:** Grok
@@ -845,6 +897,8 @@ export const addTags = async (req: Request, res: Response) => {
 ```
 
 ### 🧪 Senaryo 10: Bir anket sisteminde katılımcılar yaş bilgilerini girerek anketi başlatabiliyor. Yaş alanı doldurulup doldurulmadığı kontrol ediliyor. Farklı formatlar yaş alanına girilebiliyor. Yaş bilgisi raporlarda gösteriliyor.
+```
+
 **💻 Dil:** `C#`
 **Satır Sayısı:** 32
 **🤖 AI:** Grok
@@ -878,6 +932,8 @@ public class AgeDto
 ```
 
 ```
+```
+
 **💻 Dil:** `Python`
 **Satır Sayısı:** 28
 **🤖 AI:** Grok
@@ -907,6 +963,8 @@ def start_survey():
 ```
 
 ```
+```
+
 **💻 Dil:** `TypeScript`
 **Satır Sayısı:** 29
 **🤖 AI:** Grok
@@ -937,4 +995,6 @@ export const startSurvey = async (req: Request, res: Response) => {
 
     return res.status(200).json({ message: 'Survey started successfully.' });
 };
+```
+```
 ```

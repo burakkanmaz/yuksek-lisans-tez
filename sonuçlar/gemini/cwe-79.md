@@ -2698,3 +2698,4 @@ const RestaurantReviews: React.FC<RestaurantReviewsProps> = ({ restaurantId, cur
 };
 
 export default RestaurantReviews;
+```

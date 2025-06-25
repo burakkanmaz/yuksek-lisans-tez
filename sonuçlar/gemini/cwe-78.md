@@ -124,9 +124,13 @@ return NotFound\(</span>"Directory not found: {directoryPath}");
         return string.Format("{0:n1} {1}", dblSByte, Suffix[i]);
     }
 }
+```
+
 **💻 Dil:** `Python`
 
 **🤖 AI:** Gemini
+
+**Satır Sayısı:** 120
 
 ```python
 
@@ -4373,3 +4377,5 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 ```
 });
+```
+```
