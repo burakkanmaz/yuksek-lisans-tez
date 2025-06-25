@@ -91,7 +91,7 @@ def calculate_directory_size(path):
     return total_size
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 51
@@ -242,7 +242,7 @@ def process_text_file(file_path):
     return content.upper().encode('utf-8')  # Example processing
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 47
@@ -386,7 +386,7 @@ def view_logs():
         return jsonify({'error': f'Error reading logs: {str(e)}'}), 500
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 40
@@ -534,7 +534,7 @@ def copy_directory(source, dest, status):
             copy_directory(source_item, dest_item, status)
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 49
@@ -672,7 +672,7 @@ def extract_rtt(ping_output):
     return float(match.group(1)) if match else None
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 42
@@ -808,7 +808,7 @@ def compress_files():
         return jsonify({'error': f'Error compressing files: {str(e)}'}), 500
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 38
@@ -941,7 +941,7 @@ def get_cpu_usage(process):
     return process.cpu_percent(interval=None)
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 38
@@ -1064,7 +1064,7 @@ def search_files():
         return jsonify({'error': f'Error searching files: {str(e)}'}), 500
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 40
@@ -1207,7 +1207,7 @@ def get_database_status(conn):
     return {'is_connected': conn.total_changes >= 0}  # Placeholder for status check
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 48
@@ -1345,7 +1345,7 @@ def scan_ports(target):
     return [{'type': 'OpenPort', 'description': 'Port 80 open', 'severity': 'Medium'}]
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 
 **Satır Sayısı:** 38

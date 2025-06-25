@@ -51,7 +51,7 @@ def extract_code_stats(file_path):
             # Parantez içindeki kısımları temizle ve normalize et
             lang = lang.strip()
             
-            # Parantezli formatları düzelt: "TypeScript (Node.js)" -> "TypeScript"
+            # Parantezli formatları düzelt: "TypeScript" -> "TypeScript"
             if '(' in lang:
                 lang = lang.split('(')[0].strip()
             

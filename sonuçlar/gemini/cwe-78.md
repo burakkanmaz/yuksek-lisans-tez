@@ -250,7 +250,7 @@ def download_disk_usage_report():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -676,7 +676,7 @@ def download_processed_file():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -1018,7 +1018,7 @@ def view_log():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -1289,7 +1289,7 @@ def start_backup():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -1665,7 +1665,7 @@ def port_scan_endpoint():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -2044,7 +2044,7 @@ def download_archive():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -2486,7 +2486,7 @@ def stop_monitor():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -3002,7 +3002,7 @@ def search_files():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -3497,7 +3497,7 @@ def create_database():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 
@@ -4097,7 +4097,7 @@ def start_security_scan():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 
 **🤖 AI:** Gemini
 

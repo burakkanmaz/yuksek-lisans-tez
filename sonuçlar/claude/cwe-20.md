@@ -64,7 +64,7 @@ def validate_postal_code(postal_code):
     raise ValueError("Invalid postal code format")
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 25
 ```typescript
@@ -153,7 +153,7 @@ def create_password():
     return jsonify({'message': 'Password created successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 14
 ```typescript
@@ -232,7 +232,7 @@ def track_package(tracking_number):
     })
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 16
 ```typescript
@@ -314,7 +314,7 @@ def update_biography():
     return jsonify({'message': 'Biography updated successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 14
 ```typescript
@@ -392,7 +392,7 @@ def check_availability():
     return jsonify({'available': conflicting_count == 0})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 17
 ```typescript
@@ -481,7 +481,7 @@ def create_topic():
     return jsonify({'topic_id': str(result.inserted_id)})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 20
 ```typescript
@@ -581,7 +581,7 @@ def register():
     return jsonify({'user_id': str(result.inserted_id)})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 21
 ```typescript
@@ -674,7 +674,7 @@ def search_files():
     return jsonify(result)
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 14
 ```typescript
@@ -780,7 +780,7 @@ def add_tags():
     return jsonify({'message': 'Tags added successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 28
 ```typescript
@@ -886,7 +886,7 @@ def start_survey():
     return jsonify({'response_id': str(result.inserted_id)})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Claude
 **Satır Sayısı:** 20
 ```typescript

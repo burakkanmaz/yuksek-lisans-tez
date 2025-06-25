@@ -38,10 +38,10 @@ def add_comment():
     db.session.commit()
     return jsonify(comment.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 12
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { Comment } from '../models/comment';
@@ -98,10 +98,10 @@ def submit_ticket():
     db.session.commit()
     return jsonify(ticket.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 12
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { Ticket } from '../models/ticket';
@@ -158,10 +158,10 @@ def add_feedback():
     db.session.commit()
     return jsonify(feedback.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 12
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { Feedback } from '../models/feedback';
@@ -220,10 +220,10 @@ def add_reply():
     db.session.commit()
     return jsonify(reply.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 13
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { Reply } from '../models/reply';
@@ -283,10 +283,10 @@ def add_review():
     db.session.commit()
     return jsonify(review.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 13
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { Review } from '../models/review';
@@ -348,10 +348,10 @@ def add_product_review():
     db.session.commit()
     return jsonify(review.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 14
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { ProductReview } from '../models/productReview';
@@ -412,10 +412,10 @@ def add_news_comment():
     db.session.commit()
     return jsonify(comment.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 13
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { NewsComment } from '../models/newsComment';
@@ -475,10 +475,10 @@ def add_evaluation():
     db.session.commit()
     return jsonify(evaluation.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 13
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { Evaluation } from '../models/evaluation';
@@ -538,10 +538,10 @@ def add_exam_comment():
     db.session.commit()
     return jsonify(comment.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 13
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { ExamComment } from '../models/examComment';
@@ -601,10 +601,10 @@ def add_restaurant_review():
     db.session.commit()
     return jsonify(review.to_dict()), 200
 ```
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** Grok
 **Satır Sayısı:** 13
-```typescript (node.js)
+```TypeScript
 
 import { Request, Response } from 'express';
 import { RestaurantReview } from '../models/restaurantReview';

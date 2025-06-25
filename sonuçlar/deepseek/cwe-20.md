@@ -299,7 +299,7 @@ def update_bio():
     return jsonify({'success': True, 'message': 'Bio updated successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 30
@@ -390,7 +390,7 @@ def check_availability():
     return jsonify({'success': True, 'slots': slots})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 34
@@ -489,7 +489,7 @@ def create_topic():
     return jsonify({'success': True, 'message': 'Topic created successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 25
@@ -579,7 +579,7 @@ def save_birthdate():
     return jsonify({'success': True, 'message': 'Birthdate saved successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 34
@@ -665,7 +665,7 @@ def search_files():
     return jsonify({'success': True, 'files': files})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 27
@@ -752,7 +752,7 @@ def add_tag():
     return jsonify({'success': True, 'message': 'Tag added successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 28
@@ -850,7 +850,7 @@ def save_age():
     return jsonify({'success': True, 'message': 'Age saved successfully'})
 ```
 
-**💻 Dil:** `TypeScript (Node.js)`
+**💻 Dil:** `TypeScript`
 **🤖 AI:** DeepSeek Chat
 
 **Satır Sayısı:** 31
